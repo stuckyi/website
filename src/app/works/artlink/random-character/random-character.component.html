@@ -1,0 +1,82 @@
+<!-- 최상단 프로젝트별 메인 이미지 영역 -->
+<div class="mainImg column is-overlay">
+  <figure class="image">
+    <img src="assets/images/works/artlink/randomcharacter/main.png" alt="main image">
+  </figure>
+</div>
+
+
+<div class="detail-container">
+  <!-- title 영역 -->
+  <div class="columns">
+    <div class="column is-8">
+      <p class="title">{{ title }} </p>
+      <p class="summary column is-9 is-paddingless"> {{ summary}} </p>
+    </div>
+    <div class="column is-offset-2 is-2"> 
+      <p class="tag-title">{{year}}<br/>{{type}}</p>
+      <p *ngFor="let tag of tags" class="tag-item">{{tag}}</p>
+    </div>
+  </div>
+  
+  <!-- 프로젝트 설명 -->
+  <p class="subtitle process-desc"> </p> 
+  <div class="desc-content column is-8 is-paddingless">
+    <p *ngFor="let description of descriptions">{{description}}</p>
+  </div>
+  
+  <!-- 관련 링크 -->
+  <p class="subtitle process-link"> </p> 
+  <ul>
+    <li class="link" (click)="openUrl(link.url)" *ngFor="let link of links">{{link.info}}</li>
+  </ul>
+
+
+  <!-- 프로젝트 구현 영상 -->
+  <p class="subtitle process-video"> </p> 
+  <div class="column precessVideo">
+    <!--<img src="assets/images/works/artlink/randomcharacter/capture.gif" alt="랜덤 캐릭터 구현영상 gif"/>-->
+    <iframe src="https://player.vimeo.com/video/239292055" width="640" height="480" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+<p><a href="https://vimeo.com/239292055">2017 Artlink : Make Random Character</a> from <a href="https://vimeo.com/user73075104">stuckyistudio</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+  </div>
+
+
+
+  <!-- 프로세스 이미지 -->
+  <p class="subtitle process-img"> </p>
+  <div class="processImg columns is-multiline">
+    <br/>
+    <div class="column is-4">
+      <figure class="image is-1by1">
+        <img [src]="baseUrl+'0.png'">
+      </figure>
+    </div>
+    <div class="column is-4">
+      <figure class="image is-1by1">
+        <img [src]="baseUrl+'1.png'">
+      </figure>
+    </div>
+    <div class="column is-4">
+      <figure class="image is-1by1">
+        <img [src]="baseUrl+'2.png'">
+      </figure>
+    </div>
+    <div class="column is-4">
+      <figure class="image is-1by1">
+        <img [src]="baseUrl+'3.png'">
+      </figure>
+    </div>
+    <div class="column is-4">
+      <figure class="image is-1by1">
+        <img [src]="baseUrl+'4.png'">
+      </figure>
+    </div>
+    <div class="column is-4">
+      <figure class="image is-1by1">
+        <img [src]="baseUrl+'5.png'">
+      </figure>
+    </div>
+  </div>
+
+
+</div>

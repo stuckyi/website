@@ -1,0 +1,25 @@
+
+
+// z-index
+
+$z-index-navbar: 1000;
+
+
+
+
+/* color */
+$main-color: #ffff8c;
+$main-color-light: lighten($main-color, 20%);
+$main-color-dark: darken($main-color, 20%);
+
+
+// tag color
+$tag-col: #9B9B9B;
+// GRID
+
+
+$base: 900px;
+$warp-main-grid: 960px; // 메인 그리드 가로너비 영역 (max)
+$wrapWidth: 900px;      // 설명 콘텐츠 가로너비 영역 (max) // wrapWidth's min: 760px max: 900px.
+$mainImgHeight: 465px;  // 프로젝트 상세페이지 메인 이미지 높이
+$about-main-height: 80%; // 임의 설정

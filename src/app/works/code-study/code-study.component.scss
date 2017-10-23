@@ -1,0 +1,10 @@
+@import 'assets/scss/global';
+
+.mainImg {
+    background-color: #C42BFF;
+    top: 0;
+    img {
+        @include size(347px, auto);
+        margin: 3rem auto 1rem;
+    }
+}

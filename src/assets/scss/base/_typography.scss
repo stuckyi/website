@@ -1,0 +1,234 @@
+@charset "utf-8";
+
+
+// Thin
+@font-face {
+    font-family: "Spoqa Han Sans";
+    font-weight: 100;
+    src: local("☺"),
+         url(/assets/fonts/spocahansans_subset/SpoqaHanSans-Thin.eot), /* IE9 Compat Modes */
+         url(/assets/fonts/spocahansans_subset/SpoqaHanSans-Thin.eot?#iefix) format("embedded-opentype"), /* IE6-8 */
+         url(/assets/fonts/spocahansans_subset/SpoqaHanSans-Thin.woff) format("woff"), /* Mordern Browsers */
+         url(/assets/fonts/spocahansans_subset/SpoqaHanSans-Thin.ttf) format("truetype"); /* If not support woff */
+}
+
+
+// Light
+@font-face {
+    font-family: "Spoqa Han Sans";
+    font-weight: 300;
+    src: local("☺"),
+         url(/assets/fonts/spocahansans_subset/SpoqaHanSans-Light.eot), /* IE9 Compat Modes */
+         url(/assets/fonts/spocahansans_subset/SpoqaHanSans-Light.eot?#iefix) format("embedded-opentype"), /* IE6-8 */
+         url(/assets/fonts/spocahansans_subset/SpoqaHanSans-Light.woff) format("woff"), /* Mordern Browsers */
+         url(/assets/fonts/spocahansans_subset/SpoqaHanSans-Light.ttf) format("truetype"); /* If not support woff */
+}
+
+
+// Regular
+@font-face {
+    font-family: "Spoqa Han Sans";
+    font-weight: 500;
+    src: local("☺"),
+         url(/assets/fonts/spocahansans_subset/SpoqaHanSans-Regular.eot), /* IE9 Compat Modes */
+         url(/assets/fonts/spocahansans_subset/SpoqaHanSans-Regular.eot?#iefix) format("embedded-opentype"), /* IE6-8 */
+         url(/assets/fonts/spocahansans_subset/SpoqaHanSans-Regular.woff) format("woff"), /* Mordern Browsers */
+         url(/assets/fonts/spocahansans_subset/SpoqaHanSans-Regular.ttf) format("truetype"); /* If not support woff */
+}
+
+
+// Bold
+@font-face {
+    font-family: "Spoqa Han Sans";
+    font-weight: 700;
+    src: local("☺"),
+         url(/assets/fonts/spocahansans_subset/SpoqaHanSans-Bold.eot), /* IE9 Compat Modes */
+         url(/assets/fonts/spocahansans_subset/SpoqaHanSans-Bold.eot?#iefix) format("embedded-opentype"), /* IE6-8 */
+         url(/assets/fonts/spocahansans_subset/SpoqaHanSans-Bold.woff) format("woff"), /* Mordern Browsers */
+         url(/assets/fonts/spocahansans_subset/SpoqaHanSans-Bold.ttf) format("truetype"); /* If not support woff */
+}
+
+
+
+// font-family
+$default-sans: 'Spoqa Han Sans', Apple SD Gothic Neo, Nanum Barun Gothic, Nanum Gothic, "돋움", Dotum, Verdana, Arial, sans-serif;
+$default-serif: serif;
+$default-mobile: Arial, sans-serif;
+
+
+
+// Typography
+
+
+// Body (base font size)
+$body-size: 16px; // bulma default var
+$body-mobile-size: 8px; // mobile only
+
+
+$size-1: 0.875rem;
+$size-2: 1rem;
+$size-3: 1.125rem;
+$size-4: 1.375rem;
+$size-5: 1.875rem;
+$size-6: 2.25rem;
+
+// Text Size (for use)
+$size-extraSmall: $size-1;
+$size-small: $size-2;
+$size-normal: $size-3; // 1rem
+$size-medium: $size-4;
+$size-large: $size-5;
+$size-extraLarge: $size-6;
+
+
+
+// 자간
+$letter-spacing-1: 0.0375rem;
+$letter-spacing-2: 0.05rem;
+$letter-spacing-3: 0.0625rem;
+$letter-spacing-4: 0.1rem;
+
+// 줄간격 변수
+$line-height-1: 1.3;
+$line-height-2: 1.5;
+$line-height-3: 1.8;
+$line-height-4: 2;
+
+
+
+
+// 굵기 (spoqa)
+$weight-thin: 100;
+$weight-light: 300;
+// $weight-normal: 400;
+$weight-medium: 500;
+$weight-bold: 700;
+$weight-extraBold: 700; // 우리 스타일에는 있지만, spoqa에는 extraBold가 없다. <strong>은 가능.
+
+//use
+
+// mobile only
+* {
+    font-family: $default-mobile;
+}
+
+// from tablet to widescreen
+@media(min-width: $tablet){
+    * {
+        font-family: $default-sans;
+    }
+}
+
+
+
+// navbar: 상단 네비게이션 메뉴 영역
+
+
+.navbar-item{
+    //spocahansans
+    font-size: rem(16px);
+    font-weight: bold;
+    color: black;
+
+    &.studioname { 
+        font-size: rem(20px);
+        font-weight: normal;
+    }
+}
+
+
+// about : 소개 페이지 
+
+
+
+// works/work : 프로젝트 상세 페이지
+
+p {
+    line-height: 180%;
+    font-size: rem(17px);
+}
+
+
+ul { 
+    list-style: circle;
+    line-height: 180%;
+    font-size: rem(17px);
+    margin-left: 2rem;
+}
+
+
+// About: 소개 페이지 
+#about {
+    p {
+        font-weight: 700;       //extra bold
+        font-size: rem(20px);
+
+        &.hello {  font-size: rem(26px); }
+        &.contact-email { font-size: rem(26px); }
+    }
+
+}
+
+// 상세페이지 상단 메인이미지 영역
+
+.detail-container {
+    @include size($wrapWidth, auto);
+    
+    margin: $mainImgHeight auto $mainImgHeight/2;
+    
+    // 상세페이지 타이틀
+    .title { 
+        font-size: rem(36px);
+        font-weight: bold;
+        margin-bottom: rem(25px);
+    }
+
+    // 상세페이지 태그 제목
+    .tag-title {
+        font-size: rem(14px);
+        margin-bottom: rem(25px);
+    }
+
+    // 상세페이지 태그 아이템
+    .tag-item {
+        font-size: rem(14px);
+        color: $tag-col;
+    }
+
+    // 프로젝트 설명
+    .desc-content {
+        p { margin: rem(30px) 0; }
+    }
+    // 관련 링크
+    .link {
+        text-decoration: underline;
+    }
+}
+// 프로젝트 소개 소제목 : subtitle
+
+.subtitle {
+    margin-top: rem(100px); // sub section 간의 간격
+    margin-bottom: rem(30px);
+    font-size: rem(18px);
+    font-weight: bold;
+    &:before {
+        margin-top: 3rem;
+        padding:4px;
+        border-top: 3px solid black;
+    }
+    &.process-desc {  &:before { content: '프로젝트 설명'; } }
+    &.process-img {  &:before { content: '프로세스 이미지'; } }
+    &.process-video {  &:before { content: '프로젝트 구현 영상'; } }
+    &.process-link {  &:before { content: '관련 링크'; } }
+}
+
+
+// footer
+
+.footer {
+     p {
+        font-size: rem(16px);
+        font-style: bold;
+    }
+
+}

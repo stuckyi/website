@@ -1,0 +1,32 @@
+@charset "utf-8";
+
+// z-index
+$z-index-search: 400;
+$z-index-nav: 200;
+$z-index-nav-btn: 900;
+
+
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.nav { z-index: $z-index-nav; }
+
+// 프로젝트 상세 페이지
+
+// 상세페이지 상단 메인이미지 영역
+.mainImg {
+    @include size(100%, $mainImgHeight);
+
+    img { 
+      @include size(auto, $mainImgHeight);
+      margin: 0 auto;
+    }
+}
+
+.detail-container {
+  @include size($wrapWidth, auto);
+    margin: $mainImgHeight auto $mainImgHeight/2;
+}

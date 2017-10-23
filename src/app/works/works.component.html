@@ -1,0 +1,99 @@
+<img *ngIf="loading" src="/assets/loading.gif" alt="loading" />
+<img [hidden]="loading" (load)="onLoad()" src="{{ source }}" />
+
+
+<div class="works columns is-multiline">
+  <div routerLink="/works/collection" class="work column is-4">
+    <div (mouseenter)="setHoverState('collection')" 
+         (mouseleave)="setHoverState('collection')"
+         class="image"
+         [style.background-image]="'url(/assets/images/works/sprite_ted.png)'"
+         [class.steps7]="hoverState.collection">
+    </div>
+    <div class="work-title"> 
+      <p class="sub-title">웹사이트, 자체 프로젝트</p>
+      <p class="title">모여라 월경컵</p>
+    </div>
+  </div>
+
+
+  <div routerLink="/works/codedfont" class="work column is-4">
+    <div (mouseenter)="setHoverState('codedfont')" 
+         (mouseleave)="setHoverState('codedfont')"
+         class="image"
+         [style.background-image]="'url(/assets/images/works/sprite_codedfont.png)'"
+         [class.steps7]="hoverState.codedfont">
+    </div>
+    <div class="work-title"> 
+      <p class="sub-title">인터랙티브 웹콘텐츠, 워크숍 참여, 전시</p>
+      <p class="title">보는 이와 상호작용하는 폰트, <br/> CODED FONT</p>
+    </div>
+  </div>
+
+
+  <div routerLink="/works/kohi-brochure" class="work column is-4">
+    <div (mouseenter)="setHoverState('kohi')" 
+         (mouseleave)="setHoverState('kohi')"
+         class="image"
+         [style.background-image]="'url(/assets/images/works/sprite_kohi.png)'"
+         [class.steps7]="hoverState.kohi">
+    </div>
+    <div class="work-title"> 
+      <p class="sub-title">인쇄물, 브로슈어, 외주작업</p>
+      <p class="title">응급처치 및 심폐소생술 브로슈어</p>
+    </div>
+  </div>
+
+
+  <div routerLink="/works/jumpgame" class="work column is-4">
+    <div (mouseenter)="setHoverState('jumpgame')" 
+         (mouseleave)="setHoverState('jumpgame')"
+         class="image"
+         [style.background-image]="'url(/assets/images/works/sprite_jumpgame.png)'"
+         [class.steps11]="hoverState.jumpgame">
+    </div>
+    <div class="work-title"> 
+      <p class="sub-title">웹페이지, 콜라보레이션</p>
+      <p class="title">멘넴X스투키, 장애물 점프</p>
+    </div>
+  </div>
+
+  <div routerLink="/works/random-character" class="work column is-4">
+    <div (mouseenter)="setHoverState('randomcharacter')" 
+         (mouseleave)="setHoverState('randomcharacter')"
+         class="image"
+         [style.background-image]="'url(/assets/images/works/sprite_randomcharacter.png)'"
+         [class.steps5]="hoverState.randomcharacter">
+    </div>
+    <div class="work-title"> 
+      <p class="sub-title">웹페이지, 콜라보레이션</p>
+      <p class="title">멘넴X스투키 랜덤 캐릭터 생성기</p>
+    </div>
+  </div>
+
+  <div routerLink="/works/codestudy" class="work column is-4">
+    <div (mouseenter)="setHoverState('codestudy')" 
+         (mouseleave)="setHoverState('codestudy')"
+         class="image"
+         [style.background-image]="'url(/assets/images/works/sprite_codestudy.png)'"
+         [class.steps11]="hoverState.codestudy">
+    </div>
+    <div class="work-title"> 
+      <p class="sub-title">웹페이지, 콜라보레이션</p>
+      <p class="title">멘넴과의 코드스터디</p>
+    </div>
+  </div>
+
+  <div routerLink="/works/ted" class="work column is-4">
+    <div (mouseenter)="setHoverState('ted')" 
+         (mouseleave)="setHoverState('ted')"
+         class="image"
+         [style.background-image]="'url(/assets/images/works/sprite_ted.png)'"
+         [class.steps7]="hoverState.ted">
+    </div>
+    <div class="work-title"> 
+      <p class="sub-title">데이터 시각화, 자체 프로젝트</p>
+      <p class="title">TED 강연 평가 시각화</p>
+    </div>
+  </div>
+</div>

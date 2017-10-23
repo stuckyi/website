@@ -1,0 +1,37 @@
+
+<div id="about">
+  <div class="about-main is-overlay">
+    <div class="container"> 
+      <p class="hello">
+        안녕하세요. 스투키 스튜디오입니다. <br/>
+        정유미와 김태경이 2016년 3월부터 함께 작업을 하고 있습니다.<br/>
+        우리의 손길이 필요한 데이터들을 찾아다니고, 그것들을 모으고 정리하여 이해하기 쉬운 형태로 시각화하는데 희열을 느낍니다. 정리한 데이터로는 주로 웹을 기반으로 상호작용이 가능한 콘텐츠를 만들거나 인쇄물을 제작하고 있습니다. 
+      </p>
+      <p class="contact-msg">작업 문의</p>
+      <p class="contact-email">stuckyi.info@gmail.com</p>
+    </div>
+  </div>
+
+
+  <div class="about-info container">
+    <p class="section-title" >이런 분야에 대해 다루는 것을 좋아합니다.</p>
+    <div class="interest columns is-multiline"> 
+      <div *ngFor="let interest of interests" class="column is-3">
+        <p>{{ interest }}</p>
+      </div>
+    </div>
+
+
+    <p class="section-title">참여 프로젝트, 워크숍</p>
+
+    <div *ngFor="let pw of participationWorks" class="participation columns is-multiline">
+      <div class="column is-1"><p>{{pw.year}}</p></div>
+      <div class="column is-5"><p>{{pw.title}}</p></div>
+      <div class="column is-3"><p>{{pw.host}}</p></div>
+      <div class="column is-3"><p>{{pw.role}}</p></div>
+    </div>
+
+  </div>
+
+
+</div>

@@ -1,0 +1,41 @@
+@import 'assets/scss/global';
+// 90% 부분 임의로 설정한 것이기 때문에 다시 결정해봐야한다. 
+
+
+.works {
+    @include size($warp-main-grid, auto);
+    margin: rem(100px) auto; // 사이드 여백은 관리 전체 콘텐츠 크기 잡은 후, 중앙으로 몰아준다 차라리.
+
+    .work {
+        margin: rem(30px) auto;
+
+        .image { 
+            margin-bottom: 2rem;
+            @include size(300px, 270px);
+            background-color: #222;
+            background-repeat: no-repeat;
+            background-position: 0 0%;
+        }
+        .work-title {
+            margin: 0 auto;
+            @include size(300px, auto);
+            .sub-title { font-size: 13px; }
+            .title { 
+                margin: .35rem auto;
+                font-size: 20px; font-weight: bold;
+            }
+        }
+        
+    }
+}
+
+
+
+@keyframes sprite {
+  from { background-position: 0 0; }
+  to { background-position: 100% 0; }
+}
+.steps5 { animation: sprite 1s steps(5) infinite; }
+.steps7 { animation: sprite 1s steps(7) infinite; }
+.steps11 { animation: sprite 1s steps(11) infinite; }
+

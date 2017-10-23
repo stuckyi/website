@@ -1,0 +1,8 @@
+@import 'assets/scss/global';
+
+.footer {
+    background: none;
+    img {
+        @include size(39px, 39px);
+    }
+}
