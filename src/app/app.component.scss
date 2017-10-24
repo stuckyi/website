@@ -1,1 +1,63 @@
 @import 'assets/scss/global';
+
+
+
+// Nav Animation Class
+.nav-on {
+    display: block; 
+    animation: slideInDown 0.48s cubic-bezier(1,.015,.295,1.225) forwards running;
+}
+.nav-off { 
+    display: none;
+    animation: slideOutUp 0.48s cubic-bezier(1,.015,.295,1.225) forwards running;
+}
+
+
+.btn-gototop {
+    z-index: 1100;
+
+    @include size(39px, 39px);
+
+    position: fixed;
+    right: 4%;
+    bottom: 4%;
+
+    background-image: url(/assets/images/ui/icons/gototop@2x.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+
+}
+
+
+
+
+@keyframes slideInDown {
+  from {
+    transform: translate3d(0, -100%, 0);
+    visibility: visible;
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.slideInDown {
+  animation-name: slideInDown;
+}
+
+@keyframes slideOutUp {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    visibility: hidden;
+    transform: translate3d(0, -100%, 0);
+  }
+}
+
+.slideOutUp {
+  animation-name: slideOutUp;
+}

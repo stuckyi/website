@@ -124,19 +124,6 @@ $weight-extraBold: 700; // 우리 스타일에는 있지만, spoqa에는 extraBo
 // navbar: 상단 네비게이션 메뉴 영역
 
 
-.navbar-item{
-    //spocahansans
-    font-size: rem(16px);
-    font-weight: bold;
-    color: black;
-
-    &.studioname { 
-        font-size: rem(20px);
-        font-weight: normal;
-    }
-}
-
-
 // about : 소개 페이지 
 
 
@@ -157,7 +144,6 @@ ul {
 }
 
 
-// About: 소개 페이지 
 #about {
     p {
         font-weight: 700;       //extra bold
@@ -172,10 +158,6 @@ ul {
 // 상세페이지 상단 메인이미지 영역
 
 .detail-container {
-    @include size($wrapWidth, auto);
-    
-    margin: $mainImgHeight auto $mainImgHeight/2;
-    
     // 상세페이지 타이틀
     .title { 
         font-size: rem(36px);

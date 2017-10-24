@@ -3,22 +3,12 @@
 #about{
     .about-main{
         background-color: #FFFC63;
-        @include size(auto, 100vh);
-
-        .hello {
-            max-width: 860px;
-            margin-top: 20vh;
-        }
-        .contact-msg { margin-top: 20vh; }
+        
     }
 
     .about-info {
-        margin: 100vh auto 10rem;
         .interest {  line-height: 136%; }
         .participation {  line-height: 136%; }
     }
     
-    .section-title {
-        margin: 10rem auto 2rem;
-    }
 }

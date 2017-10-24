@@ -1,20 +1,14 @@
 @import 'assets/scss/global';
+
 .nav-container {
-    top: 0;
-    .navbar {
-        z-index: $z-index-navbar;
-        background: none;       
-        padding: rem(30px);
-        
-        img {
-            @include size(113px, 67px);
-        }
-        .link {
-            outline: 0;
+    background: none;       
+
+    .nav-right {
+        span {
             &:hover { text-decoration: line-through; }
             &:focus { text-decoration: line-through; }
         }
         
     }
-
+    
 }

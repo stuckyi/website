@@ -1,4 +1,5 @@
-<div class="nav-container">
+<!--
+  <div class="nav-container">
   <nav class="navbar" role="navigation" aria-label="main navigation">
     <div class="navbar-start">
       <img routerLink="/works" src="assets/images/ui/icons/logotype@3x.png" alt="logo image">
@@ -8,5 +9,16 @@
       <div routerLink="/about" class="navbar-item link">소개</div>
     </div>
   </nav>
+</div>
+-->
+
+<div class="nav-container">
+  <div routerLink="/works" class="nav-left">
+    <img src="assets/images/ui/icons/logotype@3x.png" alt="로고이미지" />
+  </div>
+  <div class="nav-right">
+    <span routerLink="/works">작업</span>
+    <span routerLink="/about">소개</span>
+  </div>
 
 </div>

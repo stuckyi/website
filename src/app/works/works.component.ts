@@ -10,6 +10,7 @@ import { Observable } from 'rxjs/Rx';
   styleUrls: ['./works.component.css']
 })
 export class WorksComponent implements OnInit {
+  isLoad: boolean = false;
   hoverState = {
     collection: false,
     codedfont: false,
@@ -64,6 +65,12 @@ export class WorksComponent implements OnInit {
         console.log('we dont use setHoverState fn!');
         break;
     }
+  }
+
+  onLoad(){
+    console.log("로딩 완료!!!!!!!!!!!!!");
+    this.isLoad = true;
+
   }
 
 

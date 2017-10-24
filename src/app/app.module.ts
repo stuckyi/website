@@ -1,6 +1,7 @@
 
 
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
@@ -12,7 +13,7 @@ import { environment } from './../environments/environment';
 import { AppComponent } from './app.component';
 import { WorksComponent } from './works/works.component';
 import { AboutComponent } from './about/about.component';
-import { WorkDetailComponent } from './works/work-detail/work-detail.component';
+
 import { NavComponent } from './main/nav/nav.component';
 import { TedComponent } from './works/ted/ted.component';
 import { CodedfontComponent } from './works/codedfont/codedfont.component';
@@ -30,7 +31,7 @@ import { FooterComponent } from './main/footer/footer.component';
     AppComponent,
     WorksComponent,
     AboutComponent,
-    WorkDetailComponent,
+    
     NavComponent,
     TedComponent,
     CodedfontComponent,
@@ -43,6 +44,7 @@ import { FooterComponent } from './main/footer/footer.component';
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     FormsModule,
     HttpModule,
     AppRoutingModule

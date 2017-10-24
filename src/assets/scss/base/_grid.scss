@@ -1,10 +1,5 @@
 @charset "utf-8";
 
-// z-index
-$z-index-search: 400;
-$z-index-nav: 200;
-$z-index-nav-btn: 900;
-
 
 * {
   -webkit-box-sizing: border-box;
@@ -12,21 +7,118 @@ $z-index-nav-btn: 900;
           box-sizing: border-box;
 }
 
-.nav { z-index: $z-index-nav; }
+
+// 상단 네비게이션 영역
+.nav-container {
+  z-index: $z-index-navbar;     
+  @include size(100%, auto);
+  
+  @include flex(flex, row nowrap);
+  justify-content: space-between;
+  
+  position: absolute;
+  padding: rem(20px);
+
+  .nav-left {
+    @include size(20%);
+    @include testBg();
+    img { @include size(113px, 67px); }
+  }
+  .nav-right {
+    @include size(10%);
+    @include flex(flex, row nowrap);
+    justify-content: space-around;
+    @include testBg();
+  }
+
+}
+
+
+//
+// about
+//
+
+#about{
+    .about-main{
+        @include size(100%, 100vh);
+        padding: 20vh;
+        .hello { max-width: 860px; }
+        .contact-msg { margin-top: 20vh; }
+    }
+
+    .about-info { margin: rem(100px) auto; }
+    
+    .section-title {
+        margin: 10rem auto 2rem;
+    }
+}
+
+
+//
+// works 영역
+//
+
+.work-main{
+    @include size(100%, 80vh);
+    padding: 20vh;
+    .hello {
+        max-width: 860px;
+    }
+    .contact-msg { margin-top: 20vh; }
+}
+
+
+.works {
+    @include size($warp-main-grid, auto);
+     // 사이드 여백은 관리 전체 콘텐츠 크기 잡은 후, 중앙으로 몰아준다 차라리.
+    // margin: 80vh auto rem(100px);
+    margin: rem(100px) auto;
+    
+
+    .work {
+      // (그리드 내) 개별 work간의 간격 설정
+        margin: rem(30px) auto;
+
+        .image { 
+            margin-bottom: 2rem;
+            @include size(300px, 270px);
+        }
+        .work-title {
+            margin: 0 auto;
+            @include size(300px, auto);
+            .title { margin: .35rem auto; }
+        }
+        
+    }
+}
+
 
 // 프로젝트 상세 페이지
 
 // 상세페이지 상단 메인이미지 영역
 .mainImg {
+    z-index: $z-index-work-mainImg;
     @include size(100%, $mainImgHeight);
+    padding: 0;
+    overflow: hidden;
 
     img { 
       @include size(auto, $mainImgHeight);
       margin: 0 auto;
+      padding: rem(10px);
     }
 }
 
-.detail-container {
-  @include size($wrapWidth, auto);
-    margin: $mainImgHeight auto $mainImgHeight/2;
+
+.detail {
+  @include size(100%, auto);
+  background-color: rosybrown;
+  z-index: $z-index-work-content;
+
+  .detail-container {
+    @include size($wrapWidth, auto);
+    margin: rem(60px) auto;
+    background-color: white;
+  }
+
 }

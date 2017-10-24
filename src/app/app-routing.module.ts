@@ -4,7 +4,8 @@ import { Routes, RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { WorksComponent } from './works/works.component';
 import { AboutComponent } from './about/about.component';
-import { WorkDetailComponent } from './works/work-detail/work-detail.component';
+
+
 import { TedComponent } from './works/ted/ted.component';
 import { CodedfontComponent } from './works/codedfont/codedfont.component';
 import { JumpgameComponent } from './works/artlink/jumpgame/jumpgame.component';
@@ -19,7 +20,6 @@ const routes: Routes = [
     { path: '', redirectTo: '/works', pathMatch: 'full' },
     { path: 'app', component: AppComponent },
     { path: 'works', component: WorksComponent },
-    { path: 'detail/:id', component: WorkDetailComponent, pathMatch: 'full' },
     { path: 'about', component: AboutComponent },
     { path: 'works/ted', component: TedComponent },
     { path: 'works/codedfont', component: CodedfontComponent },

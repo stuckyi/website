@@ -1,7 +1,8 @@
-<app-nav></app-nav>
-
 <section>
+    <app-nav></app-nav>
     <router-outlet></router-outlet>
+    <app-footer></app-footer>
 </section>
 
-<app-footer></app-footer>
+<div (click)="gotoTop()" 
+     [@dynamicNavClass]="dynamicNavClass" class="btn-gototop"> </div>

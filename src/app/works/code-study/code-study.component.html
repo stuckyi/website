@@ -1,77 +1,79 @@
 <!-- 최상단 프로젝트별 메인 이미지 영역 -->
-<div class="mainImg column is-overlay"> 
+<div class="mainImg"> 
   <figure class="image">
     <img src="assets/images/works/codestudy_bg.png" alt="codedfont 메인 이미지" />
   </figure>
 </div>
 
+<div class="detail">
+  <div class="detail-container">
+    <!-- title 영역 -->
+    <div class="columns">
+      <div class="column is-8">
+        <p class="title">{{ title }} </p>
+        <p class="summary column is-9 is-paddingless"> {{ summary}} </p>
+      </div>
+      <div class="column is-offset-2 is-2"> 
+        <p class="tag-title">{{year}}<br/>{{type}}</p>
+        <p *ngFor="let tag of tags" class="tag-item">{{tag}}</p>
+      </div>
+    </div>
+    
+    <!-- 프로젝트 설명 -->
+    <p class="subtitle process-desc"> </p> 
+    <div class="desc-content column is-8 is-paddingless">
+      <p *ngFor="let description of descriptions">{{description}}</p>
+    </div>
+    
+    <!-- 관련 링크 -->
+    <p class="subtitle process-link"> </p> 
+    <ul>
+      <li>CODED FONT를 정의한 발표 자료</li>
+      <li>과정에 대한 기록을 해둔 트렐로(Trello) 보드</li>
+      <li>몇몇 실험을 캡쳐하여 모아둔 텀블러 페이지</li>
+      <li>아래의 링크를 통해 작업한 것 중 몇 가지를 보실 수 있습니다.</li>
+      <li>스마트폰의 기울기에 반응하는 폰트 (모바일 전용)</li>
+    </ul>
 
-<div class="detail-container">
-  <!-- title 영역 -->
-  <div class="columns">
-    <div class="column is-8">
-      <p class="title">{{ title }} </p>
-      <p class="summary column is-9 is-paddingless"> {{ summary}} </p>
+
+
+
+    <!-- 프로세스 이미지 -->
+    <p class="subtitle process-img"> </p>
+    <div class="processImg columns is-multiline">
+      <div class="column is-4">
+        <figure class="image is-1by1">
+          <img [src]="baseUrl+'0.png'">
+        </figure>
+      </div>
+      <div class="column is-4">
+        <figure class="image is-1by1">
+          <img [src]="baseUrl+'1.png'">
+        </figure>
+      </div>
+      <div class="column is-4">
+        <figure class="image is-1by1">
+          <img [src]="baseUrl+'2.png'">
+        </figure>
+      </div>
+      <div class="column is-4">
+        <figure class="image is-1by1">
+          <img [src]="baseUrl+'3.png'">
+        </figure>
+      </div>
+      <div class="column is-4">
+        <figure class="image is-1by1">
+          <img [src]="baseUrl+'4.png'">
+        </figure>
+      </div>
+      <div class="column is-4">
+        <figure class="image is-1by1">
+          <img [src]="baseUrl+'5.png'">
+        </figure>
+      </div>
     </div>
-    <div class="column is-offset-2 is-2"> 
-      <p class="tag-title">{{year}}<br/>{{type}}</p>
-      <p *ngFor="let tag of tags" class="tag-item">{{tag}}</p>
-    </div>
+
+
   </div>
-  
-  <!-- 프로젝트 설명 -->
-  <p class="subtitle process-desc"> </p> 
-  <div class="desc-content column is-8 is-paddingless">
-    <p *ngFor="let description of descriptions">{{description}}</p>
-  </div>
-  
-  <!-- 관련 링크 -->
-  <p class="subtitle process-link"> </p> 
-  <ul>
-    <li>CODED FONT를 정의한 발표 자료</li>
-    <li>과정에 대한 기록을 해둔 트렐로(Trello) 보드</li>
-    <li>몇몇 실험을 캡쳐하여 모아둔 텀블러 페이지</li>
-    <li>아래의 링크를 통해 작업한 것 중 몇 가지를 보실 수 있습니다.</li>
-    <li>스마트폰의 기울기에 반응하는 폰트 (모바일 전용)</li>
-  </ul>
-
-
-
-
-  <!-- 프로세스 이미지 -->
-  <p class="subtitle process-img"> </p>
-  <div class="processImg columns is-multiline">
-    <div class="column is-4">
-      <figure class="image is-1by1">
-        <img [src]="baseUrl+'0.png'">
-      </figure>
-    </div>
-    <div class="column is-4">
-      <figure class="image is-1by1">
-        <img [src]="baseUrl+'1.png'">
-      </figure>
-    </div>
-    <div class="column is-4">
-      <figure class="image is-1by1">
-        <img [src]="baseUrl+'2.png'">
-      </figure>
-    </div>
-    <div class="column is-4">
-      <figure class="image is-1by1">
-        <img [src]="baseUrl+'3.png'">
-      </figure>
-    </div>
-    <div class="column is-4">
-      <figure class="image is-1by1">
-        <img [src]="baseUrl+'4.png'">
-      </figure>
-    </div>
-    <div class="column is-4">
-      <figure class="image is-1by1">
-        <img [src]="baseUrl+'5.png'">
-      </figure>
-    </div>
-  </div>
-
 
 </div>
