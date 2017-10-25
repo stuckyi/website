@@ -1,0 +1,34 @@
+
+
+
+
+<div #slider class="slider columns is-marginless">
+  <a *ngFor="let sliderItem of sliderInfo" 
+      class="slider-item column"
+      [ngStyle]="{ 'transform' : dynamicOffset }"
+      (click)="gotoSlideDetail(sliderItem)">
+
+    <div class="image" 
+         [style.background-image]="'url(/assets/images/works/artlink/randomcharacter/slider.png)'"
+         [style.background-position]="getXpos(sliderItem.index)">
+         <!--[style.background-image]="'url(/assets/images/works/artlink/randomcharacter/slider_0.png)'">-->
+    <!--{{sliderItem.title}}-->
+    </div>
+  </a>
+  <div (click)="updatePos('left')" *ngIf="isLeft" class="slider-btn left"> </div>
+  <div (click)="updatePos('right')" *ngIf="isRight" class="slider-btn right"> </div>
+</div>
+
+<!-- default: inactive -->
+<div class="modal" 
+    [class.is-active]="isModal" >
+  <div (click)="closeModal()" class="modal-background"></div>
+  <div class="modal-content">
+    <div class="slider-btn left">&lt;</div>
+    <div class="detail-img">{{ currentItemInfo.title }}</div>
+    <div class="slider-btn right">&gt;</div>
+    
+    <!-- Any other Bulma elements you want -->
+  </div>
+  <button (click)="closeModal()"  class="modal-close is-large" aria-label="close"></button>
+</div>

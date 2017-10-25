@@ -37,16 +37,25 @@
 
     <!-- 프로젝트 구현 영상 -->
     <p class="subtitle process-video"> </p> 
+
+    <!--
     <div class="column precessVideo">
-      <!--<img src="assets/images/works/artlink/randomcharacter/capture.gif" alt="랜덤 캐릭터 구현영상 gif"/>-->
       <iframe src="https://player.vimeo.com/video/239292055" width="640" height="480" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-  <p><a href="https://vimeo.com/239292055">2017 Artlink : Make Random Character</a> from <a href="https://vimeo.com/user73075104">stuckyistudio</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+      <p><a href="https://vimeo.com/239292055">2017 Artlink : Make Random Character</a> from <a href="https://vimeo.com/user73075104">stuckyistudio</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
     </div>
+    -->
 
 
 
     <!-- 프로세스 이미지 -->
     <p class="subtitle process-img"> </p>
+
+    <app-slider 
+      [projectInfo]="'artlink/randomcharacter/'"
+      [sliderInfo]="sliderArr"></app-slider>
+
+
+    <!--
     <div class="processImg columns is-multiline">
       <br/>
       <div class="column is-4">
@@ -80,6 +89,7 @@
         </figure>
       </div>
     </div>
+    -->
 
 
   </div>

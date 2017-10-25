@@ -1,0 +1,50 @@
+@import 'assets/scss/global';
+
+.slider {
+    @include size($wrapWidth, auto);
+    overflow: hidden;
+    @include testBorder();
+    
+    // 슬라이더 아이템
+    .slider-item {
+        @include size(20%, auto);
+        @include flex(flex, column nowrap);
+        padding: 0;
+        transition: all 0.3s ease-in-out;
+        @include testBorder();
+        .image {
+            @include size(230px, 230px);
+            background-size: auto 100%;
+            background-repeat: no-repeat;
+            // &:hover { @include hover-enter-slide(); }
+        }
+    }
+    // 좌우 슬라이더 이동 버튼
+    .slider-btn {
+        @include size(40px, 230px);
+        position: absolute;
+        background-color: white;
+        opacity: .4;
+        &:hover { opacity: .8; }
+        &.right { margin-left: 860px; }
+
+    }
+}
+
+.modal {
+    .modal-background {
+        background-color: rgba(white, 0.9);
+    }
+    .modal-content{
+        @include size(100%, auto);
+        @include testBorder();
+        .slider-btn {
+            @include size(100px, 100px);
+            position: absolute;
+
+            &.right { right: 70px; }
+            &.left { left: 70px; }
+        }
+
+    }
+}

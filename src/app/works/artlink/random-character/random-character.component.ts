@@ -24,6 +24,19 @@ export class RandomCharacterComponent implements OnInit {
   links = [ 
     { info: '	<멘넴X스투키 랜덤 캐릭터 생성기> 직접 랜덤 캐릭터를 생성 해볼 수 있습니다.', url: '#'}
   ];
+  // 사진은 10장으로 일단 시작.
+  sliderArr = [
+    { index: 0, title: '(ex)처음 구조를 잡는 사진0', desc: '(ex)이런식으로 잡고 했다.0' },
+    { index: 1, title: '(ex)처음 구조를 잡는 사진1', desc: '(ex)이런식으로 잡고 했다.1' },
+    { index: 2, title: '(ex)처음 구조를 잡는 사진2', desc: '(ex)이런식으로 잡고 했다.2' },
+    { index: 3, title: '(ex)처음 구조를 잡는 사진3', desc: '(ex)이런식으로 잡고 했다.3' },
+    { index: 4, title: '(ex)처음 구조를 잡는 사진4', desc: '(ex)이런식으로 잡고 했다.4' },
+    { index: 5, title: '(ex)처음 구조를 잡는 사진5', desc: '(ex)이런식으로 잡고 했다.5' },
+    { index: 6, title: '(ex)처음 구조를 잡는 사진6', desc: '(ex)이런식으로 잡고 했다.6' },
+    { index: 7, title: '(ex)처음 구조를 잡는 사진7', desc: '(ex)이런식으로 잡고 했다.7' },
+    { index: 8, title: '(ex)처음 구조를 잡는 사진8', desc: '(ex)이런식으로 잡고 했다.8' },
+    { index: 9, title: '(ex)처음 구조를 잡는 사진9', desc: '(ex)이런식으로 잡고 했다.9' }
+  ];
   constructor() { }
 
   ngOnInit() {

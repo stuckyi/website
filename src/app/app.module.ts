@@ -23,6 +23,7 @@ import { KohiBrochureComponent } from './works/kohi-brochure/kohi-brochure.compo
 import { CodeStudyComponent } from './works/code-study/code-study.component';
 import { CollectionComponent } from './works/collection/collection.component';
 import { FooterComponent } from './main/footer/footer.component';
+import { SliderComponent } from './main/slider/slider.component';
 
 
 
@@ -40,7 +41,8 @@ import { FooterComponent } from './main/footer/footer.component';
     KohiBrochureComponent,
     CodeStudyComponent,
     CollectionComponent,
-    FooterComponent
+    FooterComponent,
+    SliderComponent
   ],
   imports: [
     BrowserModule,
