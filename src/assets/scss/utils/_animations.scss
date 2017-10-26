@@ -53,7 +53,6 @@
   100%{transform: translateY(0) scale(1);}
 }
 
-
 @keyframes spring-up-slide{
   0% {transform: translateY(0); }
   100%{transform: translateY(-25px);}
@@ -111,15 +110,13 @@
 }
 
 
-/*
 
-@keyframes spring-up{
-  0% {transform: translate(0,0); }
-  100%{transform: translate(0,-50px) scale(1.05);}
+@mixin testPageTransition(){
+  transform-origin: center;
+  animation: spring-down-small 0.3s cubic-bezier(1,.015,.295,1.225) forwards running;
 }
 
-@keyframes spring-down{
-   0% {transform: translate(0,-50px) scale(1.05);}
-  100%{transform: translate(0,0) scale(1);}
+@keyframes spring-down-small{
+   0% {transform: translateY(-4px); opacity:0.4;}
+  100%{transform: translateY(0); opacity: 1;}
 }
-*/

@@ -6303,12 +6303,124 @@ ul {
     margin: 3.75rem auto;
     background-color: white; }
 
-.mainImg {
-  padding: 0;
-  background-color: #00BB6D; }
-  .mainImg img {
-    width: auto;
-    height: 430px;
-    margin: 3rem auto; }
+.hover-enter {
+  transform-origin: center;
+  animation: spring-up 0.4s cubic-bezier(1, 0.015, 0.295, 1.225) forwards running; }
 
-/*# sourceMappingURL=kohi-brochure.component.css.map */
+.hover-leave {
+  transform-origin: center;
+  animation: spring-down 0.8s cubic-bezier(1, 0.015, 0.295, 1.225) forwards running; }
+
+.hover-enter-slide {
+  transform-origin: center;
+  animation: spring-up-slide 0.2s cubic-bezier(1, 0.015, 0.295, 1.225) forwards running; }
+
+.hover-leave-slide {
+  transform-origin: center;
+  animation: spring-down-slide 0.4s cubic-bezier(1, 0.015, 0.295, 1.225) forwards running; }
+
+@keyframes spring-up {
+  0% {
+    transform: translateY(0); }
+  100% {
+    transform: translateY(-50px) scale(1.05); } }
+@keyframes spring-down {
+  0% {
+    transform: translateY(-50px) scale(1.05); }
+  100% {
+    transform: translateY(0) scale(1); } }
+@keyframes spring-up-slide {
+  0% {
+    transform: translateY(0); }
+  100% {
+    transform: translateY(-25px); } }
+@keyframes spring-down-slide {
+  0% {
+    transform: translateY(-25px); }
+  100% {
+    transform: translateY(0); } }
+.fadeIn {
+  animation: fadeIn 0.7s cubic-bezier(1, 0.015, 0.295, 1.225) forwards running; }
+
+@keyframes fadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+.fadeInDown {
+  animation-name: fadeInDown; }
+
+@keyframes fadeInDownBig {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -2000px, 0); }
+  to {
+    opacity: 1;
+    transform: none; } }
+@keyframes fadeOut {
+  from {
+    opacity: 1; }
+  to {
+    opacity: 0; } }
+.fadeOut {
+  animation-name: fadeOut; }
+
+@keyframes spring-down-small {
+  0% {
+    transform: translateY(-4px);
+    opacity: 0.4; }
+  100% {
+    transform: translateY(0);
+    opacity: 1; } }
+.modal {
+  z-index: 2000;
+  overflow: hidden;
+  transform-origin: center;
+  animation: spring-down-small 0.3s cubic-bezier(1, 0.015, 0.295, 1.225) forwards running; }
+  .modal .modal-background {
+    background-color: rgba(255, 255, 255, 0.9); }
+  .modal .modal-content {
+    width: 100%;
+    height: auto;
+    overflow: hidden; }
+    .modal .modal-content .modal-detail {
+      width: 100%;
+      height: auto;
+      display: flex;
+      flex-flow: row nowrap;
+      overflow: hidden; }
+      .modal .modal-content .modal-detail .modal-main {
+        width: auto;
+        height: 530px;
+        max-width: 800px;
+        margin: auto; }
+      .modal .modal-content .modal-detail .slider-btn {
+        width: 100px;
+        height: 100px;
+        margin: auto;
+        background-size: contain;
+        background-repeat: no-repeat; }
+    .modal .modal-content .desc {
+      text-align: center;
+      font-size: 1.0625rem;
+      margin: 2.1875rem; }
+  .modal .btn-modal-close {
+    width: 33.5px;
+    height: 33.5px;
+    right: 20px;
+    top: 20px;
+    position: fixed;
+    cursor: pointer;
+    background: none;
+    border-style: none;
+    border-color: none;
+    border: none;
+    outline: none;
+    background-image: url(../../../assets/images/ui/icons/modal_close.png);
+    background-size: contain;
+    background-repeat: no-repeat; }
+
+.is-opacity20 {
+  opacity: .2; }
+
+/*# sourceMappingURL=modal.component.css.map */

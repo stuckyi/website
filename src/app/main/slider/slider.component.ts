@@ -1,3 +1,4 @@
+import { ModalComponent } from './../modal/modal.component';
 import { Component, OnInit, Input, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
 
 @Component({
@@ -37,8 +38,11 @@ export class SliderComponent implements OnInit, AfterViewInit{
 
 
   // modal
-  isModal: boolean = false;
-  currentItemInfo = { index: 0, title: 'init title', desc: 'init desc' }; // init
+  @ViewChild(ModalComponent) modalComponent: ModalComponent;
+  // baseUrl: string = '/assets/images/works/artlink/randomcharacter/modal/';
+  // imgUrl: string = this.baseUrl + '0.png';
+
+  // selectedItem = { index: 0, title: 'init title', desc: 'init desc' }; // init
 
 
 
@@ -93,13 +97,7 @@ export class SliderComponent implements OnInit, AfterViewInit{
 
 
   gotoSlideDetail(selectedItem: any) {
-    this.isModal = true;
-    this.currentItemInfo = selectedItem;
-    console.log("slider item clicked!", this.currentItemInfo);
-  }
-
-  closeModal() {
-    this.isModal = false;
+    this.modalComponent.openModal(selectedItem, this.sliderInfo);
   }
 
   

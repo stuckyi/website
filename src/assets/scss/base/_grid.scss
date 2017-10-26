@@ -112,7 +112,6 @@
 
 .detail {
   @include size(100%, auto);
-  background-color: rosybrown;
   z-index: $z-index-work-content;
 
   .detail-container {

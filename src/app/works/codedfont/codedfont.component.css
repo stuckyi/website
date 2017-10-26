@@ -6296,7 +6296,6 @@ ul {
 .detail {
   width: 100%;
   height: auto;
-  background-color: rosybrown;
   z-index: 300; }
   .detail .detail-container {
     width: 900px;

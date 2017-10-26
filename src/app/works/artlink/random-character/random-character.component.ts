@@ -26,16 +26,16 @@ export class RandomCharacterComponent implements OnInit {
   ];
   // 사진은 10장으로 일단 시작.
   sliderArr = [
-    { index: 0, title: '(ex)처음 구조를 잡는 사진0', desc: '(ex)이런식으로 잡고 했다.0' },
-    { index: 1, title: '(ex)처음 구조를 잡는 사진1', desc: '(ex)이런식으로 잡고 했다.1' },
-    { index: 2, title: '(ex)처음 구조를 잡는 사진2', desc: '(ex)이런식으로 잡고 했다.2' },
-    { index: 3, title: '(ex)처음 구조를 잡는 사진3', desc: '(ex)이런식으로 잡고 했다.3' },
-    { index: 4, title: '(ex)처음 구조를 잡는 사진4', desc: '(ex)이런식으로 잡고 했다.4' },
-    { index: 5, title: '(ex)처음 구조를 잡는 사진5', desc: '(ex)이런식으로 잡고 했다.5' },
-    { index: 6, title: '(ex)처음 구조를 잡는 사진6', desc: '(ex)이런식으로 잡고 했다.6' },
-    { index: 7, title: '(ex)처음 구조를 잡는 사진7', desc: '(ex)이런식으로 잡고 했다.7' },
-    { index: 8, title: '(ex)처음 구조를 잡는 사진8', desc: '(ex)이런식으로 잡고 했다.8' },
-    { index: 9, title: '(ex)처음 구조를 잡는 사진9', desc: '(ex)이런식으로 잡고 했다.9' }
+    { index: 0, title: '(ex)처음 구조를 잡는 사진0', desc: '(ex)이런식으로 잡고 했다.0', imgUrl: '/assets/images/works/artlink/randomcharacter/modal/0.png' },
+    { index: 1, title: '(ex)처음 구조를 잡는 사진1', desc: '(ex)이런식으로 잡고 했다.1', imgUrl: '/assets/images/works/artlink/randomcharacter/modal/1.png' },
+    { index: 2, title: '(ex)처음 구조를 잡는 사진2', desc: '(ex)이런식으로 잡고 했다.2', imgUrl: '/assets/images/works/artlink/randomcharacter/modal/2.png' },
+    { index: 3, title: '(ex)처음 구조를 잡는 사진3', desc: '(ex)이런식으로 잡고 했다.3', imgUrl: '/assets/images/works/artlink/randomcharacter/modal/3.png' },
+    { index: 4, title: '(ex)처음 구조를 잡는 사진4', desc: '(ex)이런식으로 잡고 했다.4', imgUrl: '/assets/images/works/artlink/randomcharacter/modal/4.png' },
+    { index: 5, title: '(ex)처음 구조를 잡는 사진5', desc: '(ex)이런식으로 잡고 했다.5', imgUrl: '/assets/images/works/artlink/randomcharacter/modal/5.png' },
+    { index: 6, title: '(ex)처음 구조를 잡는 사진6', desc: '(ex)이런식으로 잡고 했다.6', imgUrl: '/assets/images/works/artlink/randomcharacter/modal/6.png' },
+    { index: 7, title: '(ex)처음 구조를 잡는 사진7', desc: '(ex)이런식으로 잡고 했다.7', imgUrl: '/assets/images/works/artlink/randomcharacter/modal/7.png' },
+    { index: 8, title: '(ex)처음 구조를 잡는 사진8', desc: '(ex)이런식으로 잡고 했다.8', imgUrl: '/assets/images/works/artlink/randomcharacter/modal/8.png' },
+    { index: 9, title: '(ex)처음 구조를 잡는 사진9', desc: '(ex)이런식으로 잡고 했다.9', imgUrl: '/assets/images/works/artlink/randomcharacter/modal/9.png' }
   ];
   constructor() { }
 

@@ -6296,7 +6296,6 @@ ul {
 .detail {
   width: 100%;
   height: auto;
-  background-color: rosybrown;
   z-index: 300; }
   .detail .detail-container {
     width: 900px;
@@ -6307,16 +6306,14 @@ ul {
 .slider {
   width: 900px;
   height: auto;
-  overflow: hidden;
-  border: 0.5px dashed black; }
+  overflow: hidden; }
   .slider .slider-item {
     width: 20%;
     height: auto;
     display: flex;
     flex-flow: column nowrap;
     padding: 0;
-    transition: all 0.3s ease-in-out;
-    border: 0.5px dashed black; }
+    transition: all 0.3s ease-in-out; }
     .slider .slider-item .image {
       width: 230px;
       height: 230px;
@@ -6332,20 +6329,5 @@ ul {
       opacity: .8; }
     .slider .slider-btn.right {
       margin-left: 860px; }
-
-.modal .modal-background {
-  background-color: rgba(255, 255, 255, 0.9); }
-.modal .modal-content {
-  width: 100%;
-  height: auto;
-  border: 0.5px dashed black; }
-  .modal .modal-content .slider-btn {
-    width: 100px;
-    height: 100px;
-    position: absolute; }
-    .modal .modal-content .slider-btn.right {
-      right: 70px; }
-    .modal .modal-content .slider-btn.left {
-      left: 70px; }
 
 /*# sourceMappingURL=slider.component.css.map */

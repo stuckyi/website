@@ -24,6 +24,7 @@ import { CodeStudyComponent } from './works/code-study/code-study.component';
 import { CollectionComponent } from './works/collection/collection.component';
 import { FooterComponent } from './main/footer/footer.component';
 import { SliderComponent } from './main/slider/slider.component';
+import { ModalComponent } from './main/modal/modal.component';
 
 
 
@@ -42,7 +43,8 @@ import { SliderComponent } from './main/slider/slider.component';
     CodeStudyComponent,
     CollectionComponent,
     FooterComponent,
-    SliderComponent
+    SliderComponent,
+    ModalComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,24 @@
+
+<!-- default: inactive -->
+<div class="modal is-fullwidth" 
+    [class.is-active]="isModal" >
+  <div (click)="closeModal()" class="modal-background"></div>
+  <div class="modal-content">
+    
+    <div class="modal-detail" > 
+      <div (click)="updateItem('left')" 
+           class="slider-btn" 
+           [class.is-opacity20]="imgIndex === 0"
+           [style.background-image]="'url(/assets/images/ui/icons/slider_left.png)'"> </div>
+
+      <img class="modal-main" [src]="imgUrl" />
+      <div (click)="updateItem('right')" 
+           class="slider-btn" 
+           [class.is-opacity20]="imgIndex === maxIndex"
+           [style.background-image]="'url(/assets/images/ui/icons/slider_right.png)'"> </div>
+    </div>
+
+    <p class="desc">{{ selectedItem.desc }}</p>
+  </div>
+  <button (click)="closeModal()" class="btn-modal-close" aria-label="close"> </button>
+</div>
