@@ -1,8 +1,6 @@
 <!-- 최상단 프로젝트별 메인 이미지 영역 -->
 <div class="mainImg"> 
-  <figure class="image">
-    <img src="assets/images/works/codestudy_bg.png" alt="codedfont 메인 이미지" />
-  </figure>
+  
 </div>
 
 <div class="detail">
@@ -40,40 +38,10 @@
 
     <!-- 프로세스 이미지 -->
     <p class="subtitle process-img"> </p>
-    <div class="processImg columns is-multiline">
-      <div class="column is-4">
-        <figure class="image is-1by1">
-          <img [src]="baseUrl+'0.png'">
-        </figure>
-      </div>
-      <div class="column is-4">
-        <figure class="image is-1by1">
-          <img [src]="baseUrl+'1.png'">
-        </figure>
-      </div>
-      <div class="column is-4">
-        <figure class="image is-1by1">
-          <img [src]="baseUrl+'2.png'">
-        </figure>
-      </div>
-      <div class="column is-4">
-        <figure class="image is-1by1">
-          <img [src]="baseUrl+'3.png'">
-        </figure>
-      </div>
-      <div class="column is-4">
-        <figure class="image is-1by1">
-          <img [src]="baseUrl+'4.png'">
-        </figure>
-      </div>
-      <div class="column is-4">
-        <figure class="image is-1by1">
-          <img [src]="baseUrl+'5.png'">
-        </figure>
-      </div>
-    </div>
 
-
+    <app-slider 
+      [projectInfo]="'codestudy'"
+      [sliderInfo]="sliderArr"></app-slider>
   </div>
 
 </div>

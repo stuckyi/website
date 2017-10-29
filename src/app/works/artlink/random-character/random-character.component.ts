@@ -24,6 +24,7 @@ export class RandomCharacterComponent implements OnInit {
   links = [ 
     { info: '	<멘넴X스투키 랜덤 캐릭터 생성기> 직접 랜덤 캐릭터를 생성 해볼 수 있습니다.', url: '#'}
   ];
+  
   // 사진은 10장으로 일단 시작.
   sliderArr = [
     { index: 0, title: '(ex)처음 구조를 잡는 사진0', desc: '(ex)이런식으로 잡고 했다.0', imgUrl: '/assets/images/works/artlink/randomcharacter/modal/0.png' },

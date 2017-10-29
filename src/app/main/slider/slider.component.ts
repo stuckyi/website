@@ -9,6 +9,8 @@ import { Component, OnInit, Input, AfterViewInit, ViewChild, ElementRef } from '
 export class SliderComponent implements OnInit, AfterViewInit{
   @Input('projectInfo') projectInfo;
   @Input('sliderInfo') sliderInfo;
+  baseUrl: string = 'url(/assets/images/works/default/slider.png)';
+
 
   @ViewChild('slider') slider;
   sliderSize = { w: 0, h: 0 };
@@ -32,17 +34,14 @@ export class SliderComponent implements OnInit, AfterViewInit{
     
   //
   cupWidth: number = 0;
-  cupCount: number = 5;
+  cupCount: number = 4;
 
 
 
 
   // modal
   @ViewChild(ModalComponent) modalComponent: ModalComponent;
-  // baseUrl: string = '/assets/images/works/artlink/randomcharacter/modal/';
-  // imgUrl: string = this.baseUrl + '0.png';
-
-  // selectedItem = { index: 0, title: 'init title', desc: 'init desc' }; // init
+  
 
 
 
@@ -51,12 +50,14 @@ export class SliderComponent implements OnInit, AfterViewInit{
   ngOnInit() {
     this.getElementSize();
     this.dynamicOffset = 'translateX(' + this.currentPos + 'px)';
-    this.maxLev = Math.floor(((this.sliderInfo.length/2)-1) / this.offsetLev);
+    this.maxLev = Math.floor(((this.sliderInfo.length / 2) - 1) / this.offsetLev);
+    this.baseUrl = 'url(/assets/images/works/' + this.projectInfo + '/slider.png)';
   }
 
 
   ngAfterViewInit() {
     console.log('slidercomp ngAfterViewInit');
+
     this.sliderSize.w = this.slider.nativeElement.offsetWidth;
   }
 

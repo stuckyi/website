@@ -21,14 +21,12 @@
 
   .nav-left {
     @include size(20%);
-    @include testBg();
     img { @include size(113px, 67px); }
   }
   .nav-right {
     @include size(10%);
     @include flex(flex, row nowrap);
     justify-content: space-around;
-    @include testBg();
   }
 
 }

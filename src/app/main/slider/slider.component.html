@@ -3,40 +3,13 @@
       class="slider-item column"
       [ngStyle]="{ 'transform' : dynamicOffset }"
       (click)="gotoSlideDetail(sliderItem)">
-
     <div class="image" 
-         [style.background-image]="'url(/assets/images/works/artlink/randomcharacter/slider.png)'"
+         [style.background-image]="baseUrl"
          [style.background-position]="getXpos(sliderItem.index)">
     </div>
   </a>
   <div (click)="updatePos('left')" *ngIf="isLeft" class="slider-btn left"> </div>
   <div (click)="updatePos('right')" *ngIf="isRight" class="slider-btn right"> </div>
 </div>
-
-<!-- default: inactive
-<div class="modal is-fullwidth" 
-    [class.is-active]="isModal" >
-  <div (click)="closeModal()" class="modal-background"></div>
-  <div class="modal-content">
-    
-    <div class="modal-detail" > 
-      <div class="slider-btn" [style.background-image]="'url(/assets/images/ui/icons/slider_left.png)'"> </div>
-      <img class="modal-main" [src]="imgUrl" alt="modal main image" />
-      <div class="slider-btn" [style.background-image]="'url(/assets/images/ui/icons/slider_right.png)'"> </div>
-    </div>
-
-    <p class="desc">{{ selectedItem.desc }}</p>
-  </div>
-  <button (click)="closeModal()" class="btn-modal-close" aria-label="close"> </button>
-</div>
- -->
-
-<!--
-<app-modal
-  (modalClose)="setModalState()"
-  [isModal]="isModal"
-  [selectedItem]="selectedItem" 
-  [baseArr]="sliderInfo"></app-modal>
--->
 
 <app-modal></app-modal>

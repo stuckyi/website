@@ -26,55 +26,10 @@
 
     <!-- 프로세스 이미지 -->
     <p class="subtitle process-img"> </p>
-    <div class="processImg columns is-multiline">
-
-      
-      <div class="column is-4">
-        <figure class="image is-1by1">
-          <img [src]="baseUrl+'0.png'">
-        </figure>
-      </div>
-      <div class="column is-4">
-        <figure class="image is-1by1">
-          <img [src]="baseUrl+'1.png'">
-        </figure>
-      </div>
-      <div class="column is-4">
-        <figure class="image is-1by1">
-          <img [src]="baseUrl+'2.png'">
-        </figure>
-      </div>
-      <div class="column is-4">
-        <figure class="image is-1by1">
-          <img [src]="baseUrl+'3.png'">
-        </figure>
-      </div>
-      <div class="column is-4">
-        <figure class="image is-1by1">
-          <img [src]="baseUrl+'4.png'">
-        </figure>
-      </div>
-      <div class="column is-4">
-        <figure class="image is-1by1">
-          <img [src]="baseUrl+'5.png'">
-        </figure>
-      </div>
-      <div class="column is-4">
-        <figure class="image is-1by1">
-          <img [src]="baseUrl+'6.png'">
-        </figure>
-      </div>
-      <div class="column is-4">
-        <figure class="image is-1by1">
-          <img [src]="baseUrl+'7.png'">
-        </figure>
-      </div>
-      <div class="column is-4">
-        <figure class="image is-1by1">
-          <img [src]="baseUrl+'8.png'">
-        </figure>
-      </div>
-    </div>
+    
+    <app-slider 
+      [projectInfo]="'ted'"
+      [sliderInfo]="sliderArr"></app-slider>
 
 
   </div>

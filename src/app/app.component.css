@@ -6229,8 +6229,7 @@ ul {
   padding: 1.25rem; }
   .nav-container .nav-left {
     width: 20%;
-    height: 20%;
-    background-color: rgba(236, 236, 236, 0.8); }
+    height: 20%; }
     .nav-container .nav-left img {
       width: 113px;
       height: 67px; }
@@ -6239,8 +6238,7 @@ ul {
     height: 10%;
     display: flex;
     flex-flow: row nowrap;
-    justify-content: space-around;
-    background-color: rgba(236, 236, 236, 0.8); }
+    justify-content: space-around; }
 
 #about .about-main {
   width: 100%;

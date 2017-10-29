@@ -7,7 +7,7 @@
     
     // 슬라이더 아이템
     .slider-item {
-        @include size(20%, auto);
+        @include size(25%, auto);
         @include flex(flex, column nowrap);
         padding: 0;
         transition: all 0.3s ease-in-out;
