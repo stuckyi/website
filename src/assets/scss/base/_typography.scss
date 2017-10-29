@@ -128,8 +128,6 @@ $weight-extraBold: 700; // 우리 스타일에는 있지만, spoqa에는 extraBo
 
 
 
-// works/work : 프로젝트 상세 페이지
-
 p {
     line-height: 180%;
     font-size: rem(17px);
@@ -153,6 +151,19 @@ ul {
         &.contact-email { font-size: rem(26px); }
     }
 
+}
+
+// works
+
+.work-main {
+    p {
+        font-weight: 700;       //extra bold
+        font-size: rem(20px);
+
+        &.hello {  font-size: rem(26px); }
+        &.contact-email { font-size: rem(26px); }
+    }
+    
 }
 
 // 상세페이지 상단 메인이미지 영역

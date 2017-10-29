@@ -17,18 +17,11 @@ import { CollectionComponent } from './works/collection/collection.component';
 
 
 const routes: Routes = [
-    { path: '', redirectTo: '/works', pathMatch: 'full' },
+  { path: '', redirectTo: '/works', pathMatch: 'full' },
+    { path: 'work', loadChildren: './work.module#WorkModule' },
     { path: 'app', component: AppComponent },
     { path: 'works', component: WorksComponent },
-    { path: 'about', component: AboutComponent },
-    { path: 'works/ted', component: TedComponent },
-    { path: 'works/codedfont', component: CodedfontComponent },
-    { path: 'works/jumpgame', component: JumpgameComponent },
-    { path: 'works/kohi-brochure', component: KohiBrochureComponent },
-    { path: 'works/random-character', component: RandomCharacterComponent },
-    { path: 'works/codestudy', component: CodeStudyComponent },
-    { path: 'works/collection', component: CollectionComponent }
-    // { path: 'source', component: SourceComponent }
+    { path: 'about', component: AboutComponent }
 ];
 
 @NgModule({

@@ -6176,6 +6176,14 @@ ul {
   #about p.contact-email {
     font-size: 1.625rem; }
 
+.work-main p {
+  font-weight: 700;
+  font-size: 1.25rem; }
+  .work-main p.hello {
+    font-size: 1.625rem; }
+  .work-main p.contact-email {
+    font-size: 1.625rem; }
+
 .detail-container .title {
   font-size: 2.25rem;
   font-weight: bold;

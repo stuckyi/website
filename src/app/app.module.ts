@@ -15,16 +15,18 @@ import { WorksComponent } from './works/works.component';
 import { AboutComponent } from './about/about.component';
 
 import { NavComponent } from './main/nav/nav.component';
-import { TedComponent } from './works/ted/ted.component';
-import { CodedfontComponent } from './works/codedfont/codedfont.component';
-import { JumpgameComponent } from './works/artlink/jumpgame/jumpgame.component';
-import { RandomCharacterComponent } from './works/artlink/random-character/random-character.component';
-import { KohiBrochureComponent } from './works/kohi-brochure/kohi-brochure.component';
-import { CodeStudyComponent } from './works/code-study/code-study.component';
-import { CollectionComponent } from './works/collection/collection.component';
+// import { TedComponent } from './works/ted/ted.component';
+// import { CodedfontComponent } from './works/codedfont/codedfont.component';
+// import { JumpgameComponent } from './works/artlink/jumpgame/jumpgame.component';
+// import { RandomCharacterComponent } from './works/artlink/random-character/random-character.component';
+// import { KohiBrochureComponent } from './works/kohi-brochure/kohi-brochure.component';
+// import { CodeStudyComponent } from './works/code-study/code-study.component';
+// import { CollectionComponent } from './works/collection/collection.component';
+
 import { FooterComponent } from './main/footer/footer.component';
-import { SliderComponent } from './main/slider/slider.component';
-import { ModalComponent } from './main/modal/modal.component';
+
+// import { SliderComponent } from './main/slider/slider.component';
+// import { ModalComponent } from './main/modal/modal.component';
 
 
 
@@ -35,16 +37,16 @@ import { ModalComponent } from './main/modal/modal.component';
     AboutComponent,
     
     NavComponent,
-    TedComponent,
-    CodedfontComponent,
-    JumpgameComponent,
-    RandomCharacterComponent,
-    KohiBrochureComponent,
-    CodeStudyComponent,
-    CollectionComponent,
-    FooterComponent,
-    SliderComponent,
-    ModalComponent
+    // TedComponent,
+    // CodedfontComponent,
+    // JumpgameComponent,
+    // RandomCharacterComponent,
+    // KohiBrochureComponent,
+    // CodeStudyComponent,
+    // CollectionComponent,
+    FooterComponent
+    // SliderComponent,
+    // ModalComponent
   ],
   imports: [
     BrowserModule,
