@@ -18,7 +18,7 @@ import { CollectionComponent } from './works/collection/collection.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/works', pathMatch: 'full' },
-    { path: 'work', loadChildren: './work.module#WorkModule' },
+    // { path: 'work', loadChildren: './work.module#WorkModule' },
     { path: 'app', component: AppComponent },
     { path: 'works', component: WorksComponent },
     { path: 'about', component: AboutComponent },
@@ -28,7 +28,8 @@ const routes: Routes = [
     { path: 'works/kohi-brochure', component: KohiBrochureComponent },
     { path: 'works/collection', component: CollectionComponent },
     { path: 'works/jumpgame', component: JumpgameComponent },
-    { path: 'works/random-character', component: RandomCharacterComponent }
+    { path: 'works/random-character', component: RandomCharacterComponent },
+    { path: '**', component: WorksComponent }
 ];
 
 @NgModule({
