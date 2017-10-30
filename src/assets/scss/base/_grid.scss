@@ -8,6 +8,10 @@
 }
 
 
+body {
+    background-color: white;
+}
+
 // 상단 네비게이션 영역
 .nav-container {
   z-index: $z-index-navbar;     

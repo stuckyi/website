@@ -6226,6 +6226,9 @@ ul {
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
+body {
+  background-color: white; }
+
 .nav-container {
   z-index: 1000;
   width: 100%;
