@@ -6315,41 +6315,15 @@ ul {
     margin: 3.75rem auto;
     background-color: white; }
 
-.nav-on {
-  display: block;
-  animation: slideInDown 0.48s cubic-bezier(1, 0.015, 0.295, 1.225) forwards running; }
+.hero {
+  background-color: #FFFC63; }
+  .hero p {
+    font-size: 1.625rem;
+    font-weight: 700; }
+  .hero .contact-msg {
+    font-size: 1.25rem; }
+  .hero .is-fullheight {
+    width: 100%;
+    height: 100vh; }
 
-.nav-off {
-  display: none;
-  animation: slideOutUp 0.48s cubic-bezier(1, 0.015, 0.295, 1.225) forwards running; }
-
-.btn-gototop {
-  z-index: 1100;
-  width: 39px;
-  height: 39px;
-  position: fixed;
-  right: 4%;
-  bottom: 4%;
-  background-image: url(/assets/images/ui/icons/gototop@2x.png);
-  background-repeat: no-repeat;
-  background-size: cover; }
-
-@keyframes slideInDown {
-  from {
-    transform: translate3d(0, -100%, 0);
-    visibility: visible; }
-  to {
-    transform: translate3d(0, 0, 0); } }
-.slideInDown {
-  animation-name: slideInDown; }
-
-@keyframes slideOutUp {
-  from {
-    transform: translate3d(0, 0, 0); }
-  to {
-    visibility: hidden;
-    transform: translate3d(0, -100%, 0); } }
-.slideOutUp {
-  animation-name: slideOutUp; }
-
-/*# sourceMappingURL=app.component.css.map */
+/*# sourceMappingURL=hero.component.css.map */

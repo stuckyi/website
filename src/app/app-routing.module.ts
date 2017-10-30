@@ -21,7 +21,14 @@ const routes: Routes = [
     { path: 'work', loadChildren: './work.module#WorkModule' },
     { path: 'app', component: AppComponent },
     { path: 'works', component: WorksComponent },
-    { path: 'about', component: AboutComponent }
+    { path: 'about', component: AboutComponent },
+    { path: 'ted', component: TedComponent },
+    { path: 'works/codedfont', component: CodedfontComponent },
+    { path: 'works/codestudy', component: CodeStudyComponent },
+    { path: 'works/kohi-brochure', component: KohiBrochureComponent },
+    { path: 'works/collection', component: CollectionComponent },
+    { path: 'works/jumpgame', component: JumpgameComponent },
+    { path: 'works/random-character', component: RandomCharacterComponent }
 ];
 
 @NgModule({

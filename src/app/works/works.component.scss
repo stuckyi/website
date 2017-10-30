@@ -1,5 +1,16 @@
 @import 'assets/scss/global';
-// 90% 부분 임의로 설정한 것이기 때문에 다시 결정해봐야한다. 
+
+$col-loading: #e9e9e9;
+
+$size-hello: $size-2;
+
+$size-info-title: $size-3;
+$size-info-email: $size-2;
+
+$size-work-tag: $size-8;
+$size-work-name: $size-3;
+
+
 .work-main{
     background-color: #FFFC63;
 }
@@ -8,15 +19,15 @@
 .works {
     .work {
         .image { 
-            background-color: #e9e9e9;
+            background-color: $col-loading;
             background-repeat: no-repeat;
             background-position: 0 0%;
         }
-        .work-title {
-            .sub-title { font-size: 13px; }
-            .title { 
-                font-size: 20px; 
-                font-weight: bold;
+        .work-item {
+            .work-tag { font-size: $size-work-tag; }
+            .work-name { 
+                font-size: $size-work-name;
+                font-weight: $weight-bold;
             }
         }
     }

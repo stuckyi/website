@@ -6153,41 +6153,36 @@ label.panel-block {
   src: local("☺"), url(/assets/fonts/spocahansans_subset/SpoqaHanSans-Bold.eot), url(/assets/fonts/spocahansans_subset/SpoqaHanSans-Bold.eot?#iefix) format("embedded-opentype"), url(/assets/fonts/spocahansans_subset/SpoqaHanSans-Bold.woff) format("woff"), url(/assets/fonts/spocahansans_subset/SpoqaHanSans-Bold.ttf) format("truetype");
   /* If not support woff */ }
 * {
-  font-family: Arial, sans-serif; }
+  font-family: Arial, sans-serif;
+  font-size: 8px; }
+  * body {
+    font-family: Arial, sans-serif;
+    font-size: 8px; }
 
 @media (min-width: 769px) {
   * {
-    font-family: "Spoqa Han Sans", Apple SD Gothic Neo, Nanum Barun Gothic, Nanum Gothic, "돋움", Dotum, Verdana, Arial, sans-serif; } }
+    font-family: "Spoqa Han Sans", Apple SD Gothic Neo, Nanum Barun Gothic, Nanum Gothic, "돋움", Dotum, Verdana, Arial, sans-serif;
+    font-size: 16px; }
+
+  body {
+    font-family: "Spoqa Han Sans", Apple SD Gothic Neo, Nanum Barun Gothic, Nanum Gothic, "돋움", Dotum, Verdana, Arial, sans-serif;
+    font-size: 16px; } }
 p {
   line-height: 180%;
-  font-size: 1.0625rem; }
+  font-size: 1.063rem; }
 
 ul {
   list-style: circle;
   line-height: 180%;
-  font-size: 1.0625rem;
+  font-size: 1.063rem;
   margin-left: 2rem; }
-
-#about p {
-  font-weight: 700;
-  font-size: 1.25rem; }
-  #about p.hello {
-    font-size: 1.625rem; }
-  #about p.contact-email {
-    font-size: 1.625rem; }
-
-.work-main p {
-  font-weight: 700;
-  font-size: 1.25rem; }
-  .work-main p.hello {
-    font-size: 1.625rem; }
-  .work-main p.contact-email {
-    font-size: 1.625rem; }
 
 .detail-container .title {
   font-size: 2.25rem;
-  font-weight: bold;
+  font-weight: 700;
   margin-bottom: 1.5625rem; }
+.detail-container .summary {
+  font-size: 1.125rem; }
 .detail-container .tag-title {
   font-size: 0.875rem;
   margin-bottom: 1.5625rem; }
@@ -6195,6 +6190,7 @@ ul {
   font-size: 0.875rem;
   color: #9B9B9B; }
 .detail-container .desc-content p {
+  font-size: 1.063rem;
   margin: 1.875rem 0; }
 .detail-container .link {
   text-decoration: underline; }
@@ -6203,7 +6199,7 @@ ul {
   margin-top: 6.25rem;
   margin-bottom: 1.875rem;
   font-size: 1.125rem;
-  font-weight: bold; }
+  font-weight: 700; }
   .subtitle:before {
     margin-top: 3rem;
     padding: 4px;
@@ -6217,17 +6213,10 @@ ul {
   .subtitle.process-link:before {
     content: '관련 링크'; }
 
-.footer p {
-  font-size: 1rem;
-  font-style: bold; }
-
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
-
-body {
-  background-color: white; }
 
 .nav-container {
   z-index: 1000;
@@ -6240,16 +6229,28 @@ body {
   padding: 1.25rem; }
   .nav-container .nav-left {
     width: 20%;
-    height: 20%; }
+    height: auto; }
     .nav-container .nav-left img {
-      width: 113px;
-      height: 67px; }
+      width: 80px;
+      height: 47px; }
+    @media (min-width: 769px) {
+      .nav-container .nav-left img {
+        width: 113px;
+        height: 67px; } }
   .nav-container .nav-right {
+    text-align: center;
     width: 10%;
-    height: 10%;
+    height: 47px;
     display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-around; }
+    flex-flow: column nowrap;
+    align-content: stretch; }
+    @media (min-width: 769px) {
+      .nav-container .nav-right {
+        width: 10%;
+        height: auto;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-around; } }
 
 #about .about-main {
   width: 100%;
@@ -6264,14 +6265,16 @@ body {
 #about .section-title {
   margin: 10rem auto 2rem; }
 
-.work-main {
+.hero {
   width: 100%;
   height: 80vh;
   padding: 20vh; }
-  .work-main .hello {
+  .hero .hello {
     max-width: 860px; }
-  .work-main .contact-msg {
+  .hero .contact-msg {
     margin-top: 20vh; }
+  .hero.works {
+    height: 100vh; }
 
 .works {
   width: 960px;
@@ -6283,11 +6286,11 @@ body {
       margin-bottom: 2rem;
       width: 300px;
       height: 270px; }
-    .works .work .work-title {
+    .works .work .work-item {
       margin: 0 auto;
       width: 300px;
       height: auto; }
-      .works .work .work-title .title {
+      .works .work .work-item .work-name {
         margin: .35rem auto; }
 
 .mainImg {

@@ -1,14 +1,11 @@
 @import 'assets/scss/global';
 
-#about{
-    .about-main{
-        background-color: #FFFC63;
-        
-    }
+.about-info {
+    font-weight: $weight-bold;
+    font-size: $size-3;
 
-    .about-info {
-        .interest {  line-height: 136%; }
-        .participation {  line-height: 136%; }
-    }
-    
+    .interest {  line-height: 136%; }
+    .participation {  line-height: 136%; }
 }
+
+    

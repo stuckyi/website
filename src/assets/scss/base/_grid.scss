@@ -8,10 +8,6 @@
 }
 
 
-body {
-    background-color: white;
-}
-
 // 상단 네비게이션 영역
 .nav-container {
   z-index: $z-index-navbar;     
@@ -24,13 +20,27 @@ body {
   padding: rem(20px);
 
   .nav-left {
-    @include size(20%);
-    img { @include size(113px, 67px); }
+    @include size(20%, auto);
+
+    img { @include size(80px, 47px); }
+    @media(min-width: $tablet){
+        img { @include size(113px, 67px); }
+    }
+    
   }
   .nav-right {
-    @include size(10%);
-    @include flex(flex, row nowrap);
-    justify-content: space-around;
+    
+    text-align: center;
+    @include size(10%, 47px);
+    @include flex(flex, column nowrap);
+    align-content: stretch;
+
+    @media(min-width: $tablet){
+        @include size(10%, auto);
+        @include flex(flex, row nowrap);
+        justify-content: space-around;
+    }
+    
   }
 
 }
@@ -60,13 +70,14 @@ body {
 // works 영역
 //
 
-.work-main{
+.hero{
     @include size(100%, 80vh);
     padding: 20vh;
     .hello {
         max-width: 860px;
     }
     .contact-msg { margin-top: 20vh; }
+    &.works { height: 100vh; }
 }
 
 
@@ -85,10 +96,10 @@ body {
             margin-bottom: 2rem;
             @include size(300px, 270px);
         }
-        .work-title {
+        .work-item {
             margin: 0 auto;
             @include size(300px, auto);
-            .title { margin: .35rem auto; }
+            .work-name { margin: .35rem auto; }
         }
         
     }

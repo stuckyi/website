@@ -1,0 +1,19 @@
+@import 'assets/scss/global';
+
+
+
+
+.hero{
+    background-color: #FFFC63;
+    p { 
+        font-size: $size-2;
+        font-weight: $weight-bold;
+    }
+
+    .contact-msg { font-size: $size-3; }
+
+    .is-fullheight {
+        @include size(100%, 100vh);
+    }
+}
+

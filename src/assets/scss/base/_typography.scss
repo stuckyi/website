@@ -65,20 +65,27 @@ $body-size: 16px; // bulma default var
 $body-mobile-size: 8px; // mobile only
 
 
-$size-1: 0.875rem;
-$size-2: 1rem;
-$size-3: 1.125rem;
-$size-4: 1.375rem;
-$size-5: 1.875rem;
-$size-6: 2.25rem;
 
-// Text Size (for use)
-$size-extraSmall: $size-1;
-$size-small: $size-2;
-$size-normal: $size-3; // 1rem
-$size-medium: $size-4;
-$size-large: $size-5;
-$size-extraLarge: $size-6;
+// SIZE VARIABLES LENGTH : 8
+// 13, 14, 16, 17, 18, 20, 26, 36
+
+$size-1: 2.25rem;       // 36px
+$size-2: 1.625rem;      // 26px
+$size-3: 1.25rem;       // 20px
+$size-4: 1.125rem;      // 18px
+$size-5: 1.063rem;      // 17px
+$size-6: 1rem;          // 16px (base)
+$size-7: 0.875rem;      // 14px
+$size-8: 0.8125rem;     // 13px
+$size-9: 0.625rem;      // 10px
+
+
+$size-extraSmall:   $size-8; // 13px
+$size-small:	    $size-7; // 14px
+$size-normal:	    $size-6; // 1rem
+$size-medium:	    $size-6; // 1rem
+$size-large:	    $size-3; // 20px
+$size-ExtraLarge:	$size-1; // 36px
 
 
 
@@ -110,14 +117,27 @@ $weight-extraBold: 700; // 우리 스타일에는 있지만, spoqa에는 extraBo
 // mobile only
 * {
     font-family: $default-mobile;
+    font-size: $body-mobile-size;
+    body {
+        font-family: $default-mobile;
+        font-size: $body-mobile-size;
+    }
 }
 
 // from tablet to widescreen
 @media(min-width: $tablet){
     * {
         font-family: $default-sans;
+        font-size: $body-size;
+    }
+
+    body {
+        font-family: $default-sans;
+        font-size: $body-size;
     }
 }
+
+
 
 
 
@@ -130,67 +150,51 @@ $weight-extraBold: 700; // 우리 스타일에는 있지만, spoqa에는 extraBo
 
 p {
     line-height: 180%;
-    font-size: rem(17px);
+    font-size: $size-5;
 }
 
 
 ul { 
     list-style: circle;
     line-height: 180%;
-    font-size: rem(17px);
+    font-size: $size-5;
+
     margin-left: 2rem;
 }
 
 
-#about {
-    p {
-        font-weight: 700;       //extra bold
-        font-size: rem(20px);
-
-        &.hello {  font-size: rem(26px); }
-        &.contact-email { font-size: rem(26px); }
-    }
-
-}
-
-// works
-
-.work-main {
-    p {
-        font-weight: 700;       //extra bold
-        font-size: rem(20px);
-
-        &.hello {  font-size: rem(26px); }
-        &.contact-email { font-size: rem(26px); }
-    }
-    
-}
-
-// 상세페이지 상단 메인이미지 영역
+// WORK
 
 .detail-container {
     // 상세페이지 타이틀
     .title { 
-        font-size: rem(36px);
-        font-weight: bold;
+        font-size: $size-1;
+        font-weight: $weight-bold;
+
         margin-bottom: rem(25px);
+    }
+    .summary {
+        font-size: $size-4;
     }
 
     // 상세페이지 태그 제목
     .tag-title {
-        font-size: rem(14px);
+        font-size: $size-7;
         margin-bottom: rem(25px);
     }
 
     // 상세페이지 태그 아이템
     .tag-item {
-        font-size: rem(14px);
+        font-size: $size-7;
         color: $tag-col;
     }
 
     // 프로젝트 설명
     .desc-content {
-        p { margin: rem(30px) 0; }
+        p { 
+            font-size: $size-5;
+            margin: rem(30px) 0;
+        }
     }
     // 관련 링크
     .link {
@@ -202,8 +206,10 @@ ul {
 .subtitle {
     margin-top: rem(100px); // sub section 간의 간격
     margin-bottom: rem(30px);
-    font-size: rem(18px);
-    font-weight: bold;
+
+    font-size: $size-4;
+    font-weight: $weight-bold;
+
     &:before {
         margin-top: 3rem;
         padding:4px;
@@ -215,13 +221,3 @@ ul {
     &.process-link {  &:before { content: '관련 링크'; } }
 }
 
-
-// footer
-
-.footer {
-     p {
-        font-size: rem(16px);
-        font-style: bold;
-    }
-
-}

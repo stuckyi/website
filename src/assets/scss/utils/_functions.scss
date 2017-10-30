@@ -1,3 +1,9 @@
-   @function rem($pixels){
-        @return $pixels / 16px + rem;
-    }
+
+
+@function rem($pixels){
+    @return $pixels / 16px + rem;
+}
+
+@function mRem($pixels){
+    @return $pixels / 8px + rem;
+}

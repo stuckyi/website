@@ -1,17 +1,8 @@
-<div class="work-main">
-  <div class="container"> 
-    <p class="hello">
-      안녕하세요. 스투키 스튜디오입니다. <br/>
-      정유미와 김태경이 2016년 3월부터 함께 작업을 하고 있습니다.<br/>
-      우리의 손길이 필요한 데이터들을 찾아다니고, 그것들을 모으고 정리하여 이해하기 쉬운 형태로 시각화하는데 희열을 느낍니다. 정리한 데이터로는 주로 웹을 기반으로 상호작용이 가능한 콘텐츠를 만들거나 인쇄물을 제작하고 있습니다. 
-    </p>
-    <!--<p class="contact-msg">작업 문의</p>
-    <p class="contact-email">stuckyi.info@gmail.com</p>-->
-  </div>
-</div>
+
+<app-hero [isContactInfo]="false"></app-hero>
 
 <div class="works columns is-multiline">
-  <div routerLink="/work/collection" class="work column is-4">
+  <div routerLink="/works/collection" class="work column is-4">
     <div (mouseenter)="setHoverState('collection')" 
          (mouseleave)="setHoverState('collection')"
          class="image"
@@ -19,90 +10,90 @@
          [class.steps7]="hoverState.collection">
     </div>
 
-    <div class="work-title">
-      <p class="sub-title">웹사이트, 자체 프로젝트</p>
-      <p class="title">모여라 월경컵</p>
+    <div class="work-item">
+      <p class="work-tag">웹사이트, 자체 프로젝트</p>
+      <p class="work-name">모여라 월경컵</p>
     </div>
   </div>
 
 
-  <div routerLink="/work/codedfont" class="work column is-4">
+  <div routerLink="/works/codedfont" class="work column is-4">
     <div (mouseenter)="setHoverState('codedfont')" 
          (mouseleave)="setHoverState('codedfont')"
          class="image"
          [style.background-image]="'url(/assets/images/works/sprite_ted.png)'"
          [class.steps7]="hoverState.codedfont">
     </div>
-    <div class="work-title"> 
-      <p class="sub-title">인터랙티브 웹콘텐츠, 워크숍 참여, 전시</p>
-      <p class="title">보는 이와 상호작용하는 폰트, <br/> CODED FONT</p>
+    <div class="work-item"> 
+      <p class="work-tag">인터랙티브 웹콘텐츠, 워크숍 참여, 전시</p>
+      <p class="work-name">보는 이와 상호작용하는 폰트, <br/> CODED FONT</p>
     </div>
   </div>
 
 
-  <div routerLink="/work/kohi-brochure" class="work column is-4">
+  <div routerLink="/works/kohi-brochure" class="work column is-4">
     <div (mouseenter)="setHoverState('kohi')" 
          (mouseleave)="setHoverState('kohi')"
          class="image"
          [style.background-image]="'url(/assets/images/works/sprite_kohi.png)'"
          [class.steps7]="hoverState.kohi">
     </div>
-    <div class="work-title"> 
-      <p class="sub-title">인쇄물, 브로슈어, 외주작업</p>
-      <p class="title">응급처치 및 심폐소생술 브로슈어</p>
+    <div class="work-item"> 
+      <p class="work-tag">인쇄물, 브로슈어, 외주작업</p>
+      <p class="work-name">응급처치 및 심폐소생술 브로슈어</p>
     </div>
   </div>
 
 
-  <div routerLink="/work/jumpgame" class="work column is-4">
+  <div routerLink="/works/jumpgame" class="work column is-4">
     <div (mouseenter)="setHoverState('jumpgame')" 
          (mouseleave)="setHoverState('jumpgame')"
          class="image"
          [style.background-image]="'url(/assets/images/works/sprite_jumpgame.png)'"
          [class.steps11]="hoverState.jumpgame">
     </div>
-    <div class="work-title"> 
-      <p class="sub-title">웹페이지, 콜라보레이션</p>
-      <p class="title">멘넴X스투키, 장애물 점프</p>
+    <div class="work-item"> 
+      <p class="work-tag">웹페이지, 콜라보레이션</p>
+      <p class="work-name">멘넴X스투키, 장애물 점프</p>
     </div>
   </div>
 
-  <div routerLink="/work/random-character" class="work column is-4">
+  <div routerLink="/works/random-character" class="work column is-4">
     <div (mouseenter)="setHoverState('randomcharacter')" 
          (mouseleave)="setHoverState('randomcharacter')"
          class="image"
          [style.background-image]="'url(/assets/images/works/sprite_randomcharacter.png)'"
          [class.steps5]="hoverState.randomcharacter">
     </div>
-    <div class="work-title"> 
-      <p class="sub-title">웹페이지, 콜라보레이션</p>
-      <p class="title">멘넴X스투키 랜덤 캐릭터 생성기</p>
+    <div class="work-item"> 
+      <p class="work-tag">웹페이지, 콜라보레이션</p>
+      <p class="work-name">멘넴X스투키 랜덤 캐릭터 생성기</p>
     </div>
   </div>
 
-  <div routerLink="/work/codestudy" class="work column is-4">
+  <div routerLink="/works/codestudy" class="work column is-4">
     <div (mouseenter)="setHoverState('codestudy')" 
          (mouseleave)="setHoverState('codestudy')"
          class="image"
          [style.background-image]="'url(/assets/images/works/sprite_codestudy.png)'"
          [class.steps11]="hoverState.codestudy">
     </div>
-    <div class="work-title"> 
-      <p class="sub-title">웹페이지, 콜라보레이션</p>
-      <p class="title">멘넴과의 코드스터디</p>
+    <div class="work-item"> 
+      <p class="work-tag">웹페이지, 콜라보레이션</p>
+      <p class="work-name">멘넴과의 코드스터디</p>
     </div>
   </div>
 
-  <div routerLink="/work/ted" class="work column is-4">
+  <div routerLink="/works/ted" class="work column is-4">
     <div (mouseenter)="setHoverState('ted')" 
          (mouseleave)="setHoverState('ted')"
          class="image"
          [style.background-image]="'url(/assets/images/works/sprite_ted.png)'"
          [class.steps7]="hoverState.ted">
     </div>
-    <div class="work-title"> 
-      <p class="sub-title">데이터 시각화, 자체 프로젝트</p>
-      <p class="title">TED 강연 평가 시각화</p>
+    <div class="work-item"> 
+      <p class="work-tag">데이터 시각화, 자체 프로젝트</p>
+      <p class="work-name">TED 강연 평가 시각화</p>
     </div>
   </div>
 </div>
