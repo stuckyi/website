@@ -3,6 +3,8 @@ import { Router, NavigationStart } from '@angular/router';
 
 import { Observable } from 'rxjs/Rx';
 
+import { AppService } from './../app.service';
+
 
 @Component({
   selector: 'app-works',
@@ -10,6 +12,9 @@ import { Observable } from 'rxjs/Rx';
   styleUrls: ['./works.component.css']
 })
 export class WorksComponent implements OnInit {
+  contents;
+
+
   isLoad: boolean = false;
   hoverState = {
     collection: false,
@@ -24,19 +29,30 @@ export class WorksComponent implements OnInit {
 
 
 
-  constructor(private router: Router) { 
-    // if user move to some work page, set scroll value to 0,0
-    this.router.events.subscribe(event => {
-      if(event.constructor.name === 'NavigationStart'){
-        console.log("works to some work! and i go to 0,0.");
-        window.scrollTo(0,0);
-      }
-    });
-
-  }
+  constructor(
+    private router: Router,
+    private appService: AppService
+  ) { }
 
 
   ngOnInit() {
+
+    this.contents = this.appService.getContents();
+    window.scrollTo(0,0);
+  }
+  getHoverState(name) {
+    switch (name) {
+      case 'collection': return this.hoverState.collection;
+      case 'codedfont': return this.hoverState.codedfont;
+      case 'kohi': return this.hoverState.kohi;
+      case 'jumpgame': return this.hoverState.jumpgame;
+      case 'randomcharacter': return this.hoverState.randomcharacter;
+      case 'codestudy': return this.hoverState.codestudy;
+      case 'ted': return this.hoverState.ted;
+      default:
+        console.log('we dont use setHoverState Fn.');
+        break;
+    }
   }
   setHoverState(name){
     switch(name){
@@ -70,8 +86,13 @@ export class WorksComponent implements OnInit {
   onLoad(){
     console.log("로딩 완료!!!!!!!!!!!!!");
     this.isLoad = true;
-
   }
+
+  gotoDetail(id: number) {
+    let link = ['/detail', id];
+    this.router.navigate(link);
+  }
+  
 
 
 }

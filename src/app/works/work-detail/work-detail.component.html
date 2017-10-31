@@ -32,9 +32,17 @@
     <p class="subtitle process-img"> </p>
     <div class="column imgSlider">
       <figure class="image">
-        <img [src]="baseUrl+'slider_0.png'" alt="브로슈어 내지에 들어간 삽화들 중 일부 슬라이더">
+        <!--<img [src]="baseUrl+'slider_0.png'" alt="브로슈어 내지에 들어간 삽화들 중 일부 슬라이더">-->
       </figure>
     </div>
+
+
+    <!-- 프로세스 이미지 -->
+    <p class="subtitle process-img"> </p>
+
+    <app-slider 
+      [sliderImgUrl]="sliderImgUrl"
+      [sliderInfo]="content.modalImgs"></app-slider>
     
   </div>
 

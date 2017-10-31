@@ -1,4 +1,4 @@
-type SliderImg = {
+type ModalImg = {
     index: number;
     title: string;
     desc: string;
@@ -17,6 +17,7 @@ type Link = {
 export class Content {
     id: number;
     title: string;
+    title_en: string;
     baseUrl: string;
     summary: string;
 
@@ -26,7 +27,7 @@ export class Content {
 
     descriptions: string[];
 
-    sliderImgs?: SliderImg[];
+    modalImgs?: ModalImg[];
     sliderGifs?: SliderGif[];
     links?: Link[];
 }
@@ -35,6 +36,7 @@ export const CONTENTS = [
     { 
         id: 0,
         title: '모여라 월경컵',
+        title_en: 'collection',
         summary: '생리컵 제품 정보를 수집하는 기준을 만들고, 그 기준에 맞춰 정보를 모으는 사이트를 제작하였습니다.',
         baseUrl: 'assets/images/works/collection/',
         year: '2016 ~ 현재',
@@ -51,7 +53,7 @@ export const CONTENTS = [
             { info: '<모여라 월경컵> 사이트 : cups.kr', url: 'https://cups.kr' },
             { info: '<모여라 월경컵> 제품 정보 원본 데이터', url: 'https://cups.kr' }
         ],
-        sliderImgs: [
+        modalImgs: [
             { index: 0, title: '(ex)처음 구조를 잡는 사진0', desc: '로사이드에서 함께 작업하는 모습', imgUrl: '/assets/images/works/codestudy/modal/0.png' },
             { index: 1, title: '(ex)처음 구조를 잡는 사진1', desc: '코드를 한줄 한줄 함께 읽어보는 시간', imgUrl: '/assets/images/works/codestudy/modal/1.png' },
             { index: 2, title: '(ex)처음 구조를 잡는 사진2', desc: '규섭창작자가 그려왔던 캐릭터들', imgUrl: '/assets/images/works/codestudy/modal/2.png' },
@@ -69,6 +71,7 @@ export const CONTENTS = [
     { 
         id: 1,
         title: '보는 이와 상호작용하는 폰트 <CODED FONT>',
+        title_en: 'codedfont',
         summary: '새로운 매체 환경에서 글자가 어떤 가능성을 가지는지 실험해보았던 작업으로, 웹페이지 상에서 계속 변화하거나 보는 사람과 상호작용하는 레터링과 폰트를 제작하였습니다.',
         baseUrl: 'assets/images/works/codedfont/',
         year: '2016',
@@ -86,7 +89,7 @@ export const CONTENTS = [
             { info: '몇몇 실험을 캡쳐하여 모아둔 텀블러 페이지', url: '#'},
             { info: '스마트폰의 기울기에 반응하는 폰트 (모바일 전용)', url: '#'} 
         ],
-        sliderImgs: [
+        modalImgs: [
             { index: 0, title: '(ex)처음 구조를 잡는 사진0', desc: '로사이드에서 함께 작업하는 모습', imgUrl: '/assets/images/works/codestudy/modal/0.png' },
             { index: 1, title: '(ex)처음 구조를 잡는 사진1', desc: '코드를 한줄 한줄 함께 읽어보는 시간', imgUrl: '/assets/images/works/codestudy/modal/1.png' },
             { index: 2, title: '(ex)처음 구조를 잡는 사진2', desc: '규섭창작자가 그려왔던 캐릭터들', imgUrl: '/assets/images/works/codestudy/modal/2.png' },
@@ -103,6 +106,7 @@ export const CONTENTS = [
     },
     { 
         id: 2,
+        title_en: 'kohi',
         title: '응급처치 및 심폐소생술 브로슈어',
         summary: '심폐소생술 및 응급처치 매뉴얼에 대한 브로슈어를 제작했습니다.',
         baseUrl: 'assets/images/works/kohi-brochure/',
@@ -117,7 +121,7 @@ export const CONTENTS = [
         links: [
            { info: '	<멘넴X스투키 장애물 점프>링크를 클릭하면 장애물 점프를 직접 해볼 수 있습니다.', url: '#'}
         ],
-        sliderImgs: [
+        modalImgs: [
             { index: 0, title: '(ex)처음 구조를 잡는 사진0', desc: '로사이드에서 함께 작업하는 모습', imgUrl: '/assets/images/works/codestudy/modal/0.png' },
             { index: 1, title: '(ex)처음 구조를 잡는 사진1', desc: '코드를 한줄 한줄 함께 읽어보는 시간', imgUrl: '/assets/images/works/codestudy/modal/1.png' },
             { index: 2, title: '(ex)처음 구조를 잡는 사진2', desc: '규섭창작자가 그려왔던 캐릭터들', imgUrl: '/assets/images/works/codestudy/modal/2.png' },
@@ -135,6 +139,7 @@ export const CONTENTS = [
     { 
         id: 3,
         title: '장애물 점프',
+        title_en: 'jumpgame',
         summary: '멘넴의 캐릭터가 주인공인 간단한 게임을 만들어보았습니다.',
         baseUrl: 'assets/images/works/artlink/jumpgame/',
         year: '2017',
@@ -150,7 +155,7 @@ export const CONTENTS = [
         links: [
            { info: '	<멘넴X스투키 장애물 점프>링크를 클릭하면 장애물 점프를 직접 해볼 수 있습니다.', url: '#'}
         ],
-        sliderImgs: [
+        modalImgs: [
             { index: 0, title: '(ex)처음 구조를 잡는 사진0', desc: '로사이드에서 함께 작업하는 모습', imgUrl: '/assets/images/works/codestudy/modal/0.png' },
             { index: 1, title: '(ex)처음 구조를 잡는 사진1', desc: '코드를 한줄 한줄 함께 읽어보는 시간', imgUrl: '/assets/images/works/codestudy/modal/1.png' },
             { index: 2, title: '(ex)처음 구조를 잡는 사진2', desc: '규섭창작자가 그려왔던 캐릭터들', imgUrl: '/assets/images/works/codestudy/modal/2.png' },
@@ -168,6 +173,7 @@ export const CONTENTS = [
     { 
         id: 4,
         title: '멘넴X스투키 랜덤 캐릭터 생성기',
+        title_en: 'randomcharacter',
         summary: '특징이 뚜렷한 맨넴의 캐릭터들을 모듈화하여 자동으로 생성해서 새로운 조합의 형태를 보았습니다.',
         baseUrl: 'assets/images/works/artlink/randomcharacter/',
         year: '2017',
@@ -182,7 +188,7 @@ export const CONTENTS = [
         links: [
            { info: '	<멘넴X스투키 랜덤 캐릭터 생성기> 직접 랜덤 캐릭터를 생성 해볼 수 있습니다.', url: '#'}
         ],
-        sliderImgs: [
+        modalImgs: [
             { index: 0, title: '(ex)처음 구조를 잡는 사진0', desc: '(ex)이런식으로 잡고 했다.0', imgUrl: '/assets/images/works/artlink/randomcharacter/modal/0.png' },
             { index: 1, title: '(ex)처음 구조를 잡는 사진1', desc: '(ex)이런식으로 잡고 했다.1', imgUrl: '/assets/images/works/artlink/randomcharacter/modal/1.png' },
             { index: 2, title: '(ex)처음 구조를 잡는 사진2', desc: '(ex)이런식으로 잡고 했다.2', imgUrl: '/assets/images/works/artlink/randomcharacter/modal/2.png' },
@@ -202,42 +208,8 @@ export const CONTENTS = [
     },
     { 
         id: 5,
-        title: '멘넴X스투키 랜덤 캐릭터 생성기',
-        summary: '특징이 뚜렷한 맨넴의 캐릭터들을 모듈화하여 자동으로 생성해서 새로운 조합의 형태를 보았습니다.',
-        baseUrl: 'assets/images/works/artlink/randomcharacter/',
-        year: '2017',
-        type: '인터랙티브 웹 콘텐츠',
-        tags: ['#아트링크', '#협업', '#p5.js'],
-        descriptions: [
-            '맨넴은 거의 매일 그림을 그립니다. 그림의 대부분은 캐릭터 그림인데, 그 캐릭터들에게서 자주 보이는 형태적인 특징들이 있습니다. 정면을 보고 팔다리를 쭉 뻗고 있거나, 허리 벨트를 하고 있거나, 남녀의 생김새 차이가 뚜렷하다는 점 등입니다.',
-            '또한 캐릭터의 이름을 짓는 방식이나, 채색을 하는 방식에 있어도 규칙적이고 반복적이고 정해진 틀이 있다는 특징이 있습니다.',
-            '우리는 이 규칙성과 반복성, 정형성에 주목하였고, 프로그래밍을 통해 멘넴의 규칙을 따르되 기존의 캐릭터와 다른, 낯선 캐릭터들을 자동으로 만들어내는 작업을 해보았습니다.',
-            '멘넴의 규칙성 안에서 자동으로 만들어진 캐릭터들은 기존의 멘넴 캐릭터들과는 다른 낯선 모습을 가지고 있었지만, 각각의 새로운 캐릭터들에게 함께 이름을 지어주고, 사는 곳을 정해주고, 각자의 성격과 개성을 부여하면서 멘넴의 캐릭터 세상 속으로 받아들였습니다.'
-        ],
-        links: [
-           { info: '	<멘넴X스투키 랜덤 캐릭터 생성기> 직접 랜덤 캐릭터를 생성 해볼 수 있습니다.', url: '#'}
-        ],
-        sliderImgs: [
-            { index: 0, title: '(ex)처음 구조를 잡는 사진0', desc: '(ex)이런식으로 잡고 했다.0', imgUrl: '/assets/images/works/artlink/randomcharacter/modal/0.png' },
-            { index: 1, title: '(ex)처음 구조를 잡는 사진1', desc: '(ex)이런식으로 잡고 했다.1', imgUrl: '/assets/images/works/artlink/randomcharacter/modal/1.png' },
-            { index: 2, title: '(ex)처음 구조를 잡는 사진2', desc: '(ex)이런식으로 잡고 했다.2', imgUrl: '/assets/images/works/artlink/randomcharacter/modal/2.png' },
-            { index: 3, title: '(ex)처음 구조를 잡는 사진3', desc: '(ex)이런식으로 잡고 했다.3', imgUrl: '/assets/images/works/artlink/randomcharacter/modal/3.png' },
-            { index: 4, title: '(ex)처음 구조를 잡는 사진4', desc: '(ex)이런식으로 잡고 했다.4', imgUrl: '/assets/images/works/artlink/randomcharacter/modal/4.png' },
-            { index: 5, title: '(ex)처음 구조를 잡는 사진5', desc: '(ex)이런식으로 잡고 했다.5', imgUrl: '/assets/images/works/artlink/randomcharacter/modal/5.png' },
-            { index: 6, title: '(ex)처음 구조를 잡는 사진6', desc: '(ex)이런식으로 잡고 했다.6', imgUrl: '/assets/images/works/artlink/randomcharacter/modal/6.png' },
-            { index: 7, title: '(ex)처음 구조를 잡는 사진7', desc: '(ex)이런식으로 잡고 했다.7', imgUrl: '/assets/images/works/artlink/randomcharacter/modal/7.png' },
-            { index: 8, title: '(ex)처음 구조를 잡는 사진8', desc: '(ex)이런식으로 잡고 했다.8', imgUrl: '/assets/images/works/artlink/randomcharacter/modal/8.png' },
-            { index: 9, title: '(ex)처음 구조를 잡는 사진9', desc: '(ex)이런식으로 잡고 했다.9', imgUrl: '/assets/images/works/artlink/randomcharacter/modal/9.png' }
-        ],
-        sliderGifs: [
-            { index: 0, imgUrl: '/assets/images/works/codestudy/preview/0.gif' },
-            { index: 1, imgUrl: '/assets/images/works/codestudy/preview/1.gif' },
-            { index: 2, imgUrl: '/assets/images/works/codestudy/preview/2.gif' }
-        ]
-    },
-    { 
-        id: 6,
         title: '멘넴과의 코드스터디',
+        title_en: 'codestudy',
         summary: '새로운 매체 환경에서 글자가 어떤 가능성을 가지는지 실험해보았던 작업으로, 웹페이지 상에서 계속 변화하거나 보는 사람과 상호작용하는 레터링과 폰트를 제작하였습니다.',
         baseUrl: 'assets/images/works/codedfont/',
         year: '2016',
@@ -252,7 +224,7 @@ export const CONTENTS = [
         links: [
            { info: '	<멘넴X스투키 랜덤 캐릭터 생성기> 직접 랜덤 캐릭터를 생성 해볼 수 있습니다.', url: '#'}
         ],
-        sliderImgs: [
+        modalImgs: [
             { index: 0, title: '(ex)처음 구조를 잡는 사진0', desc: '로사이드에서 함께 작업하는 모습', imgUrl: '/assets/images/works/codestudy/modal/0.png' },
             { index: 1, title: '(ex)처음 구조를 잡는 사진1', desc: '코드를 한줄 한줄 함께 읽어보는 시간', imgUrl: '/assets/images/works/codestudy/modal/1.png' },
             { index: 2, title: '(ex)처음 구조를 잡는 사진2', desc: '규섭창작자가 그려왔던 캐릭터들', imgUrl: '/assets/images/works/codestudy/modal/2.png' },
@@ -268,8 +240,9 @@ export const CONTENTS = [
         ]
     },
     { 
-        id: 7,
+        id: 6,
         title: 'TED 강연 평가 시각화',
+        title_en: 'ted',
         summary: '강연에 대한 평가를 한눈에 파악할 수 있으면 어떨까? TED Talks의 각 강연에 대해 시청자들이 느낀 감정 데이터를 반영하여 캐릭터를 만들어보았습니다.',
         baseUrl: 'assets/images/works/ted/',
         year: '2016',
@@ -287,7 +260,7 @@ export const CONTENTS = [
         links: [
            { info: '링크 설명', url: '#'}
         ],
-        sliderImgs: [
+        modalImgs: [
             { index: 0, title: '(ex)처음 구조를 잡는 사진0', desc: '로사이드에서 함께 작업하는 모습', imgUrl: '/assets/images/works/codestudy/modal/0.png' },
             { index: 1, title: '(ex)처음 구조를 잡는 사진1', desc: '코드를 한줄 한줄 함께 읽어보는 시간', imgUrl: '/assets/images/works/codestudy/modal/1.png' },
             { index: 2, title: '(ex)처음 구조를 잡는 사진2', desc: '규섭창작자가 그려왔던 캐릭터들', imgUrl: '/assets/images/works/codestudy/modal/2.png' },

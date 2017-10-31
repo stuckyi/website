@@ -1,4 +1,4 @@
-import { AppService } from './app.service';
+
 
 
 import { BrowserModule } from '@angular/platform-browser';
@@ -7,30 +7,27 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
-import { AppRoutingModule } from './app-routing.module';
-
 import { environment } from './../environments/environment';
 
+import { AppRoutingModule } from './app-routing.module';
+import { AppService } from './app.service';
+
+
 import { AppComponent } from './app.component';
-import { WorksComponent } from './works/works.component';
 import { AboutComponent } from './about/about.component';
 
+import { WorksComponent } from './works/works.component';
+import { WorkDetailComponent } from './works/work-detail/work-detail.component';
+import { HeroComponent } from './main/hero/hero.component';
+
+
+// MAIN_COMPONENTS
 import { NavComponent } from './main/nav/nav.component';
-import { TedComponent } from './works/ted/ted.component';
-import { CodedfontComponent } from './works/codedfont/codedfont.component';
-import { JumpgameComponent } from './works/artlink/jumpgame/jumpgame.component';
-import { RandomCharacterComponent } from './works/artlink/random-character/random-character.component';
-import { KohiBrochureComponent } from './works/kohi-brochure/kohi-brochure.component';
-import { CodeStudyComponent } from './works/code-study/code-study.component';
-import { CollectionComponent } from './works/collection/collection.component';
-
 import { FooterComponent } from './main/footer/footer.component';
-
 import { SliderComponent } from './main/slider/slider.component';
 import { ModalComponent } from './main/modal/modal.component';
-import { HeroComponent } from './main/hero/hero.component';
 import { SliderGifComponent } from './main/slider-gif/slider-gif.component';
-import { WorkDetailComponent } from './works/work-detail/work-detail.component';
+
 
 
 
@@ -41,13 +38,6 @@ import { WorkDetailComponent } from './works/work-detail/work-detail.component';
     AboutComponent,
     
     NavComponent,
-    TedComponent,
-    CodedfontComponent,
-    JumpgameComponent,
-    RandomCharacterComponent,
-    KohiBrochureComponent,
-    CodeStudyComponent,
-    CollectionComponent,
     FooterComponent,
     SliderComponent,
     ModalComponent,

@@ -2,6 +2,21 @@
 <app-hero [isContactInfo]="false"></app-hero>
 
 <div class="works columns is-multiline">
+  <div *ngFor="let content of contents" (click)="gotoDetail(content.id)" class="work column is-4">
+    <!-- sprite class 선택을 각 work별로 다르게 설정해줘야한다 with ngClass! -->
+    <div (mouseenter)="setHoverState(content.title_en)" 
+         (mouseleave)="setHoverState(content.title_en)"
+         class="image"
+         [style.background-image]="'url(/assets/images/works/sprite_'+content.title_en+ '.png)'"
+         [class.steps7]="getHoverState(content.title_en)">
+    </div>
+    <div class="work-item">
+      <p class="work-tag">{{ content.type }}</p>
+      <p class="work-name">{{ content.title }}</p>
+    </div>
+  </div>
+
+  <!--
   <div routerLink="/works/collection" class="work column is-4">
     <div (mouseenter)="setHoverState('collection')" 
          (mouseleave)="setHoverState('collection')"
@@ -15,6 +30,7 @@
       <p class="work-name">모여라 월경컵</p>
     </div>
   </div>
+
 
 
   <div routerLink="/works/codedfont" class="work column is-4">
@@ -96,4 +112,5 @@
       <p class="work-name">TED 강연 평가 시각화</p>
     </div>
   </div>
+  -->
 </div>

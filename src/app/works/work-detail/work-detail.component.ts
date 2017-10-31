@@ -11,6 +11,8 @@ import { AppService } from './../../app.service';
 export class WorkDetailComponent implements OnInit {
   content;
   mainImgUrl: string = '';
+  sliderImgUrl: string = '';
+
 
   // assets/images/works/collection/main.png  
   constructor(
@@ -26,7 +28,9 @@ export class WorkDetailComponent implements OnInit {
       contentId = parseInt(urlParameters['id']);
     });
     this.content = this.appService.getContent(contentId);
+
     this.mainImgUrl = this.content.baseUrl + 'main.png';
+    this.sliderImgUrl = this.content.baseUrl + 'slider.png';
   }
 
 }

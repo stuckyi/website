@@ -7,7 +7,7 @@ import { Component, OnInit, Input, AfterViewInit, ViewChild, ElementRef } from '
   styleUrls: ['./slider.component.css']
 })
 export class SliderComponent implements OnInit, AfterViewInit{
-  @Input('projectInfo') projectInfo;
+  @Input('sliderImgUrl') sliderImgUrl;
   @Input('sliderInfo') sliderInfo;
   baseUrl: string = 'url(/assets/images/works/default/slider.png)';
 
@@ -51,7 +51,8 @@ export class SliderComponent implements OnInit, AfterViewInit{
     this.getElementSize();
     this.dynamicOffset = 'translateX(' + this.currentPos + 'px)';
     this.maxLev = Math.floor(((this.sliderInfo.length / 2) - 1) / this.offsetLev);
-    this.baseUrl = 'url(/assets/images/works/' + this.projectInfo + '/slider.png)';
+    // this.baseUrl = 'url(/assets/images/works/' + this.projectInfo + '/slider.png)';
+    this.baseUrl = 'url(/'+ this.sliderImgUrl +')';
   }
 
 
