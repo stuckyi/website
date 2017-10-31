@@ -1,3 +1,4 @@
+import { WorkDetailComponent } from './works/work-detail/work-detail.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 //page
@@ -21,6 +22,7 @@ const routes: Routes = [
     // { path: 'work', loadChildren: './work.module#WorkModule' },
     { path: 'app', component: AppComponent },
     { path: 'works', component: WorksComponent },
+    { path: 'detail/:id', component: WorkDetailComponent },
     { path: 'about', component: AboutComponent },
     { path: 'ted', component: TedComponent },
     { path: 'works/codedfont', component: CodedfontComponent },

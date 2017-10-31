@@ -42,8 +42,6 @@ $size-ExtraLarge:	$size-1; // 36px
 
 // WORKS
 
-
-
 $size-work-tag: $size-8;
 $size-work-name: $size-3;
 

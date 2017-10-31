@@ -6117,20 +6117,11 @@ label.panel-block {
 .no-padding-bottom {
   padding-bottom: 0; }
 
-.page-margin {
-  margin: 100px auto; }
-
-.is-margin-top {
-  margin-top: 100px; }
-
-.is-margin-bottom-6rem {
-  margin-bottom: 6rem; }
-
 .is-center {
   text-align: center; }
 
-.is-strong {
-  font-weight: 700; }
+.is-opacity20 {
+  opacity: .2; }
 
 @font-face {
   font-family: "Spoqa Han Sans";
@@ -6210,6 +6201,8 @@ ul {
     content: '프로세스 이미지'; }
   .subtitle.process-video:before {
     content: '프로젝트 구현 영상'; }
+  .subtitle.process-gif:before {
+    content: '화면 미리보기'; }
   .subtitle.process-link:before {
     content: '관련 링크'; }
 
@@ -6316,7 +6309,11 @@ ul {
     background-color: white; }
 
 .mainImg {
-  background-color: black;
+  background-color: #e9e9e9;
   top: 0; }
+  .mainImg img {
+    padding: 0;
+    width: 100%;
+    height: auto; }
 
 /*# sourceMappingURL=collection.component.css.map */

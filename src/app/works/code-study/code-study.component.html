@@ -1,6 +1,8 @@
 <!-- 최상단 프로젝트별 메인 이미지 영역 -->
 <div class="mainImg"> 
-  
+   <figure class="image">
+     <img src="assets/images/works/codestudy/main.png" alt="code study 메인 이미지" />
+  </figure>
 </div>
 
 <div class="detail">
@@ -23,6 +25,11 @@
       <p *ngFor="let description of descriptions">{{description}}</p>
     </div>
     
+    <!-- 화면 미리보기 -->
+    <p class="subtitle process-gif"> </p>
+    <app-slider-gif [sliderGifInfo]="sliderGifInfo"></app-slider-gif>
+
+
     <!-- 관련 링크 -->
     <p class="subtitle process-link"> </p> 
     <ul>

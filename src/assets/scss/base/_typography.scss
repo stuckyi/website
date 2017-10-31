@@ -218,6 +218,7 @@ ul {
     &.process-desc {  &:before { content: '프로젝트 설명'; } }
     &.process-img {  &:before { content: '프로세스 이미지'; } }
     &.process-video {  &:before { content: '프로젝트 구현 영상'; } }
+    &.process-gif {  &:before { content: '화면 미리보기'; } }
     &.process-link {  &:before { content: '관련 링크'; } }
 }
 

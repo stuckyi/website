@@ -1,0 +1,12 @@
+<div class="slider-gif">
+  <div (click)="updateItem('left')" 
+      class="slider-btn left"
+      [class.is-opacity20]="!isLeft" ></div>
+
+  <img class="gif-item" [src]="curImgUrl"/>
+
+  <div (click)="updateItem('right')"
+      class="slider-btn right"
+      [class.is-opacity20]="!isRight"></div>
+      
+</div>

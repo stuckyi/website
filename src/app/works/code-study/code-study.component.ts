@@ -34,6 +34,11 @@ export class CodeStudyComponent implements OnInit {
     { index: 6, title: '(ex)처음 구조를 잡는 사진6', desc: '머리속에 그려지는 이미지를 하나씩 코드로 만들어가는 과정', imgUrl: '/assets/images/works/codestudy/modal/6.png' }
   ];
 
+  sliderGifInfo = [
+    { index: 0, imgUrl: '/assets/images/works/codestudy/preview/0.gif' },
+    { index: 1, imgUrl: '/assets/images/works/codestudy/preview/1.gif' },
+    { index: 2, imgUrl: '/assets/images/works/codestudy/preview/2.gif' }
+  ];
 
   constructor() { }
 

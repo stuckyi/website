@@ -1,3 +1,4 @@
+import { AppService } from './app.service';
 
 
 import { BrowserModule } from '@angular/platform-browser';
@@ -28,6 +29,8 @@ import { FooterComponent } from './main/footer/footer.component';
 import { SliderComponent } from './main/slider/slider.component';
 import { ModalComponent } from './main/modal/modal.component';
 import { HeroComponent } from './main/hero/hero.component';
+import { SliderGifComponent } from './main/slider-gif/slider-gif.component';
+import { WorkDetailComponent } from './works/work-detail/work-detail.component';
 
 
 
@@ -48,7 +51,9 @@ import { HeroComponent } from './main/hero/hero.component';
     FooterComponent,
     SliderComponent,
     ModalComponent,
-    HeroComponent
+    HeroComponent,
+    SliderGifComponent,
+    WorkDetailComponent
   ],
   imports: [
     BrowserModule,
@@ -57,7 +62,7 @@ import { HeroComponent } from './main/hero/hero.component';
     HttpModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [AppService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

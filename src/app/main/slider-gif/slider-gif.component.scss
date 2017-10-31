@@ -1,0 +1,30 @@
+@import 'assets/scss/global';
+
+
+.slider-gif {
+    margin-top: 3rem;
+
+    @include flex(flex, row nowrap);
+    justify-content: space-between;
+
+    .gif-item {
+        transition: all 0.3s ease-in-out;
+
+    }
+    .slider-btn {
+        margin: auto 0;
+        @include size(16px, 34px);
+        background-size: contain;
+        background-repeat: no-repeat;
+
+        &.left { 
+            background-image: url(../../../assets/images/ui/icons/slider_left.small.png); 
+        }
+        &.right {
+            background-image: url(../../../assets/images/ui/icons/slider_right.small.png); 
+        }
+    }
+
+}
+
+
