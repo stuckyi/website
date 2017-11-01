@@ -6286,16 +6286,11 @@ ul {
       .works .work .work-item .work-name {
         margin: .35rem auto; }
 
-.mainImg img {
-  width: auto;
-  height: 60vh;
-  padding: 0.625rem; }
-
 .footer {
   margin-top: 10rem; }
 
 .hero {
-  background-color: #FFFC63; }
+  background-color: #ffff8c; }
   .hero p {
     font-size: 1.625rem;
     font-weight: 700; }

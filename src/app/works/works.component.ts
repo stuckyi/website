@@ -41,24 +41,24 @@ export class WorksComponent implements OnInit {
   }
 
   setClass(name_en: string) {
-
+    let result = '';
     if (name_en === 'collection' && this.hoverState.collection) {
-      return 'steps11';
+      result = 'steps11';
     } else if (name_en === 'codedfont' && this.hoverState.codedfont) {
-      return 'steps7';
+      result = 'steps7';
     } else if (name_en === 'kohi' && this.hoverState.kohi) {
-      return 'steps5';
+      result = 'steps5';
     } else if (name_en === 'jumpgame' && this.hoverState.jumpgame) {
-      return 'steps11';
+      result = 'steps11';
     } else if (name_en === 'randomcharacter' && this.hoverState.randomcharacter) {
-      return 'steps5';
+      result = 'steps5';
     } else if (name_en === 'codestudy' && this.hoverState.codestudy) {
-      return 'steps11';
+      result = 'steps11';
     } else if (name_en === 'ted' && this.hoverState.ted) {
-      return 'steps7';
+      result = 'steps7';
     }
 
-    console.log("setClass Error");
+    return result;
   }
   
 

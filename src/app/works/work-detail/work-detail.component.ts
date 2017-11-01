@@ -38,7 +38,8 @@ export class WorkDetailComponent implements OnInit {
     
 
         
-    this.mainImgUrl = this.content.baseUrl + 'main.png';      // 메인 상단 이미지
+    this.mainImgUrl = this.content.baseUrl;      // 메인 상단 이미지
+    // this.mainImgUrl = this.content.baseUrl + 'main.png';      // 메인 상단 이미지
     this.sliderGifs = this.content.sliderGifs;                // 모달 상세 이미지
     this.sliderImgUrl = this.content.baseUrl + 'slider.png';  // 슬라이더 스프라이트 이미지
 

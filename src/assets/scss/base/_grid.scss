@@ -110,14 +110,6 @@
 
 // 상세페이지 상단 메인이미지 영역
 
-.mainImg {
-    img { 
-      @include size(auto, $mainImgHeight);
-    //   margin: 0 auto;
-      padding: 0.625rem;
-    }
-}
-
 
 .footer {
     margin-top: 10rem;
