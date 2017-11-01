@@ -12,12 +12,11 @@ import { WorkDetailComponent } from './works/work-detail/work-detail.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/works', pathMatch: 'full' },
-    // { path: 'work', loadChildren: './work.module#WorkModule' },
-    { path: 'app', component: AppComponent },
-    { path: 'works', component: WorksComponent },
-    { path: 'detail/:id', component: WorkDetailComponent },
-    { path: 'about', component: AboutComponent },
-    { path: '**', component: WorksComponent }
+  { path: 'app', component: AppComponent },
+  { path: 'works', component: WorksComponent },
+  { path: 'detail/:id', component: WorkDetailComponent },
+  { path: 'about', component: AboutComponent },
+  { path: '**', component: WorksComponent }
 ];
 
 @NgModule({
