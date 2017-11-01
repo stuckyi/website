@@ -36,10 +36,33 @@ export class WorksComponent implements OnInit {
 
 
   ngOnInit() {
-
     this.contents = this.appService.getContents();
-    window.scrollTo(0,0);
+    
   }
+
+  setClass(name_en: string) {
+
+    if (name_en === 'collection' && this.hoverState.collection) {
+      return 'steps11';
+    } else if (name_en === 'codedfont' && this.hoverState.codedfont) {
+      return 'steps7';
+    } else if (name_en === 'kohi' && this.hoverState.kohi) {
+      return 'steps5';
+    } else if (name_en === 'jumpgame' && this.hoverState.jumpgame) {
+      return 'steps11';
+    } else if (name_en === 'randomcharacter' && this.hoverState.randomcharacter) {
+      return 'steps5';
+    } else if (name_en === 'codestudy' && this.hoverState.codestudy) {
+      return 'steps11';
+    } else if (name_en === 'ted' && this.hoverState.ted) {
+      return 'steps7';
+    }
+
+    console.log("setClass Error");
+  }
+  
+
+
   getHoverState(name) {
     switch (name) {
       case 'collection': return this.hoverState.collection;

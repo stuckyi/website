@@ -9,7 +9,6 @@
 
     .gif-item {
         transition: all 0.3s ease-in-out;
-
     }
     .slider-btn {
         margin: auto 0;
@@ -26,5 +25,13 @@
     }
 
 }
-
+.slider-gif-info {
+    text-align: center;
+    margin-top: 2rem;
+    p { 
+        font-size: $size-8;
+        color: grey;
+        line-height: $line-height-0;
+    }
+}
 

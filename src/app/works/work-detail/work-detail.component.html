@@ -10,7 +10,7 @@
     <div class="columns">
     <!-- title 영역 -->
       <div class="column is-8">
-        <p class="title">{{ content.title }} </p>
+        <p *ngFor="let title of content.title" class="title">{{ title }} </p>
         <p class="summary column is-9 is-paddingless"> {{ content.summary }} </p>
       </div>
       
@@ -28,22 +28,20 @@
       <p *ngFor="let description of content.descriptions">{{description}}</p>
     </div>
     
-    <!-- 프로세스 이미지 (슬라이더) -->
-    <p class="subtitle process-img"> </p>
-    <div class="column imgSlider">
-      <figure class="image">
-        <!--<img [src]="baseUrl+'slider_0.png'" alt="브로슈어 내지에 들어간 삽화들 중 일부 슬라이더">-->
-      </figure>
+    
+    <!-- 화면 미리보기 (GIF 슬라이더) -->
+    <div *ngIf="isGifSlider">
+      <p class="subtitle process-gif"> </p>
+      <app-slider-gif [sliderGifInfo]="sliderGifs"></app-slider-gif>
     </div>
 
-
     <!-- 프로세스 이미지 -->
-    <p class="subtitle process-img"> </p>
-
-    <app-slider 
-      [sliderImgUrl]="sliderImgUrl"
-      [sliderInfo]="content.modalImgs"></app-slider>
-    
+    <div *ngIf="isImgSlider">
+      <p class="subtitle process-img"> </p>
+      <app-slider 
+        [sliderImgUrl]="sliderImgUrl"
+        [sliderInfo]="content.modalImgs"></app-slider>
+    </div>
   </div>
 
 

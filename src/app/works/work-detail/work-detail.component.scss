@@ -1,10 +1,28 @@
 @import 'assets/scss/global';
 
 .mainImg {
+    z-index: $z-index-work-mainImg;
+    // @include size(100%, $mainImgHeight);
+    padding: 0;
+    overflow: hidden;
+
     background-color: #e9e9e9;
     top:0;
     img {
         padding: 0;
         @include size(100%, auto);
     }
+}
+
+
+.detail {
+  @include size(100%, auto);
+  z-index: $z-index-work-content;
+
+  .detail-container {
+    @include size($wrapWidth, auto);
+    margin: 3.75rem auto;
+    background-color: white;
+  }
+
 }

@@ -6286,27 +6286,13 @@ ul {
       .works .work .work-item .work-name {
         margin: .35rem auto; }
 
-.mainImg {
-  z-index: 200;
-  width: 100%;
+.mainImg img {
+  width: auto;
   height: 60vh;
-  padding: 0;
-  overflow: hidden; }
-  .mainImg img {
-    width: auto;
-    height: 60vh;
-    margin: 0 auto;
-    padding: 0.625rem; }
+  padding: 0.625rem; }
 
-.detail {
-  width: 100%;
-  height: auto;
-  z-index: 300; }
-  .detail .detail-container {
-    width: 900px;
-    height: auto;
-    margin: 3.75rem auto;
-    background-color: white; }
+.footer {
+  margin-top: 10rem; }
 
 .mainImg {
   background-color: #e9e9e9;

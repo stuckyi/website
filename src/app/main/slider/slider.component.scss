@@ -23,7 +23,7 @@
     .slider-btn {
         @include size(40px, 230px);
         position: absolute;
-        background-color: white;
+        background-color: black;
         opacity: .4;
         &:hover { opacity: .8; }
         &.right { margin-left: 860px; }

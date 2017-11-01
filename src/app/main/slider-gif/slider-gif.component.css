@@ -6286,27 +6286,13 @@ ul {
       .works .work .work-item .work-name {
         margin: .35rem auto; }
 
-.mainImg {
-  z-index: 200;
-  width: 100%;
+.mainImg img {
+  width: auto;
   height: 60vh;
-  padding: 0;
-  overflow: hidden; }
-  .mainImg img {
-    width: auto;
-    height: 60vh;
-    margin: 0 auto;
-    padding: 0.625rem; }
+  padding: 0.625rem; }
 
-.detail {
-  width: 100%;
-  height: auto;
-  z-index: 300; }
-  .detail .detail-container {
-    width: 900px;
-    height: auto;
-    margin: 3.75rem auto;
-    background-color: white; }
+.footer {
+  margin-top: 10rem; }
 
 .slider-gif {
   margin-top: 3rem;
@@ -6325,5 +6311,13 @@ ul {
       background-image: url(../../../assets/images/ui/icons/slider_left.small.png); }
     .slider-gif .slider-btn.right {
       background-image: url(../../../assets/images/ui/icons/slider_right.small.png); }
+
+.slider-gif-info {
+  text-align: center;
+  margin-top: 2rem; }
+  .slider-gif-info p {
+    font-size: 0.8125rem;
+    color: grey;
+    line-height: 0.5; }
 
 /*# sourceMappingURL=slider-gif.component.css.map */

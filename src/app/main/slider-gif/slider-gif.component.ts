@@ -16,13 +16,10 @@ export class SliderGifComponent implements OnInit {
   isLeft: boolean = false;
   isRight: boolean = true;
 
-
-
-
-
   constructor() { }
 
   ngOnInit() {
+    this.selectedItem = this.sliderGifInfo[0];
     this.maxIndex = this.sliderGifInfo.length;
     this.curImgUrl = this.sliderGifInfo[0].imgUrl;
   }

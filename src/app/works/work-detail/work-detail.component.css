@@ -6286,17 +6286,24 @@ ul {
       .works .work .work-item .work-name {
         margin: .35rem auto; }
 
+.mainImg img {
+  width: auto;
+  height: 60vh;
+  padding: 0.625rem; }
+
+.footer {
+  margin-top: 10rem; }
+
 .mainImg {
   z-index: 200;
-  width: 100%;
-  height: 60vh;
   padding: 0;
-  overflow: hidden; }
+  overflow: hidden;
+  background-color: #e9e9e9;
+  top: 0; }
   .mainImg img {
-    width: auto;
-    height: 60vh;
-    margin: 0 auto;
-    padding: 0.625rem; }
+    padding: 0;
+    width: 100%;
+    height: auto; }
 
 .detail {
   width: 100%;
@@ -6307,13 +6314,5 @@ ul {
     height: auto;
     margin: 3.75rem auto;
     background-color: white; }
-
-.mainImg {
-  background-color: #e9e9e9;
-  top: 0; }
-  .mainImg img {
-    padding: 0;
-    width: 100%;
-    height: auto; }
 
 /*# sourceMappingURL=work-detail.component.css.map */
