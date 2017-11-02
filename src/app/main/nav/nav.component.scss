@@ -5,10 +5,36 @@
 
     .nav-right {
         div {
-            &:hover { text-decoration: line-through; }
-            &:focus { text-decoration: line-through; }
+            span {
+                position: relative;
+                 &:hover {
+                    &:before {
+                        width: 100%;
+                    }
+                }
+                &:before {
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    top: 50%;
+
+                    @include size(0, .16rem);
+                    background: black;
+                    transition: width .4s ease-in-out;
+                }
+
+            }
         }
         
     }
     
+}
+// hover effect
+.active-link {
+    span {
+        &:before {
+            width:100% !important;
+        }
+    }
 }

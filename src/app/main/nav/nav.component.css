@@ -6291,9 +6291,22 @@ ul {
 
 .nav-container {
   background: none; }
-  .nav-container .nav-right div:hover {
-    text-decoration: line-through; }
-  .nav-container .nav-right div:focus {
-    text-decoration: line-through; }
+  .nav-container .nav-right div span {
+    position: relative; }
+    .nav-container .nav-right div span:hover:before {
+      width: 100%; }
+    .nav-container .nav-right div span:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 50%;
+      width: 0;
+      height: 0.16rem;
+      background: black;
+      transition: width .4s ease-in-out; }
+
+.active-link span:before {
+  width: 100% !important; }
 
 /*# sourceMappingURL=nav.component.css.map */
