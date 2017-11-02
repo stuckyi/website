@@ -16,14 +16,18 @@ export class WorkDetailComponent implements OnInit {
   sliderImgUrl: string = '';
   sliderGifs;
 
+  // 슬라이더 요소 표시 여부
   isImgSlider: boolean;
   isGifSlider: boolean;
 
+  isBgImg: boolean = false;
 
 
+  styleInfo = {
+    background: '#000'
+  };
 
-
-  // assets/images/works/collection/main.png  
+  
   constructor(
     private appService: AppService,
     private activatedRoute: ActivatedRoute
@@ -37,19 +41,41 @@ export class WorkDetailComponent implements OnInit {
     this.content = this.appService.getContent(contentId);
     
 
-        
-    this.mainImgUrl = this.content.baseUrl;      // 메인 상단 이미지
-    // this.mainImgUrl = this.content.baseUrl + 'main.png';      // 메인 상단 이미지
-    this.sliderGifs = this.content.sliderGifs;                // 모달 상세 이미지
-    this.sliderImgUrl = this.content.baseUrl + 'slider.png';  // 슬라이더 스프라이트 이미지
+    // 메인 상단 설정
+    this.styleInfo.background = this.setBgCol(this.content.title_en);  // 메인 상단 배경색
+    
+    this.mainImgUrl = this.content.baseUrl;                           // 메인 상단 이미지
+
+    // this.mainImgUrl = this.content.baseUrl + 'main.png';           // 메인 상단 이미지
+    this.sliderGifs = this.content.sliderGifs;                        // 모달 상세 이미지
+    this.sliderImgUrl = this.content.baseUrl + 'slider.png';          // 슬라이더 스프라이트 이미지
 
 
     // 이미지 슬라이더 표시여부
     this.isImgSlider = (this.content.modalImgs.length > 0) ? true : false;
     this.isGifSlider = (this.content.sliderGifs.length > 0) ? true : false;
     
+
     // 초기화시 화면 최상단
     window.scrollTo(0, 0);
+  }
+
+  setBgCol(name_en: string) {
+    let result = '';
+    if (name_en === 'randomcharacter') {
+      this.isBgImg = false;
+      result = '#FAB8D5';
+    } else if (name_en === "codestudy") {
+      this.isBgImg = false;
+      result = '#F7F7F7';
+    } else if (name_en === "jumpgame") {
+      this.isBgImg = true;
+      result = "url('assets/images/works/artlink/jumpgame/main_bg.png')";
+    } else {
+      this.isBgImg = false;
+      result  = '#E9E9E9';
+    }
+    return result;
   }
 
 }

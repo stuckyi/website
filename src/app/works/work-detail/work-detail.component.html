@@ -1,10 +1,17 @@
 <!-- 최상단 프로젝트별 메인 이미지 영역 -->
-<div class="mainImg">
+
+<div class="mainImg"
+     [class.isBgImg]="isBgImg"
+     [ngStyle]="styleInfo">
+
    <figure class="image">
-    <img class="is-hidden-tablet" [src]="mainImgUrl+'main.m.png'" alt="프로젝트 상세페이지 메인 이미지" />
-    <img class="is-hidden-mobile" [src]="mainImgUrl+'main.png'" alt="프로젝트 상세페이지 메인 이미지" />
+    <img class="is-hidden-tablet" [src]="mainImgUrl+'main.m.png'" alt="상세페이지 메인 이미지" />
+    <img class="is-hidden-mobile" [src]="mainImgUrl+'main.png'" alt="상세페이지 메인 이미지" />
   </figure>
 </div>
+
+
+
 
 <div class="detail">
   <div class="detail-container">

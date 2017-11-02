@@ -52,7 +52,7 @@ export class SliderComponent implements OnInit, AfterViewInit{
     this.dynamicOffset = 'translateX(' + this.currentPos + 'px)';
     this.maxLev = Math.floor(((this.sliderInfo.length / 2) - 1) / this.offsetLev);
     // this.baseUrl = 'url(/assets/images/works/' + this.projectInfo + '/slider.png)';
-    this.baseUrl = 'url(/'+ this.sliderImgUrl +')';
+    this.baseUrl = 'url('+ this.sliderImgUrl +')';
   }
 
 
