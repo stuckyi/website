@@ -6146,9 +6146,10 @@ label.panel-block {
 * {
   font-family: Arial, sans-serif;
   font-size: 8px; }
-  * body {
-    font-family: Arial, sans-serif;
-    font-size: 8px; }
+
+body {
+  font-family: Arial, sans-serif;
+  font-size: 8px; }
 
 @media (min-width: 769px) {
   * {
@@ -6159,8 +6160,7 @@ label.panel-block {
     font-family: "Spoqa Han Sans", Apple SD Gothic Neo, Nanum Barun Gothic, Nanum Gothic, "돋움", Dotum, Verdana, Arial, sans-serif;
     font-size: 16px; } }
 p {
-  line-height: 180%;
-  font-size: 1.063rem; }
+  line-height: 180%; }
 
 ul {
   list-style: circle;
@@ -6224,12 +6224,12 @@ ul {
     width: 20%;
     height: auto; }
     .nav-container .nav-left img {
-      width: 80px;
-      height: 47px; }
+      width: 5rem;
+      height: 2.9375rem; }
     @media (min-width: 769px) {
       .nav-container .nav-left img {
-        width: 113px;
-        height: 67px; } }
+        width: 7.0625rem;
+        height: 4.1875rem; } }
   .nav-container .nav-right {
     text-align: center;
     width: 10%;
@@ -6257,17 +6257,6 @@ ul {
   margin: 6.25rem auto; }
 #about .section-title {
   margin: 10rem auto 2rem; }
-
-.hero {
-  width: 100%;
-  height: 80vh;
-  padding: 20vh; }
-  .hero .hello {
-    max-width: 860px; }
-  .hero .contact-msg {
-    margin-top: 20vh; }
-  .hero.works {
-    height: 100vh; }
 
 .works {
   width: 960px;

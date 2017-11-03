@@ -3,17 +3,44 @@
 
 
 
-.hero{
-    background-color: $main-color;
-    p { 
-        font-size: $size-2;
-        font-weight: $weight-bold;
-    }
-   
-    .contact-msg { font-size: $size-3; }
+#hero{
+    
+    
+    @include size(100vw, 80vh);
+    padding: 18vh 2.125rem;
+    overflow: hidden;
 
-    .is-fullheight {
+    background-color: $main-color;
+    p {
+        font-size: $size-5;
+        font-weight: $weight-bold;
+        line-height: $line-height-5;
+    }
+    .m-contact-email { 
+        margin-top: 10vh; 
+    }
+
+
+    
+
+
+    @media(min-width: $tablet){
+        @include size(100%, 80vh);
+        padding: 20vh;
+
+        .hello { max-width: 860px; }
+        .contact-msg { 
+            font-size: $size-3;
+            margin-top: 10vh; 
+        }
+        p {  font-size: $size-2; }
+    }
+
+    &.is-fullheight {
         @include size(100%, 100vh);
     }
 }
+
+
+
 

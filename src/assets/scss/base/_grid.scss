@@ -8,6 +8,9 @@
 }
 
 
+
+
+
 // 상단 네비게이션 영역
 .nav-container {
   z-index: $z-index-navbar;     
@@ -17,14 +20,17 @@
   justify-content: space-between;
   
   position: absolute;
-  padding: rem(20px);
+  padding: 1.25rem;
 
   .nav-left {
     @include size(20%, auto);
 
-    img { @include size(80px, 47px); }
+    img { @include size(5rem, 2.9375rem); }
     @media(min-width: $tablet){
-        img { @include size(113px, 67px); }
+        img { 
+            @include size(7.0625rem, 4.1875rem);
+
+        }
     }
     
   }
@@ -70,15 +76,6 @@
 // works 영역
 //
 
-.hero{
-    @include size(100%, 80vh);
-    padding: 20vh;
-    .hello {
-        max-width: 860px;
-    }
-    .contact-msg { margin-top: 20vh; }
-    &.works { height: 100vh; }
-}
 
 
 .works {
