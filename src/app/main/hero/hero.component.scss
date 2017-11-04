@@ -1,6 +1,6 @@
 @import 'assets/scss/global';
 
-
+$test-line-height: 160%;
 
 
 #hero{
@@ -33,7 +33,10 @@
             font-size: $size-3;
             margin-top: 10vh; 
         }
-        p {  font-size: $size-2; }
+        p {  
+            font-size: $size-2;
+            // line-height: $test-line-height;
+        }
     }
 
     &.is-fullheight {
