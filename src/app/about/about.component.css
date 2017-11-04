@@ -6211,40 +6211,6 @@ ul {
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
-.nav-container {
-  z-index: 1000;
-  width: 100%;
-  height: auto;
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-between;
-  position: absolute;
-  padding: 1.25rem; }
-  .nav-container .nav-left {
-    width: 20%;
-    height: auto; }
-    .nav-container .nav-left img {
-      width: 5rem;
-      height: 2.9375rem; }
-    @media (min-width: 769px) {
-      .nav-container .nav-left img {
-        width: 7.0625rem;
-        height: 4.1875rem; } }
-  .nav-container .nav-right {
-    text-align: center;
-    width: 10%;
-    height: 47px;
-    display: flex;
-    flex-flow: column nowrap;
-    align-content: stretch; }
-    @media (min-width: 769px) {
-      .nav-container .nav-right {
-        width: 10%;
-        height: auto;
-        display: flex;
-        flex-flow: row nowrap;
-        justify-content: space-around; } }
-
 #about .about-main {
   width: 100%;
   height: 100vh;
