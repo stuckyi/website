@@ -1,6 +1,10 @@
 <div class="nav-container">
-  <div routerLink="/works" class="nav-left">
-    <img src="assets/images/ui/icons/logotype@3x.png" alt="로고이미지" />
+  <div routerLink="/works" class="nav-left"
+    (mouseenter)="setLogoState('in')"
+    (mouseleave)="setLogoState('out')">
+    <img [@logoState]="logoState" 
+         class="logo" 
+         src="assets/images/ui/icons/logotype@3x.png" alt="로고 이미지" />
   </div>
   <div class="nav-right">
     <div routerLink="/works" routerLinkActive="active-link"><span>작업</span></div>
