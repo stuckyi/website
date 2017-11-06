@@ -35,32 +35,6 @@
 //
 
 
-
-.works {
-    @include size($warp-main-grid, auto);
-     // 사이드 여백은 관리 전체 콘텐츠 크기 잡은 후, 중앙으로 몰아준다 차라리.
-    // margin: 80vh auto rem(100px);
-    margin: rem(100px) auto;
-    
-
-    .work {
-      // (그리드 내) 개별 work간의 간격 설정
-        margin: rem(30px) auto;
-
-        .image { 
-            margin-bottom: 2rem;
-            @include size(300px, 270px);
-        }
-        .work-item {
-            margin: 0 auto;
-            @include size(300px, auto);
-            .work-name { margin: .35rem auto; }
-        }
-        
-    }
-}
-
-
 // 프로젝트 상세 페이지
 
 // 상세페이지 상단 메인이미지 영역

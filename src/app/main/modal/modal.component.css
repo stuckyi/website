@@ -6224,23 +6224,6 @@ ul {
 #about .section-title {
   margin: 10rem auto 2rem; }
 
-.works {
-  width: 960px;
-  height: auto;
-  margin: 6.25rem auto; }
-  .works .work {
-    margin: 1.875rem auto; }
-    .works .work .image {
-      margin-bottom: 2rem;
-      width: 300px;
-      height: 270px; }
-    .works .work .work-item {
-      margin: 0 auto;
-      width: 300px;
-      height: auto; }
-      .works .work .work-item .work-name {
-        margin: .35rem auto; }
-
 .footer {
   margin-top: 10rem; }
 

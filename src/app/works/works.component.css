@@ -6224,40 +6224,85 @@ ul {
 #about .section-title {
   margin: 10rem auto 2rem; }
 
-.works {
-  width: 960px;
-  height: auto;
-  margin: 6.25rem auto; }
-  .works .work {
-    margin: 1.875rem auto; }
-    .works .work .image {
-      margin-bottom: 2rem;
-      width: 300px;
-      height: 270px; }
-    .works .work .work-item {
-      margin: 0 auto;
-      width: 300px;
-      height: auto; }
-      .works .work .work-item .work-name {
-        margin: .35rem auto; }
-
 .footer {
   margin-top: 10rem; }
 
 .work-main {
   background-color: #FFFC63; }
 
-.works .work .image {
-  background-color: #e9e9e9;
-  background-repeat: no-repeat;
-  background-position: 0 0%; }
-.works .work .work-item .work-tag {
-  font-size: 0.8125rem; }
-.works .work .work-item .work-name {
-  font-size: 1.25rem;
-  font-weight: 700;
-  line-height: 0.8; }
+.works {
+  width: 960px;
+  height: auto;
+  margin: 6.25rem auto; }
+  .works .work {
+    width: 100%;
+    height: auto;
+    padding: 0;
+    margin: 4rem 0; }
+    @media (min-width: 769px) {
+      .works .work {
+        width: 30%;
+        height: auto;
+        min-width: 16.875rem;
+        min-height: 20.1875rem; } }
+    @media (min-width: 769px) {
+      .works .work {
+        margin: 1rem; } }
+    .works .work .image {
+      padding: 0; }
+      .works .work .image img {
+        width: 40%;
+        height: auto; }
+      @media (min-width: 769px) {
+        .works .work .image {
+          width: 100%;
+          height: auto;
+          min-width: 16.875rem;
+          min-height: 15.1875rem;
+          padding: 0;
+          background-color: #e9e9e9;
+          background-repeat: no-repeat;
+          background-position: 0 0%; } }
+    .works .work .work-item {
+      width: 100%;
+      height: 100px; }
+      @media (min-width: 769px) {
+        .works .work .work-item {
+          padding: 0; } }
+      .works .work .work-item .work-tag {
+        margin-top: 0.9375rem;
+        font-size: 0.8125rem; }
+      .works .work .work-item .work-name {
+        font-size: 1.25rem;
+        font-weight: 700;
+        line-height: 1; }
 
+/*
+
+.works {
+    // @include size($warp-main-grid, auto);
+     // 사이드 여백은 관리 전체 콘텐츠 크기 잡은 후, 중앙으로 몰아준다 차라리.
+    // margin: 80vh auto rem(100px);
+    margin: rem(100px) auto;
+    
+
+    .work {
+      // (그리드 내) 개별 work간의 간격 설정
+        margin: rem(30px) auto;
+
+        .image { 
+            margin-bottom: 2rem;
+            @include size(300px, 270px);
+        }
+        .work-item {
+            margin: 0 auto;
+            @include size(300px, auto);
+            // .work-name { margin: .35rem auto; }
+        }
+        
+    }
+}
+*/
 @keyframes sprite {
   from {
     background-position: 0 0; }
