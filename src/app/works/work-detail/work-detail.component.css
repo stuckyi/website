@@ -6149,15 +6149,16 @@ label.panel-block {
 
 body {
   font-family: Arial, sans-serif;
-  font-size: 8px; }
+  font-size: 8px;
+  background-color: red; }
 
 @media (min-width: 769px) {
   * {
-    font-family: "Spoqa Han Sans", Apple SD Gothic Neo, Nanum Barun Gothic, Nanum Gothic, "돋움", Dotum, Verdana, Arial, sans-serif;
+    font-family: "Spoqa Han Sans", "Apple SD Gothic Neo", "Nanum Barun Gothic", "Nanum Gothic", "돋움", Dotum, "Verdana", Arial, sans-serif;
     font-size: 16px; }
 
   body {
-    font-family: "Spoqa Han Sans", Apple SD Gothic Neo, Nanum Barun Gothic, Nanum Gothic, "돋움", Dotum, Verdana, Arial, sans-serif;
+    font-family: "Spoqa Han Sans", "Apple SD Gothic Neo", "Nanum Barun Gothic", "Nanum Gothic", "돋움", Dotum, "Verdana", Arial, sans-serif;
     font-size: 16px; } }
 p {
   line-height: 180%; }
@@ -6167,44 +6168,6 @@ ul {
   line-height: 180%;
   font-size: 1.063rem;
   margin-left: 2rem; }
-
-.detail-container .title {
-  font-size: 2.25rem;
-  font-weight: 700;
-  margin-bottom: 1.5625rem; }
-.detail-container .summary {
-  font-size: 1.125rem; }
-.detail-container .tag-title {
-  font-size: 0.875rem;
-  margin-bottom: 1.5625rem; }
-.detail-container .tag-item {
-  font-size: 0.875rem;
-  color: #9B9B9B; }
-.detail-container .desc-content p {
-  font-size: 1.063rem;
-  margin: 1.875rem 0; }
-.detail-container .link {
-  text-decoration: underline; }
-
-.subtitle {
-  margin-top: 6.25rem;
-  margin-bottom: 1.875rem;
-  font-size: 1.125rem;
-  font-weight: 700; }
-  .subtitle:before {
-    margin-top: 3rem;
-    padding: 4px;
-    border-top: 3px solid black; }
-  .subtitle.process-desc:before {
-    content: '프로젝트 설명'; }
-  .subtitle.process-img:before {
-    content: '프로세스 이미지'; }
-  .subtitle.process-video:before {
-    content: '프로젝트 구현 영상'; }
-  .subtitle.process-gif:before {
-    content: '화면 미리보기'; }
-  .subtitle.process-link:before {
-    content: '관련 링크'; }
 
 * {
   -webkit-box-sizing: border-box;
@@ -6223,9 +6186,6 @@ ul {
   margin: 6.25rem auto; }
 #about .section-title {
   margin: 10rem auto 2rem; }
-
-.footer {
-  margin-top: 10rem; }
 
 .mainImg {
   z-index: 200;
@@ -6249,8 +6209,77 @@ ul {
   .detail .detail-container {
     width: 900px;
     height: auto;
-    margin: 3.75rem auto;
+    margin: 3.75rem auto; }
+    .detail .detail-container .work-title {
+      font-size: 2.25rem;
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 0; }
+    .detail .detail-container .work-summary {
+      font-size: 1.125rem;
+      margin: 2rem 0; }
+    .detail .detail-container .tag-title {
+      font-size: 0.875rem;
+      margin-bottom: 1.5rem; }
+    .detail .detail-container .tag-item {
+      font-size: 0.875rem;
+      color: #9B9B9B; }
+    .detail .detail-container .desc-content p {
+      font-size: 1.063rem;
+      margin: 1.8rem 0; }
+    .detail .detail-container .link {
+      text-decoration: underline; }
+
+.m-detail {
+  width: 100%;
+  height: auto;
+  z-index: 300; }
+  .m-detail .m-detail-container {
+    width: 100%;
+    height: auto;
+    padding: 1.68rem;
     background-color: white; }
+    .m-detail .m-detail-container .work-title {
+      font-size: 1.625rem;
+      font-weight: 700;
+      line-height: 1.1; }
+    .m-detail .m-detail-container .work-summary {
+      max-width: 100%;
+      font-size: 1.125rem; }
+    .m-detail .m-detail-container .tag-title {
+      font-size: 0.875rem; }
+    .m-detail .m-detail-container .tag-item {
+      font-size: 0.625rem;
+      color: #9B9B9B; }
+      .m-detail .m-detail-container .tag-item:after {
+        content: ',  '; }
+      .m-detail .m-detail-container .tag-item:last-of-type:after {
+        content: ''; }
+    .m-detail .m-detail-container .desc-content p {
+      font-size: 1.063rem;
+      margin: 1.875rem 0; }
+    .m-detail .m-detail-container .link {
+      text-decoration: underline; }
+
+.sub-title {
+  margin-top: 6.25rem;
+  margin-bottom: 2.4rem;
+  font-size: 1.125rem;
+  font-weight: 700; }
+  .sub-title:before {
+    margin-top: 3rem;
+    padding: 4px;
+    border-top: 3px solid black; }
+  .sub-title.process-desc:before {
+    content: '프로젝트 설명'; }
+  .sub-title.process-img:before {
+    content: '프로세스 이미지'; }
+  .sub-title.process-video:before {
+    content: '프로젝트 구현 영상'; }
+  .sub-title.process-gif:before {
+    content: '화면 미리보기'; }
+  .sub-title.process-link:before {
+    content: '관련 링크'; }
 
 .isBgImg {
   background-size: auto 100% !important;

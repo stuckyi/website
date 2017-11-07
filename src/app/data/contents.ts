@@ -123,10 +123,10 @@ export const CONTENTS = [
     },
     { 
         id: 3,
-        title: ['장애물 점프'],
+        title: ['멘넴X스투키, 장애물 점프'],
         title_en: 'jumpgame',
         summary: '멘넴의 캐릭터가 주인공인 간단한 게임을 만들어보았습니다.',
-        baseUrl: 'assets/images/works/artlink/jumpgame/',
+        baseUrl: 'assets/images/works/jumpgame/',
         year: '2017',
         type: '인터랙티브 웹 콘텐츠',
         tags: ['#아트링크', '#협업', '#p5.js'],
@@ -141,33 +141,33 @@ export const CONTENTS = [
            { info: '	<멘넴X스투키 장애물 점프>링크를 클릭하면 장애물 점프를 직접 해볼 수 있습니다.', url: '#'}
         ],
         modalImgs: [
-            { index: 0, title: '(ex)', desc: '게임 화면에 들어갈 이미지 소스를 함께 제작합니다.', imgUrl: '/assets/images/works/artlink/jumpgame/modal/0.png' },
-            { index: 1, title: '(ex)', desc: '멘넴이 피날레 장면을 그리고 있습니다.', imgUrl: '/assets/images/works/artlink/jumpgame/modal/1.png' },
-            { index: 2, title: '(ex)', desc: '게임에 맞는 음악을 만들어달라고 오선지를 건네자, 멘넴이 그 자리에서 작곡을 시작합니다.', imgUrl: '/assets/images/works/artlink/jumpgame/modal/2.png' },
-            { index: 3, title: '(ex)', desc: '인터넷에서 찾은 피아노로 연주하여 녹음합니다. 운지가 어려워 키보드에 계이름을 적어두었습니다.', imgUrl: '/assets/images/works/artlink/jumpgame/modal/3.png' },
-            { index: 4, title: '(ex)', desc: '완성된 게임 BGM 악보입니다.', imgUrl: '/assets/images/works/artlink/jumpgame/modal/4.png' },
-            { index: 5, title: '(ex)', desc: '게임에 출연하는 캐릭터들을 되짚어보며 피날레를 그리는 모습입니다.', imgUrl: '/assets/images/works/artlink/jumpgame/modal/5.png' },
-            { index: 6, title: '(ex)', desc: '게임 타이틀 화면을 그리고 있습니다.', imgUrl: '/assets/images/works/artlink/jumpgame/modal/6.png' },
-            { index: 7, title: '(ex)', desc: '게임 타이틀 화면을 구상하고 있습니다.', imgUrl: '/assets/images/works/artlink/jumpgame/modal/7.png' },
-            { index: 8, title: '(ex)', desc: '멘넴이 디자인 한 EXIT 이미지에 트레이싱지를 대고 선을 진하게 해서 다시 그립니다.', imgUrl: '/assets/images/works/artlink/jumpgame/modal/8.png' },
-            { index: 9, title: '(ex)', desc: '게임에 출연하는 캐릭터들의 자기 소개 멘트도 녹음합니다.', imgUrl: '/assets/images/works/artlink/jumpgame/modal/9.png' },
-            { index: 10, title: '(ex)', desc: '만들어진 게임을 직접 해봅니다.', imgUrl: '/assets/images/works/artlink/jumpgame/modal/10.png' },
-            { index: 11, title: '(ex)', desc: '나름 재밌습니다 :)', imgUrl: '/assets/images/works/artlink/jumpgame/modal/11.png' }
+            { index: 0, title: '(ex)', desc: '게임 화면에 들어갈 이미지 소스를 함께 제작합니다.', imgUrl: '/assets/images/works/jumpgame/modal/0.png' },
+            { index: 1, title: '(ex)', desc: '멘넴이 피날레 장면을 그리고 있습니다.', imgUrl: '/assets/images/works/jumpgame/modal/1.png' },
+            { index: 2, title: '(ex)', desc: '게임에 맞는 음악을 만들어달라고 오선지를 건네자, 멘넴이 그 자리에서 작곡을 시작합니다.', imgUrl: '/assets/images/works/jumpgame/modal/2.png' },
+            { index: 3, title: '(ex)', desc: '인터넷에서 찾은 피아노로 연주하여 녹음합니다. 운지가 어려워 키보드에 계이름을 적어두었습니다.', imgUrl: '/assets/images/works/jumpgame/modal/3.png' },
+            { index: 4, title: '(ex)', desc: '완성된 게임 BGM 악보입니다.', imgUrl: '/assets/images/works/jumpgame/modal/4.png' },
+            { index: 5, title: '(ex)', desc: '게임에 출연하는 캐릭터들을 되짚어보며 피날레를 그리는 모습입니다.', imgUrl: '/assets/images/works/jumpgame/modal/5.png' },
+            { index: 6, title: '(ex)', desc: '게임 타이틀 화면을 그리고 있습니다.', imgUrl: '/assets/images/works/jumpgame/modal/6.png' },
+            { index: 7, title: '(ex)', desc: '게임 타이틀 화면을 구상하고 있습니다.', imgUrl: '/assets/images/works/jumpgame/modal/7.png' },
+            { index: 8, title: '(ex)', desc: '멘넴이 디자인 한 EXIT 이미지에 트레이싱지를 대고 선을 진하게 해서 다시 그립니다.', imgUrl: '/assets/images/works/jumpgame/modal/8.png' },
+            { index: 9, title: '(ex)', desc: '게임에 출연하는 캐릭터들의 자기 소개 멘트도 녹음합니다.', imgUrl: '/assets/images/works/jumpgame/modal/9.png' },
+            { index: 10, title: '(ex)', desc: '만들어진 게임을 직접 해봅니다.', imgUrl: '/assets/images/works/jumpgame/modal/10.png' },
+            { index: 11, title: '(ex)', desc: '나름 재밌습니다 :)', imgUrl: '/assets/images/works/jumpgame/modal/11.png' }
         ],
         sliderGifs: [
-            { index: 0, title:'장애물 점프 타이틀 화면', desc: '멘넴이 작곡한 <장애물점프-여행의 시작> 음악이 흘러나오기 시작합니다.', imgUrl: '/assets/images/works/artlink/jumpgame/preview/0.png' },
-            { index: 1, title: '캐릭터 선택 화면', desc: '멘넴이 고른 다섯 캐릭터 중에 하나를 고르면 게임이 시작됩니다.', imgUrl: '/assets/images/works/artlink/jumpgame/preview/1.png' },
-            { index: 2, title: '게임 시작 화면', desc: '꽃가루공꽃을 피해 친구들을 만나 인사를 모두 하는 게 목표입니다.', imgUrl: '/assets/images/works/artlink/jumpgame/preview/2.png' },
-            { index: 3, title: '게임 화면', desc: '첫 번째 친구 다롱이와 조우하자 다롱이가 자기 소개를 합니다.', imgUrl: '/assets/images/works/artlink/jumpgame/preview/3.png' },
-            { index: 4, title: '골인 지점', desc: '모든 친구를 만나 인사를 하고 나면 게임이 끝나게 됩니다.', imgUrl: '/assets/images/works/artlink/jumpgame/preview/4.png' }
+            { index: 0, title:'장애물 점프 타이틀 화면', desc: '멘넴이 작곡한 <장애물점프-여행의 시작> 음악이 흘러나오기 시작합니다.', imgUrl: '/assets/images/works/jumpgame/preview/0.png' },
+            { index: 1, title: '캐릭터 선택 화면', desc: '멘넴이 고른 다섯 캐릭터 중에 하나를 고르면 게임이 시작됩니다.', imgUrl: '/assets/images/works/jumpgame/preview/1.png' },
+            { index: 2, title: '게임 시작 화면', desc: '꽃가루공꽃을 피해 친구들을 만나 인사를 모두 하는 게 목표입니다.', imgUrl: '/assets/images/works/jumpgame/preview/2.png' },
+            { index: 3, title: '게임 화면', desc: '첫 번째 친구 다롱이와 조우하자 다롱이가 자기 소개를 합니다.', imgUrl: '/assets/images/works/jumpgame/preview/3.png' },
+            { index: 4, title: '골인 지점', desc: '모든 친구를 만나 인사를 하고 나면 게임이 끝나게 됩니다.', imgUrl: '/assets/images/works/jumpgame/preview/4.png' }
         ]
     },
     { 
         id: 4,
-        title: ['멘넴X스투키 랜덤 캐릭터 생성기'],
+        title: ['멘넴X스투키', '랜덤 캐릭터 생성기'],
         title_en: 'randomcharacter',
         summary: '특징이 뚜렷한 맨넴의 캐릭터들을 모듈화하여 자동으로 생성해서 새로운 조합의 형태를 보았습니다.',
-        baseUrl: 'assets/images/works/artlink/randomcharacter/',
+        baseUrl: 'assets/images/works/randomcharacter/',
         year: '2017',
         type: '인터랙티브 웹 콘텐츠',
         tags: ['#아트링크', '#협업', '#p5.js'],
@@ -180,13 +180,24 @@ export const CONTENTS = [
         links: [
            { info: '	<멘넴X스투키 랜덤 캐릭터 생성기> 직접 랜덤 캐릭터를 생성 해볼 수 있습니다.', url: '#'}
         ],
-        modalImgs: [ ],
+        modalImgs: [
+            { index: 0, title: '(ex)', desc: '=', imgUrl: '/assets/images/works/randomcharacter/modal/0.png' },
+            { index: 1, title: '(ex)', desc: '=', imgUrl: '/assets/images/works/randomcharacter/modal/1.png' },
+            { index: 2, title: '(ex)', desc: '=', imgUrl: '/assets/images/works/randomcharacter/modal/2.png' },
+            { index: 3, title: '(ex)', desc: '=', imgUrl: '/assets/images/works/randomcharacter/modal/3.png' },
+            { index: 4, title: '(ex)', desc: '=', imgUrl: '/assets/images/works/randomcharacter/modal/4.png' },
+            { index: 5, title: '(ex)', desc: '=', imgUrl: '/assets/images/works/randomcharacter/modal/5.png' },
+            { index: 6, title: '(ex)', desc: '=', imgUrl: '/assets/images/works/randomcharacter/modal/6.png' },
+            { index: 7, title: '(ex)', desc: '=', imgUrl: '/assets/images/works/randomcharacter/modal/7.png' },
+            { index: 8, title: '(ex)', desc: '=', imgUrl: '/assets/images/works/randomcharacter/modal/8.png' },
+            { index: 9, title: '(ex)', desc: '=', imgUrl: '/assets/images/works/randomcharacter/modal/9.png' }
+         ],
         sliderGifs: [
-            { index: 0, title:'-', desc: '-', imgUrl: '/assets/images/works/artlink/randomcharacter/preview/0.png' },
-            { index: 1, title: '-', desc: '-', imgUrl: '/assets/images/works/artlink/randomcharacter/preview/1.png' },
-            { index: 2, title: '-', desc: '-', imgUrl: '/assets/images/works/artlink/randomcharacter/preview/2.png' },
-            { index: 3, title: '-', desc: '-', imgUrl: '/assets/images/works/artlink/randomcharacter/preview/3.png' },
-            { index: 4, title: '-', desc: '-', imgUrl: '/assets/images/works/artlink/randomcharacter/preview/4.png' }
+            { index: 0, title:'-', desc: '-', imgUrl: '/assets/images/works/randomcharacter/preview/0.png' },
+            { index: 1, title: '-', desc: '-', imgUrl: '/assets/images/works/randomcharacter/preview/1.png' },
+            { index: 2, title: '-', desc: '-', imgUrl: '/assets/images/works/randomcharacter/preview/2.png' },
+            { index: 3, title: '-', desc: '-', imgUrl: '/assets/images/works/randomcharacter/preview/3.png' },
+            { index: 4, title: '-', desc: '-', imgUrl: '/assets/images/works/randomcharacter/preview/4.png' }
         ]
     },
     { 

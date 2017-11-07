@@ -51,7 +51,7 @@
 
 
 // font-family
-$default-sans: 'Spoqa Han Sans', Apple SD Gothic Neo, Nanum Barun Gothic, Nanum Gothic, "돋움", Dotum, Verdana, Arial, sans-serif;
+$default-sans: 'Spoqa Han Sans', 'Apple SD Gothic Neo', 'Nanum Barun Gothic', 'Nanum Gothic', "돋움", Dotum, 'Verdana', Arial, sans-serif;
 $default-serif: serif;
 $default-mobile: Arial, sans-serif;
 
@@ -126,6 +126,7 @@ $weight-extraBold: 700; // 우리 스타일에는 있지만, spoqa에는 extraBo
 body {
     font-family: $default-mobile;
     font-size: $body-mobile-size;
+    background-color: red;
 }
 
 // from tablet to widescreen
@@ -157,64 +158,3 @@ ul {
 
     margin-left: 2rem;
 }
-
-
-// WORK
-
-.detail-container {
-    // 상세페이지 타이틀
-    .title { 
-        font-size: $size-1;
-        font-weight: $weight-bold;
-
-        margin-bottom: rem(25px);
-    }
-    .summary {
-        font-size: $size-4;
-    }
-
-    // 상세페이지 태그 제목
-    .tag-title {
-        font-size: $size-7;
-        margin-bottom: rem(25px);
-    }
-
-    // 상세페이지 태그 아이템
-    .tag-item {
-        font-size: $size-7;
-        color: $tag-col;
-    }
-
-    // 프로젝트 설명
-    .desc-content {
-        p { 
-            font-size: $size-5;
-            margin: rem(30px) 0;
-        }
-    }
-    // 관련 링크
-    .link {
-        text-decoration: underline;
-    }
-}
-// 프로젝트 소개 소제목 : subtitle
-
-.subtitle {
-    margin-top: rem(100px); // sub section 간의 간격
-    margin-bottom: rem(30px);
-
-    font-size: $size-4;
-    font-weight: $weight-bold;
-
-    &:before {
-        margin-top: 3rem;
-        padding:4px;
-        border-top: 3px solid black;
-    }
-    &.process-desc {  &:before { content: '프로젝트 설명'; } }
-    &.process-img {  &:before { content: '프로세스 이미지'; } }
-    &.process-video {  &:before { content: '프로젝트 구현 영상'; } }
-    &.process-gif {  &:before { content: '화면 미리보기'; } }
-    &.process-link {  &:before { content: '관련 링크'; } }
-}
-

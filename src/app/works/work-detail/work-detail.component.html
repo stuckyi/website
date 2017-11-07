@@ -12,14 +12,14 @@
 
 
 
-
-<div class="detail">
+<!-- pc -->
+<div class="detail is-hidden-mobile">
   <div class="detail-container">
     <div class="columns">
     <!-- title 영역 -->
       <div class="column is-8">
-        <p *ngFor="let title of content.title" class="title">{{ title }} </p>
-        <p class="summary column is-9 is-paddingless"> {{ content.summary }} </p>
+        <p *ngFor="let title of content.title" class="work-title">{{ title }} </p>
+        <p class="work-summary column is-9 is-paddingless"> {{ content.summary }} </p>
       </div>
       
       <!-- tag 영역 -->
@@ -31,7 +31,7 @@
     </div>
     
     <!-- 프로젝트 설명 -->
-    <p class="subtitle process-desc"> </p> 
+    <p class="sub-title process-desc"> </p> 
     <div class="desc-content column is-8 is-paddingless">
       <p *ngFor="let description of content.descriptions">{{description}}</p>
     </div>
@@ -39,13 +39,13 @@
     
     <!-- 화면 미리보기 (GIF 슬라이더) -->
     <div *ngIf="isGifSlider">
-      <p class="subtitle process-gif"> </p>
+      <p class="sub-title process-gif"> </p>
       <app-slider-gif [sliderGifInfo]="sliderGifs"></app-slider-gif>
     </div>
 
     <!-- 프로세스 이미지 -->
     <div *ngIf="isImgSlider">
-      <p class="subtitle process-img"> </p>
+      <p class="sub-title process-img"> </p>
       <app-slider 
         [sliderImgUrl]="sliderImgUrl"
         [sliderInfo]="content.modalImgs"></app-slider>
@@ -53,4 +53,35 @@
   </div>
 
 
+</div>
+
+<!-- mobile -->
+<div class="m-detail is-hidden-tablet">
+  <div class="m-detail-container">
+    <div class="columns">
+    <!-- title 영역 -->
+      <div class="column">
+        <p *ngFor="let title of content.title" class="work-title">{{ title }} </p>
+        <p class="tag-title">{{content.year}}, {{content.type}}</p>
+        <span *ngFor="let tag of content.tags" class="tag-item">{{tag}}</span>
+      </div>
+      
+      <!-- tag 영역 -->
+      <div class="column"> 
+          <p class="work-summary column is-9 is-paddingless"> {{ content.summary }} </p>
+      </div>
+
+    </div>
+    
+    <!-- 프로젝트 설명 -->
+    <p class="sub-title process-desc"> </p> 
+    <div class="desc-content column is-8 is-paddingless">
+      <p *ngFor="let description of content.descriptions">{{description}}</p>
+    </div>
+    
+    <!-- 모바일 전용 GIF 영역 -->
+    <p class="sub-title process-gif"> </p>
+    <img src="{{ '/assets/images/works/' + content.title_en + '/preview/m.gif' }}" alt="mobile gif"/>
+
+  </div>
 </div>

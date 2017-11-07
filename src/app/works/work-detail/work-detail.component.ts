@@ -70,12 +70,17 @@ export class WorkDetailComponent implements OnInit {
       result = '#F7F7F7';
     } else if (name_en === "jumpgame") {
       this.isBgImg = true;
-      result = "url('assets/images/works/artlink/jumpgame/main_bg.png')";
+      result = "url('assets/images/works/jumpgame/main_bg.png')";
+    } else if (name_en === "collection") {
+      this.isBgImg = false;
+      result = "#1DC4A2";
     } else {
       this.isBgImg = false;
       result  = '#E9E9E9';
     }
     return result;
   }
+
+  
 
 }

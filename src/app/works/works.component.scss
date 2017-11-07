@@ -36,7 +36,7 @@ $size-work-name: $size-3;   // 그리드 아이템 제목
 
         .image { 
             padding: 0;
-            // img { @include size(40%, auto); }
+            
             img { @include size(40%, auto); }
             
             

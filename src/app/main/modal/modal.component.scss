@@ -9,6 +9,7 @@
     // 모달 배경 영역
     .modal-background {
         background-color: rgba(white, 0.9);
+        z-index: $z-index-modal-close;
     }
     .modal-content{
         @include size(100%, auto);
@@ -46,7 +47,7 @@
     // 모달 닫기 버튼
     .btn-modal-close {
         @include size(33.5px, 33.5px);
-        
+        z-index: $z-index-modal-close;
         right: 20px;
         top: 20px;
         position: fixed;

@@ -4,11 +4,15 @@ $footer-size: 2.438rem;
 
 .footer {
     background: none;
+    margin: 10rem auto;
+
+    .email {
+        font-size: $size-6;
+        font-weight: $weight-bold;
+        margin-bottom: 0;
+    }
     img {
         @include size($footer-size, $footer-size);
     }
-    p {
-        font-size: $size-6;
-        font-style: $weight-bold;
-    }
+    
 }
