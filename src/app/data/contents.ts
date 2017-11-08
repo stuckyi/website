@@ -10,6 +10,18 @@ type SliderGif = {
     imgUrl: string;
     desc: string;
 }
+
+type PreviewImg = {
+    index: number;
+    imgUrl: string;
+    desc: string;
+}
+
+type PreviewGif = {
+    index: number;
+    imgUrl: string;
+    desc: string;
+}
 type Link = {
     info: string;
     url: string;
@@ -29,6 +41,8 @@ export class Content {
 
     modalImgs?: ModalImg[];
     sliderGifs?: SliderGif[];
+    previewImgs?: PreviewImg[];
+    previewGifs?: PreviewGif[];
     links?: Link[];
 }
 
@@ -63,7 +77,11 @@ export const CONTENTS = [
             { index: 5, title: 'preview title5', desc: '설명5', imgUrl: '/assets/images/works/collection/preview/5.png' },
             { index: 6, title: 'preview title6', desc: '설명6', imgUrl: '/assets/images/works/collection/preview/6.png' },
             { index: 7, title: 'preview title7', desc: '설명7.', imgUrl: '/assets/images/works/collection/preview/7.png' }
-        ]
+        ],
+        previewGifs: [
+            { index: 0, title: 'preview title7', desc: '설명7.', imgUrl: '/assets/images/works/collection/preview/m_0.gif' }
+        ],
+        previewImgs: []
     },
     { 
         id: 1,
@@ -93,7 +111,11 @@ export const CONTENTS = [
             { index: 2, title: '-', desc: '-', imgUrl: '/assets/images/works/codedfont/preview/2.png' },
             { index: 3, title: '-', desc: '-', imgUrl: '/assets/images/works/codedfont/preview/3.png' },
             { index: 4, title: '-', desc: '-', imgUrl: '/assets/images/works/codedfont/preview/4.png' }
-        ]
+        ],
+        previewGifs: [
+            { index: 0, title:'-', desc: '-', imgUrl: '/assets/images/works/codedfont/preview/m_0.gif' }
+        ],
+        previewImgs: [ ]
     },
     { 
         id: 2,
@@ -114,6 +136,16 @@ export const CONTENTS = [
         ],
         modalImgs: [ ],
         sliderGifs: [
+            { index: 0, title:'-', desc: '-', imgUrl: '/assets/images/works/kohi-brochure/preview/0.png' },
+            { index: 1, title: '-', desc: '-', imgUrl: '/assets/images/works/kohi-brochure/preview/1.png' },
+            { index: 2, title: '-', desc: '-', imgUrl: '/assets/images/works/kohi-brochure/preview/2.png' },
+            { index: 3, title: '-', desc: '-', imgUrl: '/assets/images/works/kohi-brochure/preview/3.png' },
+            { index: 4, title: '-', desc: '-', imgUrl: '/assets/images/works/kohi-brochure/preview/4.png' }
+        ],
+        previewGifs: [
+            { index: 0, title:'-', desc: '-', imgUrl: '/assets/images/works/codedfont/preview/m_0.gif' }
+        ],
+        previewImgs: [
             { index: 0, title:'-', desc: '-', imgUrl: '/assets/images/works/kohi-brochure/preview/0.png' },
             { index: 1, title: '-', desc: '-', imgUrl: '/assets/images/works/kohi-brochure/preview/1.png' },
             { index: 2, title: '-', desc: '-', imgUrl: '/assets/images/works/kohi-brochure/preview/2.png' },
@@ -160,6 +192,16 @@ export const CONTENTS = [
             { index: 2, title: '게임 시작 화면', desc: '꽃가루공꽃을 피해 친구들을 만나 인사를 모두 하는 게 목표입니다.', imgUrl: '/assets/images/works/jumpgame/preview/2.png' },
             { index: 3, title: '게임 화면', desc: '첫 번째 친구 다롱이와 조우하자 다롱이가 자기 소개를 합니다.', imgUrl: '/assets/images/works/jumpgame/preview/3.png' },
             { index: 4, title: '골인 지점', desc: '모든 친구를 만나 인사를 하고 나면 게임이 끝나게 됩니다.', imgUrl: '/assets/images/works/jumpgame/preview/4.png' }
+        ],
+        previewGifs: [
+            { index: 0, title: '장애물 점프 타이틀 화면', desc: '멘넴이 작곡한 <장애물점프-여행의 시작> 음악이 흘러나오기 시작합니다.', imgUrl: '/assets/images/works/jumpgame/preview/m_0.gif' }
+        ],
+        previewImgs: [
+            { index: 0, title:'장애물 점프 타이틀 화면', desc: '멘넴이 작곡한 <장애물점프-여행의 시작> 음악이 흘러나오기 시작합니다.', imgUrl: '/assets/images/works/jumpgame/preview/0.png' },
+            { index: 1, title: '캐릭터 선택 화면', desc: '멘넴이 고른 다섯 캐릭터 중에 하나를 고르면 게임이 시작됩니다.', imgUrl: '/assets/images/works/jumpgame/preview/1.png' },
+            { index: 2, title: '게임 시작 화면', desc: '꽃가루공꽃을 피해 친구들을 만나 인사를 모두 하는 게 목표입니다.', imgUrl: '/assets/images/works/jumpgame/preview/2.png' },
+            { index: 3, title: '게임 화면', desc: '첫 번째 친구 다롱이와 조우하자 다롱이가 자기 소개를 합니다.', imgUrl: '/assets/images/works/jumpgame/preview/3.png' },
+            { index: 4, title: '골인 지점', desc: '모든 친구를 만나 인사를 하고 나면 게임이 끝나게 됩니다.', imgUrl: '/assets/images/works/jumpgame/preview/4.png' }
         ]
     },
     { 
@@ -198,6 +240,16 @@ export const CONTENTS = [
             { index: 2, title: '-', desc: '-', imgUrl: '/assets/images/works/randomcharacter/preview/2.png' },
             { index: 3, title: '-', desc: '-', imgUrl: '/assets/images/works/randomcharacter/preview/3.png' },
             { index: 4, title: '-', desc: '-', imgUrl: '/assets/images/works/randomcharacter/preview/4.png' }
+        ],
+        previewGifs: [
+            { index: 0, title: '-', desc: '-', imgUrl: '/assets/images/works/randomcharacter/preview/m_0.gif' }
+        ],
+        previewImgs: [
+            { index: 0, title:'-', desc: '-', imgUrl: '/assets/images/works/randomcharacter/preview/0.png' },
+            { index: 1, title: '-', desc: '-', imgUrl: '/assets/images/works/randomcharacter/preview/1.png' },
+            { index: 2, title: '-', desc: '-', imgUrl: '/assets/images/works/randomcharacter/preview/2.png' },
+            { index: 3, title: '-', desc: '-', imgUrl: '/assets/images/works/randomcharacter/preview/3.png' },
+            { index: 4, title: '-', desc: '-', imgUrl: '/assets/images/works/randomcharacter/preview/4.png' }
         ]
     },
     { 
@@ -231,7 +283,19 @@ export const CONTENTS = [
             { index: 0, title: '맨넴 캐릭터 생성기', desc:'화면을 클릭하면, 그동안 멘넴이 만들어온 캐릭터 중 하나가 랜덤으로 생성됩니다.', imgUrl: '/assets/images/works/codestudy/preview/0.gif' },
             { index: 1, title: '웰컴 투 멘넴 월드', desc:'멘넴이 캐릭터가 되어 자신이 그렸던 캐릭터 세상 속에 들어갑니다.', imgUrl: '/assets/images/works/codestudy/preview/1.gif' },
             { index: 2, title: '멘넴 마리오', desc: '멘넴이 친구들을 만나러 다닙니다. 키보드를 누르면, 멘넴이 인사를 하며 점프를 합니다.', imgUrl: '/assets/images/works/codestudy/preview/2.gif' }
-        ]
+         ],
+        previewGifs: [ 
+            { index: 0, title: '맨넴 캐릭터 생성기', desc:'화면을 클릭하면, 그동안 멘넴이 만들어온 캐릭터 중 하나가 랜덤으로 생성됩니다.', imgUrl: '/assets/images/works/codestudy/preview/m_0.gif' },
+            { index: 1, title: '웰컴 투 멘넴 월드', desc:'멘넴이 캐릭터가 되어 자신이 그렸던 캐릭터 세상 속에 들어갑니다.', imgUrl: '/assets/images/works/codestudy/preview/m_1.gif' },
+            { index: 2, title: '멘넴 마리오', desc: '멘넴이 친구들을 만나러 다닙니다. 키보드를 누르면, 멘넴이 인사를 하며 점프를 합니다.', imgUrl: '/assets/images/works/codestudy/preview/m_2.gif' }
+         ],
+         previewImgs: [
+            { index: 0, title:'-', desc: '-', imgUrl: '/assets/images/works/codedfont/preview/0.png' },
+            { index: 1, title: '-', desc: '-', imgUrl: '/assets/images/works/codedfont/preview/1.png' },
+            { index: 2, title: '-', desc: '-', imgUrl: '/assets/images/works/codedfont/preview/2.png' },
+            { index: 3, title: '-', desc: '-', imgUrl: '/assets/images/works/codedfont/preview/3.png' },
+            { index: 4, title: '-', desc: '-', imgUrl: '/assets/images/works/codedfont/preview/4.png' }
+         ] 
     },
     { 
         id: 6,
@@ -256,6 +320,16 @@ export const CONTENTS = [
         ],
         modalImgs: [],
         sliderGifs: [
+            { index: 0, title:'-', desc: '-', imgUrl: '/assets/images/works/ted/preview/0.png' },
+            { index: 1, title: '-', desc: '-', imgUrl: '/assets/images/works/ted/preview/1.png' },
+            { index: 2, title: '-', desc: '-', imgUrl: '/assets/images/works/ted/preview/2.png' },
+            { index: 3, title: '-', desc: '-', imgUrl: '/assets/images/works/ted/preview/3.png' },
+            { index: 4, title: '-', desc: '-', imgUrl: '/assets/images/works/ted/preview/4.png' }
+        ],
+        previewGifs: [
+            { index: 0, title: '-', desc: '-', imgUrl: '/assets/images/works/ted/preview/m_0.gif' }
+        ],
+        previewImgs: [
             { index: 0, title:'-', desc: '-', imgUrl: '/assets/images/works/ted/preview/0.png' },
             { index: 1, title: '-', desc: '-', imgUrl: '/assets/images/works/ted/preview/1.png' },
             { index: 2, title: '-', desc: '-', imgUrl: '/assets/images/works/ted/preview/2.png' },

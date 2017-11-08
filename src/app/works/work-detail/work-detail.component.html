@@ -43,6 +43,7 @@
       <app-slider-gif [sliderGifInfo]="sliderGifs"></app-slider-gif>
     </div>
 
+
     <!-- 프로세스 이미지 -->
     <div *ngIf="isImgSlider">
       <p class="sub-title process-img"> </p>
@@ -79,9 +80,14 @@
       <p *ngFor="let description of content.descriptions">{{description}}</p>
     </div>
     
-    <!-- 모바일 전용 GIF 영역 -->
-    <p class="sub-title process-gif"> </p>
-    <img src="{{ '/assets/images/works/' + content.title_en + '/preview/m.gif' }}" alt="mobile gif"/>
+
+    <!-- Preview List (mobile only) -->
+    <div *ngIf="isPreviewGifs">
+      <p class="sub-title process-preview"> </p>
+      <app-preview
+        [previewInfo]="previewGifs">
+      </app-preview>
+    </div>
 
   </div>
 </div>

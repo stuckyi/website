@@ -38,9 +38,6 @@ export class SliderGifComponent implements OnInit {
 
     this.isLeft = (this.curIndex === 0) ? false : true;
     this.isRight = (this.curIndex === (this.maxIndex - 1)) ? false : true;
-
-
-
   }
 
 

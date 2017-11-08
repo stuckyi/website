@@ -15,10 +15,15 @@ export class WorkDetailComponent implements OnInit {
   mainImgUrl: string = '';
   sliderImgUrl: string = '';
   sliderGifs;
+  previewGifs;
+
 
   // 슬라이더 요소 표시 여부
   isImgSlider: boolean;
   isGifSlider: boolean;
+
+  // 모바일용 gif list 표시 여부
+  isPreviewGifs: boolean;
 
   isBgImg: boolean = false;
 
@@ -49,11 +54,13 @@ export class WorkDetailComponent implements OnInit {
     // this.mainImgUrl = this.content.baseUrl + 'main.png';           // 메인 상단 이미지
     this.sliderGifs = this.content.sliderGifs;                        // 모달 상세 이미지
     this.sliderImgUrl = this.content.baseUrl + 'slider.png';          // 슬라이더 스프라이트 이미지
+    this.previewGifs = this.content.previewGifs;
 
 
     // 이미지 슬라이더 표시여부
     this.isImgSlider = (this.content.modalImgs.length > 0) ? true : false;
     this.isGifSlider = (this.content.sliderGifs.length > 0) ? true : false;
+    this.isPreviewGifs = (this.content.previewGifs.length > 0) ? true : false;
     
 
     // 초기화시 화면 최상단

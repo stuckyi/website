@@ -24,6 +24,7 @@ import { FooterComponent } from './main/footer/footer.component';
 import { SliderComponent } from './main/slider/slider.component';
 import { ModalComponent } from './main/modal/modal.component';
 import { SliderGifComponent } from './main/slider-gif/slider-gif.component';
+import { PreviewComponent } from './main/preview/preview.component';
 
 
 
@@ -40,7 +41,8 @@ import { SliderGifComponent } from './main/slider-gif/slider-gif.component';
     ModalComponent,
     HeroComponent,
     SliderGifComponent,
-    WorkDetailComponent
+    WorkDetailComponent,
+    PreviewComponent
   ],
   imports: [
     BrowserModule,
