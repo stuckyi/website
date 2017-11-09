@@ -7,8 +7,8 @@ import { Component, OnInit, Input, AfterViewInit, ViewChild, ElementRef } from '
   styleUrls: ['./slider.component.css']
 })
 export class SliderComponent implements OnInit, AfterViewInit{
-  @Input('sliderImgUrl') sliderImgUrl;
-  @Input('sliderInfo') sliderInfo;
+  @Input('processSpriteImg') processSpriteImg;
+  @Input('processSliderItems') processSliderItems;
   baseUrl: string = 'url(/assets/images/works/default/slider.png)';
 
 
@@ -50,9 +50,12 @@ export class SliderComponent implements OnInit, AfterViewInit{
   ngOnInit() {
     this.getElementSize();
     this.dynamicOffset = 'translateX(' + this.currentPos + 'px)';
-    this.maxLev = Math.floor(((this.sliderInfo.length / 2) - 1) / this.offsetLev);
+    this.maxLev = Math.floor(((this.processSliderItems.length / 2) - 1) / this.offsetLev);
     // this.baseUrl = 'url(/assets/images/works/' + this.projectInfo + '/slider.png)';
-    this.baseUrl = 'url('+ this.sliderImgUrl +')';
+    this.baseUrl = 'url(' + this.processSpriteImg + ')';
+    console.log(this.processSpriteImg);
+    console.log(this.processSliderItems);
+    console.log(this.baseUrl);
   }
 
 
@@ -99,7 +102,7 @@ export class SliderComponent implements OnInit, AfterViewInit{
 
 
   gotoSlideDetail(selectedItem: any) {
-    this.modalComponent.openModal(selectedItem, this.sliderInfo);
+    this.modalComponent.openModal(selectedItem, this.processSliderItems);
   }
 
   

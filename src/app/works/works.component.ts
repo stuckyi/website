@@ -47,7 +47,7 @@ export class WorksComponent implements OnInit {
     } else if (name_en === 'codedfont' && this.hoverState.codedfont) {
       result = 'steps7';
     } else if (name_en === 'kohi' && this.hoverState.kohi) {
-      result = 'steps5';
+      result = 'steps7';
     } else if (name_en === 'jumpgame' && this.hoverState.jumpgame) {
       result = 'steps11';
     } else if (name_en === 'randomcharacter' && this.hoverState.randomcharacter) {

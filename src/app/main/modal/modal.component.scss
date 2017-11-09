@@ -1,17 +1,22 @@
 @import 'assets/scss/global';
 @import 'assets/scss/utils/animations';
 
+$hover-opacity-off: 1;
+$hover-opacity-on: .48;
+
+
 
 .modal {
-    z-index: $z-index-modal-content;
+    
     overflow: hidden;
     @include testPageTransition();
     // 모달 배경 영역
     .modal-background {
         background-color: rgba(white, 0.9);
-        z-index: $z-index-modal-close;
+        z-index: $z-index-modal-bg;
     }
     .modal-content{
+        z-index: $z-index-modal-content;
         @include size(100%, auto);
         overflow: hidden;
 
@@ -22,25 +27,28 @@
             overflow: hidden;
             
             // 모달 메인 이미지
-            .modal-main { 
-                @include size(auto, 530px);
-                max-width: 800px;
-                margin: auto;
+            .modal-main-container {
+                @include size(800px, 530px);
+                .modal-main { 
+                    @include size(auto, 530px);
+                    max-width: 800px;
+                    margin: auto;
+                }
             }
             // 모달 슬라이더 좌우 버튼
             .slider-btn {
-            @include size(100px, 100px);
-            margin: auto;
-            background-size: contain;
-            background-repeat: no-repeat;
+                @include size(100px, 100px);
+                margin: auto;
+                background-size: contain;
+                background-repeat: no-repeat;
             }
             
         }
         // 사진 별 설명
         .desc { 
                 text-align: center;
-                font-size: rem(17px);
-                margin: rem(35px);
+                font-size: 1.0625rem;
+                margin: 2.1875rem;
         }   
     }
 
@@ -50,7 +58,7 @@
         z-index: $z-index-modal-close;
         right: 20px;
         top: 20px;
-        position: fixed;
+        position: absolute;
         
         
         cursor: pointer;
@@ -63,6 +71,11 @@
         background-image: url(../../../assets/images/ui/icons/modal_close.png);
         background-size: contain;
         background-repeat: no-repeat;
+
+        opacity: $hover-opacity-off;
+        &:hover {
+            opacity: $hover-opacity-on;
+        }
 
     }
 }

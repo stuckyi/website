@@ -7,9 +7,21 @@
     @include flex(flex, row nowrap);
     justify-content: space-between;
 
-    .gif-item {
-        transition: all 0.3s ease-in-out;
+    .gif-item-container {
+        @include size(800px, 400px);
+        
+        
+        .gif-item {
+            @include size(auto, 400px);
+            max-width: 800px;
+            margin: auto;
+
+            display: block;
+
+            transition: all 0.3s ease-in-out;
+        }
     }
+    
     .slider-btn {
         margin: auto 0;
         @include size(16px, 34px);

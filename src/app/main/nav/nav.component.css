@@ -6123,6 +6123,9 @@ label.panel-block {
 .is-opacity20 {
   opacity: .2; }
 
+.is-lightgrey {
+  color: lightgray; }
+
 @font-face {
   font-family: "Spoqa Han Sans";
   font-weight: 100;

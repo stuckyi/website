@@ -1,11 +1,11 @@
 <div #slider class="slider columns is-marginless">
-  <a *ngFor="let sliderItem of sliderInfo" 
+  <a *ngFor="let processSliderItem of processSliderItems" 
       class="slider-item column"
       [ngStyle]="{ 'transform' : dynamicOffset }"
-      (click)="gotoSlideDetail(sliderItem)">
+      (click)="gotoSlideDetail(processSliderItem)">
     <div class="image" 
          [style.background-image]="baseUrl"
-         [style.background-position]="getXpos(sliderItem.index)">
+         [style.background-position]="getXpos(processSliderItem.index)">
     </div>
   </a>
   <div (click)="updatePos('left')" *ngIf="isLeft" class="slider-btn left"> </div>

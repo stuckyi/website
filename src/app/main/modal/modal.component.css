@@ -6123,6 +6123,9 @@ label.panel-block {
 .is-opacity20 {
   opacity: .2; }
 
+.is-lightgrey {
+  color: lightgray; }
+
 @font-face {
   font-family: "Spoqa Han Sans";
   font-weight: 100;
@@ -6257,14 +6260,14 @@ ul {
     transform: translateY(0);
     opacity: 1; } }
 .modal {
-  z-index: 2000;
   overflow: hidden;
   transform-origin: center;
   animation: spring-down-small 0.3s cubic-bezier(1, 0.015, 0.295, 1.225) forwards running; }
   .modal .modal-background {
     background-color: rgba(255, 255, 255, 0.9);
-    z-index: 2100; }
+    z-index: 1900; }
   .modal .modal-content {
+    z-index: 2000;
     width: 100%;
     height: auto;
     overflow: hidden; }
@@ -6274,11 +6277,14 @@ ul {
       display: flex;
       flex-flow: row nowrap;
       overflow: hidden; }
-      .modal .modal-content .modal-detail .modal-main {
-        width: auto;
-        height: 530px;
-        max-width: 800px;
-        margin: auto; }
+      .modal .modal-content .modal-detail .modal-main-container {
+        width: 800px;
+        height: 530px; }
+        .modal .modal-content .modal-detail .modal-main-container .modal-main {
+          width: auto;
+          height: 530px;
+          max-width: 800px;
+          margin: auto; }
       .modal .modal-content .modal-detail .slider-btn {
         width: 100px;
         height: 100px;
@@ -6295,7 +6301,7 @@ ul {
     z-index: 2100;
     right: 20px;
     top: 20px;
-    position: fixed;
+    position: absolute;
     cursor: pointer;
     background: none;
     border-style: none;
@@ -6304,6 +6310,9 @@ ul {
     outline: none;
     background-image: url(../../../assets/images/ui/icons/modal_close.png);
     background-size: contain;
-    background-repeat: no-repeat; }
+    background-repeat: no-repeat;
+    opacity: 1; }
+    .modal .btn-modal-close:hover {
+      opacity: 0.48; }
 
 /*# sourceMappingURL=modal.component.css.map */

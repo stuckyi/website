@@ -15,11 +15,19 @@
     
     img {
       margin: 0 auto;
-      padding: 0;
+      padding: 2.6rem;
       max-width: $fullhd;
       @include size(100%, auto);
     }
 }
+
+.isBgImg {
+    background-size: auto 100% !important;
+    background-repeat: repeat-x !important;
+}
+
+
+
 
 
 
@@ -68,12 +76,21 @@
         }
     }
     // 관련 링크
-    .link {
-        text-decoration: underline;
-    }
+    .link { text-decoration: underline; }
   }
-
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 // mobile detail
 
@@ -154,9 +171,3 @@
 }
 
 
-
-
-.isBgImg {
-  background-size: auto 100% !important;
-  background-repeat: repeat-x !important;
-}

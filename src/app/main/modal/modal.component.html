@@ -11,7 +11,10 @@
            [class.is-opacity20]="imgIndex === 0"
            [style.background-image]="'url(/assets/images/ui/icons/slider_left.png)'"> </div>
 
-      <img class="modal-main" [src]="imgUrl || ''" />
+      <figure class="modal-main-container">
+        <img class="modal-main" [src]="imgUrl || ''" />
+      </figure>
+      
       <div (click)="updateItem('right')" 
            class="slider-btn" 
            [class.is-opacity20]="imgIndex === maxIndex"
@@ -20,5 +23,6 @@
 
     <p class="desc">{{ selectedItem.desc }}</p>
   </div>
-  <button (click)="closeModal()" class="btn-modal-close" aria-label="close"> </button>
+  <button (click)="closeModal()" class="btn-modal-close is-paddingless" aria-label="close"> </button>
+  
 </div>

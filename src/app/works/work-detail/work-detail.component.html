@@ -24,8 +24,8 @@
       
       <!-- tag 영역 -->
       <div class="column is-offset-2 is-2"> 
-        <p class="tag-title">{{content.year}}<br/>{{content.type}}</p>
-        <p *ngFor="let tag of content.tags" class="tag-item">{{tag}}</p>
+        <p class="tag-title">{{content.year}}<br/>{{ content.tagInfo.title }}</p>
+        <p *ngFor="let tagItem of content.tagInfo.items" class="tag-item">{{ tagItem }}</p>
       </div>
 
     </div>
@@ -37,10 +37,10 @@
     </div>
     
     
-    <!-- 화면 미리보기 (GIF 슬라이더) -->
+    <!-- 화면 미리보기 (슬라이더 O) -->
     <div *ngIf="isPreviewSlider">
       <p class="sub-title process-gif"> </p>
-      <app-slider-gif [sliderGifInfo]="previewSliderItems"></app-slider-gif>
+      <app-slider-gif [previewSliderItems]="previewSliderItems"></app-slider-gif>
     </div>
 
 
@@ -48,9 +48,11 @@
     <div *ngIf="isProcessSlider">
       <p class="sub-title process-img"> </p>
       <app-slider 
-        [sliderImgUrl]="processSpriteImg"
-        [sliderInfo]="processSliderItems"></app-slider>
+        [processSpriteImg]="processSpriteImg"
+        [processSliderItems]="processSliderItems"> </app-slider>
+
     </div>
+
   </div>
 
 
@@ -82,7 +84,7 @@
     
 
     <!-- Preview List (mobile only) -->
-    <div *ngIf="isPreviewContentItems">
+    <div *ngIf="isPreviewContent">
       <p class="sub-title process-preview"> </p>
       <app-preview
         [previewInfo]="previewContentItems">

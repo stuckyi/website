@@ -32,18 +32,6 @@ export class WorkDetailComponent implements OnInit {
 
   // 기존 Value
   mainImgUrl: string = '';
-  
-
-  sliderImgUrl: string = ''; // 임시로 계속 사용한다.
-
-
-  sliderGifs;
-  previewGifs;
-
-
-  // 슬라이더 요소 표시 여부
-  isImgSlider: boolean;
-  isGifSlider: boolean;
 
   // 모바일용 gif list 표시 여부
   isPreviewGifs: boolean;
@@ -73,32 +61,24 @@ export class WorkDetailComponent implements OnInit {
     this.styleInfo.background = this.setBgCol(this.content.title_en);  // 메인 상단 배경색
     
     this.mainImgUrl = this.content.baseUrl;                           // 메인 상단 이미지
-    // this.mainImgUrl = this.content.baseUrl + 'main.png';           // 메인 상단 이미지
-    // this.sliderGifs = this.content.sliderGifs;                        // 화면미리보기 (슬O)
+    
     this.previewSliderItems = this.content.previewSliderItems;        // 화면미리보기 (슬O)
+    this.previewContentItems = this.content.previewContentItems;      // 화면미리보기 (슬X)
 
-    // this.sliderImgUrl = this.content.baseUrl + 'slider.png';          // 슬라이더 스프라이트 이미지
+    
     this.processSpriteImg = this.content.baseUrl + 'slider.png';
     this.processSliderItems = this.content.processSliderItems;
 
     this.linkItems = this.content.linkItems;
 
+    
+
+
     // 데이터 셋 안에, 해당하는 값이 있을 경우만 렌더링 시작.
     this.isPreviewSlider = (this.previewSliderItems.length > 0) ? true : false;
     this.isPreviewContent = (this.previewContentItems.length > 0) ? true : false;
     this.isProcessSlider = (this.processSliderItems.length > 0) ? true : false;
-    this.isLinkItem = (this.linkItems > 0) ? true : false;
-
-
-
-    
-
-
-    // 이미지 슬라이더 표시여부
-    // this.isImgSlider = (this.content.modalImgs.length > 0) ? true : false;
-    // this.isGifSlider = (this.content.sliderGifs.length > 0) ? true : false;
-    // this.isPreviewGifs = (this.content.previewGifs.length > 0) ? true : false;
-    
+    this.isLinkItem = (this.linkItems.length > 0) ? true : false;
 
     // 초기화시 화면 최상단
     window.scrollTo(0, 0);

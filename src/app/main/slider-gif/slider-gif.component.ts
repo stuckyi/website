@@ -6,7 +6,7 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./slider-gif.component.css']
 })
 export class SliderGifComponent implements OnInit {
-  @Input('sliderGifInfo') sliderGifInfo;
+  @Input('previewSliderItems') previewSliderItems;
   selectedItem;
   curImgUrl: string = '';
   curLev: number = 0;
@@ -19,19 +19,19 @@ export class SliderGifComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    this.selectedItem = this.sliderGifInfo[0];
-    this.maxIndex = this.sliderGifInfo.length;
-    this.curImgUrl = this.sliderGifInfo[0].imgUrl;
+    this.selectedItem = this.previewSliderItems[0];
+    this.maxIndex = this.previewSliderItems.length;
+    this.curImgUrl = this.previewSliderItems[0].imgUrl;
   }
 
   updateItem(dir: string) {
     if (dir === 'left' && this.curIndex !== 0) {
       this.curIndex--;
-      this.selectedItem = this.sliderGifInfo[this.curIndex];
+      this.selectedItem = this.previewSliderItems[this.curIndex];
       this.curImgUrl = this.selectedItem.imgUrl;
     } else if (dir === 'right' && this.curIndex !== (this.maxIndex - 1)) {
       this.curIndex++;
-      this.selectedItem = this.sliderGifInfo[this.curIndex];
+      this.selectedItem = this.previewSliderItems[this.curIndex];
       this.curImgUrl = this.selectedItem.imgUrl;
       console.log('right');
     }
