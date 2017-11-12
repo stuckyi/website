@@ -148,7 +148,10 @@ body {
 
 // navbar: 상단 네비게이션 메뉴 영역
 
-p { line-height: 180%;}
+p { 
+    font-family: $default-sans;
+    line-height: 180%;
+}
 // about : 소개 페이지 
 
 ul { 
