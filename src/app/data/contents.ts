@@ -113,16 +113,28 @@ export const CONTENTS = [
             { title: '몇몇 실험을 캡쳐하여 모아둔 텀블러 페이지', url: '#'},
             { title: '스마트폰의 기울기에 반응하는 폰트 (모바일 전용)', url: '#'} 
         ],
-        previewSliderItems: [ ],
+        previewSliderItems: [
+            { index: 0, title: '안녕 1', desc: 'codedfont experiment', imgUrl: '/assets/images/works/codedfont/preview/0.gif' },
+            { index: 1, title: '안녕 2', desc: 'codedfont experiment', imgUrl: '/assets/images/works/codedfont/preview/1.gif' },
+            { index: 2, title: '움직이는 스포카한산스 ', desc: '새로운 글자 형태를 구성하는 것이 아니라, 기존 글꼴의 정보를 읽어 다양한 인터랙션을 적용한 형태', imgUrl: '/assets/images/works/codedfont/preview/2.gif' },
+            { index: 3, title: '무늬', desc: '글자를 구성하는 정보를 바탕으로, 도형과 랜덤 개념을 이용하여 매 순간 무늬가 변하도록 구성', imgUrl: '/assets/images/works/codedfont/preview/3.gif' },
+            { index: 4, title: '모여 1', desc: '코드로 만들어진 원소 캐릭터들은, 글자 정보에따라 조합되어 글자 형태를 이룬다.', imgUrl: '/assets/images/works/codedfont/preview/4.gif' },
+            { index: 5, title: '모여 2', desc: '원소 캐릭터들은 글자를 구성한 후에도 각각의 객체로 존재하며, 사용자 동작에도 반응한다.', imgUrl: '/assets/images/works/codedfont/preview/5.gif' },
+            { index: 6, title: '틸트체', desc: '스마트폰 기울기에 따라 다양한 형태로 변경된다. 사용자는 자신이 원하는 글자를 입력 해볼 수 있다.', imgUrl: '/assets/images/works/codedfont/preview/6.gif' },
+            { index: 7, title: '-', desc: '-', imgUrl: '/assets/images/works/codedfont/preview/7.gif' }
+            
+         ],
         previewContentItems: [
             { index: 0, title:'-', desc: '-', imgUrl: '/assets/images/works/codedfont/preview/m_0.gif' }
         ],
         processSliderItems: [
-            { index: 0, title:'-', desc: '-', imgUrl: '/assets/images/works/codedfont/preview/0.png' },
-            { index: 1, title: '-', desc: '-', imgUrl: '/assets/images/works/codedfont/preview/1.png' },
-            { index: 2, title: '-', desc: '-', imgUrl: '/assets/images/works/codedfont/preview/2.png' },
-            { index: 3, title: '-', desc: '-', imgUrl: '/assets/images/works/codedfont/preview/3.png' },
-            { index: 4, title: '-', desc: '-', imgUrl: '/assets/images/works/codedfont/preview/4.png' }
+            { index: 0, title:'-', desc: '인터랙션에 따라 글자를 구성하는 캐릭터들이 움직이는 기획', imgUrl: '/assets/images/works/codedfont/modal/0.png' },
+            { index: 1, title: '-', desc: '포커싱에따라 형태가 변화하는 딴짓체. 형태가 구성 된 후, 포커싱이 되지않으면 글자를 구성하던 캐릭터들이 글자에서 분리되어 나오는 방식', imgUrl: '/assets/images/works/codedfont/modal/1.png' },
+            { index: 2, title: '-', desc: '글자를 구성하는 원소 캐릭터. 이 역시 코드로 구성된다.', imgUrl: '/assets/images/works/codedfont/modal/2.png' },
+            { index: 3, title: '-', desc: '한글 자소 단위에서 이루어지는 다양한 형태 변화', imgUrl: '/assets/images/works/codedfont/modal/3.png' },
+            { index: 4, title: '-', desc: '정보 전달이 가능한 범위 내에서 형태 변형', imgUrl: '/assets/images/works/codedfont/modal/4.png' },
+            { index: 5, title: '-', desc: '스마트폰 자이로센서 값에 따라 변화하는 폰트 기획', imgUrl: '/assets/images/works/codedfont/modal/5.png' },
+            { index: 6, title: '스마트폰 자이로센서 탐구', desc: '스마트폰 자이로센서 원리 탐구', imgUrl: '/assets/images/works/codedfont/modal/6.png' }
          ]
     },
     {

@@ -45,8 +45,6 @@ export class AppComponent implements AfterViewInit, OnInit {
       if (event.constructor.name === 'NavigationEnd') {
         const url = this.router.url;
         this.isAbout = (url === '/about') ? true : false;
-        console.log(this.isAbout);
-        console.log(url);
       }
     });
 

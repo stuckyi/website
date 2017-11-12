@@ -6182,7 +6182,7 @@ ul {
 
 .works {
   z-index: 500;
-  width: 100vw;
+  width: 100%;
   height: auto;
   margin: 8rem auto; }
   @media (min-width: 769px) {

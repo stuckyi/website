@@ -18,7 +18,7 @@ $size-work-name: $size-3;   // 그리드 아이템 제목
 
 .works {
     z-index: 500;
-    @include size(100vw, auto);
+    @include size(100%, auto);
     margin: 8rem auto;
     
     
