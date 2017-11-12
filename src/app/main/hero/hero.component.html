@@ -24,7 +24,10 @@
     <p class="hello"> 정유미와 김태경이 2016년 3월부터 함께 작업을 하고 있습니다. 우리의 손길이 필요한 데이터들을 찾아다니고, 그것들을 모으고, 정리하여 이해하기 쉬운 형태로 시각화하는데 희열을 느낍니다. 정리한 데이터로는 주로 웹을 기반으로 상호작용이 가능한 웹 콘텐츠를 만들거나 인쇄물을 제작하고 있습니다.</p>
     
     <p *ngIf="isContactInfo" class="m-contact-email has-text-centered">stuckyi.info@gmail.com</p>
-    <p *ngIf="isContactInfo" class="m-contact-msg has-text-centered">인스타그램 로고</p>
+    <p *ngIf="isContactInfo" class="m-contact-msg has-text-centered">
+      <img class="mobile-hero-insta" (click)="openUrl()" src="/assets/images/ui/icons/instagram_white@2x.png" alt="instagram link icon">
+    </p>
+
   </div>
 </div>
 

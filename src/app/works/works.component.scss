@@ -17,8 +17,16 @@ $size-work-name: $size-3;   // 그리드 아이템 제목
 
 
 .works {
-    @include size($warp-main-grid, auto);
-    margin: 6.25rem auto;
+    z-index: 500;
+    @include size(100vw, auto);
+    margin: 8rem auto;
+    
+    
+    @media(min-width: $tablet){
+        @include size($warp-main-grid, auto);
+        margin: 6.25rem auto;
+    }
+    
 
     .work {
 
@@ -37,7 +45,7 @@ $size-work-name: $size-3;   // 그리드 아이템 제목
         .image { 
             padding: 0;
             
-            img { @include size(40%, auto); }
+            img { @include size(100%, auto); }
             
             
             
@@ -70,33 +78,6 @@ $size-work-name: $size-3;   // 그리드 아이템 제목
 }
 
 
-
-/*
-
-.works {
-    // @include size($warp-main-grid, auto);
-     // 사이드 여백은 관리 전체 콘텐츠 크기 잡은 후, 중앙으로 몰아준다 차라리.
-    // margin: 80vh auto rem(100px);
-    margin: rem(100px) auto;
-    
-
-    .work {
-      // (그리드 내) 개별 work간의 간격 설정
-        margin: rem(30px) auto;
-
-        .image { 
-            margin-bottom: 2rem;
-            @include size(300px, 270px);
-        }
-        .work-item {
-            margin: 0 auto;
-            @include size(300px, auto);
-            // .work-name { margin: .35rem auto; }
-        }
-        
-    }
-}
-*/
 
 @keyframes sprite {
   from { background-position: 0 0; }

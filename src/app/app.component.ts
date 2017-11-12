@@ -2,6 +2,8 @@ import { Observable } from 'rxjs/Rx';
 import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { trigger,state,style,transition,animate,keyframes } from '@angular/animations';
 
+import { Router } from '@angular/router';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -27,14 +29,27 @@ import { trigger,state,style,transition,animate,keyframes } from '@angular/anima
 })
 export class AppComponent implements AfterViewInit, OnInit {
   title = 'app works!';
-  
+
+  isAbout: boolean = false;
+
   isNav: boolean = true;
   scrollY = { prev: 0 };
   dynamicNavClass: string = 'init';
 
+  constructor(private router: Router) {
+    
+  }
 
   ngOnInit(){
-    console.log("ngOnInit!");
+    this.router.events.subscribe(event => {
+      if (event.constructor.name === 'NavigationEnd') {
+        const url = this.router.url;
+        this.isAbout = (url === '/about') ? true : false;
+        console.log(this.isAbout);
+        console.log(url);
+      }
+    });
+
   }
   ngAfterViewInit(){
     console.log("ngAfterViewInit!, 모든 콘텐츠 로딩 완료!");

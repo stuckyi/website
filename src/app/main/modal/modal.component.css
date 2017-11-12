@@ -6177,19 +6177,6 @@ ul {
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
-#about .about-main {
-  width: 100%;
-  height: 100vh;
-  padding: 20vh; }
-  #about .about-main .hello {
-    max-width: 860px; }
-  #about .about-main .contact-msg {
-    margin-top: 20vh; }
-#about .about-info {
-  margin: 6.25rem auto; }
-#about .section-title {
-  margin: 10rem auto 2rem; }
-
 .hover-enter {
   transform-origin: center;
   animation: spring-up 0.4s cubic-bezier(1, 0.015, 0.295, 1.225) forwards running; }

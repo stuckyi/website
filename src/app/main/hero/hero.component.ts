@@ -61,5 +61,10 @@ export class HeroComponent implements OnInit {
     return result;
   }
 
+
+  openUrl(){
+    window.open('https://www.instagram.com/stuckyistudio/');
+  }
+
 }
 

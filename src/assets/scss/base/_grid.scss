@@ -14,18 +14,3 @@
 // about
 //
 
-#about{
-    .about-main{
-        @include size(100%, 100vh);
-        padding: 20vh;
-        .hello { max-width: 860px; }
-        .contact-msg { margin-top: 20vh; }
-    }
-
-    .about-info { margin: rem(100px) auto; }
-    
-    .section-title {
-        margin: 10rem auto 2rem;
-    }
-}
-

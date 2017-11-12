@@ -1,15 +1,13 @@
-<div class="nav-container">
+<div class="nav-container is-hidden-mobile">
   <div routerLink="/works" class="nav-left"
-    
     (mouseenter)="setLogoState('in')"
     (mouseleave)="setLogoState('out')">
-
     <div  class="logo-text fix">Stu</div>
     <div  class="logo-text move">
       <p >ckyi</p>
       <p >dio</p>
     </div>
-    <!--<img [@logoState]="logoState"  class="logo"  src="assets/images/ui/icons/logotype@3x.png" alt="로고 이미지" />-->
+    <!--<img class="logo"  src="assets/images/ui/icons/logotype@3x.png" alt="로고 이미지" />-->
 
   </div>
   <div class="nav-right">
@@ -17,4 +15,15 @@
     <div routerLink="/about" routerLinkActive="active-link"><span>소개</span></div>
   </div>
 
+</div>
+
+<div class="m-nav-container is-hidden-tablet">
+
+  <div class="nav-left">
+    <img routerLink="/works" src="/assets/images/ui/icons/logo@2x.png" alt="logo" />
+  </div>
+  <div class="nav-right">
+    <div routerLink="/works" routerLinkActive="active-link"><span>작업</span></div>
+    <div routerLink="/about" routerLinkActive="active-link"><span>소개</span></div>
+  </div>
 </div>

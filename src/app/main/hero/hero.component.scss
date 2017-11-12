@@ -47,3 +47,7 @@ $test-line-height: 160%;
 
 
 
+
+.mobile-hero-insta {
+    @include size(2.438rem, 2.438rem);
+}

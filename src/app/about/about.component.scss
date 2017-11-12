@@ -1,11 +1,23 @@
 @import 'assets/scss/global';
 
-.about-info {
-    font-weight: $weight-bold;
-    font-size: $size-3;
-
-    .interest {  line-height: 136%; }
-    .participation {  line-height: 136%; }
-}
 
     
+.about{
+    @include size(100%, 100vh);
+    overflow: hidden;
+    @media(min-width: $tablet){ 
+        @include size(100%, auto);
+    }
+    .about-info { 
+        margin: 6.25rem auto;
+        font-weight: $weight-bold;
+        font-size: $size-3;
+
+        .interest {  line-height: 136%; }
+        .participation {  line-height: 136%; }
+    }
+    
+    .section-title {
+        margin: 10rem auto 2rem;
+    }
+}

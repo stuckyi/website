@@ -1,7 +1,9 @@
 <section>
     <app-nav></app-nav>
     <router-outlet></router-outlet>
-    <app-footer></app-footer>
+    <!-- mobile 에서만 footer를 조건부 표시 -->
+    <app-footer class="is-hidden-mobile"></app-footer>
+    <app-footer class="is-hidden-tablet" *ngIf="!isAbout"></app-footer>
 </section>
 
 <div (click)="gotoTop()" 

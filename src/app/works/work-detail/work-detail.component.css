@@ -6177,19 +6177,6 @@ ul {
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
-#about .about-main {
-  width: 100%;
-  height: 100vh;
-  padding: 20vh; }
-  #about .about-main .hello {
-    max-width: 860px; }
-  #about .about-main .contact-msg {
-    margin-top: 20vh; }
-#about .about-info {
-  margin: 6.25rem auto; }
-#about .section-title {
-  margin: 10rem auto 2rem; }
-
 .mainImg {
   z-index: 200;
   width: 100%;
@@ -6200,7 +6187,6 @@ ul {
   background-color: #e9e9e9; }
   .mainImg img {
     margin: 0 auto;
-    padding: 2.6rem;
     max-width: 1408px;
     width: 100%;
     height: auto; }

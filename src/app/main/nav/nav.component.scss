@@ -12,7 +12,6 @@
 
     .nav-left {
         @include size(20%, auto);
-        /* for test */
         @include flex(flex, row nowrap);
         font-weight: $weight-bold;
         
@@ -21,8 +20,6 @@
         overflow: hidden;
         .move { 
             @include size(50%, 24px);
-            
-            
             p {
                 
                 position: absolute;
@@ -102,4 +99,57 @@
             width:100% !important;
         }
     }
+}
+
+
+
+// mobile nav
+.m-nav-container {
+    z-index: $z-index-navbar;     
+    @include size(100%, auto);
+    min-height: 2rem;
+    @include flex(flex, row nowrap);
+    justify-content: space-between;
+    background: none;
+    position: fixed;
+    top: 0;
+
+    .nav-left{
+        padding: 1rem;
+        img {
+            @include size(auto, 50px);
+        }
+    } 
+    .nav-right {
+        padding: 1rem;
+        @include flex(flex, column nowrap);
+        justify-content: space-around;
+        div {
+            overflow: hidden;
+            span {
+                position: relative;
+                font-size: 1.2rem;
+                font-weight: bold;
+                &:focus {
+                    
+                    &:before { width: 100%; }
+                }
+                &:before {
+                        content: '';
+                        position: absolute;
+                        left: 0;
+                        right: 0;
+                        top: 50%;
+
+                        @include size(0, .16rem);
+                        background: black;
+                        transition: width .4s ease-in-out;
+                }            
+            }
+
+        }
+        
+    }
+
+
 }
