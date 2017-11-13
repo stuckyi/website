@@ -48,15 +48,15 @@ export class AppComponent implements AfterViewInit, OnInit {
       }
     });
 
+    window.scrollTo(0, 0);
+
   }
   ngAfterViewInit(){
-    console.log("ngAfterViewInit!, 모든 콘텐츠 로딩 완료!");
     this.registerScrollEvent();
   }
 
 
   registerScrollEvent() {
-    console.log("registerScrollEvent");
 
     const scrollTop$ = Observable.fromEvent(window, "scroll");
     const scrollFn$ = scrollTop$

@@ -6176,7 +6176,8 @@ ul {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
-  position: absolute;
+  position: fixed;
+  top: 0;
   padding: 1.25rem; }
   .nav-container .nav-left {
     width: 20%;

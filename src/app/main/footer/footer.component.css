@@ -6169,8 +6169,9 @@ ul {
   box-sizing: border-box; }
 
 .footer {
-  background: none;
-  margin: 10rem auto; }
+  background-color: white;
+  margin: 0 auto;
+  padding-top: 10rem; }
   .footer .email {
     font-size: 1rem;
     font-weight: 700;

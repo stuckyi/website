@@ -1,10 +1,11 @@
 @import 'assets/scss/global';
 
-$footer-size: 1.48rem;
+$icon-instar: 1.48rem;
 
 .footer {
-    background: none;
-    margin: 10rem auto;
+    background-color: white;
+    margin: 0 auto;
+    padding-top: 10rem;
 
     .email {
         font-size: $size-6;
@@ -13,7 +14,7 @@ $footer-size: 1.48rem;
     }
     img {
         margin-top: 1rem;
-        @include size($footer-size, $footer-size);
+        @include size($icon-instar, $icon-instar);
     }
     
 }

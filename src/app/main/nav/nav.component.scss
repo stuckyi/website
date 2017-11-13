@@ -6,7 +6,9 @@
     @include size(100%, auto);
     @include flex(flex, row nowrap);
     justify-content: space-between;
-    position: absolute;
+
+    position: fixed;
+    top: 0;
     padding: 1.25rem;
 
 

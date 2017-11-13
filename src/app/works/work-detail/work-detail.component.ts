@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params, Router } from '@angular/router';
+import { Observable } from 'rxjs/Observable';
 
 import { AppService } from './../../app.service';
 
@@ -35,21 +36,34 @@ export class WorkDetailComponent implements OnInit {
 
   // 모바일용 gif list 표시 여부
   isPreviewGifs: boolean;
-
   isBgImg: boolean = false;
 
 
-  styleInfo = {
-    background: '#000'
-  };
+  styleInfo = { background: '#000', opacity: 1 };
 
+
+  // scrollEvent 
+  scrollOpacity = 1;
   
+
+
+
+
   constructor(
     private appService: AppService,
     private activatedRoute: ActivatedRoute
   ) { }
 
   ngOnInit() {
+  
+    this.setContent();
+    this.registerScrollEvent();
+
+    // 초기화시 화면 최상단
+    window.scrollTo(0, 0);
+  }
+
+  setContent() {
     let contentId: number;
     this.activatedRoute.params.forEach((urlParameters) => {
       contentId = parseInt(urlParameters['id']);
@@ -79,9 +93,6 @@ export class WorkDetailComponent implements OnInit {
     this.isPreviewContent = (this.previewContentItems.length > 0) ? true : false;
     this.isProcessSlider = (this.processSliderItems.length > 0) ? true : false;
     this.isLinkItem = (this.linkItems.length > 0) ? true : false;
-
-    // 초기화시 화면 최상단
-    window.scrollTo(0, 0);
   }
 
   setBgCol(name_en: string) {
@@ -102,6 +113,50 @@ export class WorkDetailComponent implements OnInit {
       this.isBgImg = false;
       result  = '#E9E9E9';
     }
+    return result;
+  }
+
+  // main image에 적용할 스크롤 이벤트
+  registerScrollEvent() {
+    console.log("registerScrollEvent in work-detail");
+    const scrollRule = {
+      pc: { startY: 0, endY: (480+100) },
+      m: { startY: 0, endY: 375 }
+    };
+    const scrollTop$ = Observable.fromEvent(window, "scroll")
+      .map((val: any) => {
+        let currentY = val.target.scrollingElement.scrollTop;
+        
+        if (currentY >= scrollRule.pc.startY && currentY <= scrollRule.pc.endY) {
+          let result = this.getMap(
+            val.target.scrollingElement.scrollTop,
+            scrollRule.pc.startY, scrollRule.pc.endY,
+            1.0, 0.1);
+          
+          return result.toFixed(1);
+        } else {
+          return 1;
+        }
+      }).distinctUntilChanged();
+    const checkScroll$ = scrollTop$.subscribe((val:any) => {
+      this.styleInfo.opacity = val;
+    });
+    
+    
+  }
+
+  // p5js의 map()기능과 동일하다.
+  getMap(val, start1, stop1, start2, stop2) {
+    let newVal = ((val - start1) / (stop1 - start1)) * (stop2 - start2) + start2;
+    if (start2 < stop2) { 
+      return this.getConstrain(newVal, start2, stop2);
+    } else {
+      return this.getConstrain(newVal, stop2, start2);
+    }    
+  }
+  // 값의 범위를 제한한다.
+  getConstrain(n, low, high) {
+    let result = Math.max(Math.min(n, high), low);
     return result;
   }
 

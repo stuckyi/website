@@ -1,29 +1,49 @@
 @import 'assets/scss/global';
 
 
+$main-height-pc: 480px;
+$main-height-m: 375px;
+
+
+
 
 .mainImg {
     z-index: $z-index-work-mainImg;
-    @include size(100%, auto);
     
     top:0;
     padding: 0;
-
+    margin: 0 auto;
+    position: fixed;                                                // for test
     overflow: hidden;
     background-color: #e9e9e9;
+
+
+    @include size(auto, $main-height-m); // m
+    @media(min-width: $tablet){ 
+        @include size(100%, $main-height-pc); 
+    }
+    
+    
     
     
     img {
+      @include size(auto, $main-height-m);
       margin: 0 auto;
-    //   padding: 2.6rem;
-      max-width: $fullhd;
-      @include size(100%, auto);
     }
+    @media(min-width: $tablet){ 
+        img {
+            @include size(auto, $main-height-pc);
+            max-width: $fullhd;
+        }
+    }
+
+
 }
 
 .isBgImg {
     background-size: auto 100% !important;
     background-repeat: repeat-x !important;
+    background-attachment: fixed;                                    // fot test
 }
 
 
@@ -37,15 +57,22 @@
 .detail {
   @include size(100%, auto);
   z-index: $z-index-work-content;
+  background-color: white;
+  margin-top: $main-height-pc;
+  
 
   .detail-container {
     @include size($wrapWidth, auto);
-    margin: 3.75rem auto;
+    margin:  0 auto; // $main-height-pc + 100px
+    padding-top: 100px;
+    padding-bottom: 100px;
+    
     
 
 
     // 상세페이지 타이틀
     .work-title { 
+        
         font-size: $size-1;
         font-weight: $weight-bold;
         line-height: 1.2;
@@ -97,6 +124,8 @@
 .m-detail {
     @include size(100%, auto);
     z-index: $z-index-work-content;
+    margin-top: $main-height-m;
+    background-color: white;
   
     .m-detail-container {
       @include size(100%, auto);
