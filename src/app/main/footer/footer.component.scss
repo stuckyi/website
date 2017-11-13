@@ -1,6 +1,6 @@
 @import 'assets/scss/global';
 
-$footer-size: 2.438rem;
+$footer-size: 1.48rem;
 
 .footer {
     background: none;
@@ -12,6 +12,7 @@ $footer-size: 2.438rem;
         margin-bottom: 0;
     }
     img {
+        margin-top: 1rem;
         @include size($footer-size, $footer-size);
     }
     

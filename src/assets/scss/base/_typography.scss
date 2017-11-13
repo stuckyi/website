@@ -2,27 +2,27 @@
 
 
 // Thin
-@font-face {
-    font-family: "Spoqa Han Sans";
-    font-weight: 100;
-    src: local("☺"),
-         url(/assets/fonts/spocahansans_subset/SpoqaHanSans-Thin.eot), /* IE9 Compat Modes */
-         url(/assets/fonts/spocahansans_subset/SpoqaHanSans-Thin.eot?#iefix) format("embedded-opentype"), /* IE6-8 */
-         url(/assets/fonts/spocahansans_subset/SpoqaHanSans-Thin.woff) format("woff"), /* Mordern Browsers */
-         url(/assets/fonts/spocahansans_subset/SpoqaHanSans-Thin.ttf) format("truetype"); /* If not support woff */
-}
+// @font-face {
+//     font-family: "Spoqa Han Sans";
+//     font-weight: 100;
+//     src: local("☺"),
+//          url(/assets/fonts/spocahansans_subset/SpoqaHanSans-Thin.eot), /* IE9 Compat Modes */
+//          url(/assets/fonts/spocahansans_subset/SpoqaHanSans-Thin.eot?#iefix) format("embedded-opentype"), /* IE6-8 */
+//          url(/assets/fonts/spocahansans_subset/SpoqaHanSans-Thin.woff) format("woff"), /* Mordern Browsers */
+//          url(/assets/fonts/spocahansans_subset/SpoqaHanSans-Thin.ttf) format("truetype"); /* If not support woff */
+// }
 
 
-// Light
-@font-face {
-    font-family: "Spoqa Han Sans";
-    font-weight: 300;
-    src: local("☺"),
-         url(/assets/fonts/spocahansans_subset/SpoqaHanSans-Light.eot), /* IE9 Compat Modes */
-         url(/assets/fonts/spocahansans_subset/SpoqaHanSans-Light.eot?#iefix) format("embedded-opentype"), /* IE6-8 */
-         url(/assets/fonts/spocahansans_subset/SpoqaHanSans-Light.woff) format("woff"), /* Mordern Browsers */
-         url(/assets/fonts/spocahansans_subset/SpoqaHanSans-Light.ttf) format("truetype"); /* If not support woff */
-}
+// // Light
+// @font-face {
+//     font-family: "Spoqa Han Sans";
+//     font-weight: 300;
+//     src: local("☺"),
+//          url(/assets/fonts/spocahansans_subset/SpoqaHanSans-Light.eot), /* IE9 Compat Modes */
+//          url(/assets/fonts/spocahansans_subset/SpoqaHanSans-Light.eot?#iefix) format("embedded-opentype"), /* IE6-8 */
+//          url(/assets/fonts/spocahansans_subset/SpoqaHanSans-Light.woff) format("woff"), /* Mordern Browsers */
+//          url(/assets/fonts/spocahansans_subset/SpoqaHanSans-Light.ttf) format("truetype"); /* If not support woff */
+// }
 
 
 // Regular
@@ -49,12 +49,22 @@
 }
 
 
-
 // font-family
-$default-sans: 'Spoqa Han Sans', 'Apple SD Gothic Neo', 'Nanum Barun Gothic', 'Nanum Gothic', "돋움", Dotum, 'Verdana', Arial, sans-serif;
-$default-serif: serif;
-$default-mobile: Arial, sans-serif;
+$default-sans: 
+    'Spoqa Han Sans', 
+    '애플 SD 산돌고딕 Neo', 'Apple SD Gothic Neo',
+    나눔고딕, 'Nanum Gothic',
+    '돋움', Dotum,
+    Arial, sans-serif;
 
+$default-mobile: 
+    'Spoqa Han Sans', 
+    '애플 SD 산돌고딕 Neo', 'Apple SD Gothic Neo',
+    나눔고딕, 'Nanum Gothic',
+    '돋움', Dotum,
+    Arial, sans-serif;
+    
+$default-serif: serif;
 
 
 // Typography
@@ -109,8 +119,8 @@ $line-height-6: 3;
 
 
 // 굵기 (spoqa)
-$weight-thin: 100;
-$weight-light: 300;
+// $weight-thin: 100;
+// $weight-light: 300;
 // $weight-normal: 400;
 $weight-medium: 500;
 $weight-bold: 700;

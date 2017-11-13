@@ -6,7 +6,7 @@ $test-line-height: 160%;
 #hero{
     
     
-    @include size(100vw, 80vh);
+    @include size(100%, 80%);
     padding: 18vh 2.125rem;
     overflow: hidden;
 
@@ -26,7 +26,7 @@ $test-line-height: 160%;
 
     @media(min-width: $tablet){
         @include size(100%, 80vh);
-        padding: 20vh;
+        padding: 8rem;
 
         .hello { max-width: 860px; }
         .contact-msg { 

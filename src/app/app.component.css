@@ -6128,16 +6128,6 @@ label.panel-block {
 
 @font-face {
   font-family: "Spoqa Han Sans";
-  font-weight: 100;
-  src: local("☺"), url(/assets/fonts/spocahansans_subset/SpoqaHanSans-Thin.eot), url(/assets/fonts/spocahansans_subset/SpoqaHanSans-Thin.eot?#iefix) format("embedded-opentype"), url(/assets/fonts/spocahansans_subset/SpoqaHanSans-Thin.woff) format("woff"), url(/assets/fonts/spocahansans_subset/SpoqaHanSans-Thin.ttf) format("truetype");
-  /* If not support woff */ }
-@font-face {
-  font-family: "Spoqa Han Sans";
-  font-weight: 300;
-  src: local("☺"), url(/assets/fonts/spocahansans_subset/SpoqaHanSans-Light.eot), url(/assets/fonts/spocahansans_subset/SpoqaHanSans-Light.eot?#iefix) format("embedded-opentype"), url(/assets/fonts/spocahansans_subset/SpoqaHanSans-Light.woff) format("woff"), url(/assets/fonts/spocahansans_subset/SpoqaHanSans-Light.ttf) format("truetype");
-  /* If not support woff */ }
-@font-face {
-  font-family: "Spoqa Han Sans";
   font-weight: 500;
   src: local("☺"), url(/assets/fonts/spocahansans_subset/SpoqaHanSans-Regular.eot), url(/assets/fonts/spocahansans_subset/SpoqaHanSans-Regular.eot?#iefix) format("embedded-opentype"), url(/assets/fonts/spocahansans_subset/SpoqaHanSans-Regular.woff) format("woff"), url(/assets/fonts/spocahansans_subset/SpoqaHanSans-Regular.ttf) format("truetype");
   /* If not support woff */ }
@@ -6147,24 +6137,24 @@ label.panel-block {
   src: local("☺"), url(/assets/fonts/spocahansans_subset/SpoqaHanSans-Bold.eot), url(/assets/fonts/spocahansans_subset/SpoqaHanSans-Bold.eot?#iefix) format("embedded-opentype"), url(/assets/fonts/spocahansans_subset/SpoqaHanSans-Bold.woff) format("woff"), url(/assets/fonts/spocahansans_subset/SpoqaHanSans-Bold.ttf) format("truetype");
   /* If not support woff */ }
 * {
-  font-family: Arial, sans-serif;
+  font-family: "Spoqa Han Sans", "애플 SD 산돌고딕 Neo", "Apple SD Gothic Neo", 나눔고딕, "Nanum Gothic", "돋움", Dotum, Arial, sans-serif;
   font-size: 8px; }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Spoqa Han Sans", "애플 SD 산돌고딕 Neo", "Apple SD Gothic Neo", 나눔고딕, "Nanum Gothic", "돋움", Dotum, Arial, sans-serif;
   font-size: 8px;
   background-color: red; }
 
 @media (min-width: 769px) {
   * {
-    font-family: "Spoqa Han Sans", "Apple SD Gothic Neo", "Nanum Barun Gothic", "Nanum Gothic", "돋움", Dotum, "Verdana", Arial, sans-serif;
+    font-family: "Spoqa Han Sans", "애플 SD 산돌고딕 Neo", "Apple SD Gothic Neo", 나눔고딕, "Nanum Gothic", "돋움", Dotum, Arial, sans-serif;
     font-size: 16px; }
 
   body {
-    font-family: "Spoqa Han Sans", "Apple SD Gothic Neo", "Nanum Barun Gothic", "Nanum Gothic", "돋움", Dotum, "Verdana", Arial, sans-serif;
+    font-family: "Spoqa Han Sans", "애플 SD 산돌고딕 Neo", "Apple SD Gothic Neo", 나눔고딕, "Nanum Gothic", "돋움", Dotum, Arial, sans-serif;
     font-size: 16px; } }
 p {
-  font-family: "Spoqa Han Sans", "Apple SD Gothic Neo", "Nanum Barun Gothic", "Nanum Gothic", "돋움", Dotum, "Verdana", Arial, sans-serif;
+  font-family: "Spoqa Han Sans", "애플 SD 산돌고딕 Neo", "Apple SD Gothic Neo", 나눔고딕, "Nanum Gothic", "돋움", Dotum, Arial, sans-serif;
   line-height: 180%; }
 
 ul {
@@ -6187,32 +6177,14 @@ ul {
   animation: slideOutUp 0.48s cubic-bezier(1, 0.015, 0.295, 1.225) forwards running; }
 
 .btn-gototop {
-  z-index: 1100;
-  width: 39px;
-  height: 39px;
+  z-index: 9000;
+  width: 2rem;
+  height: 2rem;
   position: fixed;
   right: 4%;
   bottom: 4%;
   background-image: url(/assets/images/ui/icons/gototop@2x.png);
   background-repeat: no-repeat;
-  background-size: cover; }
-
-@keyframes slideInDown {
-  from {
-    transform: translate3d(0, -100%, 0);
-    visibility: visible; }
-  to {
-    transform: translate3d(0, 0, 0); } }
-.slideInDown {
-  animation-name: slideInDown; }
-
-@keyframes slideOutUp {
-  from {
-    transform: translate3d(0, 0, 0); }
-  to {
-    visibility: hidden;
-    transform: translate3d(0, -100%, 0); } }
-.slideOutUp {
-  animation-name: slideOutUp; }
+  background-size: contain; }
 
 /*# sourceMappingURL=app.component.css.map */

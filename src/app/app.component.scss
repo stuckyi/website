@@ -12,9 +12,9 @@
 
 
 .btn-gototop {
-    z-index: 1100;
+    z-index: $z-index-btn-gotoTop;
 
-    @include size(39px, 39px);
+    @include size(2rem, 2rem);
 
     position: fixed;
     right: 4%;
@@ -22,40 +22,7 @@
 
     background-image: url(/assets/images/ui/icons/gototop@2x.png);
     background-repeat: no-repeat;
-    background-size: cover;
-
-
+    background-size: contain;
 }
 
 
-
-
-@keyframes slideInDown {
-  from {
-    transform: translate3d(0, -100%, 0);
-    visibility: visible;
-  }
-
-  to {
-    transform: translate3d(0, 0, 0);
-  }
-}
-
-.slideInDown {
-  animation-name: slideInDown;
-}
-
-@keyframes slideOutUp {
-  from {
-    transform: translate3d(0, 0, 0);
-  }
-
-  to {
-    visibility: hidden;
-    transform: translate3d(0, -100%, 0);
-  }
-}
-
-.slideOutUp {
-  animation-name: slideOutUp;
-}
