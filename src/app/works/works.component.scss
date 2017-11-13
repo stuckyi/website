@@ -1,7 +1,5 @@
 @import 'assets/scss/global';
 
-$col-loading: #e9e9e9;
-
 $size-hello: $size-2;       // 인사말 폰트 사이즈
 
 $size-info-title: $size-3;  // 작업 문의
@@ -12,16 +10,18 @@ $size-work-name: $size-3;   // 그리드 아이템 제목
 
 
 .work-main{
-    background-color: #FFFC63;
+    background-color: $main-color;
 }
 
 
 .works {
-    z-index: 500;
+    z-index: $z-index-works;
+
+    // MOBILE
     @include size(100%, auto);
     margin: 8rem auto;
     
-    
+    // PC
     @media(min-width: $tablet){
         @include size($warp-main-grid, auto);
         margin: 6.25rem auto;
@@ -30,40 +30,47 @@ $size-work-name: $size-3;   // 그리드 아이템 제목
 
     .work {
 
+        // ALL
+        padding: 0;
+
+
+        // MOBILE
         @include size(100%, auto);
+        margin: 4rem 0;
+        
+
+        // PC
         @media(min-width: $tablet){ 
             @include size(30%, auto);
-            @include min-size(16.875rem, 20.1875rem); } // 270, 323
-        
-        padding: 0;
-        margin: 4rem 0;
-        @media(min-width: $tablet){ margin: 1rem; }
-        
+            @include min-size(16.875rem, 20.1875rem);  // 270, 323
+            margin: 1rem;
+        }
 
-        
 
         .image { 
+            // ALL
             padding: 0;
-            
             img { @include size(100%, auto); }
             
             
-            
+            // PC
             @media(min-width: $tablet){
-                @include size(100%, auto);
-                @include min-size(16.875rem, 15.1875rem); // 270, 243
-                padding: 0;
-
-                background-color: $col-loading;
+                @include size(300px, 270px);
+                @include min-size(18.75rem, 16.875rem);  // 300, 270
+                
                 background-repeat: no-repeat;
                 background-position: 0 0%;
             }
             
         }
         .work-item {
+            // MOBILE
             @include size(100%, 100px);
+
+            // PC
             @media(min-width: $tablet){ padding: 0; }
             
+            // ALL
             .work-tag { 
                 margin-top: 0.9375rem;
                 font-size: $size-work-tag;

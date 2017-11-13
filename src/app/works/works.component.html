@@ -2,26 +2,29 @@
 <app-hero class="is-hidden-mobile" [isContactInfo]="false"></app-hero>
 
 <div class="works columns is-multiline">
-  <div *ngFor="let content of contents" (click)="gotoDetail(content.id)" class="work columns is-multiline">
-      <!-- pc -->
+  <div *ngFor="let content of contents" (click)="gotoDetail(content.id)" 
+        class="work columns is-multiline">
+      <!-- pc: sprite image -->
       <div (mouseenter)="setHoverState(content.title_en)" 
           (mouseleave)="setHoverState(content.title_en)"
-          class="image column is-12 is-hidden-mobile"
+          class="image column is-hidden-mobile"
           [ngClass]="setClass(content.title_en)"
           [style.background-image]="'url(/assets/images/works/main/'+content.title_en+'.png)'">
       </div>
 
+      <!-- pc: title, tagInfo -->
       <div class="work-item column is-12 is-hidden-mobile">
         <p class="work-tag">{{ content.tagInfo.title }}</p>
         <p class="work-name" *ngFor="let title of content.title">{{ title }}</p>
       </div>
 
 
-      <!-- mobile -->
+      <!-- mobile image -->
       <figure class="image column is-12 is-hidden-tablet">
         <img src=" {{ '/assets/images/works/main/' + content.title_en + '.m.png'}} " />
       </figure>
-
+      
+      <!-- mobile: title, tagInfo -->
       <div class="work-item column is-12 is-hidden-tablet">
         <p class="work-name" *ngFor="let title of content.title">{{ title }}</p>
         <p class="work-tag">{{ content.tagInfo.title }}</p>

@@ -3,17 +3,13 @@
 // z-index
 
 
-$z-index-work-mainImg:  200;
-$z-index-work-content:  300;
-$z-index-navbar:        1000;
-$z-index-modal-bg:      1900; // btn, background
-$z-index-modal-content: 2000;
-$z-index-modal-close:   2100; // btn, background
-
-
-
-
-
+$z-index-work-mainImg:  200;  // Work-detail Main Image
+$z-index-work-content:  300;  // Work-detail Content
+$z-index-works:         500;  // Works
+$z-index-navbar:        1000; // Navigation bar
+$z-index-modal-bg:      1900; // Modal Background
+$z-index-modal-content: 2000; // Modal Content
+$z-index-modal-close:   2100; // Close Button
 
 
 
@@ -25,13 +21,12 @@ $main-color-dark: darken($main-color, 20%);
 
 // tag color
 $tag-col: #9B9B9B;
+
 // GRID
-
-
 $base: 900px;
 
 $warp-main-grid: 960px; // 메인 그리드 가로너비 영역 (max)
 $wrapWidth: 900px;      // 설명 콘텐츠 가로너비 영역 (max) // wrapWidth's min: 760px max: 900px.
-// $mainImgHeight: 465px;  // 프로젝트 상세페이지 메인 이미지 높이
+
 $mainImgHeight: 60vh;  // 프로젝트 상세페이지 메인 이미지 높이
 $about-main-height: 80%; // 임의 설정
