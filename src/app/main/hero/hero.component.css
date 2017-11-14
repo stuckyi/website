@@ -6198,6 +6198,7 @@ ul {
 
 .mobile-hero-insta {
   width: 2.438rem;
-  height: 2.438rem; }
+  height: 2.438rem;
+  transition: all 1s ease-in-out; }
 
 /*# sourceMappingURL=hero.component.css.map */

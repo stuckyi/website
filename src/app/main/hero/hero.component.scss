@@ -21,7 +21,6 @@ $test-line-height: 160%;
     }
 
 
-    
 
 
     @media(min-width: $tablet){
@@ -50,4 +49,5 @@ $test-line-height: 160%;
 
 .mobile-hero-insta {
     @include size(2.438rem, 2.438rem);
+    transition: all 1s ease-in-out;
 }
