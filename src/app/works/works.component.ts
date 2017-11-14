@@ -26,9 +26,6 @@ export class WorksComponent implements OnInit {
     ted: false
   };
 
-
-
-
   constructor(
     private router: Router,
     private appService: AppService
@@ -37,11 +34,13 @@ export class WorksComponent implements OnInit {
 
   ngOnInit() {
     this.contents = this.appService.getContents();
+    window.scrollTo(0, 0);
     
   }
 
   setClass(name_en: string) {
     let result = '';
+
     if (name_en === 'collection' && this.hoverState.collection) {
       result = 'steps11';
     } else if (name_en === 'codedfont' && this.hoverState.codedfont) {
@@ -106,10 +105,6 @@ export class WorksComponent implements OnInit {
     }
   }
 
-  onLoad(){
-    console.log("로딩 완료!!!!!!!!!!!!!");
-    this.isLoad = true;
-  }
 
   gotoDetail(id: number) {
     let link = ['/detail', id];

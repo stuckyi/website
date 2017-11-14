@@ -6192,13 +6192,11 @@ ul {
         margin-top: 10vh; }
       #hero p {
         font-size: 1.625rem; } }
-  #hero.is-fullheight {
-    width: 100%;
-    height: 100vh; }
+  #hero.is-hidden {
+    display: hidden; }
 
 .mobile-hero-insta {
   width: 2.438rem;
-  height: 2.438rem;
-  transition: all 1s ease-in-out; }
+  height: 2.438rem; }
 
 /*# sourceMappingURL=hero.component.css.map */
