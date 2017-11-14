@@ -14,7 +14,7 @@ $main-height-m: 375px;
     padding: 0;
     margin: 0 auto;
     position: fixed;                                                // for test
-    overflow: hidden;
+    // overflow: hidden;
     background-color: #e9e9e9;
 
 
@@ -23,9 +23,12 @@ $main-height-m: 375px;
     
     
     
-    
-    .detail-mainImg {
-      @include size(auto, $main-height-m);
+    .img-m { 
+        @include size(auto, $main-height-m);
+        margin: 0 auto;
+    }
+    .img-pc {
+      
       @media(min-width: $tablet){  @include size(auto, $main-height-pc); }
       margin: 0 auto;
       max-width: none;

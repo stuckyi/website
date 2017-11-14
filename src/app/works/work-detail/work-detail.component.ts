@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
 import { ActivatedRoute, Params, Router } from '@angular/router';
 import { Observable } from 'rxjs/Observable';
 
@@ -9,7 +9,11 @@ import { AppService } from './../../app.service';
   templateUrl: './work-detail.component.html',
   styleUrls: ['./work-detail.component.css']
 })
-export class WorkDetailComponent implements OnInit {
+export class WorkDetailComponent implements OnInit, AfterViewInit {
+  @ViewChild('main') main: ElementRef;
+  @ViewChild('imgEl') imgEl: ElementRef;
+
+
   content;
 
   /**
@@ -39,7 +43,13 @@ export class WorkDetailComponent implements OnInit {
   isBgImg: boolean = false;
 
 
-  styleInfo = { background: '#000', opacity: 1 };
+  styleInfo = { background: '#000', opacity: 1 }; 
+  customStyle = {
+    mainImg: { background: '#000', opacity: 1 },  // .mainImg's bacgkround
+    img: { transform: 'translateX(0)' }           // .detail-mainImg
+  };
+
+
 
 
   // scrollEvent 
@@ -50,6 +60,7 @@ export class WorkDetailComponent implements OnInit {
 
 
   constructor(
+    private elementRef: ElementRef,
     private appService: AppService,
     private activatedRoute: ActivatedRoute
   ) { }
@@ -63,6 +74,20 @@ export class WorkDetailComponent implements OnInit {
     window.scrollTo(0, 0);
   }
 
+  ngAfterViewInit() {
+    setTimeout(() => { this.customStyle.img.transform = this.getOffsetX(); }, 0); 
+  }
+
+  getOffsetX() {
+    let sizes = {
+      main: this.main.nativeElement.offsetWidth,
+      imgEl: this.imgEl.nativeElement.offsetWidth
+    };
+    let offsetX = (sizes.imgEl / 2) - (sizes.main / 2);
+    // targetEl.style.transform = 'translateX(-' + offsetX + 'px)';
+    return 'translateX(-' + offsetX + 'px)';
+  }
+
   setContent() {
     let contentId: number;
     this.activatedRoute.params.forEach((urlParameters) => {
@@ -72,7 +97,7 @@ export class WorkDetailComponent implements OnInit {
     
 
     // 메인 상단 설정
-    this.styleInfo.background = this.setBgCol(this.content.title_en);  // 메인 상단 배경색
+    this.customStyle.mainImg.background = this.setBgCol(this.content.title_en);  // 메인 상단 배경색
     
     this.mainImgUrl = this.content.baseUrl;                           // 메인 상단 이미지
     
@@ -85,9 +110,7 @@ export class WorkDetailComponent implements OnInit {
 
     this.linkItems = this.content.linkItems;
 
-    
-
-
+  
     // 데이터 셋 안에, 해당하는 값이 있을 경우만 렌더링 시작.
     this.isPreviewSlider = (this.previewSliderItems.length > 0) ? true : false;
     this.isPreviewContent = (this.previewContentItems.length > 0) ? true : false;
