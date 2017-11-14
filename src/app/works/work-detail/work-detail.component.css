@@ -6182,15 +6182,15 @@ ul {
     .mainImg {
       width: 100%;
       height: 480px; } }
-  .mainImg img {
+  .mainImg .detail-mainImg {
     width: auto;
     height: 375px;
-    margin: 0 auto; }
-  @media (min-width: 769px) {
-    .mainImg img {
-      width: auto;
-      height: 480px;
-      max-width: 1408px; } }
+    margin: 0 auto;
+    max-width: none; }
+    @media (min-width: 769px) {
+      .mainImg .detail-mainImg {
+        width: auto;
+        height: 480px; } }
 
 .isBgImg {
   background-size: auto 100% !important;

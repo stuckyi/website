@@ -19,23 +19,18 @@ $main-height-m: 375px;
 
 
     @include size(auto, $main-height-m); // m
-    @media(min-width: $tablet){ 
-        @include size(100%, $main-height-pc); 
-    }
+    @media(min-width: $tablet){  @include size(100%, $main-height-pc);  }
     
     
     
     
-    img {
+    .detail-mainImg {
       @include size(auto, $main-height-m);
+      @media(min-width: $tablet){  @include size(auto, $main-height-pc); }
       margin: 0 auto;
+      max-width: none;
     }
-    @media(min-width: $tablet){ 
-        img {
-            @include size(auto, $main-height-pc);
-            max-width: $fullhd;
-        }
-    }
+    
 
 
 }
