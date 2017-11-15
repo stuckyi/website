@@ -31,6 +31,8 @@ export class AppComponent implements AfterViewInit, OnInit {
   title = 'app works!';
 
   isAbout: boolean = false;
+  isHero: boolean = true;
+
 
   isNav: boolean = true;
   scrollY = { prev: 0 };
@@ -44,7 +46,8 @@ export class AppComponent implements AfterViewInit, OnInit {
     this.router.events.subscribe(event => {
       if (event.constructor.name === 'NavigationEnd') {
         const url = this.router.url;
-        this.isAbout = (url === '/about') ? true : false;
+        this.isAbout = (url === '/about') ? true : false;        
+        
       }
     });
 

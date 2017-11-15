@@ -2,7 +2,8 @@
 
 <div #main class="mainImg"
      [class.isBgImg]="isBgImg"
-     [ngStyle]="customStyle.mainImg">
+     [ngStyle]="customStyle.mainImg"
+     (window:resize)="getFromResizeEvent($event)">
 
    <figure class="image">
     <img class="img-m is-hidden-tablet" [src]="mainImgUrl+'main.m.png'" alt="상세페이지 메인 이미지" />

@@ -78,6 +78,10 @@ export class WorkDetailComponent implements OnInit, AfterViewInit {
     setTimeout(() => { this.customStyle.img.transform = this.getOffsetX(); }, 0); 
   }
 
+  getFromResizeEvent(event: any) {
+    setTimeout(() => { this.customStyle.img.transform = this.getOffsetX(); }, 0);
+  }
+
   getOffsetX() {
     let sizes = {
       main: this.main.nativeElement.offsetWidth,

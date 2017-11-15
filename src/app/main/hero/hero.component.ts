@@ -55,6 +55,7 @@ export class HeroComponent implements OnInit {
           this.dynamicHeight = 'works';
         }
         else {
+          console.log("router urlname: ", url);
           this.isHero = false;
           this.isAbout = false;
         }
