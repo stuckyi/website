@@ -1,47 +1,38 @@
 
+<!-- pc -->
+<div #evtMouse  id="hero"  class="is-hidden-mobile" [class.is-fullheight]="isAbout">
+  <div class="container">
+    <div >
 
-<div *ngIf="isHero">
-  
-  <!-- pc -->
-  <div #evtMouse  id="hero"  class="is-hidden-mobile" [class.is-fullheight]="isAbout"
-  [@dynamicHeight]="dynamicHeight" >
-    <div class="container">
-      <div >
-
-        <p class="hello"> 스투키 스튜디오는 <span [ngStyle]="styleConf">2016년 3월부터 대한민국 서울에서 활동하고 있습니다.</span></p>
-        <p class="hello"> <span [ngStyle]="styleConf">그들의 관심분야에 관한 </span>데이터<span [ngStyle]="styleConf">를 찾고 모으고,</span></p>
-        <p class="hello"> <span [ngStyle]="styleConf">정리하여</span> 이해하기 쉬운 형태<span [ngStyle]="styleConf">로 </span>시각화<span [ngStyle]="styleConf">하는데 </span>희열<span [ngStyle]="styleConf">을 느낍니다.</span></p>
-        <p class="hello"> <span [ngStyle]="styleConf">정리한 데이터로는 주로 </span>상호작용<span [ngStyle]="styleConf">이 가능한 </span>웹 콘텐츠 </p>
-        <p class="hello"> <span [ngStyle]="styleConf">또는, </span>인쇄물<span [ngStyle]="styleConf">로 제작하고 있습니다.</span></p>
-        
-        <div *ngIf="isAbout">
-          <p class="contact-msg">contact</p>
-          <p class="contact-email">stuckyi.info@gmail.com</p>
-        </div>
-      </div> 
+      <p class="hello"> 스투키 스튜디오는 <span [ngStyle]="styleConf">2016년 3월부터 대한민국 서울에서 활동하고 있습니다.</span></p>
+      <p class="hello"> <span [ngStyle]="styleConf">그들의 관심분야에 관한 </span>데이터<span [ngStyle]="styleConf">를 찾고 모으고,</span></p>
+      <p class="hello"> <span [ngStyle]="styleConf">정리하여</span> 이해하기 쉬운 형태<span [ngStyle]="styleConf">로 </span>시각화<span [ngStyle]="styleConf">하는데 </span>희열<span [ngStyle]="styleConf">을 느낍니다.</span></p>
+      <p class="hello"> <span [ngStyle]="styleConf">정리한 데이터로는 주로 </span>상호작용<span [ngStyle]="styleConf">이 가능한 </span>웹 콘텐츠 </p>
+      <p class="hello"> <span [ngStyle]="styleConf">또는, </span>인쇄물<span [ngStyle]="styleConf">로 제작하고 있습니다.</span></p>
       
-    </div>
-  </div>
-
-
-
-  <!-- mobile -->
-  <div id="hero" class="is-hidden-tablet" [class.is-hidden]="!isAbout" >
-    <div class="container"> 
-      <p class="hello"> 안녕하세요. 스투키 스튜디오입니다.</p>
-      <p class="hello"> 정유미와 김태경이 2016년 3월부터 함께 작업을 하고 있습니다. 우리의 손길이 필요한 데이터들을 찾아다니고, 그것들을 모으고, 정리하여 이해하기 쉬운 형태로 시각화하는데 희열을 느낍니다. 정리한 데이터로는 주로 웹을 기반으로 상호작용이 가능한 웹 콘텐츠를 만들거나 인쇄물을 제작하고 있습니다.</p>
-
       <div *ngIf="isAbout">
-        <p class="m-contact-email has-text-centered">stuckyi.info@gmail.com</p>
-        <p class="m-contact-msg has-text-centered">
-          <img class="mobile-hero-insta" (click)="openUrl()" src="/assets/images/ui/icons/instagram_white@2x.png" alt="instagram link icon">
-        </p>
+        <p class="contact-msg">contact</p>
+        <p class="contact-email">stuckyi.info@gmail.com</p>
       </div>
-  
-    </div>
+    </div> 
+    
   </div>
+</div>
 
 
 
+<!-- mobile -->
+<div id="hero" class="is-hidden-tablet" [class.is-hidden]="!isAbout" >
+  <div class="container"> 
+    <p class="hello"> 안녕하세요. 스투키 스튜디오입니다.</p>
+    <p class="hello"> 정유미와 김태경이 2016년 3월부터 함께 작업을 하고 있습니다. 우리의 손길이 필요한 데이터들을 찾아다니고, 그것들을 모으고, 정리하여 이해하기 쉬운 형태로 시각화하는데 희열을 느낍니다. 정리한 데이터로는 주로 웹을 기반으로 상호작용이 가능한 웹 콘텐츠를 만들거나 인쇄물을 제작하고 있습니다.</p>
 
+    <div *ngIf="isAbout">
+      <p class="m-contact-email has-text-centered">stuckyi.info@gmail.com</p>
+      <p class="m-contact-msg has-text-centered">
+        <img class="mobile-hero-insta" (click)="openUrl()" src="/assets/images/ui/icons/instagram_white@2x.png" alt="instagram link icon">
+      </p>
+    </div>
+
+  </div>
 </div>
