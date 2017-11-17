@@ -2,6 +2,7 @@ import { Component, OnInit, ViewChild, ElementRef, AfterViewInit } from '@angula
 import { ActivatedRoute, Params, Router } from '@angular/router';
 import { Observable } from 'rxjs/Observable';
 
+import { getMap } from '../../utils/util';
 import { AppService } from './../../app.service';
 
 @Component({
@@ -43,18 +44,17 @@ export class WorkDetailComponent implements OnInit, AfterViewInit {
   isBgImg: boolean = false;
 
 
-  styleInfo = { background: '#000', opacity: 1 }; 
+  
   customStyle = {
-    mainImg: { background: '#000', opacity: 1 },  // .mainImg's bacgkround
-    img: { transform: 'translateX(0)' }           // .detail-mainImg
+    // .mainImg's bacgkround
+    mainImg: { opacity: 1 }, 
+    transparent: { opacity: 1 } ,
+    // .detail-mainImg
+    img: {
+      transform: 'translateX(0)'
+    }           
   };
 
-
-
-
-  // scrollEvent 
-  scrollOpacity = 1;
-  
 
 
 
@@ -68,14 +68,15 @@ export class WorkDetailComponent implements OnInit, AfterViewInit {
   ngOnInit() {
   
     this.setContent();
-    this.registerScrollEvent();
+    
 
     // 초기화시 화면 최상단
     window.scrollTo(0, 0);
   }
 
   ngAfterViewInit() {
-    setTimeout(() => { this.customStyle.img.transform = this.getOffsetX(); }, 0); 
+    setTimeout(() => { this.customStyle.img.transform = this.getOffsetX(); }, 100); 
+    this.registerScrollEvent();
   }
 
   getFromResizeEvent(event: any) {
@@ -88,7 +89,6 @@ export class WorkDetailComponent implements OnInit, AfterViewInit {
       imgEl: this.imgEl.nativeElement.offsetWidth
     };
     let offsetX = (sizes.imgEl / 2) - (sizes.main / 2);
-    // targetEl.style.transform = 'translateX(-' + offsetX + 'px)';
     return 'translateX(-' + offsetX + 'px)';
   }
 
@@ -101,7 +101,7 @@ export class WorkDetailComponent implements OnInit, AfterViewInit {
     
 
     // 메인 상단 설정
-    this.customStyle.mainImg.background = this.setBgCol(this.content.title_en);  // 메인 상단 배경색
+    this.customStyle.mainImg = this.setBgCol(this.content.title_en);  // 메인 상단 배경색
     
     this.mainImgUrl = this.content.baseUrl;                           // 메인 상단 이미지
     
@@ -123,39 +123,66 @@ export class WorkDetailComponent implements OnInit, AfterViewInit {
   }
 
   setBgCol(name_en: string) {
-    let result = '';
+    const obj = {
+      backgroundColor: 'none',
+      backgroundImage: 'none',
+      opacity: 1
+    };
+
     if (name_en === 'randomcharacter') {
+      obj.backgroundImage = 'none';
+      obj.backgroundColor = '#FAB8D5';
+
       this.isBgImg = false;
-      result = '#FAB8D5';
+      
     } else if (name_en === "codestudy") {
+      obj.backgroundImage = 'none';
+      obj.backgroundColor = '#F7F7F7';
+
       this.isBgImg = false;
-      result = '#F7F7F7';
+      
     } else if (name_en === "jumpgame") {
+      obj.backgroundImage = "url('assets/images/works/jumpgame/main_bg.png')";
+      obj.backgroundColor = '#E7FF67';
+
       this.isBgImg = true;
-      result = "url('assets/images/works/jumpgame/main_bg.png')";
+      
     } else if (name_en === "collection") {
+      obj.backgroundImage = 'none';
+      obj.backgroundColor = '#1DC4A2';
       this.isBgImg = false;
-      result = "#1DC4A2";
+
+    } else if (name_en === "codedfont") {
+      obj.backgroundImage = "url('assets/images/works/codedfont/main_bg.png')";
+      obj.backgroundColor = '#B000FF';
+      
+      this.isBgImg = true;
     } else {
+      obj.backgroundImage = 'none';
+      obj.backgroundColor = '#e9e9e9';
+
       this.isBgImg = false;
-      result  = '#E9E9E9';
     }
-    return result;
+
+    return obj;
   }
 
   // main image에 적용할 스크롤 이벤트
   registerScrollEvent() {
-    console.log("registerScrollEvent in work-detail");
+    
+    const imgHeight = { pc: 480, m: 375 };
+    const marginWithContent = 100;          // pc only.
+
     const scrollRule = {
-      pc: { startY: 0, endY: (480+100) },
-      m: { startY: 0, endY: 375 }
+      pc: { startY: 0, endY: (imgHeight.pc + marginWithContent) },
+      m: { startY: 0, endY: imgHeight.m }
     };
     const scrollTop$ = Observable.fromEvent(window, "scroll")
       .map((val: any) => {
         let currentY = val.target.scrollingElement.scrollTop;
         
         if (currentY >= scrollRule.pc.startY && currentY <= scrollRule.pc.endY) {
-          let result = this.getMap(
+          let result = getMap(
             val.target.scrollingElement.scrollTop,
             scrollRule.pc.startY, scrollRule.pc.endY,
             1.0, 0.1);
@@ -165,28 +192,15 @@ export class WorkDetailComponent implements OnInit, AfterViewInit {
           return 1;
         }
       }).distinctUntilChanged();
+    
+    // opacity effect 
     const checkScroll$ = scrollTop$.subscribe((val:any) => {
-      this.styleInfo.opacity = val;
+      this.customStyle.transparent.opacity = val;
+      this.customStyle.mainImg.opacity = val;
     });
     
     
   }
 
-  // p5js의 map()기능과 동일하다.
-  getMap(val, start1, stop1, start2, stop2) {
-    let newVal = ((val - start1) / (stop1 - start1)) * (stop2 - start2) + start2;
-    if (start2 < stop2) { 
-      return this.getConstrain(newVal, start2, stop2);
-    } else {
-      return this.getConstrain(newVal, stop2, start2);
-    }    
-  }
-  // 값의 범위를 제한한다.
-  getConstrain(n, low, high) {
-    let result = Math.max(Math.min(n, high), low);
-    return result;
-  }
-
-  
 
 }

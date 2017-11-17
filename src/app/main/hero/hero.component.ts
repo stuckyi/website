@@ -3,7 +3,7 @@ import { Router } from '@angular/router';
 import { Observable } from 'rxjs/Rx';
 import 'rxjs/add/observable/fromEvent';
 
-import { getMax, getConstrain } from '../../utils/util';
+import { getMap } from '../../utils/util';
 
 
 
@@ -36,7 +36,7 @@ export class HeroComponent implements OnInit {
     let elementSize = { w: this.evtMouse.nativeElement.offsetWidth };
     let mouseStrem$ = Observable.fromEvent<MouseEvent>(this.evtMouse.nativeElement, 'mousemove')
       .subscribe((res: any) => {
-        this.styleConf.opacity = +getMax(res.offsetX, 0, elementSize.w, 0, 1).toFixed(1);
+        this.styleConf.opacity = +getMap(res.offsetX, 0, elementSize.w, 0, 1).toFixed(1);
       }); 
   }
 

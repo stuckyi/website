@@ -6226,7 +6226,8 @@ ul {
       color: #9B9B9B; }
     .detail .detail-container .desc-content p {
       font-size: 1.063rem;
-      margin: 1.8rem 0; }
+      margin: 1.8rem 0;
+      text-align: justify; }
     .detail .detail-container .link {
       text-decoration: underline; }
 

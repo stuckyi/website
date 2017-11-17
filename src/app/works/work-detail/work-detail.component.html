@@ -1,19 +1,21 @@
 <!-- 최상단 프로젝트별 메인 이미지 영역 -->
 
-<div #main class="mainImg"
-     [class.isBgImg]="isBgImg"
-     [ngStyle]="customStyle.mainImg"
-     (window:resize)="getFromResizeEvent($event)">
+  <div #main class="mainImg"
+      [class.isBgImg]="isBgImg"
+      [ngStyle]="customStyle.mainImg"
+      (window:resize)="getFromResizeEvent($event)">
 
-   <figure class="image">
-    <img class="img-m is-hidden-tablet" [src]="mainImgUrl+'main.m.png'" alt="상세페이지 메인 이미지" />
-    <img #imgEl 
-         id="img-pc"
-         class="img-pc is-hidden-mobile" 
-         [ngStyle]="customStyle.img"
-         [src]="mainImgUrl+'main.png'" alt="상세페이지 메인 이미지" />
-  </figure>
-</div>
+    <figure class="image">
+      <img class="img-m is-hidden-tablet" [src]="mainImgUrl+'main.m.png'" alt="상세페이지 메인 이미지" />
+      <img #imgEl 
+          id="img-pc"
+          class="img-pc is-hidden-mobile" 
+          [ngStyle]="customStyle.img"
+          [src]="mainImgUrl+'main.png'" alt="상세페이지 메인 이미지" />
+    </figure>
+  </div>
+
+
 
 
 
