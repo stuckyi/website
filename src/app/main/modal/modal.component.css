@@ -6257,10 +6257,10 @@ ul {
     opacity: 1; } }
 .modal {
   overflow: hidden;
-  transform-origin: center;
-  animation: spring-down-small 0.3s cubic-bezier(1, 0.015, 0.295, 1.225) forwards running; }
+  z-index: 1800; }
   .modal .modal-background {
     background-color: rgba(255, 255, 255, 0.9);
+    position: fixed;
     z-index: 1900; }
   .modal .modal-content {
     z-index: 2000;
@@ -6297,7 +6297,7 @@ ul {
     z-index: 2100;
     right: 20px;
     top: 20px;
-    position: absolute;
+    position: fixed;
     cursor: pointer;
     background: none;
     border-style: none;

@@ -236,20 +236,12 @@ export const CONTENTS = [
             '우리는 이 규칙성과 반복성, 정형성에 주목하였고, 프로그래밍을 통해 멘넴의 규칙을 따르되 기존의 캐릭터와 다른, 낯선 캐릭터들을 자동으로 만들어내는 작업을 해보았습니다.',
             '멘넴의 규칙성 안에서 자동으로 만들어진 캐릭터들은 기존의 멘넴 캐릭터들과는 다른 낯선 모습을 가지고 있었지만, 각각의 새로운 캐릭터들에게 함께 이름을 지어주고, 사는 곳을 정해주고, 각자의 성격과 개성을 부여하면서 멘넴의 캐릭터 세상 속으로 받아들였습니다.'
         ],
-        linkItems: [
-            {
-                title: '<멘넴X스투키 랜덤 캐릭터 생성기> 직접 랜덤 캐릭터를 생성 해볼 수 있습니다.', url: '#'
-            }
-        ],
+        linkItems: [ ],
         previewSliderItems: [
-            { index: 0, title:'-', desc: '-', imgUrl: '/assets/images/works/randomcharacter/preview/0.png' },
-            { index: 1, title: '-', desc: '-', imgUrl: '/assets/images/works/randomcharacter/preview/1.png' },
-            { index: 2, title: '-', desc: '-', imgUrl: '/assets/images/works/randomcharacter/preview/2.png' },
-            { index: 3, title: '-', desc: '-', imgUrl: '/assets/images/works/randomcharacter/preview/3.png' },
-            { index: 4, title: '-', desc: '-', imgUrl: '/assets/images/works/randomcharacter/preview/4.png' }
+            { index: 0, title:'랜덤 캐릭터 생성기 구현 모습', desc: '멘넴의 다양한 그림들이 조합되어 이제까지 없던 새로운 형태의 캐릭터가 만들어진다.', imgUrl: '/assets/images/works/randomcharacter/preview/0.gif' }
         ],
         previewContentItems: [
-            { index: 0, title: '-', desc: '-', imgUrl: '/assets/images/works/randomcharacter/preview/m_0.gif' }
+            { index: 0, title:'랜덤 캐릭터 생성기 구현 모습', desc: '멘넴의 다양한 그림들이 조합되어 이제까지 없던 새로운 형태의 캐릭터가 만들어진다.', imgUrl: '/assets/images/works/randomcharacter/preview/m_0.gif' }
         ],
         processSliderItems: [
             { index: 0, title: '(ex)', desc: '멘넴의 캐릭터에서 얼굴, 머리, 눈, 코, 입, 상의 등을 따로 모듈화해서 랜덤으로 뽑아서 다시 손으로 그려 조합하는 게임을 해보고 있습니다.', imgUrl: '/assets/images/works/randomcharacter/modal/0.png' },
@@ -261,9 +253,9 @@ export const CONTENTS = [
             { index: 6, title: '(ex)', desc: '디지털화 하는 작업을 합니다.', imgUrl: '/assets/images/works/randomcharacter/modal/6.png' },
             { index: 7, title: '(ex)', desc: '조합의 규칙과 기준선 등을 이해하보기 위해 직접 프린트해서 조합해봅니다.', imgUrl: '/assets/images/works/randomcharacter/modal/7.png' },
             { index: 8, title: '(ex)', desc: '모듈을 하나 하나씩 자르는 과정은 역시 노가다입니다.', imgUrl: '/assets/images/works/randomcharacter/modal/8.png' },
-            { index: 9, title: '(ex)', desc: '로사이드에서 작업 중인', imgUrl: '/assets/images/works/randomcharacter/modal/9.png' },
+            { index: 9, title: '(ex)', desc: '로사이드에서 작업 중인 모습', imgUrl: '/assets/images/works/randomcharacter/modal/9.png' },
             { index: 10, title: '(ex)', desc: '규칙에 따라 손으로 조합해본 모듈입니다.', imgUrl: '/assets/images/works/randomcharacter/modal/10.png' },
-            { index: 11, title: '(ex)', desc: '조합을 위한 가이드라인을 만든 후 진행한 것입니다.', imgUrl: '/assets/images/works/randomcharacter/modal/10.png' } 
+            { index: 11, title: '(ex)', desc: '조합을 위한 가이드라인을 만든 후 진행한 것입니다.', imgUrl: '/assets/images/works/randomcharacter/modal/11.png' } 
          ],
     },
     { 

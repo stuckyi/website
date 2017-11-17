@@ -9,10 +9,12 @@ $hover-opacity-on: .48;
 .modal {
     
     overflow: hidden;
-    @include testPageTransition();
+    z-index: $z-index-modal;
+    // @include testPageTransition();
     // 모달 배경 영역
     .modal-background {
         background-color: rgba(white, 0.9);
+        position: fixed;
         z-index: $z-index-modal-bg;
     }
     .modal-content{
@@ -58,7 +60,7 @@ $hover-opacity-on: .48;
         z-index: $z-index-modal-close;
         right: 20px;
         top: 20px;
-        position: absolute;
+        position: fixed;
         
         
         cursor: pointer;
@@ -78,5 +80,8 @@ $hover-opacity-on: .48;
         }
 
     }
+
+
+
 }
 
