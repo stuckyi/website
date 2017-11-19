@@ -46,6 +46,9 @@ a {
   box-sizing: border-box;
   outline: 0; }
 
+alt {
+  opacity: 0; }
+
 /*! bulma.io v0.6.0 | MIT License | github.com/jgthms/bulma */
 @keyframes spinAround {
   from {

@@ -46,6 +46,9 @@ a {
   box-sizing: border-box;
   outline: 0; }
 
+alt {
+  opacity: 0; }
+
 /*! bulma.io v0.6.0 | MIT License | github.com/jgthms/bulma */
 @keyframes spinAround {
   from {
@@ -6175,13 +6178,25 @@ ul {
   height: auto;
   display: flex;
   flex-flow: row nowrap;
-  justify-content: space-between;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  padding: 1.25rem; }
+
+.nav-container {
+  background: none;
+  z-index: 1000;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
   position: fixed;
   top: 0;
   padding: 1.25rem; }
   .nav-container .nav-center {
-    width: 100vw;
-    height: auto;
+    width: 100px;
+    height: 40px;
     display: flex;
     flex-flow: row nowrap;
     font-weight: 700;

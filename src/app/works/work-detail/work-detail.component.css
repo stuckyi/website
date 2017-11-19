@@ -46,6 +46,9 @@ a {
   box-sizing: border-box;
   outline: 0; }
 
+alt {
+  opacity: 0; }
+
 /*! bulma.io v0.6.0 | MIT License | github.com/jgthms/bulma */
 @keyframes spinAround {
   from {
@@ -6175,7 +6178,7 @@ ul {
   margin: 0 auto;
   position: fixed;
   background-color: #e9e9e9;
-  width: auto;
+  width: 100%;
   height: 375px; }
   @media (min-width: 769px) {
     .mainImg {
@@ -6184,14 +6187,13 @@ ul {
   .mainImg .img-m {
     width: auto;
     height: 375px;
-    margin: 0 auto; }
-  .mainImg .img-pc {
     margin: 0 auto;
     max-width: none; }
-    @media (min-width: 769px) {
-      .mainImg .img-pc {
-        width: auto;
-        height: 480px; } }
+  .mainImg .img-pc {
+    width: auto;
+    height: 480px;
+    margin: 0 auto;
+    max-width: none; }
 
 .isBgImg {
   background-size: auto 100% !important;

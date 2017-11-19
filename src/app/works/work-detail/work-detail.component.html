@@ -3,12 +3,19 @@
   <div #main class="mainImg"
       [class.isBgImg]="isBgImg"
       [ngStyle]="customStyle.mainImg"
-      (window:resize)="getFromResizeEvent($event)">
+      (window:resize)="getFromResizeEvent()">
 
     <figure class="image">
-      <img class="img-m is-hidden-tablet" [src]="mainImgUrl+'main.m.png'" alt="상세페이지 메인 이미지" />
+      <!-- mobile -->
+      <img #imgElMobile
+          (load)="getFromResizeEvent()"
+          class="img-m is-hidden-tablet" 
+          [ngStyle]="customStyle.img"
+          [src]="mainImgUrl+'main.m.png'" alt="상세페이지 메인 이미지" />
+
+      <!-- pc -->
       <img #imgEl 
-          (load)="imgOnLoad()"
+          (load)="getFromResizeEvent()"
           id="img-pc"
           class="img-pc is-hidden-mobile" 
           [ngStyle]="customStyle.img"

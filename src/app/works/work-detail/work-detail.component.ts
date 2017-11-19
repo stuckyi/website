@@ -1,3 +1,4 @@
+import { NavComponent } from './../../main/nav/nav.component';
 import { Component, OnInit, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
 import { ActivatedRoute, Params, Router } from '@angular/router';
 import { Observable } from 'rxjs/Observable';
@@ -13,6 +14,7 @@ import { AppService } from './../../app.service';
 export class WorkDetailComponent implements OnInit, AfterViewInit {
   @ViewChild('main') main: ElementRef;
   @ViewChild('imgEl') imgEl: ElementRef;
+  @ViewChild('imgElMobile') imgElMobile: ElementRef;
 
 
   content;
@@ -66,11 +68,7 @@ export class WorkDetailComponent implements OnInit, AfterViewInit {
   ) { }
 
   ngOnInit() {
-  
     this.setContent();
-    
-
-    // 초기화시 화면 최상단
     window.scrollTo(0, 0);
   }
 
@@ -79,16 +77,24 @@ export class WorkDetailComponent implements OnInit, AfterViewInit {
     this.registerScrollEvent();
   }
 
-  getFromResizeEvent(event: any) {
+  getFromResizeEvent() {
     setTimeout(() => { this.customStyle.img.transform = this.getOffsetX(); }, 0);
   }
 
   getOffsetX() {
     let sizes = {
       main: this.main.nativeElement.offsetWidth,
-      imgEl: this.imgEl.nativeElement.offsetWidth
+      imgEl: this.imgEl.nativeElement.offsetWidth,
+      imgElMobile: this.imgElMobile.nativeElement.offsetWidth
     };
-    let offsetX = (sizes.imgEl / 2) - (sizes.main / 2);
+    let offsetX = 0;
+    let device = (sizes.imgEl === 0) ? 'm' : 'pc';
+
+    if (device === 'pc') {
+      offsetX = (sizes.imgEl / 2) - (sizes.main / 2);
+    } else {
+      offsetX = (sizes.imgElMobile / 2) - (sizes.main / 2);
+    }
     return 'translateX(-' + offsetX + 'px)';
   }
 
@@ -195,7 +201,7 @@ export class WorkDetailComponent implements OnInit, AfterViewInit {
     
     // opacity effect 
     const checkScroll$ = scrollTop$.subscribe((val:any) => {
-      this.customStyle.transparent.opacity = val;
+      // this.customStyle.transparent.opacity = val;
       this.customStyle.mainImg.opacity = val;
     });
     
@@ -204,7 +210,8 @@ export class WorkDetailComponent implements OnInit, AfterViewInit {
 
 
   imgOnLoad() {
-    this.customStyle.img.transform = this.getOffsetX();
+    console.log("imgOnload");
+    this.getFromResizeEvent();
   }
 
 

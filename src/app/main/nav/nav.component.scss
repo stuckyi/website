@@ -1,11 +1,25 @@
 @import 'assets/scss/global';
 
+
 .nav-container {
     background: none;       
     z-index: $z-index-navbar;     
     @include size(100%, auto);
     @include flex(flex, row nowrap);
-    justify-content: space-between;
+    justify-content: center;
+
+    position: fixed;
+    top: 0;
+    padding: 1.25rem;
+
+}
+
+.nav-container {
+    background: none;       
+    z-index: $z-index-navbar;     
+    @include size(100%, auto);
+    @include flex(flex, row nowrap);
+    justify-content: center;
 
     position: fixed;
     top: 0;
@@ -13,7 +27,7 @@
 
 
     .nav-center {
-        @include size(100vw, auto);
+        @include size(100px, 40px);
         @include flex(flex, row nowrap);
         font-weight: $weight-bold;
         

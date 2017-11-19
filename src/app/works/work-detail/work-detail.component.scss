@@ -17,8 +17,10 @@ $main-height-m: 375px;
     // overflow: hidden;
     background-color: #e9e9e9;
 
+    // @include flex(flex, row nowrap);
+    // justify-content: center;
 
-    @include size(auto, $main-height-m); // m
+    @include size(100%, $main-height-m); // m
     @media(min-width: $tablet){  @include size(100%, $main-height-pc);  }
     
     
@@ -26,12 +28,12 @@ $main-height-m: 375px;
     .img-m { 
         @include size(auto, $main-height-m);
         margin: 0 auto;
+        max-width: none;
     }
     .img-pc {
-      
-      @media(min-width: $tablet){  @include size(auto, $main-height-pc); }
-      margin: 0 auto;
-      max-width: none;
+        @include size(auto, $main-height-pc);
+        margin: 0 auto;
+        max-width: none;
     }
     
 
