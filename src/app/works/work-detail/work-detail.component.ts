@@ -207,12 +207,4 @@ export class WorkDetailComponent implements OnInit, AfterViewInit {
     
     
   }
-
-
-  imgOnLoad() {
-    console.log("imgOnload");
-    this.getFromResizeEvent();
-  }
-
-
 }

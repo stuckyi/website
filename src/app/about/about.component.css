@@ -6171,23 +6171,13 @@ ul {
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
-.about {
+.hello {
   width: 100%;
   height: 100vh;
-  overflow: hidden; }
-  @media (min-width: 769px) {
-    .about {
-      width: 100%;
-      height: auto; } }
-  .about .about-info {
-    margin: 6.25rem auto;
-    font-weight: 700;
-    font-size: 1.25rem; }
-    .about .about-info .interest {
-      line-height: 136%; }
-    .about .about-info .participation {
-      line-height: 136%; }
-  .about .section-title {
-    margin: 10rem auto 2rem; }
+  background-color: #FFFC63; }
+  .hello h1 {
+    padding-top: 4rem;
+    text-align: center;
+    font-size: 4rem; }
 
 /*# sourceMappingURL=about.component.css.map */

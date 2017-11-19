@@ -13,7 +13,7 @@ import { AppService } from './../app.service';
 })
 export class WorksComponent implements OnInit {
   contents;
-
+  content_about;
 
   isLoad: boolean = false;
   hoverState = {
@@ -34,6 +34,7 @@ export class WorksComponent implements OnInit {
 
   ngOnInit() {
     this.contents = this.appService.getContents();
+    this.content_about = this.appService.getContentAbout();
     window.scrollTo(0, 0);
     
   }
@@ -110,6 +111,8 @@ export class WorksComponent implements OnInit {
     let link = ['/detail', id];
     this.router.navigate(link);
   }
+
+
   
 
 

@@ -6223,6 +6223,21 @@ ul {
         font-weight: 700;
         line-height: 1; }
 
+.about {
+  width: 100%;
+  height: auto;
+  overflow: hidden; }
+  .about .about-info {
+    margin: 6.25rem auto;
+    font-weight: 700;
+    font-size: 1.25rem; }
+    .about .about-info .interest {
+      line-height: 136%; }
+    .about .about-info .participation {
+      line-height: 136%; }
+  .about .section-title {
+    margin: 10rem auto 2rem; }
+
 @keyframes sprite {
   from {
     background-position: 0 0; }

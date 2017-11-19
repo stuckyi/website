@@ -86,6 +86,28 @@ $size-work-name: $size-3;   // 그리드 아이템 제목
 
 
 
+.about{
+    @include size(100%, auto);
+    overflow: hidden;
+    
+    .about-info { 
+        margin: 6.25rem auto;
+        font-weight: $weight-bold;
+        font-size: $size-3;
+
+        .interest {  line-height: 136%; }
+        .participation {  line-height: 136%; }
+    }
+    
+    .section-title {
+        margin: 10rem auto 2rem;
+    }
+}
+
+
+
+
+
 @keyframes sprite {
   from { background-position: 0 0; }
   to { background-position: 100% 0; }
