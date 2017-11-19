@@ -1,14 +1,14 @@
 Arguments: 
-  /Users/admin/.nvm/versions/node/v6.9.1/bin/node /usr/local/bin/yarn add d3
+  /Users/admin/.nvm/versions/node/v8.9.1/bin/node /usr/local/bin/yarn add firebase-tools global
 
 PATH: 
-  /Users/admin/.nvm/versions/node/v6.9.1/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/Library/TeX/texbin:/Users/admin/.rvm/bin
+  /Users/admin/.nvm/versions/node/v8.9.1/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/TeX/texbin:/opt/X11/bin:/Users/admin/.rvm/bin
 
 Yarn version: 
   0.16.1
 
 Node version: 
-  6.9.1
+  8.9.1
 
 Platform: 
   darwin x64
@@ -52,6 +52,7 @@ npm manifest:
       "@types/jasmine": "2.5.38",
       "@types/node": "~6.0.60",
       "codelyzer": "~2.0.0",
+      "d3": "^4.11.0",
       "jasmine-core": "~2.5.2",
       "jasmine-spec-reporter": "~3.2.0",
       "karma": "~1.4.1",
@@ -7725,5 +7726,4 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/zone.js/-/zone.js-0.8.18.tgz#8cecb3977fcd1b3090562ff4570e2847e752b48d"
 
 Trace: 
-  Error: EACCES: permission denied, mkdir '/Users/admin/Desktop/_STUCKYI/_PROJECT/website/node_modules/@angular-devkit/build-optimizer/node_modules/loader-utils'
-      at Error (native)
+  Error: EACCES: permission denied, mkdir '/Users/admin/Desktop/_STUCKYI/_PROJECT/WEBSITE/node_modules/@angular-devkit/build-optimizer/node_modules/loader-utils'

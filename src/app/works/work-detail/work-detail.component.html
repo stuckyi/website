@@ -8,6 +8,7 @@
     <figure class="image">
       <img class="img-m is-hidden-tablet" [src]="mainImgUrl+'main.m.png'" alt="상세페이지 메인 이미지" />
       <img #imgEl 
+          (load)="imgOnLoad()"
           id="img-pc"
           class="img-pc is-hidden-mobile" 
           [ngStyle]="customStyle.img"

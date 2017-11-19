@@ -203,4 +203,9 @@ export class WorkDetailComponent implements OnInit, AfterViewInit {
   }
 
 
+  imgOnLoad() {
+    this.customStyle.img.transform = this.getOffsetX();
+  }
+
+
 }

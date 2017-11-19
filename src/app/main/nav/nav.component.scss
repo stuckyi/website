@@ -12,18 +12,19 @@
     padding: 1.25rem;
 
 
-    .nav-left {
-        @include size(20%, auto);
+    .nav-center {
+        @include size(100vw, auto);
         @include flex(flex, row nowrap);
         font-weight: $weight-bold;
         
         vertical-align: top;
-        justify-content: flex-start;
+        justify-content: center;
         overflow: hidden;
+        text-align: center;
         .move { 
             @include size(50%, 24px);
+            
             p {
-                
                 position: absolute;
                 line-height: 157%;
                 transition: all .4s ease-in-out;
@@ -55,43 +56,10 @@
         
     }
 
-    .nav-right {
-        text-align: center;
-        @include size(10%, 47px);
-        @include flex(flex, column nowrap);
-        align-content: stretch;
-
-        @media(min-width: $tablet){
-            @include size(10%, auto);
-            @include flex(flex, row nowrap);
-            justify-content: space-around;
-
-            div {
-                span {
-                    position: relative;
-                    &:hover {
-                        &:before {
-                            width: 100%;
-                        }
-                    }
-                    &:before {
-                        content: '';
-                        position: absolute;
-                        left: 0;
-                        right: 0;
-                        top: 50%;
-
-                        @include size(0, .16rem);
-                        background: black;
-                        transition: width .4s ease-in-out;
-                    }
-
-                }
-            }
-        }
+    
         
         
-    }
+    
     
 }
 // hover effect
