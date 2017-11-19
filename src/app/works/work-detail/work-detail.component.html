@@ -50,6 +50,21 @@
     <div class="desc-content column is-8 is-paddingless">
       <p *ngFor="let description of content.descriptions">{{description}}</p>
     </div>
+
+
+    <!-- link -->
+    <div *ngIf="isLinkItem">
+        <p class="sub-title process-link"> </p>
+        <ul>
+          <li class="link" 
+              *ngFor="let link of linkItems" 
+              (click)="openUrl(link.url)">{{link.title}}</li>
+        </ul>
+    </div>
+    
+
+
+    
     
     
     <!-- 화면 미리보기 (슬라이더 O) -->
@@ -96,6 +111,18 @@
     <div class="desc-content column is-8 is-paddingless">
       <p *ngFor="let description of content.descriptions">{{description}}</p>
     </div>
+
+    <!-- link -->
+    <div *ngIf="isLinkItem">
+        <p class="sub-title process-link"> </p>
+        <ul>
+          <li *ngFor="let link of linkItems" (click)="openUrl(link.url)">{{link.title}}</li>
+        </ul>
+
+    </div>
+    
+
+
     
 
     <!-- Preview List (mobile only) -->

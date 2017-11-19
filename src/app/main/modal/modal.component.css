@@ -6260,7 +6260,9 @@ ul {
     opacity: 1; } }
 .modal {
   overflow: hidden;
-  z-index: 1800; }
+  z-index: 1800;
+  transform-origin: center;
+  animation: spring-down-small 0.3s cubic-bezier(1, 0.015, 0.295, 1.225) forwards running; }
   .modal .modal-background {
     background-color: rgba(255, 255, 255, 0.9);
     position: fixed;
@@ -6282,6 +6284,7 @@ ul {
         .modal .modal-content .modal-detail .modal-main-container .modal-main {
           width: auto;
           height: 530px;
+          display: block;
           max-width: 800px;
           margin: auto; }
       .modal .modal-content .modal-detail .slider-btn {

@@ -96,7 +96,12 @@ $main-height-m: 375px;
         }
     }
     // 관련 링크
-    .link { text-decoration: underline; }
+    .link { 
+        text-decoration: underline;
+        &:hover {
+            font-weight: $weight-bold;
+        }
+    }
   }
 }
 
@@ -166,6 +171,7 @@ $main-height-m: 375px;
       // 관련 링크
       .link {
           text-decoration: underline;
+          
       }
     }
   

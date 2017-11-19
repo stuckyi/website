@@ -6232,6 +6232,8 @@ ul {
       text-align: justify; }
     .detail .detail-container .link {
       text-decoration: underline; }
+      .detail .detail-container .link:hover {
+        font-weight: 700; }
 
 .m-detail {
   width: 100%;

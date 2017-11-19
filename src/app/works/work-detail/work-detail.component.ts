@@ -117,8 +117,8 @@ export class WorkDetailComponent implements OnInit, AfterViewInit {
     
     this.processSpriteImg = this.content.baseUrl + 'slider.png';
     this.processSliderItems = this.content.processSliderItems;
-
     this.linkItems = this.content.linkItems;
+
 
   
     // 데이터 셋 안에, 해당하는 값이 있을 경우만 렌더링 시작.
@@ -201,10 +201,14 @@ export class WorkDetailComponent implements OnInit, AfterViewInit {
     
     // opacity effect 
     const checkScroll$ = scrollTop$.subscribe((val:any) => {
-      // this.customStyle.transparent.opacity = val;
       this.customStyle.mainImg.opacity = val;
     });
     
     
+  }
+
+
+  openUrl(url: string) {
+    window.open(url);
   }
 }

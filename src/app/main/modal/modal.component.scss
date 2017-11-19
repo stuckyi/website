@@ -10,7 +10,7 @@ $hover-opacity-on: .48;
     
     overflow: hidden;
     z-index: $z-index-modal;
-    // @include testPageTransition();
+    @include testPageTransition();
     // 모달 배경 영역
     .modal-background {
         background-color: rgba(white, 0.9);
@@ -33,6 +33,7 @@ $hover-opacity-on: .48;
                 @include size(800px, 530px);
                 .modal-main { 
                     @include size(auto, 530px);
+                    display: block;
                     max-width: 800px;
                     margin: auto;
                 }

@@ -139,10 +139,9 @@ export const CONTENTS = [
             '우리가 제작한 폰트와 같이 환경에 반응하여 형태가 변하는 웹폰트는 기존의 웹폰트의 범주와는 목적과 접근 방식이 달라야 함을 느꼈습니다. 그래서 이 상호작용하는 웹폰트를 CODED FONT라 명명함으로서 새롭게 분류하였습니다.'
         ],
         linkItems: [
-            { title: 'CODED FONT를 정의한 발표 자료', url: '#'},
-            { title: '과정에 대한 기록을 해둔 트렐로(Trello) 보드', url: '#'},
-            { title: '몇몇 실험을 캡쳐하여 모아둔 텀블러 페이지', url: '#'},
-            { title: '스마트폰의 기울기에 반응하는 폰트 (모바일 전용)', url: '#'} 
+            { title: 'CODED FONT를 정의한 발표 자료', url: 'https://www.slideshare.net/secret/so1lfatzsDllqG'},
+            { title: '과정에 대한 기록을 해둔 트렐로(Trello) 보드', url: 'https://trello.com/b/X7FxBG8o/%EC%BD%94%EB%93%9C%EA%B8%80%EC%9E%90%EA%BC%B4-stuckyi-studio'},
+            { title: '몇몇 실험을 캡쳐하여 모아둔 텀블러 페이지', url: 'http://stuckyi-codetype.tumblr.com/'}
         ],
         previewSliderItems: [
             { index: 0, title: '안녕 1', desc: 'codedfont experiment', imgUrl: '/assets/images/works/codedfont/preview/0.gif' },
@@ -307,7 +306,7 @@ export const CONTENTS = [
             '그동안 멘넴이 창작해온 이미지들은 < 멘넴의 블로그> 에 고정된 게시물의 형태로 남아있었지만, 이번 코드스터디를 통해 각각의 이미지들이 상호 작용하는 형태로 변신하였습니다.'
         ],
         linkItems: [
-           { title: '<멘넴X스투키 랜덤 캐릭터 생성기> 직접 랜덤 캐릭터를 생성 해볼 수 있습니다.', url: '#'}
+           { title: '코드스터디에대한 자세한 내용을 볼 수 있는 Github link', url: 'https://github.com/stuckyi/codestudy'}
         ],
         previewSliderItems: [
             { index: 0, title: '맨넴 캐릭터 생성기', desc:'화면을 클릭하면 멘넴이 그동안 만들어온 캐릭터들이 랜덤으로 생성되는 인터랙티브 콘텐츠입니다.', imgUrl: '/assets/images/works/codestudy/preview/0.gif' },
