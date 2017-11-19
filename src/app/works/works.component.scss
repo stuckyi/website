@@ -52,6 +52,8 @@ $size-work-name: $size-3;   // 그리드 아이템 제목
             padding: 0;
             img { @include size(100%, auto); }
             
+            @include size(100%, auto);
+            @include min-size(320px, 280px);
             
             // PC
             @media(min-width: $tablet){

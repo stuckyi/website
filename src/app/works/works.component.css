@@ -6197,7 +6197,11 @@ ul {
         min-height: 20.1875rem;
         margin: 1rem; } }
     .works .work .image {
-      padding: 0; }
+      padding: 0;
+      width: 100%;
+      height: auto;
+      min-width: 320px;
+      min-height: 280px; }
       .works .work .image img {
         width: 100%;
         height: auto; }
