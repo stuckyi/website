@@ -14,17 +14,12 @@ $main-height-m: 375px;
     padding: 0;
     margin: 0 auto;
     position: fixed;                                                // for test
-    // overflow: hidden;
+    
     background-color: #e9e9e9;
-
-    // @include flex(flex, row nowrap);
-    // justify-content: center;
 
     @include size(100%, $main-height-m); // m
     @media(min-width: $tablet){  @include size(100%, $main-height-pc);  }
-    
-    
-    
+
     .img-m { 
         @include size(auto, $main-height-m);
         margin: 0 auto;
@@ -35,9 +30,6 @@ $main-height-m: 375px;
         margin: 0 auto;
         max-width: none;
     }
-    
-
-
 }
 
 .isBgImg {

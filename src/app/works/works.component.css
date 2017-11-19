@@ -6221,7 +6221,7 @@ ul {
       .works .work .work-item .work-name {
         font-size: 1.25rem;
         font-weight: 700;
-        line-height: 1; }
+        line-height: 1.5; }
 
 .about {
   width: 100%;
@@ -6243,13 +6243,25 @@ ul {
     background-position: 0 0; }
   to {
     background-position: 100% 0; } }
-.steps5 {
+.sp-collection {
+  animation: sprite 0.7s steps(11) infinite; }
+
+.sp-codedfont {
+  animation: sprite 0.5s steps(7) infinite; }
+
+.sp-kohi {
+  animation: sprite 1.3s steps(7) infinite; }
+
+.sp-jumpgame {
+  animation: sprite 0.6s steps(11) infinite; }
+
+.sp-randomcharacter {
   animation: sprite 1s steps(5) infinite; }
 
-.steps7 {
-  animation: sprite 1s steps(7) infinite; }
-
-.steps11 {
+.sp-codestudy {
   animation: sprite 1s steps(11) infinite; }
+
+.sp-ted {
+  animation: sprite 2.5s steps(56) infinite; }
 
 /*# sourceMappingURL=works.component.css.map */

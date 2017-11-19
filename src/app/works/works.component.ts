@@ -43,19 +43,19 @@ export class WorksComponent implements OnInit {
     let result = '';
 
     if (name_en === 'collection' && this.hoverState.collection) {
-      result = 'steps11';
+      result = 'sp-' + name_en;
     } else if (name_en === 'codedfont' && this.hoverState.codedfont) {
-      result = 'steps7';
+      result = 'sp-' + name_en;
     } else if (name_en === 'kohi' && this.hoverState.kohi) {
-      result = 'steps7';
+      result = 'sp-' + name_en;
     } else if (name_en === 'jumpgame' && this.hoverState.jumpgame) {
-      result = 'steps11';
+      result = 'sp-' + name_en;
     } else if (name_en === 'randomcharacter' && this.hoverState.randomcharacter) {
-      result = 'steps5';
+      result = 'sp-' + name_en;
     } else if (name_en === 'codestudy' && this.hoverState.codestudy) {
-      result = 'steps11';
+      result = 'sp-' + name_en;
     } else if (name_en === 'ted' && this.hoverState.ted) {
-      result = 'steps7';
+      result = 'sp-' + name_en;
     }
 
     return result;
