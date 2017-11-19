@@ -21,7 +21,6 @@ $test-line-height: 160%;
     }
 
 
-    
 
 
     @media(min-width: $tablet){
@@ -35,12 +34,11 @@ $test-line-height: 160%;
         }
         p {  
             font-size: $size-2;
-            // line-height: $test-line-height;
         }
     }
 
-    &.is-fullheight {
-        @include size(100%, 100vh);
+    &.is-hidden {
+       display: hidden;
     }
 }
 
@@ -50,4 +48,5 @@ $test-line-height: 160%;
 
 .mobile-hero-insta {
     @include size(2.438rem, 2.438rem);
+    
 }

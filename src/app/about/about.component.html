@@ -1,28 +1,4 @@
 
-<div class="about">
-  <app-hero [isContactInfo]="true"></app-hero>
-  <div class="is-hidden-mobile">
-    <div class="about-info container">
-      <p class="section-title" >이런 분야에 대해 다루는 것을 좋아합니다.</p>
-      <div class="interest columns is-multiline"> 
-        <div *ngFor="let interest of interests" class="column is-3">
-          <p>{{ interest }}</p>
-        </div>
-      </div>
-
-
-      <p class="section-title">참여 프로젝트, 워크숍</p>
-
-      <div *ngFor="let pw of participationWorks" class="participation columns is-multiline">
-        <div class="column is-1"><p>{{pw.year}}</p></div>
-        <div class="column is-5"><p>{{pw.title}}</p></div>
-        <div class="column is-3"><p>{{pw.host}}</p></div>
-        <div class="column is-3"><p>{{pw.role}}</p></div>
-      </div>
-
-    </div>
-  </div>
-  
-
-
+<div class="hello">
+  <h1> hello </h1>
 </div>

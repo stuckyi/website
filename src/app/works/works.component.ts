@@ -13,7 +13,7 @@ import { AppService } from './../app.service';
 })
 export class WorksComponent implements OnInit {
   contents;
-
+  content_about;
 
   isLoad: boolean = false;
   hoverState = {
@@ -26,9 +26,6 @@ export class WorksComponent implements OnInit {
     ted: false
   };
 
-
-
-
   constructor(
     private router: Router,
     private appService: AppService
@@ -37,25 +34,28 @@ export class WorksComponent implements OnInit {
 
   ngOnInit() {
     this.contents = this.appService.getContents();
+    this.content_about = this.appService.getContentAbout();
+    window.scrollTo(0, 0);
     
   }
 
   setClass(name_en: string) {
     let result = '';
+
     if (name_en === 'collection' && this.hoverState.collection) {
-      result = 'steps11';
+      result = 'sp-' + name_en;
     } else if (name_en === 'codedfont' && this.hoverState.codedfont) {
-      result = 'steps7';
+      result = 'sp-' + name_en;
     } else if (name_en === 'kohi' && this.hoverState.kohi) {
-      result = 'steps7';
+      result = 'sp-' + name_en;
     } else if (name_en === 'jumpgame' && this.hoverState.jumpgame) {
-      result = 'steps11';
+      result = 'sp-' + name_en;
     } else if (name_en === 'randomcharacter' && this.hoverState.randomcharacter) {
-      result = 'steps5';
+      result = 'sp-' + name_en;
     } else if (name_en === 'codestudy' && this.hoverState.codestudy) {
-      result = 'steps11';
+      result = 'sp-' + name_en;
     } else if (name_en === 'ted' && this.hoverState.ted) {
-      result = 'steps7';
+      result = 'sp-' + name_en;
     }
 
     return result;
@@ -106,15 +106,13 @@ export class WorksComponent implements OnInit {
     }
   }
 
-  onLoad(){
-    console.log("로딩 완료!!!!!!!!!!!!!");
-    this.isLoad = true;
-  }
 
   gotoDetail(id: number) {
     let link = ['/detail', id];
     this.router.navigate(link);
   }
+
+
   
 
 

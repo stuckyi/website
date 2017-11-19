@@ -52,6 +52,8 @@ $size-work-name: $size-3;   // 그리드 아이템 제목
             padding: 0;
             img { @include size(100%, auto); }
             
+            @include size(100%, auto);
+            @include min-size(320px, 280px);
             
             // PC
             @media(min-width: $tablet){
@@ -78,7 +80,7 @@ $size-work-name: $size-3;   // 그리드 아이템 제목
             .work-name { 
                 font-size: $size-work-name;
                 font-weight: $weight-bold;
-                line-height: 1;
+                line-height: $line-height-2;
             }
         }
     }
@@ -86,11 +88,44 @@ $size-work-name: $size-3;   // 그리드 아이템 제목
 
 
 
+.about{
+    @include size(100%, auto);
+    overflow: hidden;
+    
+    .about-info { 
+        margin: 6.25rem auto;
+        font-weight: $weight-bold;
+        font-size: $size-3;
+
+        .interest {  line-height: 136%; }
+        .participation {  line-height: 136%; }
+    }
+    
+    .section-title {
+        margin: 10rem auto 2rem;
+    }
+}
+
+
+
+
+
 @keyframes sprite {
   from { background-position: 0 0; }
   to { background-position: 100% 0; }
 }
-.steps5 { animation: sprite 1s steps(5) infinite; }
-.steps7 { animation: sprite 1s steps(7) infinite; }
-.steps11 { animation: sprite 1s steps(11) infinite; }
+
+
+.sp-collection      { animation: sprite .7s steps(11) infinite; }
+.sp-codedfont       { animation: sprite .5s steps(7) infinite; }
+.sp-kohi            { animation: sprite 1.3s steps(7) infinite; }
+.sp-jumpgame        { animation: sprite .6s steps(11) infinite; }
+.sp-randomcharacter { animation: sprite 1s steps(5) infinite; }
+.sp-codestudy       { animation: sprite 1s steps(11) infinite; }
+.sp-ted             { animation: sprite 2.5s steps(56) infinite; }
+
+
+
+// animation-duration
+
 

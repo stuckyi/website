@@ -1,23 +1,12 @@
 @import 'assets/scss/global';
 
-
-    
-.about{
+.hello {
     @include size(100%, 100vh);
-    overflow: hidden;
-    @media(min-width: $tablet){ 
-        @include size(100%, auto);
-    }
-    .about-info { 
-        margin: 6.25rem auto;
-        font-weight: $weight-bold;
-        font-size: $size-3;
+    background-color: $main-color;
 
-        .interest {  line-height: 136%; }
-        .participation {  line-height: 136%; }
-    }
-    
-    .section-title {
-        margin: 10rem auto 2rem;
+    h1 {
+        padding-top: 4rem;
+        text-align: center;
+        font-size: 4rem;
     }
 }

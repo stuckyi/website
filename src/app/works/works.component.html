@@ -1,12 +1,10 @@
-
-<app-hero class="is-hidden-mobile" [isContactInfo]="false"></app-hero>
-
+<app-hero></app-hero>
 <div class="works columns is-multiline">
   <div *ngFor="let content of contents" (click)="gotoDetail(content.id)" 
         class="work columns is-multiline">
       <!-- pc: sprite image -->
       <div (mouseenter)="setHoverState(content.title_en)" 
-          (mouseleave)="setHoverState(content.title_en)"
+           (mouseleave)="setHoverState(content.title_en)"
           class="image column is-hidden-mobile"
           [ngClass]="setClass(content.title_en)"
           [style.background-image]="'url(/assets/images/works/main/'+content.title_en+'.png)'">
@@ -21,7 +19,7 @@
 
       <!-- mobile image -->
       <figure class="image column is-12 is-hidden-tablet">
-        <img src=" {{ '/assets/images/works/main/' + content.title_en + '.m.png'}} " />
+        <img src=" {{ '/assets/images/works/main/' + content.title_en + '.m@2x.png'}} " />
       </figure>
       
       <!-- mobile: title, tagInfo -->
@@ -30,6 +28,30 @@
         <p class="work-tag">{{ content.tagInfo.title }}</p>
       </div>
     
+  </div>
+
+</div>
+<!-- <app-about></app-about> -->
+
+<div class="about is-hidden-mobile">
+  <div class="about-info container">
+      <p class="section-title" >이런 분야에 대해 다루는 것을 좋아합니다.</p>
+      <div class="interest columns is-multiline"> 
+        <div *ngFor="let interest of content_about.interests" class="column is-3">
+          <p>{{ interest }}</p>
+        </div>
+      </div>
+
+
+      <p class="section-title">참여 프로젝트, 워크숍</p>
+
+      <div *ngFor="let pw of content_about.participationWorks" class="participation columns is-multiline">
+        <div class="column is-1"><p>{{pw.year}}</p></div>
+        <div class="column is-5"><p>{{pw.title}}</p></div>
+        <div class="column is-3"><p>{{pw.host}}</p></div>
+        <div class="column is-3"><p>{{pw.role}}</p></div>
+      </div>
+
   </div>
 
 </div>

@@ -3,13 +3,18 @@
 // z-index
 
 
-$z-index-work-mainImg:  200;  // Work-detail Main Image
+$z-index-work-mainImg:  -1;  // Work-detail Main Image
+$z-index-footer: 100;        // Footer 
 $z-index-work-content:  300;  // Work-detail Content
 $z-index-works:         500;  // Works
 $z-index-navbar:        1000; // Navigation bar
+
+$z-index-modal:         1800; // Modal Wrapper
 $z-index-modal-bg:      1900; // Modal Background
 $z-index-modal-content: 2000; // Modal Content
 $z-index-modal-close:   2100; // Close Button
+
+$z-index-vertical-text: 8900; // Global Vertical Text (email)
 $z-index-btn-gotoTop:   9000; // Global GotoTop Button
 
 
@@ -29,5 +34,5 @@ $base: 900px;
 $warp-main-grid: 960px; // 메인 그리드 가로너비 영역 (max)
 $wrapWidth: 900px;      // 설명 콘텐츠 가로너비 영역 (max) // wrapWidth's min: 760px max: 900px.
 
-$mainImgHeight: 60vh;  // 프로젝트 상세페이지 메인 이미지 높이
+
 $about-main-height: 80%; // 임의 설정

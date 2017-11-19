@@ -31,6 +31,8 @@ export class AppComponent implements AfterViewInit, OnInit {
   title = 'app works!';
 
   isAbout: boolean = false;
+  isHero: boolean = true;
+
 
   isNav: boolean = true;
   scrollY = { prev: 0 };
@@ -44,19 +46,20 @@ export class AppComponent implements AfterViewInit, OnInit {
     this.router.events.subscribe(event => {
       if (event.constructor.name === 'NavigationEnd') {
         const url = this.router.url;
-        this.isAbout = (url === '/about') ? true : false;
+        this.isAbout = (url === '/about') ? true : false;        
+        
       }
     });
 
+    window.scrollTo(0, 0);
+
   }
   ngAfterViewInit(){
-    console.log("ngAfterViewInit!, 모든 콘텐츠 로딩 완료!");
     this.registerScrollEvent();
   }
 
 
   registerScrollEvent() {
-    console.log("registerScrollEvent");
 
     const scrollTop$ = Observable.fromEvent(window, "scroll");
     const scrollFn$ = scrollTop$

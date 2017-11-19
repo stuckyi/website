@@ -46,6 +46,9 @@ a {
   box-sizing: border-box;
   outline: 0; }
 
+alt {
+  opacity: 0; }
+
 /*! bulma.io v0.6.0 | MIT License | github.com/jgthms/bulma */
 @keyframes spinAround {
   from {
@@ -6257,10 +6260,12 @@ ul {
     opacity: 1; } }
 .modal {
   overflow: hidden;
+  z-index: 1800;
   transform-origin: center;
   animation: spring-down-small 0.3s cubic-bezier(1, 0.015, 0.295, 1.225) forwards running; }
   .modal .modal-background {
     background-color: rgba(255, 255, 255, 0.9);
+    position: fixed;
     z-index: 1900; }
   .modal .modal-content {
     z-index: 2000;
@@ -6279,6 +6284,7 @@ ul {
         .modal .modal-content .modal-detail .modal-main-container .modal-main {
           width: auto;
           height: 530px;
+          display: block;
           max-width: 800px;
           margin: auto; }
       .modal .modal-content .modal-detail .slider-btn {
@@ -6297,7 +6303,7 @@ ul {
     z-index: 2100;
     right: 20px;
     top: 20px;
-    position: absolute;
+    position: fixed;
     cursor: pointer;
     background: none;
     border-style: none;

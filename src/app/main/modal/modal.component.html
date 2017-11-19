@@ -1,28 +1,48 @@
 
 <!-- default: inactive -->
-<div class="modal is-fullwidth" 
-    [class.is-active]="isModal" >
-  <div (click)="closeModal()" class="modal-background"></div>
+<div class="modal is-fullwidth" [class.is-active]="isModal" >
+  
+  <!-- modal background -->
+  <div (click)="closeModal()" class="modal-background"> </div>
+
+  <!-- Modal content -->
   <div class="modal-content">
     
     <div class="modal-detail" > 
+      <!-- dir button (left) -->
       <div (click)="updateItem('left')" 
            class="slider-btn" 
            [class.is-opacity20]="imgIndex === 0"
-           [style.background-image]="'url(/assets/images/ui/icons/slider_left.png)'"> </div>
-
+           [style.background-image]="'url(/assets/images/ui/icons/slider_left.png)'">
+      </div>
+      
+      <!-- modal image -->
       <figure class="modal-main-container">
         <img class="modal-main" [src]="imgUrl || ''" />
       </figure>
       
+      <!-- dir button (right) -->
       <div (click)="updateItem('right')" 
            class="slider-btn" 
            [class.is-opacity20]="imgIndex === maxIndex"
-           [style.background-image]="'url(/assets/images/ui/icons/slider_right.png)'"> </div>
-    </div>
+           [style.background-image]="'url(/assets/images/ui/icons/slider_right.png)'">
+      </div>
 
+
+    </div>
+    <!-- image description -->
     <p class="desc">{{ selectedItem.desc }}</p>
+    
   </div>
-  <button (click)="closeModal()" class="btn-modal-close is-paddingless" aria-label="close"> </button>
+  
+  <!-- Close button -->
+  <button (click)="closeModal()" 
+          class="btn-modal-close is-paddingless" 
+          aria-label="close"> 
+  
+  </button>
+  
   
 </div>
+
+

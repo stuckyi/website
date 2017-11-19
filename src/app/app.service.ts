@@ -1,10 +1,11 @@
 import { Injectable } from '@angular/core';
 
-import { CONTENTS, Content } from './data/contents';
+import { CONTENTS, Content, CONTENT_ABOUT } from './data/contents';
 
 @Injectable()
 export class AppService {
   content: Content;
+  content_about = CONTENT_ABOUT;
   // contents: Content[];
   contents;
 
@@ -21,6 +22,10 @@ export class AppService {
 
   getContents() {
     return this.contents;
+  }
+
+  getContentAbout() {
+    return this.content_about;
   }
 
 }
