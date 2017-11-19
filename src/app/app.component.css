@@ -6190,4 +6190,10 @@ ul {
   background-repeat: no-repeat;
   background-size: contain; }
 
+.vertical-text {
+  z-index: 8900;
+  position: fixed;
+  transform: rotate(90deg);
+  transform-origin: left top 0; }
+
 /*# sourceMappingURL=app.component.css.map */
