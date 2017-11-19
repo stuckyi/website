@@ -6190,10 +6190,16 @@ ul {
   background-repeat: no-repeat;
   background-size: contain; }
 
-.vertical-text {
+.vertical {
   z-index: 8900;
+  display: block;
   position: fixed;
-  transform: rotate(90deg);
-  transform-origin: left top 0; }
+  bottom: 0; }
+  .vertical p {
+    font-size: 1.25rem;
+    font-weight: 700;
+    letter-spacing: 0.0375rem;
+    transform: rotate(-90deg);
+    transform-origin: left top 0; }
 
 /*# sourceMappingURL=app.component.css.map */
