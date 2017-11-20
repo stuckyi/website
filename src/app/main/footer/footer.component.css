@@ -6172,9 +6172,10 @@ ul {
   box-sizing: border-box; }
 
 .footer {
-  background-color: white;
+  background-color: #232746;
   margin: 0 auto;
-  padding-top: 10rem; }
+  padding-top: 10rem;
+  color: white; }
   .footer .email {
     font-size: 1rem;
     font-weight: 700;

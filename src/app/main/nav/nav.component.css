@@ -6248,7 +6248,7 @@ ul {
   .m-nav-container .nav-left {
     padding: 1rem; }
     .m-nav-container .nav-left img {
-      width: auto;
-      height: 50px; }
+      width: 25px;
+      height: 20px; }
 
 /*# sourceMappingURL=nav.component.css.map */

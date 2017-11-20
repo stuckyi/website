@@ -25,6 +25,7 @@ import { SliderComponent } from './main/slider/slider.component';
 import { ModalComponent } from './main/modal/modal.component';
 import { SliderGifComponent } from './main/slider-gif/slider-gif.component';
 import { PreviewComponent } from './main/preview/preview.component';
+import { TouchSliderComponent } from './main/touch-slider/touch-slider.component';
 
 
 
@@ -42,7 +43,8 @@ import { PreviewComponent } from './main/preview/preview.component';
     HeroComponent,
     SliderGifComponent,
     WorkDetailComponent,
-    PreviewComponent
+    PreviewComponent,
+    TouchSliderComponent
   ],
   imports: [
     BrowserModule,

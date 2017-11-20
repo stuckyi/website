@@ -1,12 +1,11 @@
 <section>
     <app-nav></app-nav>
-    
     <router-outlet></router-outlet>
-    <!-- mobile 에서만 footer를 조건부 표시 -->
-    
-    <app-footer class="is-hidden-mobile"></app-footer>
-    <app-footer class="is-hidden-tablet" *ngIf="!isAbout"></app-footer>
+    <app-footer></app-footer>
 </section>
-<div class="vertical"><p>hello@stuckyi.studio</p></div>
+<div class="vertical is-hidden-mobile">
+    <p>hello@stuckyi.studio</p>
+</div>
 <div (click)="gotoTop()" 
-     [@dynamicNavClass]="dynamicNavClass" class="btn-gototop"> </div>
+     [@dynamicNavClass]="dynamicNavClass" 
+     class="btn-gototop"> </div>

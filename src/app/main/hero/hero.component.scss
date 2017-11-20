@@ -1,52 +1,59 @@
 @import 'assets/scss/global';
 
-$test-line-height: 160%;
 
-
+/// PC only
 #hero{
-    
-    
-    @include size(100%, 80%);
-    padding: 18vh 2.125rem;
+    @include size(100%, 100vh);
+    padding-top: 13rem;
     overflow: hidden;
 
     background-color: $main-color;
-    p {
-        font-size: $size-5;
-        font-weight: $weight-bold;
-        line-height: $line-height-5;
+
+    .works-main-img {
+        @include size(532px, 152px);
+        display: block;
+        margin: 0 auto;
     }
-    .m-contact-email { 
-        margin-top: 10vh; 
-    }
-
-
-
-
-    @media(min-width: $tablet){
-        @include size(100%, 80vh);
-        padding: 8rem;
-
-        .hello { max-width: 860px; }
-        .contact-msg { 
+    
+    .hello { 
+        margin: 0 auto;
+        padding-top: 2.5rem;
+        max-width: 860px; 
+        p {
             font-size: $size-3;
-            margin-top: 10vh; 
+            font-weight: $weight-medium;
+            line-height: $line-height-5;
+            letter-spacing: $letter-spacing-1;
+            text-align: center;
         }
-        p {  
-            font-size: $size-2;
-        }
-    }
-
-    &.is-hidden {
-       display: hidden;
     }
 }
 
 
 
 
+/// Mobile
+.m-hero {
+    @include size(100%, auto);
+    display: block;
+    padding: 8rem 2.125rem;
+    overflow: hidden;
 
-.mobile-hero-insta {
-    @include size(2.438rem, 2.438rem);
+    background-color: $main-color;
+    .hello {
+        margin-top: 2.375rem;
+        font-size: $size-5;
+        font-weight: $weight-medium;
+        line-height: $line-height-3;
+        text-align: justify;
+    }
+
     
+}
+.underline {
+    text-decoration: underline;
+}
+
+::-webkit-scrollbar {
+    display: none;
 }
