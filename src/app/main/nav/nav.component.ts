@@ -6,23 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./nav.component.css']
 })
 export class NavComponent implements OnInit {
-  logoState: string = 'init';
 
 
 
   constructor() { }
 
   ngOnInit() {
-  }
-
-  setLogoState(state: string) {
-    if (state === 'in') { 
-      this.logoState = 'hover';
-    } else if (state === 'out') {
-      this.logoState = 'init';
-    } else {
-      console.log("logo have another state name");
-    }
   }
 
 }

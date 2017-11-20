@@ -13,7 +13,7 @@ $about-wrap-width: 843px;
 
 
 .section-title {
-    margin: 5rem auto;
+    margin: 5rem auto 0;
     font-size: $size-4; // 18px
     @media(min-width: $tablet){ font-size: $size-2; } // 26px
     font-weight: $weight-bold;
@@ -30,9 +30,10 @@ $about-wrap-width: 843px;
 
     .work {
         @include size(30%, auto);
-        @include min-size(16.875rem, 20.1875rem);  // 270, 323
+        @include min-size(270px, 323px);  // 270, 323
         margin: 1rem;
         padding: 0;
+        
         
         .image { 
             @include size(300px, 270px);
@@ -40,8 +41,13 @@ $about-wrap-width: 843px;
             padding: 0;
             background-repeat: no-repeat;
             background-position: 0 0%;
-
-            img { @include size(100%, auto); }
+            
+            border: 1px solid black;
+            
+            filter: grayscale(100%);
+            &:hover { filter: grayscale(0%); }
+            
+            img {  @include size(100%, auto);  }
         }
         .work-item {
             @include size(100%, 100px);
@@ -68,32 +74,51 @@ $about-wrap-width: 843px;
     text-align: center;
 
     padding-top: 6rem;
-    padding-bottom: 6rem;
+    padding-bottom: 10rem;
 
     
-    .about-title {
-        font-size: $size-3;
-        font-weight: $weight-bold;
-        margin: 0 auto;
-        padding-top: 6rem;
-        padding-bottom: 4rem;
-
-    }
 
     .about-info { 
         @include size($about-wrap-width, auto);
-        padding-top: 2rem;
+        
         margin: 0 auto;
 
         font-weight: $weight-medium;
         font-size: $size-3;
         line-height: $line-height-4;
         letter-spacing: $letter-spacing-1;
+
+
+
+        .about-title {
+            font-weight: $weight-bold;
+            margin: 0 auto;
+            padding-top: 6rem;
+            padding-bottom: 2rem;
+
+            &:nth-of-type(2) { 
+                margin-top: 10rem;
+            }
+
+        }
+
+
+        .about-year {
+            font-weight: $weight-bold;
+
+            &:nth-of-type(3){ 
+                padding-top: 4rem;
+            }
+        }
+
     }
+
+
+
+    
     
     
 }
-
 
 
 
