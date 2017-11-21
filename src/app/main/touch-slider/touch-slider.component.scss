@@ -12,6 +12,7 @@ $item-gap: 2rem;
     @include flex(flex, row nowrap);
     margin: 2rem auto 6rem;
     overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
 
 
     .tslider {
@@ -24,3 +25,5 @@ $item-gap: 2rem;
 ::-webkit-scrollbar {
     display: none;
 }
+
+
