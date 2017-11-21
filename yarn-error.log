@@ -1,5 +1,5 @@
 Arguments: 
-  /Users/admin/.nvm/versions/node/v8.9.1/bin/node /usr/local/bin/yarn add firebase-tools global
+  /Users/admin/.nvm/versions/node/v8.9.1/bin/node /usr/local/bin/yarn add hammerjs
 
 PATH: 
   /Users/admin/.nvm/versions/node/v8.9.1/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/TeX/texbin:/opt/X11/bin:/Users/admin/.rvm/bin

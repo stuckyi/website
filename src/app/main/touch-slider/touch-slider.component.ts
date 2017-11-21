@@ -25,5 +25,9 @@ export class TouchSliderComponent implements OnInit {
     this.router.navigate(link);
   }
 
+  testSwipe(event: any) {
+    console.log("swipe!", event);
+  }
+
 
 }

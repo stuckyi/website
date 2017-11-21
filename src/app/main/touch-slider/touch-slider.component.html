@@ -1,5 +1,5 @@
 
-<div class="tsliders">
+<div class="tsliders" (swiperight)="testSwipe($event)">
   <img  (click)="gotoDetail(content.id)" class="tslider" 
         *ngFor="let content of contents"
         [src]="'assets/images/works/main/' + content.title_en
