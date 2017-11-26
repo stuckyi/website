@@ -27,10 +27,21 @@
 
 
 
-.vertical-text {
+.vertical {
     z-index: $z-index-vertical-text;
-    
+    display: block;
     position: fixed;
-	transform: rotate(90deg);
-	transform-origin: left top 0;
+    // @include size(100px, 100px);
+    bottom: 0;
+    
+    p {
+        font-size: $size-3;             // 20px
+        font-weight: $weight-bold;
+        letter-spacing: $letter-spacing-1;
+        transform: rotate(-90deg);
+        transform-origin: left top 0;
+
+    }
+    
+	
 }

@@ -4,86 +4,24 @@
 .nav-container {
     background: none;       
     z-index: $z-index-navbar;     
-    @include size(100%, auto);
+    // @include size(100%, auto);
     @include flex(flex, row nowrap);
-    justify-content: center;
+    justify-content: flex-start;
 
     position: fixed;
     top: 0;
-    padding: 1.25rem;
+    padding: .25rem;
+
+
+    .nav-left{
+        padding: 1rem;
+        img {
+            @include size(40px, 32px);
+        }
+    } 
 
 }
 
-.nav-container {
-    background: none;       
-    z-index: $z-index-navbar;     
-    @include size(100%, auto);
-    @include flex(flex, row nowrap);
-    justify-content: center;
-
-    position: fixed;
-    top: 0;
-    padding: 1.25rem;
-
-
-    .nav-center {
-        @include size(100px, 40px);
-        @include flex(flex, row nowrap);
-        font-weight: $weight-bold;
-        
-        vertical-align: top;
-        justify-content: center;
-        overflow: hidden;
-        text-align: center;
-        .move { 
-            @include size(50%, 24px);
-            
-            p {
-                position: absolute;
-                line-height: 157%;
-                transition: all .4s ease-in-out;
-                &:nth-of-type(1){ opacity: 1; margin-top: 0; }
-                &:nth-of-type(2){ opacity: 0; margin-top: 30px; }
-            }
-
-
-        }
-
-        &:hover {
-            .move {
-                p {
-                    &:nth-of-type(1){ opacity: 0;  margin-top: -30px; }
-                    &:nth-of-type(2){ opacity: 1; margin-top: 0; }
-                }
-            }
-        }
-
-        img { @include size(5rem, 2.9375rem); }
-        @media(min-width: $tablet){
-
-
-
-            img { 
-                @include size(7.0625rem, 4.1875rem);
-            }
-        }
-        
-    }
-
-    
-        
-        
-    
-    
-}
-// hover effect
-.active-link {
-    span {
-        &:before {
-            width:100% !important;
-        }
-    }
-}
 
 
 
@@ -101,7 +39,7 @@
     .nav-left{
         padding: 1rem;
         img {
-            @include size(auto, 50px);
+            @include size(25px, 20px);
         }
     } 
 

@@ -9,70 +9,50 @@ $size-work-tag: $size-8;    // 그리드 아이템 태그
 $size-work-name: $size-3;   // 그리드 아이템 제목
 
 
-.work-main{
-    background-color: $main-color;
+$about-wrap-width: 843px;
+
+
+.section-title {
+    margin: 5rem auto 0;
+    font-size: $size-4; // 18px
+    @media(min-width: $tablet){ font-size: $size-2; } // 26px
+    font-weight: $weight-bold;
+    text-align: center;
 }
 
-
+/// PC only
+.work-main{ background-color: $main-color; }
 .works {
     z-index: $z-index-works;
-
-    // MOBILE
-    @include size(100%, auto);
-    margin: 8rem auto;
-    
-    // PC
-    @media(min-width: $tablet){
-        @include size($warp-main-grid, auto);
-        margin: 6.25rem auto;
-    }
-    
+    @include size($warp-main-grid, auto);
+    margin: 6.25rem auto;
+ 
 
     .work {
-
-        // ALL
+        @include size(30%, auto);
+        @include min-size(270px, 323px);  // 270, 323
+        margin: 1rem;
         padding: 0;
-
-
-        // MOBILE
-        @include size(100%, auto);
-        margin: 4rem 0;
         
-
-        // PC
-        @media(min-width: $tablet){ 
-            @include size(30%, auto);
-            @include min-size(16.875rem, 20.1875rem);  // 270, 323
-            margin: 1rem;
-        }
-
-
+        
         .image { 
-            // ALL
+            @include size(300px, 270px);
+            @include min-size(18.75rem, 16.875rem);  // 300, 270
             padding: 0;
-            img { @include size(100%, auto); }
+            background-repeat: no-repeat;
+            background-position: 0 0%;
             
-            @include size(100%, auto);
-            @include min-size(320px, 280px);
+            border: 1px solid black;
             
-            // PC
-            @media(min-width: $tablet){
-                @include size(300px, 270px);
-                @include min-size(18.75rem, 16.875rem);  // 300, 270
-                
-                background-repeat: no-repeat;
-                background-position: 0 0%;
-            }
+            filter: grayscale(100%);
+            &:hover { filter: grayscale(0%); }
             
+            img {  @include size(100%, auto);  }
         }
         .work-item {
-            // MOBILE
             @include size(100%, 100px);
+            padding: 0;
 
-            // PC
-            @media(min-width: $tablet){ padding: 0; }
-            
-            // ALL
             .work-tag { 
                 margin-top: 0.9375rem;
                 font-size: $size-work-tag;
@@ -87,28 +67,64 @@ $size-work-name: $size-3;   // 그리드 아이템 제목
 }
 
 
-
+/// PC only
 .about{
     @include size(100%, auto);
-    overflow: hidden;
-    
-    .about-info { 
-        margin: 6.25rem auto;
-        font-weight: $weight-bold;
-        font-size: $size-3;
+    background-color: $main-color;
+    text-align: center;
 
-        .interest {  line-height: 136%; }
-        .participation {  line-height: 136%; }
-    }
+    padding-top: 6rem;
+    padding-bottom: 10rem;
+
     
-    .section-title {
-        margin: 10rem auto 2rem;
+
+    .about-info { 
+        @include size($about-wrap-width, auto);
+        
+        margin: 0 auto;
+
+        font-weight: $weight-medium;
+        font-size: $size-3;
+        line-height: $line-height-4;
+        letter-spacing: $letter-spacing-1;
+
+
+
+        .about-title {
+            font-weight: $weight-bold;
+            margin: 0 auto;
+            padding-top: 6rem;
+            padding-bottom: 2rem;
+
+            &:nth-of-type(2) { 
+                margin-top: 10rem;
+            }
+
+        }
+
+
+        .about-year {
+            font-weight: $weight-bold;
+
+            &:nth-of-type(3){ 
+                padding-top: 4rem;
+            }
+        }
+
     }
+
+
+
+    
+    
+    
 }
 
 
 
 
+
+/// Animations (pc only)
 
 @keyframes sprite {
   from { background-position: 0 0; }
@@ -124,8 +140,5 @@ $size-work-name: $size-3;   // 그리드 아이템 제목
 .sp-codestudy       { animation: sprite 1s steps(11) infinite; }
 .sp-ted             { animation: sprite 2.5s steps(56) infinite; }
 
-
-
-// animation-duration
 
 

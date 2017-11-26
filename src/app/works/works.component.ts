@@ -25,7 +25,6 @@ export class WorksComponent implements OnInit {
     codestudy: false,
     ted: false
   };
-
   constructor(
     private router: Router,
     private appService: AppService

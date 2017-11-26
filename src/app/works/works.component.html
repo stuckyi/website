@@ -1,7 +1,18 @@
+
+<!-- hero -->
 <app-hero></app-hero>
-<div class="works columns is-multiline">
-  <div *ngFor="let content of contents" (click)="gotoDetail(content.id)" 
+
+<!-- works -->
+<p class="section-title">works</p>
+
+
+
+<!-- pc -->
+<div class="works columns is-multiline is-hidden-mobile">
+  <div *ngFor="let content of contents" 
+        (click)="gotoDetail(content.id)" 
         class="work columns is-multiline">
+
       <!-- pc: sprite image -->
       <div (mouseenter)="setHoverState(content.title_en)" 
            (mouseleave)="setHoverState(content.title_en)"
@@ -16,42 +27,47 @@
         <p class="work-name" *ngFor="let title of content.title">{{ title }}</p>
       </div>
 
-
-      <!-- mobile image -->
-      <figure class="image column is-12 is-hidden-tablet">
-        <img src=" {{ '/assets/images/works/main/' + content.title_en + '.m@2x.png'}} " />
-      </figure>
-      
-      <!-- mobile: title, tagInfo -->
-      <div class="work-item column is-12 is-hidden-tablet">
-        <p class="work-name" *ngFor="let title of content.title">{{ title }}</p>
-        <p class="work-tag">{{ content.tagInfo.title }}</p>
-      </div>
-    
   </div>
 
 </div>
-<!-- <app-about></app-about> -->
 
+
+
+
+
+<!-- about (pc only)-->
 <div class="about is-hidden-mobile">
-  <div class="about-info container">
-      <p class="section-title" >이런 분야에 대해 다루는 것을 좋아합니다.</p>
+  <!-- works -->
+  <p class="section-title">about</p>
+
+  <div class="about-info">
+
+      <p class="about-title" >이런 분야에 대해 다루는 것을 좋아합니다.</p>
       <div class="interest columns is-multiline"> 
-        <div *ngFor="let interest of content_about.interests" class="column is-3">
+        <div *ngFor="let interest of content_about.interests" class="column is-3 is-paddingless">
           <p>{{ interest }}</p>
         </div>
       </div>
 
-
-      <p class="section-title">참여 프로젝트, 워크숍</p>
-
-      <div *ngFor="let pw of content_about.participationWorks" class="participation columns is-multiline">
-        <div class="column is-1"><p>{{pw.year}}</p></div>
-        <div class="column is-5"><p>{{pw.title}}</p></div>
-        <div class="column is-3"><p>{{pw.host}}</p></div>
-        <div class="column is-3"><p>{{pw.role}}</p></div>
-      </div>
+      <p class="about-title">참여 프로젝트, 워크숍</p>
+      
+      <div class="about-year">2017</div>
+      <p>&lt;청계천, 동대문 젠트리피케이션 - 리슨투더시티&gt;, 서울도시건축비엔날레, 워크숍 참여</p>
+      <p>&lt;읽고 쓰는 오프라인 매핑 - 댄 파이퍼&gt;, 서울도시건축비엔날레, 워크숍 참여</p>
+      
+      <div class="about-year">2016</div>
+      <p>&lt;뉴게임플레이 NEW GAME PLAY&gt;, 백남준아트센터, 참여 작가</p>
+      <p>&lt;코딩, 0부터 1까지&gt;, 다음학교, 보조 강사</p>
+      <p>&lt;불확실한 학교 Uncertainty School&gt;, SeMA 비엔날레, 협력 작가</p>
+      <p>&lt;반응형 웹폰트 만들기&gt;, 헤럴드디자인, 워크숍 참여, 전시</p>
+         
+          
 
   </div>
 
 </div>
+  
+
+
+<!-- mobile -->
+<app-touch-slider class="is-hidden-tablet"></app-touch-slider>
