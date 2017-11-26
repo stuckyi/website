@@ -1,137 +1,97 @@
 # Website
 
 
+## plan
 
-```js
 
- * Re-maps a number from one range to another.
- * <br><br>
- * In the first example above, the number 25 is converted from a value in the
- * range of 0 to 100 into a value that ranges from the left edge of the
- * window (0) to the right edge (width).
+### Assets
+---
 
- @method map
- * @param  {Number} value  the incoming value to be converted
- * @param  {Number} start1 lower bound of the value's current range
- * @param  {Number} stop1  upper bound of the value's current range
- * @param  {Number} start2 lower bound of the value's target range
- * @param  {Number} stop2  upper bound of the value's target range
- * @param  {Boolean} [withinBounds] constrain the value to the newly mapped range
- * @return {Number}        remapped number
- * @example
- *   <div><code>
- *     var value = 25;
- *     var m = map(value, 0, 100, 0, width);
- *     ellipse(m, 50, 10, 10);
- *   </code></div>
- *
- *   <div><code>
- *     function setup() {
- *       noStroke();
- *     }
- *
- *     function draw() {
- *       background(204);
- *       var x1 = map(mouseX, 0, width, 25, 75);
- *       ellipse(x1, 25, 25, 25);
- *       //This ellipse is constrained to the 0-100 range
- *       //after setting withinBounds to true
- *       var x2 = map(mouseX, 0, width, 0, 100, true);
- *       ellipse(x2, 75, 25, 25);
- *     }
- *   </code></div>
- *
- * @alt
- * 10 by 10 white ellipse with in mid left canvas
- * 2 25 by 25 white ellipses move with mouse x. Bottom has more range from X
- *
- */
-p5.prototype.map = function (n, start1, stop1, start2, stop2, withinBounds) {
-  var newval = ((n - start1)/(stop1 - start1)) * (stop2 - start2) + start2;
-  if (!withinBounds) {
-    return newval;
-  }
-  if (start2 < stop2) {
-    return this.constrain(newval, start2, stop2);
-  } else {
-    return this.constrain(newval, stop2, start2);
-  }
-};
+#### Font
+
+- [ ] font loading 효율화 작업
+  - [ ] font compress 
+  - [ ] update font loading process
+
+
+#### Favicon
+
+- [ ] favicon 프로세스 이해 및 확인
+  - [x] favicons 단순 적용
+
+
+#### Language
+
+- [ ] content translation (ko -> en)
+- [ ] language support feature
 
 
 
-/**
- * Constrains a value between a minimum and maximum value.
- *
- * @method constrain
- * @param  {Number} n    number to constrain
- * @param  {Number} low  minimum limit
- * @param  {Number} high maximum limit
- * @return {Number}      constrained number
- * @example
- * <div><code>
- * function draw() {
- *   background(200);
- *
- *   var leftWall = 25;
- *   var rightWall = 75;
- *
- *   // xm is just the mouseX, while
- *   // xc is the mouseX, but constrained
- *   // between the leftWall and rightWall!
- *   var xm = mouseX;
- *   var xc = constrain(mouseX, leftWall, rightWall);
- *
- *   // Draw the walls.
- *   stroke(150);
- *   line(leftWall, 0, leftWall, height);
- *   line(rightWall, 0, rightWall, height);
- *
- *   // Draw xm and xc as circles.
- *   noStroke();
- *   fill(150);
- *   ellipse(xm, 33, 9,9); // Not Constrained
- *   fill(0);
- *   ellipse(xc, 66, 9,9); // Constrained
- * }
- * </code></div>
- *
- * @alt
- * 2 vertical lines. 2 ellipses move with mouse X 1 does not move passed lines
- *
- */
-p5.prototype.constrain = function(n, low, high) {
-  return Math.max(Math.min(n, high), low);
-};
-```
 
 
-```md
-### 11.03
+### Javascript
 
-<CA 브랜딩>읽고 홈페이지 글 작성
+#### Angular
 
-## 소개글
+- [ ] 코드 리팩터링(scroll event)
+  - [ ] use another rxjs operator
+  - [ ] make method to directive file
 
-안녕하세요, **스투키 스튜디오입니다**.
-2017년을 함께 해주셔서 감사합니다.
+
+
+#### Creative Coding
+
+- [ ] mainjam ideation
+- [ ] mainjam concept fix
+- [ ] mainjam develeopment
+
+
+point
+
+- 크게 세 파트다. hero, works, about.
+- hero에서 너무 많은 것이 들어가 어디를 봐야할 지 모르겠으면 안된다는.
+
+
+
+1. hero : 미세먼지 particle
+2. works : eye tracking (work를 보는 데 방해가 되지 않을 정도지만, 그래도 재미는 있는.)
+3. about : 아직 미정
+
+
+
+
+## 1. hero : 미세먼지 particle
+
+- api 3종 있다.
+  - 기준 위치를 어디로 잡느냐가 관건
+    - 서울 위치
+    - 사용자 동의 얻고 사용자 위치
+    - api를 쓰지 않는다.
+
+- api 데이터로 상태를 색상이나 particle의 수로 표현가능(혹은 둘 다 )
+  - particle
+    - 수 : 미세먼지의 농도에 비례
+    - 입자 크기 : 랜덤이거나, pm10은 pm2.5는 grey.
+
   
-  저희는 **쉽게 읽히지 않는 것들을** 찾아 여러가지 방법으로 **풀어내는 데 희열을** 느낍니다.
+## Animation
 
-주로 이런 것들을 만듭니다.
+1. 왼쪽 to 오른쪽 이동: 따로 인터랙션은 없고, 펄린노이즈 적용하여 꿈틀대기
+2. 스투키 글자와 충돌하는 것들은 사라지거나, 색이 변하기
+3. 스투키 글자를 클릭하면, 스투키가 움찔하면서 빛을 발사하고 미세먼지가 한동안 없어지는 것
+4. 미세먼지가 스투키를 빗겨나간다.
+5. 마우스 커서가 미세먼지를 빨아들여서 없어지도록 한다.
+6. 스투키 글자에 닿으면 미세먼지가 터진다.
+
+> 여기까지인데, 아이디어를 내주면 좋겠다.
+
+- 또는 배경 전체가 점묘화처럼([airtightinteractive.com](airtightinteractive.com))
 
 
-**프린트**
+## 2. Works
+- 글자가 처음부터 있지 않아도 된다. [bigyouth.fr/en/projects](bigyouth.fr/en/projects)
 
-- 선이 굵은 **인쇄물**
-- 선이 굵지않은 **인쇄물**
 
-**웹사이트 또는 웹 콘텐츠**
 
-- 모두가 볼 수 있는 **재미없는 웹사이트**
-- 아무도 보지 않는 **재미있는 웹사이트**
-- 그리고 **중간 정도의 웹사이트**
+> 스투키가 미세먼지를 얼마나.
 
-2017년을 함께 해주셔서 감사합니다.
-
-```
