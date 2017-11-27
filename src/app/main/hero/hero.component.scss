@@ -9,24 +9,36 @@
 
     background-color: $main-color;
 
-    .works-main-img {
+    .stuckyi-container {
         @include size(532px, 152px);
         display: block;
         margin: 0 auto;
+        overflow: hidden;
+
+        .works-main-img {
+            @include size(100%, 152px);
+        }
     }
-    
-    .hello { 
+
+    .hello-container {
+        @include size(860px, 400px);
         margin: 0 auto;
         padding-top: 2.5rem;
         max-width: 860px; 
-        p {
-            font-size: $size-3;
-            font-weight: $weight-medium;
-            line-height: $line-height-5;
-            letter-spacing: $letter-spacing-1;
-            text-align: center;
+        overflow: hidden;
+        .hello {
+            transform: translateY(-300px);
+            p {
+                font-size: $size-3;
+                font-weight: $weight-medium;
+                line-height: $line-height-5;
+                letter-spacing: $letter-spacing-1;
+                text-align: center;
+            }
         }
+
     }
+    
 }
 
 
@@ -56,4 +68,30 @@
 
 ::-webkit-scrollbar {
     display: none;
+}
+
+
+
+
+.is-start {
+    
+
+    &.stuckyi {
+        animation: spring-down 0.8s cubic-bezier(1,.015,.295,1.225) forwards running;
+    }
+
+    &.hello {
+        animation: spring-down-hello 1.2s cubic-bezier(1,.015,.295,1.225) forwards running;
+        animation-delay: .8s;
+    }
+}
+
+@keyframes spring-down{
+    0% {transform: translateY(-200px) scale(1.05);}
+   100%{transform: translateY(0) scale(1);}
+}
+
+@keyframes spring-down-hello{
+    0% {transform: translateY(-300px) scale(1.05);}
+   100%{transform: translateY(0) scale(1);}
 }

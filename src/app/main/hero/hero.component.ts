@@ -18,6 +18,10 @@ export class HeroComponent implements OnInit {
   @ViewChild('evtMouse') evtMouse: ElementRef;
 
   isAbout: boolean = false;
+  isStuckyi: boolean = false;
+  isHello: boolean = false;
+
+
   styleConf = { opacity: 1 };
   
 
@@ -29,6 +33,9 @@ export class HeroComponent implements OnInit {
         this.isAbout = (this.router.url === '/about') ? true : false;
       }
     });
+
+    this.isStuckyi = true;
+    this.isHello = true;
   }
 
 

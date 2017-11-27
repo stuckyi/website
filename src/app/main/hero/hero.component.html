@@ -4,33 +4,49 @@
   
 
     <!-- main img -->
-    <img class="works-main-img"
-         src="assets/images/ui/icons/work_main_img_mobile@3x.png" alt="stuckyi main img" />
+
+    <div class="stuckyi-container">
+      <img class="works-main-img stuckyi"
+        [class.is-start]="isStuckyi"
+        src="assets/images/ui/icons/work_main_img_mobile@3x.png" 
+        alt="stuckyi main img" />
+    </div>
+    
 
     <!-- text -->
-    <div class="hello">
-      <p> 
-        <span class="underline">스투키 스튜디오</span>는 <span [ngStyle]="styleConf">2016년부터 활동하고 있습니다.</span>
-      </p>
-
-      <p> 
-        <span [ngStyle]="styleConf">관심분야에 관한</span>데이터<span [ngStyle]="styleConf">를 찾고 모으고 정리하여 </span>
-      </p>
-
-      <p>
-        이해하기 쉬운 형태<span [ngStyle]="styleConf">로 </span>시각화<span [ngStyle]="styleConf">하는데 </span>희열<span [ngStyle]="styleConf">을 느낍니다.</span>
-      </p>
+    <div class="hello-container">
+      <div class="hello" [class.is-start]="isHello">
+          <p> 
+            <span class="underline">스투키 스튜디오</span>는 
+            <span [ngStyle]="styleConf">2016년부터 활동하고 있습니다.</span>
+          </p>
+    
+          <p> 
+            <span [ngStyle]="styleConf">관심분야에 관한</span>
+            데이터<span [ngStyle]="styleConf">를 찾고 모으고 정리하여 </span>
+          </p>
+    
+          <p>
+            이해하기 쉬운 형태<span [ngStyle]="styleConf">로 </span>
+            시각화<span [ngStyle]="styleConf">하는데 </span>
+            희열<span [ngStyle]="styleConf">을 느낍니다.</span>
+          </p>
+          
+          <p>
+            <span [ngStyle]="styleConf">정리한 데이터로는 주로 </span>
+            상호작용<span [ngStyle]="styleConf">이 가능한 </span>
+            웹 콘텐츠<span [ngStyle]="styleConf">나</span>
+          </p>
+            
+          <p>
+              인쇄물<span [ngStyle]="styleConf">을 제작하고 있습니다.</span>
+          </p>
+          
       
-      <p>
-        <span [ngStyle]="styleConf">정리한 데이터로는 주로 </span>상호작용<span [ngStyle]="styleConf">이 가능한 </span>웹 콘텐츠<span [ngStyle]="styleConf">나</span>
-      </p>
-        
-      <p>
-          인쇄물<span [ngStyle]="styleConf">을 제작하고 있습니다.</span>
-      </p>
-      
-  
-    </div> 
+        </div> 
+
+    </div>
+    
     
   
 </div>
