@@ -14,7 +14,7 @@ import { AppService } from './../app.service';
 })
 export class WorksComponent implements OnInit, AfterViewInit {
   @ViewChild('worksTitle') worksTitle: ElementRef;
-  isAnimationView: boolean = false;
+  isAnimationView: boolean;
 
   contents;
   content_about;
@@ -39,12 +39,15 @@ export class WorksComponent implements OnInit, AfterViewInit {
 
 
   ngOnInit() {
+    console.log("ngOnInit");
     this.contents = this.appService.getContents();
     this.content_about = this.appService.getContentAbout();
     window.scrollTo(0, 0);
+    this.isAnimationView = false;
   }
 
   ngAfterViewInit() {
+    console.log("ngOnAfterViewInit");
     this.registerScrollEvent();
   }
 
@@ -139,6 +142,8 @@ export class WorksComponent implements OnInit, AfterViewInit {
     const onAnimationView$ = scrollTop$.subscribe((val: boolean) => {
       console.log("onAnimationView", val);
       this.isAnimationView = val;
+      if(val) { onAnimationView$.unsubscribe(); }
+      
     });
     /*
     const scrollTop$ = Observable.fromEvent(window, "scroll")
