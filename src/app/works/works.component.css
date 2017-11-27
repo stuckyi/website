@@ -6178,6 +6178,7 @@ ul {
   text-align: center; }
   @media (min-width: 769px) {
     .section-title {
+      margin-top: 16rem;
       font-size: 1.625rem; } }
 
 .work-main {
@@ -6187,7 +6188,7 @@ ul {
   z-index: 500;
   width: 960px;
   height: auto;
-  margin: 6.25rem auto; }
+  margin: 20rem auto; }
   .works .work {
     width: 30%;
     height: auto;

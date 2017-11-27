@@ -15,7 +15,11 @@ $about-wrap-width: 843px;
 .section-title {
     margin: 5rem auto 0;
     font-size: $size-4; // 18px
-    @media(min-width: $tablet){ font-size: $size-2; } // 26px
+    @media(min-width: $tablet){ 
+        margin-top: 16rem;
+        font-size: $size-2; // 26px
+
+    } 
     font-weight: $weight-bold;
     text-align: center;
 }
@@ -25,7 +29,7 @@ $about-wrap-width: 843px;
 .works {
     z-index: $z-index-works;
     @include size($warp-main-grid, auto);
-    margin: 6.25rem auto;
+    margin: 20rem auto;
  
 
     .work {

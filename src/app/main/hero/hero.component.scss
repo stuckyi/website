@@ -4,7 +4,7 @@
 /// PC only
 #hero{
     @include size(100%, 100vh);
-    padding-top: 13rem;
+    padding-top: 10rem;
     overflow: hidden;
 
     background-color: $main-color;
