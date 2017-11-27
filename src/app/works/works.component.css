@@ -6114,6 +6114,10 @@ label.panel-block {
   padding: 3rem 1.5rem 6rem; }
 
 /* color */
+/*
+    Example usage: 
+    @include animation(10s, 5s, changecolour)
+ */
 .no-padding-top {
   padding-top: 0; }
 
@@ -6188,14 +6192,16 @@ ul {
   z-index: 500;
   width: 960px;
   height: auto;
-  margin: 20rem auto; }
+  margin: 10rem auto; }
   .works .work {
     width: 30%;
     height: auto;
     min-width: 270px;
     min-height: 323px;
-    margin: 1rem;
-    padding: 0; }
+    margin: 8rem 1rem 1rem 1rem;
+    padding: 0;
+    overflow: hidden;
+    opacity: 0; }
     .works .work .image {
       width: 300px;
       height: 270px;
@@ -6204,7 +6210,6 @@ ul {
       padding: 0;
       background-repeat: no-repeat;
       background-position: 0 0%;
-      border: 1px solid black;
       filter: grayscale(100%); }
       .works .work .image:hover {
         filter: grayscale(0%); }
@@ -6275,5 +6280,30 @@ ul {
 
 .sp-ted {
   animation: sprite 2.5s steps(56) infinite; }
+
+.is-animationView {
+  animation: spring-up 1s cubic-bezier(1, 0.015, 0.295, 1.225) forwards running; }
+  .is-animationView:nth-of-type(1) {
+    animation-delay: 40ms; }
+  .is-animationView:nth-of-type(2) {
+    animation-delay: 80ms; }
+  .is-animationView:nth-of-type(3) {
+    animation-delay: 120ms; }
+  .is-animationView:nth-of-type(4) {
+    animation-delay: 160ms; }
+  .is-animationView:nth-of-type(5) {
+    animation-delay: 200ms; }
+  .is-animationView:nth-of-type(6) {
+    animation-delay: 240ms; }
+  .is-animationView:nth-of-type(7) {
+    animation-delay: 280ms; }
+
+@keyframes spring-up {
+  0% {
+    transform: translateY(0) scale(1.05);
+    opacity: 0; }
+  100% {
+    transform: translateY(-100px) scale(1);
+    opacity: 1; } }
 
 /*# sourceMappingURL=works.component.css.map */

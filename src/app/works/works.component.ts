@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
 import { Router, NavigationStart } from '@angular/router';
 
 import { Observable } from 'rxjs/Rx';
+import 'rxjs/add/observable/fromEvent';
 
 import { AppService } from './../app.service';
 
@@ -11,7 +12,10 @@ import { AppService } from './../app.service';
   templateUrl: './works.component.html',
   styleUrls: ['./works.component.css']
 })
-export class WorksComponent implements OnInit {
+export class WorksComponent implements OnInit, AfterViewInit {
+  @ViewChild('worksTitle') worksTitle: ElementRef;
+  isAnimationView: boolean = false;
+
   contents;
   content_about;
 
@@ -25,6 +29,9 @@ export class WorksComponent implements OnInit {
     codestudy: false,
     ted: false
   };
+
+
+
   constructor(
     private router: Router,
     private appService: AppService
@@ -35,7 +42,10 @@ export class WorksComponent implements OnInit {
     this.contents = this.appService.getContents();
     this.content_about = this.appService.getContentAbout();
     window.scrollTo(0, 0);
-    
+  }
+
+  ngAfterViewInit() {
+    this.registerScrollEvent();
   }
 
   setClass(name_en: string) {
@@ -109,6 +119,46 @@ export class WorksComponent implements OnInit {
   gotoDetail(id: number) {
     let link = ['/detail', id];
     this.router.navigate(link);
+  }
+
+
+
+  // main image에 적용할 스크롤 이벤트
+  registerScrollEvent() {
+    const size = {
+      width: window.innerWidth || document.body.clientWidth,
+      height: window.innerHeight || document.body.clientHeight
+    };
+    
+    const startY = size.height; //기준점 브라우저 높이
+    const scrollTop$ = Observable.fromEvent(window, "scroll")
+      .map((val: any) => {
+        return (val.target.scrollingElement.scrollTop >= startY) ? true : false; // 브라우저 스크롤의 
+      }).distinctUntilChanged();
+    
+    const onAnimationView$ = scrollTop$.subscribe((val: boolean) => {
+      console.log("onAnimationView", val);
+      this.isAnimationView = val;
+    });
+    /*
+    const scrollTop$ = Observable.fromEvent(window, "scroll")
+      .map((val: any) => {
+        let currentY = val.target.scrollingElement.scrollTop;
+        
+        if
+        } else {
+          return false;
+        }
+      }).distinctUntilChanged();
+    
+    // opacity effect 
+    const checkScroll$ = scrollTop$.subscribe((val:any) => {
+      this.styleConf.opacity = val.opacity; // hello text opacity
+      this.styleByScroll.scale = val.scale; // stuckyi image scale
+
+    });
+    */
+    
   }
 
 

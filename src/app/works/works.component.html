@@ -3,34 +3,37 @@
 <app-hero></app-hero>
 
 <!-- works -->
-<p class="section-title">works</p>
+<p #worksTitle class="section-title">works</p>
 
 
 
 <!-- pc -->
+<!-- works -->
 <div class="works columns is-multiline is-hidden-mobile">
-  <div *ngFor="let content of contents" 
-        (click)="gotoDetail(content.id)" 
-        class="work columns is-multiline">
 
-      <!-- pc: sprite image -->
-      
+    <!-- work -->
+    <div *ngFor="let content of contents" 
+      (click)="gotoDetail(content.id)" 
+      class="work columns is-multiline"
+      [class.is-animationView]="isAnimationView">
+
+      <!-- sprite image -->
       <div (mouseenter)="setHoverState(content.title_en)" 
-           (mouseleave)="setHoverState(content.title_en)"
+          (mouseleave)="setHoverState(content.title_en)"
           class="image column is-hidden-mobile"
           [ngClass]="setClass(content.title_en)"
           [style.background-image]="'url(/assets/images/works/main/'+content.title_en+'.png)'">
       </div>
 
-      <!-- pc: title, tagInfo -->
+      <!-- title, tagInfo -->
       <div class="work-item column is-12 is-hidden-mobile">
         <p class="work-tag">{{ content.tagInfo.title }}</p>
         <p class="work-name" *ngFor="let title of content.title">{{ title }}</p>
       </div>
 
-  </div>
+    </div> <!-- work end -->
 
-</div>
+</div> <!-- works end -->
 
 
 

@@ -6114,6 +6114,10 @@ label.panel-block {
   padding: 3rem 1.5rem 6rem; }
 
 /* color */
+/*
+    Example usage: 
+    @include animation(10s, 5s, changecolour)
+ */
 .no-padding-top {
   padding-top: 0; }
 
