@@ -4,17 +4,20 @@
   
 
     <!-- main img -->
+    <div class="stuckyi-container" 
+         [ngStyle]="{'transform': styleByScroll.scale}">
 
-    <div class="stuckyi-container">
       <img class="works-main-img stuckyi"
         [class.is-start]="isStuckyi"
+        
         src="assets/images/ui/icons/work_main_img_mobile@3x.png" 
         alt="stuckyi main img" />
     </div>
     
 
     <!-- text -->
-    <div class="hello-container">
+    <div class="hello-container"
+         [ngStyle]="{ 'padding-top': styleByScroll.paddingTop}">
       <div class="hello" [class.is-start]="isHello">
           <p> 
             <span class="underline">스투키 스튜디오</span>는 
