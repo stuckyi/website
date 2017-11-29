@@ -19,6 +19,7 @@ $about-wrap-width: 843px;
         margin-top: 16rem;
         font-size: $size-2; // 26px
 
+        
     } 
     font-weight: $weight-bold;
     text-align: center;
@@ -75,12 +76,25 @@ $about-wrap-width: 843px;
 
 /// PC only
 .about{
+
     @include size(100%, auto);
     background-color: $main-color;
     text-align: center;
 
-    padding-top: 6rem;
+    // padding-top: 6rem;
     padding-bottom: 10rem;
+
+
+    .about-top-img {
+        @include size(100%, auto);
+    }
+
+
+    .section-title {
+        margin-top: 5rem;
+    }
+
+
 
     
 

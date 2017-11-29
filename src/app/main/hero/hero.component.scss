@@ -3,13 +3,22 @@
 
 /// PC only
 #hero{
-    @include size(100%, 100vh);
+    @include size(100%, auto);
     padding-top: 10rem;
-    overflow: hidden;
+    // background-image: url('../../../assets/images/works/hello-bg@3x.png');
+    // background-size: 100% auto;
+    // background-repeat: no-repeat;
 
-    background-color: $main-color;
+    // overflow: hidden;
+    // background-color: $main-color;
+    .main-bg {
+        top: 0;
+        position: absolute;
+        z-index: -1;
+    }
 
     .stuckyi-container {
+        
         @include size(532px, 152px);
         display: block;
         margin: 0 auto;

@@ -6232,8 +6232,12 @@ ul {
   height: auto;
   background-color: #33FFBC;
   text-align: center;
-  padding-top: 6rem;
   padding-bottom: 10rem; }
+  .about .about-top-img {
+    width: 100%;
+    height: auto; }
+  .about .section-title {
+    margin-top: 5rem; }
   .about .about-info {
     width: 843px;
     height: auto;
