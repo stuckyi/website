@@ -15,7 +15,8 @@
     <div *ngFor="let content of contents" 
       (click)="gotoDetail(content.id)" 
       class="work columns is-multiline"
-      [class.is-animationView]="isAnimationView">
+      [@dynamicClass]="dynamicClass"
+      (@dynamicClass.done)="listAnimationUnsub($event)">
 
       <!-- sprite image -->
       <div (mouseenter)="setHoverState(content.title_en)" 

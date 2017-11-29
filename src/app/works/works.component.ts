@@ -1,7 +1,8 @@
 import { Component, OnInit, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
+import { trigger, animate, style, transition, state, keyframes } from '@angular/animations';
 import { Router, NavigationStart } from '@angular/router';
 
-import { Observable } from 'rxjs/Rx';
+import { Observable, Subscription } from 'rxjs/Rx';
 import 'rxjs/add/observable/fromEvent';
 
 import { AppService } from './../app.service';
@@ -10,11 +11,26 @@ import { AppService } from './../app.service';
 @Component({
   selector: 'app-works',
   templateUrl: './works.component.html',
-  styleUrls: ['./works.component.css']
+  styleUrls: ['./works.component.css'],
+  animations: [
+    trigger('dynamicClass', [
+      state('list-on', style({ transform: 'translate(0, -100px)', opacity: 1 })),
+      state('list-off', style({ transform: 'translate(0, 0)', opacity: 0 })),
+      transition('list-off => list-on',
+        animate('1s cubic-bezier(1,.015,.295,1.225)', keyframes([
+          style({ transform: 'translate(0, 0)', opacity: 0, offset: 0, }),
+          style({ transform: 'translate(0, -100px)', opacity: 1,  offset: 1 })
+        ])),
+      )
+  ])]
 })
 export class WorksComponent implements OnInit, AfterViewInit {
   @ViewChild('worksTitle') worksTitle: ElementRef;
   isAnimationView: boolean;
+
+  dynamicClass: string = 'list-off';
+  onAnimationView$: Subscription;
+
 
   contents;
   content_about;
@@ -136,34 +152,19 @@ export class WorksComponent implements OnInit, AfterViewInit {
     const startY = size.height; //기준점 브라우저 높이
     const scrollTop$ = Observable.fromEvent(window, "scroll")
       .map((val: any) => {
-        return (val.target.scrollingElement.scrollTop >= startY) ? true : false; // 브라우저 스크롤의 
+        return (val.target.scrollingElement.scrollTop >= startY) ? 'list-on' : 'list-off';
       }).distinctUntilChanged();
     
-    const onAnimationView$ = scrollTop$.subscribe((val: boolean) => {
-      console.log("onAnimationView", val);
-      this.isAnimationView = val;
-      if(val) { onAnimationView$.unsubscribe(); }
-      
+    this.onAnimationView$ = scrollTop$.subscribe((val: string) => {
+      this.dynamicClass = val;
     });
-    /*
-    const scrollTop$ = Observable.fromEvent(window, "scroll")
-      .map((val: any) => {
-        let currentY = val.target.scrollingElement.scrollTop;
-        
-        if
-        } else {
-          return false;
-        }
-      }).distinctUntilChanged();
-    
-    // opacity effect 
-    const checkScroll$ = scrollTop$.subscribe((val:any) => {
-      this.styleConf.opacity = val.opacity; // hello text opacity
-      this.styleByScroll.scale = val.scale; // stuckyi image scale
+  }
+  
 
-    });
-    */
-    
+  listAnimationUnsub(e: any) {
+    if (e.toState === 'list-on') {
+      this.onAnimationView$.unsubscribe();
+    }
   }
 
 
