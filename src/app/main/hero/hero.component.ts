@@ -45,12 +45,6 @@ export class HeroComponent implements OnInit {
 
   ngAfterViewInit() {
     let elementSize = { w: this.evtMouse.nativeElement.offsetWidth };
-    /*
-    let mouseStrem$ = Observable.fromEvent<MouseEvent>(this.evtMouse.nativeElement, 'mousemove')
-      .subscribe((res: any) => {
-        this.styleConf.opacity = +getMap(res.offsetX, 0, elementSize.w, 0, 1).toFixed(1);
-      }); 
-    */
     this.registerScrollEvent();
   }
 
