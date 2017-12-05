@@ -159,13 +159,22 @@ export class WorkDetailComponent implements OnInit, AfterViewInit {
       this.isBgImg = false;
 
     } else if (name_en === "codedfont") {
-      obj.backgroundImage = "url('assets/images/works/codedfont/main_bg.png')";
+      obj.backgroundImage = "url('assets/images/works/codedfont/main_bg@2x.png')";
       obj.backgroundColor = '#B000FF';
       
       this.isBgImg = true;
+    } else if (name_en === "ted") {
+      obj.backgroundColor = '#FF672E';
+      
+      this.isBgImg = false;
+    }
+    else if (name_en === "kohi") {
+      obj.backgroundColor = '#00BB6D';
+      
+      this.isBgImg = false;
     } else {
       obj.backgroundImage = 'none';
-      obj.backgroundColor = '#e9e9e9';
+      obj.backgroundColor = '#e9e9e9'; 
 
       this.isBgImg = false;
     }

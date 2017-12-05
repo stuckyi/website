@@ -6227,17 +6227,20 @@ ul {
         font-weight: 700;
         line-height: 1.5; }
 
+.work-bottom-img {
+  width: 100%;
+  height: auto;
+  margin-top: -29rem; }
+
 .about {
   width: 100%;
   height: auto;
   background-color: #33FFBC;
   text-align: center;
   padding-bottom: 10rem; }
-  .about .about-top-img {
-    width: 100%;
-    height: auto; }
   .about .section-title {
-    margin-top: 5rem; }
+    margin-top: -1rem;
+    padding-top: 5rem; }
   .about .about-info {
     width: 843px;
     height: auto;

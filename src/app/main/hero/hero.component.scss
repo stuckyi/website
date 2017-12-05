@@ -19,13 +19,16 @@
 
     .stuckyi-container {
         
-        @include size(532px, 152px);
+        @include size(600, 200);
         display: block;
         margin: 0 auto;
         overflow: hidden;
 
         .works-main-img {
-            @include size(100%, 152px);
+            @include size(532px, 152px);
+            display: block;
+            margin: 0 auto;
+
         }
     }
 
@@ -36,7 +39,9 @@
         max-width: 860px; 
         overflow: hidden;
         .hello {
-            transform: translateY(-300px);
+            // transform: translateY(-300px);
+            
+
             p {
                 font-size: $size-3;
                 font-weight: $weight-medium;
@@ -87,10 +92,10 @@
         animation: spring-down 0.8s cubic-bezier(1,.015,.295,1.225) forwards running;
     }
 
-    &.hello {
-        animation: spring-down-hello 1.2s cubic-bezier(1,.015,.295,1.225) forwards running;
-        animation-delay: .8s;
-    }
+    // &.hello {
+    //     animation: spring-down-hello 1.2s cubic-bezier(1,.015,.295,1.225) forwards running;
+    //     animation-delay: .8s;
+    // }
 }
 
 @keyframes spring-down{
@@ -98,7 +103,7 @@
    100%{transform: translateY(0) scale(1);}
 }
 
-@keyframes spring-down-hello{
-    0% {transform: translateY(-300px) scale(1.05);}
-   100%{transform: translateY(0) scale(1);}
-}
+// @keyframes spring-down-hello{
+//     0% {transform: translateY(-300px) scale(1.05);}
+//    100%{transform: translateY(0) scale(1);}
+// }

@@ -71,6 +71,12 @@ $about-wrap-width: 843px;
             }
         }
     }
+
+    
+}
+.work-bottom-img { 
+    @include size(100%, auto);
+    margin-top: -29rem;
 }
 
 
@@ -85,13 +91,9 @@ $about-wrap-width: 843px;
     padding-bottom: 10rem;
 
 
-    .about-top-img {
-        @include size(100%, auto);
-    }
-
-
     .section-title {
-        margin-top: 5rem;
+        margin-top: -1rem; // only use in worksComponent of about area
+        padding-top: 5rem;
     }
 
 
