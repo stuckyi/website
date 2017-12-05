@@ -6182,18 +6182,21 @@ ul {
   color: white; }
   .footer.pc .footer-title {
     font-weight: 700;
-    font-size: 1.5rem; }
+    font-size: 1.5rem;
+    text-decoration: underline; }
   .footer.pc .footer-body {
     font-weight: 500;
-    font-size: 1.25rem; }
+    font-size: 1.25rem;
+    margin-bottom: 0; }
   .footer.pc .email {
     font-size: 1.25rem;
-    font-weight: 700;
-    margin-bottom: 0; }
+    margin-bottom: 2rem; }
   .footer.pc img {
-    margin-top: 1rem;
-    width: 1.48rem;
-    height: 1.48rem; }
+    width: 3rem;
+    height: 3rem;
+    opacity: 0.3; }
+    .footer.pc img:hover {
+      opacity: 1; }
 .footer.mobile {
   background-color: #232746;
   margin: 0 auto;
@@ -6201,7 +6204,8 @@ ul {
   color: white; }
   .footer.mobile .footer-title {
     font-size: 1.125rem;
-    font-weight: 700; }
+    font-weight: 700;
+    text-decoration: underline; }
   .footer.mobile .footer-body {
     font-size: 1rem;
     font-weight: 500; }
@@ -6211,7 +6215,7 @@ ul {
     margin-bottom: 0; }
   .footer.mobile img {
     margin-top: 1rem;
-    width: 1.48rem;
-    height: 1.48rem; }
+    width: 3rem;
+    height: 3rem; }
 
 /*# sourceMappingURL=footer.component.css.map */

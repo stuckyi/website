@@ -6179,7 +6179,8 @@ ul {
   margin: 5rem auto 0;
   font-size: 1.125rem;
   font-weight: 700;
-  text-align: center; }
+  text-align: center;
+  text-decoration: underline; }
   @media (min-width: 769px) {
     .section-title {
       margin-top: 16rem;
@@ -6240,7 +6241,8 @@ ul {
   padding-bottom: 10rem; }
   .about .section-title {
     margin-top: -1rem;
-    padding-top: 5rem; }
+    padding-top: 5rem;
+    text-decoration: underline; }
   .about .about-info {
     width: 843px;
     height: auto;
