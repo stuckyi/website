@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
-import { trigger, animate, style, transition, state, keyframes } from '@angular/animations';
+import {trigger, state, stagger, animate, style, group, query as q, transition, keyframes} from '@angular/animations';
 import { Router, NavigationStart } from '@angular/router';
 
 import { Observable, Subscription } from 'rxjs/Rx';
@@ -8,21 +8,25 @@ import 'rxjs/add/observable/fromEvent';
 import { AppService } from './../app.service';
 
 
+const query = (s,a,o={optional:true})=>q(s,a,o);
+
+export const worksTransition = trigger('dynamicClass', [
+  state('list-on', style({ transform: 'translate(0, -100px)', opacity: 1 })),
+  state('list-off', style({ transform: 'translate(0, 0)', opacity: 0 })),
+  transition('list-off => list-on',
+    animate('1s cubic-bezier(1,.015,.295,1.225)', keyframes([
+      style({ transform: 'translate(0, 0)', opacity: 0, offset: 0, }),
+      style({ transform: 'translate(0, -100px)', opacity: 1,  offset: 1 })
+    ])),
+  )
+]);
+
+
 @Component({
   selector: 'app-works',
   templateUrl: './works.component.html',
   styleUrls: ['./works.component.css'],
-  animations: [
-    trigger('dynamicClass', [
-      state('list-on', style({ transform: 'translate(0, -100px)', opacity: 1 })),
-      state('list-off', style({ transform: 'translate(0, 0)', opacity: 0 })),
-      transition('list-off => list-on',
-        animate('1s cubic-bezier(1,.015,.295,1.225)', keyframes([
-          style({ transform: 'translate(0, 0)', opacity: 0, offset: 0, }),
-          style({ transform: 'translate(0, -100px)', opacity: 1,  offset: 1 })
-        ])),
-      )
-  ])]
+  animations: [worksTransition]
 })
 export class WorksComponent implements OnInit, AfterViewInit {
   @ViewChild('worksTitle') worksTitle: ElementRef;

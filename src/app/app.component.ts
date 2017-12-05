@@ -1,8 +1,10 @@
+
 import { Observable } from 'rxjs/Rx';
 import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { trigger,state,style,transition,animate,keyframes } from '@angular/animations';
 
 import { Router } from '@angular/router';
+import { routerTransition } from './router.transition';
 
 @Component({
   selector: 'app-root',
@@ -25,7 +27,9 @@ import { Router } from '@angular/router';
           style({ transform: 'translate(0, 0)', opacity: 1, offset: 1 })
         ])),
       )
-  ])]
+    ]),
+    routerTransition
+  ]
 })
 export class AppComponent implements AfterViewInit, OnInit {
   title = 'app works!';
@@ -38,8 +42,10 @@ export class AppComponent implements AfterViewInit, OnInit {
   scrollY = { prev: 0 };
   dynamicNavClass: string = 'init';
 
-  constructor(private router: Router) {
-    
+  constructor(private router: Router) { }
+
+  getState(outlet) {
+    return outlet.activatedRouteData.state;
   }
 
   ngOnInit(){

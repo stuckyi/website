@@ -1,8 +1,10 @@
-<section>
-    <app-nav></app-nav>
-    <router-outlet></router-outlet>
+<app-nav></app-nav>
+<section [@routerTransition]="getState(o)">
+    <router-outlet #o="outlet"></router-outlet>
     <app-footer></app-footer>
 </section>
+
+
 <div class="vertical is-hidden-mobile">
     <p>hello@stuckyi.studio</p>
 </div>
