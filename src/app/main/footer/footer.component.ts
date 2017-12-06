@@ -7,13 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FooterComponent implements OnInit {
   emailUrl: string = 'hello@stuckyi.studio';
-  isFooter: boolean = false;
 
   constructor() { }
-
-  ngOnInit() {
-
-  }
+  ngOnInit() {}
 
 
   openUrl(){
