@@ -31,8 +31,6 @@ import { PreviewComponent } from './main/preview/preview.component';
 import { TouchSliderComponent } from './main/touch-slider/touch-slider.component';
 
 
-import { routerTransition } from './router.transition';
-
 @NgModule({
   declarations: [
     AppComponent,

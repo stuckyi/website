@@ -74,7 +74,7 @@ export class HeroComponent implements OnInit {
           
           resultObj.opacity = +result.toFixed(1);
           resultObj.scale = 'scale('
-            + getMap(currentY, rule.pc.startY, rule.pc.endY / 3, 1, .8) + ')';
+            + getMap(currentY, rule.pc.startY, rule.pc.endY / 3, 1, .9) + ')';
           
           return resultObj;
 

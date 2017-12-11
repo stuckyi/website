@@ -1,5 +1,17 @@
 @import 'assets/scss/global';
 
+
+.router-loader {
+    @include size(100%, 100vh);
+    top: 0;
+    background-color: white;
+    opacity: 0;
+    // display: none;
+    position: fixed;
+    // z-index: -10;
+
+}
+
 // Nav Animation Class
 .nav-on {
     display: block; 

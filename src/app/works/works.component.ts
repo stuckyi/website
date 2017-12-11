@@ -8,13 +8,16 @@ import 'rxjs/add/observable/fromEvent';
 import { AppService } from './../app.service';
 
 
-const query = (s,a,o={optional:true})=>q(s,a,o);
+const query = (s, a, o = { optional: true }) => q(s, a, o);
+
+// const customAnimation: string = '1s cubic-bezier(1,.015,.295,1.225)';
+const customAnimation: string = '1s ease';
 
 export const worksTransition = trigger('dynamicClass', [
   state('list-on', style({ transform: 'translate(0, -100px)', opacity: 1 })),
   state('list-off', style({ transform: 'translate(0, 0)', opacity: 0 })),
   transition('list-off => list-on',
-    animate('1s cubic-bezier(1,.015,.295,1.225)', keyframes([
+    animate(customAnimation, keyframes([
       style({ transform: 'translate(0, 0)', opacity: 0, offset: 0, }),
       style({ transform: 'translate(0, -100px)', opacity: 1,  offset: 1 })
     ])),

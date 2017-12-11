@@ -6175,6 +6175,14 @@ ul {
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
+.router-loader {
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  background-color: white;
+  opacity: 0;
+  position: fixed; }
+
 .nav-on {
   display: block;
   animation: slideInDown 0.48s cubic-bezier(1, 0.015, 0.295, 1.225) forwards running; }

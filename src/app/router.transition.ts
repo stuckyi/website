@@ -1,4 +1,4 @@
-import {trigger, animate, style, group, query, transition} from '@angular/animations';
+import {trigger, animate, style, group, query, transition, keyframes} from '@angular/animations';
 
 export const routerTransition = trigger('routerTransition', [
   transition('* => works', [
@@ -29,4 +29,23 @@ export const routerTransition = trigger('routerTransition', [
         ))], { optional: true }),
     ])
   ])
+])
+
+
+
+
+
+
+const pageLoaderAnimate: string = '2s ease-in-out';
+
+export const pageLoader = trigger('pageLoader', [
+  transition('* => *',
+    animate(pageLoaderAnimate,
+      keyframes([
+        style({ backgroundColor: 'white',   opacity: 1, offset: 0 }),
+        style({ backgroundColor: 'white', opacity: 1, offset: .3 }),
+        style({ backgroundColor: 'white',  opacity: 0, offset: 1 })
+      ])
+    ),
+  )  
 ])

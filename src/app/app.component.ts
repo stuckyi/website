@@ -4,7 +4,12 @@ import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { trigger,state,style,transition,animate,keyframes } from '@angular/animations';
 
 import { Router } from '@angular/router';
-import { routerTransition } from './router.transition';
+import { pageLoader } from './router.transition';
+
+
+
+
+
 
 @Component({
   selector: 'app-root',
@@ -28,7 +33,9 @@ import { routerTransition } from './router.transition';
         ])),
       )
     ]),
-    routerTransition
+    // routerTransition
+    // routerTransitionFadeIn
+    pageLoader
   ]
 })
 export class AppComponent implements AfterViewInit, OnInit {
@@ -92,6 +99,10 @@ export class AppComponent implements AfterViewInit, OnInit {
   gotoTop() {
     window.scrollTo(0, 0);
     this.dynamicNavClass = 'init';
+  }
+
+  log(elName: string) {
+    console.log(elName);
   }
 
 
