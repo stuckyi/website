@@ -6188,7 +6188,7 @@ ul {
     z-index: -1; }
   #hero .stuckyi-container {
     width: 800px;
-    height: 170;
+    height: auto;
     display: block;
     margin: 0 auto;
     overflow: hidden; }

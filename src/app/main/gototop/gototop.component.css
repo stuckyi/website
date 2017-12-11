@@ -6184,6 +6184,7 @@ ul {
   bottom: 4%;
   background-image: url(/assets/images/ui/icons/gototop@2x.png);
   background-repeat: no-repeat;
-  background-size: contain; }
+  background-size: contain;
+  animation-fill-mode: forwards; }
 
 /*# sourceMappingURL=gototop.component.css.map */

@@ -3,22 +3,28 @@ import { trigger,state,style,transition,animate,keyframes } from '@angular/anima
 import { Observable } from 'rxjs/Rx';
 
 
-const animationRule: string = '2s ease-in-out';
+// const animationRule: string = '.4s cubic-bezier(1,.015,.295,1.225)';
+const animationRule: string = '.4s ease-in-out';
+
 const gototopAnimation = trigger('gototopAnimation',[
-  state('init', style({ display: 'none' })),
-  state('nav-on', style({ display: 'block' })),
-  state('nav-off', style({ display: 'none' })),
-  transition('nav-on => nav-off',
-    animate('0.4s cubic-bezier(1,.015,.295,1.225)', keyframes([
-      style({ transform: 'translate(0, 0)', opaicty: 1, offset: 0 }),
-      style({ transform: 'translate(0, -100%)', opacity: 0, offset: 1 })
-    ]))
+  state('init',   style({ display: 'none' })),
+  state('on',     style({ display: 'block' })),
+  state('off',    style({ display: 'none' })),
+  transition('on => off',
+    animate(animationRule,
+      keyframes([
+        style({ transform: 'scale(1)', opaicty: 1, offset: 0 }),
+        style({ transform: 'scale(0)', opacity: 0, offset: 1 })
+      ])
+    )
   ),
-  transition('nav-off => nav-on',
-    animate('0.48s cubic-bezier(1,.015,.295,1.225)', keyframes([
-      style({ transform: 'translate(0, -100%)', opacity: 0, offset: 0 }),
-      style({ transform: 'translate(0, 0)', opacity: 1, offset: 1 })
-    ])),
+  transition('off => on',
+    animate(animationRule,
+      keyframes([
+        style({ transform: 'scale(0)', opacity: 0, offset: 0 }),
+        style({ transform: 'scale(1)', opacity: 1, offset: 1 })
+      ])
+    ),
   )
 ]);
 
@@ -56,8 +62,7 @@ export class GototopComponent implements OnInit {
     // pc nav controll
     const distinctUntilChangedScrollTop$ = scrollFn$.distinctUntilChanged();
     distinctUntilChangedScrollTop$.subscribe(val => {
-      console.log(val);
-        this.gototopAnimation = (val === true) ? 'nav-on' : 'nav-off';
+        this.gototopAnimation = (val === true) ? 'on' : 'off';
     });
   }
 

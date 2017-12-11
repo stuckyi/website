@@ -17,7 +17,7 @@
 
     .stuckyi-container {
         
-        @include size(800px, 170);
+        @include size(800px, auto);
         display: block;
         margin: 0 auto;
         overflow: hidden;
@@ -26,7 +26,6 @@
             @include size(532px, 152px);
             display: block;
             margin: 0 auto;
-
         }
     }
 
@@ -37,9 +36,6 @@
         max-width: 860px; 
         overflow: hidden;
         .hello {
-            // transform: translateY(-300px);
-            
-
             p {
                 font-size: $size-3;
                 font-weight: $weight-medium;
@@ -95,8 +91,3 @@
     0% {transform: translateY(-200px) scale(1.05);}
    100%{transform: translateY(0) scale(1);}
 }
-
-// @keyframes spring-down-hello{
-//     0% {transform: translateY(-300px) scale(1.05);}
-//    100%{transform: translateY(0) scale(1);}
-// }
