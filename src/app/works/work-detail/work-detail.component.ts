@@ -57,10 +57,6 @@ export class WorkDetailComponent implements OnInit, AfterViewInit {
     }           
   };
 
-
-
-
-
   constructor(
     private elementRef: ElementRef,
     private appService: AppService,

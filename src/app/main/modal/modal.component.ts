@@ -36,7 +36,6 @@ export class ModalComponent implements OnInit {
   }
 
   closeModal() {
-    console.log("closeModal!");
     this.isModal = false;
   }
 

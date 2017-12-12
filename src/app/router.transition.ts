@@ -1,5 +1,30 @@
 import {trigger, animate, style, group, query, transition, keyframes} from '@angular/animations';
 
+const toWorks: string =  '1s ease-in-out';
+const toDetail: string = '2s ease-in-out';
+
+export const pageLoader = trigger('pageLoader', [
+  transition('* => works',
+    animate(toWorks,
+      keyframes([
+        style({ 'z-index': 9100, opacity: 1, offset: 0 }),
+        style({ 'z-index': 9100, opacity: 1, offset: .3 }),
+        style({ 'z-index': 9100, opacity: 0, offset: 1 })
+      ])
+    ),
+  ),
+  transition('* => detail',
+  animate(toDetail,
+    keyframes([
+      style({ 'z-index': 9100, opacity: 1, offset: 0 }),
+      style({ 'z-index': 9100, opacity: 1, offset: .3 }),
+      style({ 'z-index': 9100, opacity: 0, offset: 1 })
+    ])
+  ),
+)
+]);
+
+
 export const routerTransition = trigger('routerTransition', [
   transition('* => works', [
     query(':enter, :leave', style({ position: 'fixed', width:'100%' })
@@ -35,17 +60,3 @@ export const routerTransition = trigger('routerTransition', [
 
 
 
-
-const pageLoaderAnimate: string = '2s ease-in-out';
-
-export const pageLoader = trigger('pageLoader', [
-  transition('* => *',
-    animate(pageLoaderAnimate,
-      keyframes([
-        style({ backgroundColor: 'white',   opacity: 1, offset: 0 }),
-        style({ backgroundColor: 'white', opacity: 1, offset: .3 }),
-        style({ backgroundColor: 'white',  opacity: 0, offset: 1 })
-      ])
-    ),
-  )  
-])

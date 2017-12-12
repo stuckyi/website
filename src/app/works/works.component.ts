@@ -13,7 +13,7 @@ const query = (s, a, o = { optional: true }) => q(s, a, o);
 // const customAnimation: string = '1s cubic-bezier(1,.015,.295,1.225)';
 const customAnimation: string = '1s ease';
 
-export const worksTransition = trigger('dynamicClass', [
+export const worksTransition = trigger('worksTransition', [
   state('list-on', style({ transform: 'translate(0, -100px)', opacity: 1 })),
   state('list-off', style({ transform: 'translate(0, 0)', opacity: 0 })),
   transition('list-off => list-on',
@@ -35,7 +35,7 @@ export class WorksComponent implements OnInit, AfterViewInit {
   @ViewChild('worksTitle') worksTitle: ElementRef;
   isAnimationView: boolean;
 
-  dynamicClass: string = 'list-off';
+  worksTransition: string = 'list-off';
   onAnimationView$: Subscription;
 
 
@@ -62,15 +62,13 @@ export class WorksComponent implements OnInit, AfterViewInit {
 
 
   ngOnInit() {
-    console.log("ngOnInit");
     this.contents = this.appService.getContents();
     this.content_about = this.appService.getContentAbout();
-    window.scrollTo(0, 0);
     this.isAnimationView = false;
+    window.scrollTo(0, 0);
   }
 
   ngAfterViewInit() {
-    console.log("ngOnAfterViewInit");
     this.registerScrollEvent();
   }
 
@@ -163,7 +161,7 @@ export class WorksComponent implements OnInit, AfterViewInit {
       }).distinctUntilChanged();
     
     this.onAnimationView$ = scrollTop$.subscribe((val: string) => {
-      this.dynamicClass = val;
+      this.worksTransition = val;
     });
   }
   

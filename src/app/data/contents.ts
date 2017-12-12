@@ -108,14 +108,14 @@ export const CONTENTS = [
             { index: 0, title: 'preview title7', desc: '설명7.', imgUrl: '/assets/images/works/collection/preview/m_0.gif' }
         ],
         previewSliderItems: [
-            { index: 0, title: 'preview  title', desc: '여러 월경컵들 중 정보를 보고 싶은 월경컵을 고를 수 있습니다.', imgUrl: '/assets/images/works/collection/preview/0.png' },
-            { index: 1, title: 'preview title1', desc: '루넷컵을 클릭하면 상세 정보를 볼 수 있는 페이지가 나옵니다.', imgUrl: '/assets/images/works/collection/preview/1.png' },
-            { index: 2, title: 'preview title2', desc: '각각의 길이 정보에 마우스를 올리면 해당 부분의 길이만 표시가 됩니다.', imgUrl: '/assets/images/works/collection/preview/2.png' },
-            { index: 3, title: 'preview title3', desc: '하단의 슬라이드를 통해 다른 월경컵의 정보도 볼 수 있습니다..', imgUrl: '/assets/images/works/collection/preview/3.png' },
-            { index: 4, title: 'preview title4', desc: '데이터를 수집, 정리, 기재하는 방법에 대한 것을 설명해 둔 페이지입니다.', imgUrl: '/assets/images/works/collection/preview/4.png' },
-            { index: 5, title: 'preview title5', desc: '저희가 월경컵의 각 부분에 대해 정보를 정리한 기준을 볼 수 있습니다.', imgUrl: '/assets/images/works/collection/preview/5.png' },
-            { index: 6, title: 'preview title6', desc: '데이터 수집에 도움을 주시는 방법을 기록해두었습니다.', imgUrl: '/assets/images/works/collection/preview/6.png' },
-            { index: 7, title: 'preview title7', desc: '길이를 측정하는 방법에 대한 설명입니다..', imgUrl: '/assets/images/works/collection/preview/7.png' }
+            { index: 0, title: '모여라 월경컵 메인화면', desc: '여러 월경컵들 중 정보를 보고 싶은 월경컵을 고를 수 있습니다.', imgUrl: '/assets/images/works/collection/preview/0.png' },
+            { index: 1, title: '월경컵 별 상세페이지', desc: '루넷컵을 클릭하면 상세 정보를 볼 수 있는 페이지가 나옵니다.', imgUrl: '/assets/images/works/collection/preview/1.png' },
+            { index: 2, title: '월경컵 부분 별 정보 제공', desc: '각각의 길이 정보에 마우스를 올리면 해당 부분의 길이만 표시가 됩니다.', imgUrl: '/assets/images/works/collection/preview/2.png' },
+            { index: 3, title: '다른 월경컵 탐색', desc: '하단의 슬라이드를 통해 다른 월경컵의 정보도 볼 수 있습니다..', imgUrl: '/assets/images/works/collection/preview/3.png' },
+            { index: 4, title: '데이터 수집, 정리, 기재 방법', desc: '모여라 월경컵에서 제공하는 정보에 대한 내용을 정리했습니다.', imgUrl: '/assets/images/works/collection/preview/4.png' },
+            { index: 5, title: '월경컵 정보 분류 기준', desc: '저희가 월경컵의 각 부분에 대해 정보를 정리한 기준을 볼 수 있습니다.', imgUrl: '/assets/images/works/collection/preview/5.png' },
+            { index: 6, title: '프로젝트 참여 안내', desc: '데이터 수집에 도움을 주시는 방법을 기록해두었습니다.', imgUrl: '/assets/images/works/collection/preview/6.png' },
+            { index: 7, title: '길이 측정 방법 설명', desc: '길이를 측정하는 방법에 대한 설명입니다.', imgUrl: '/assets/images/works/collection/preview/7.png' }
         ],
         processSliderItems: []
     },
@@ -143,19 +143,9 @@ export const CONTENTS = [
             { title: '과정에 대한 기록을 해둔 트렐로(Trello) 보드', url: 'https://trello.com/b/X7FxBG8o/%EC%BD%94%EB%93%9C%EA%B8%80%EC%9E%90%EA%BC%B4-stuckyi-studio'},
             { title: '몇몇 실험을 캡쳐하여 모아둔 텀블러 페이지', url: 'http://stuckyi-codetype.tumblr.com/'}
         ],
-        previewSliderItems: [
-            { index: 0, title: '안녕 1', desc: 'codedfont experiment', imgUrl: '/assets/images/works/codedfont/preview/0.gif' },
-            { index: 1, title: '안녕 2', desc: 'codedfont experiment', imgUrl: '/assets/images/works/codedfont/preview/1.gif' },
-            { index: 2, title: '움직이는 스포카한산스 ', desc: '새로운 글자 형태를 구성하는 것이 아니라, 기존 글꼴의 정보를 읽어 다양한 인터랙션을 적용한 형태', imgUrl: '/assets/images/works/codedfont/preview/2.gif' },
-            { index: 3, title: '무늬', desc: '글자를 구성하는 정보를 바탕으로, 도형과 랜덤 개념을 이용하여 매 순간 무늬가 변하도록 구성', imgUrl: '/assets/images/works/codedfont/preview/3.gif' },
-            { index: 4, title: '모여 1', desc: '코드로 만들어진 원소 캐릭터들은, 글자 정보에따라 조합되어 글자 형태를 이룬다.', imgUrl: '/assets/images/works/codedfont/preview/4.gif' },
-            { index: 5, title: '모여 2', desc: '원소 캐릭터들은 글자를 구성한 후에도 각각의 객체로 존재하며, 사용자 동작에도 반응한다.', imgUrl: '/assets/images/works/codedfont/preview/5.gif' },
-            { index: 6, title: '틸트체', desc: '스마트폰 기울기에 따라 다양한 형태로 변경된다. 사용자는 자신이 원하는 글자를 입력 해볼 수 있다.', imgUrl: '/assets/images/works/codedfont/preview/6.gif' },
-            { index: 7, title: '-', desc: '-', imgUrl: '/assets/images/works/codedfont/preview/7.gif' }
-            
-         ],
+        previewSliderItems: [ ],
         previewContentItems: [
-            { index: 0, title:'-', desc: '-', imgUrl: '/assets/images/works/codedfont/preview/m_0.gif' }
+            { index: 0, title:'틸트체', desc: '스마트폰 자이로센서 값에따라 글자 형태가 변하도록 했습니다.', imgUrl: '/assets/images/works/codedfont/preview/m_0.gif' }
         ],
         processSliderItems: [
             { index: 0, title: '특정 단어의 형태 변화 실험', desc: '각 글자의 위치에 있는 원의 크기의 변화 따라 글자의 형태가 보이기도하고, 보이지 않기도 합니다.', imgUrl: '/assets/images/works/codedfont/modal/0.gif' },
@@ -195,13 +185,15 @@ export const CONTENTS = [
         ],
         linkItems: [ ],
         previewSliderItems: [ ],
-        previewContentItems: [ ],
+        previewContentItems: [ 
+            { index: 0, title:'-', desc: '', imgUrl: '/assets/images/works/codedfont/preview/m_0.gif' }
+        ],
         processSliderItems: [
-            { index: 0, title: '-', desc: '실제 인쇄물의 앞표지, 뒷표지입니다.', imgUrl: '/assets/images/works/kohi-brochure/preview/0.png' },
-            { index: 1, title: '-', desc: '인쇄물을 모두 펼쳤을 때 앞면 / 뒷면입니다.', imgUrl: '/assets/images/works/kohi-brochure/preview/1.png' },
-            { index: 2, title: '-', desc: '속지 클로즈업!', imgUrl: '/assets/images/works/kohi-brochure/preview/2.png' },
-            { index: 3, title: '-', desc: '브로슈어에 들어간 일러스트 일부입니다.', imgUrl: '/assets/images/works/kohi-brochure/preview/3.png' },
-            { index: 4, title: '-', desc: '최종적으로 인쇄하지는 않았지만 이렇게 십자모양으로 펼쳐지는 버전도 있습니다. ', imgUrl: '/assets/images/works/kohi-brochure/preview/4.gif' }   
+            { index: 0, title: '-', desc: '실제 인쇄물의 앞표지, 뒷표지입니다.', imgUrl: '/assets/images/works/kohi-brochure/modal/0.png' },
+            { index: 1, title: '-', desc: '인쇄물을 모두 펼쳤을 때 앞면 / 뒷면입니다.', imgUrl: '/assets/images/works/kohi-brochure/modal/1.png' },
+            { index: 2, title: '-', desc: '속지 클로즈업!', imgUrl: '/assets/images/works/kohi-brochure/modal/2.png' },
+            { index: 3, title: '-', desc: '브로슈어에 들어간 일러스트 일부입니다.', imgUrl: '/assets/images/works/kohi-brochure/modal/3.png' },
+            { index: 4, title: '-', desc: '최종적으로 인쇄하지는 않았지만 이렇게 십자모양으로 펼쳐지는 버전도 있습니다. ', imgUrl: '/assets/images/works/kohi-brochure/modal/4.gif' }   
         ]
     },
     { 
@@ -306,7 +298,7 @@ export const CONTENTS = [
             '그동안 멘넴이 창작해온 이미지들은 < 멘넴의 블로그> 에 고정된 게시물의 형태로 남아있었지만, 이번 코드스터디를 통해 각각의 이미지들이 상호 작용하는 형태로 변신하였습니다.'
         ],
         linkItems: [
-           { title: '코드스터디에대한 자세한 내용을 볼 수 있는 Github link', url: 'https://github.com/stuckyi/codestudy'}
+           { title: '코드스터디에대한 자세한 내용을 볼 수 있는 Github 링크', url: 'https://github.com/stuckyi/codestudy'}
         ],
         previewSliderItems: [
             { index: 0, title: '맨넴 캐릭터 생성기', desc:'화면을 클릭하면 멘넴이 그동안 만들어온 캐릭터들이 랜덤으로 생성되는 인터랙티브 콘텐츠입니다.', imgUrl: '/assets/images/works/codestudy/preview/0.gif' },
@@ -355,14 +347,14 @@ export const CONTENTS = [
         previewContentItems: [],
         processSliderItems: [
             { index: 0, title:'-', desc: '평가하는 단어를 긍정 / 부정의 두 카테고리로 나누고 색을 분류하여 시각화하면 어떨까 아이데이션 해보았습니다.', imgUrl: '/assets/images/works/ted/modal/0.png' },
-            { index: 1, title: '-', desc: '평가하는 단어의 느낌을 얼굴에 나타낼 수 있을까 스케치해보았습니다. 예를 들어 confusing(혼란스러운)이 있으면 캐릭터의 고개가 갸우뚱거리는 식으로요.', imgUrl: '/assets/images/works/ted/modal/1.png' },
+            { index: 1, title: '-', desc: '평가하는 단어의 느낌을 얼굴에 나타낼 수 있을까 스케치해보았습니다. 예를 들어 confusing(혼란스러운)이 있으면 캐릭터의 고개가 갸우뚱거리는 식으로요.', imgUrl: '/assets/images/works/ted/modal/1.jpg' },
             { index: 2, title: '-', desc: '캐릭터의 몸통도 데이터를 반영하여 변화하게끔, 코드로 조절할 수 있는 형태들 중 복잡한 형태들을 찾아보고 캐릭터화해본 스케치입니다.', imgUrl: '/assets/images/works/ted/modal/2.png' },
             { index: 3, title: '-', desc: '컨트롤하기 어렵지 않고, 이목구비의 위치 변화도 상대적으로 더 자유롭게 할 수 있도록 땅콩 모양의 곡선으로 된 몸체에 데이터를 반영하기로 합니다. ', imgUrl: '/assets/images/works/ted/modal/3.png' },
             { index: 4, title: '-', desc: '땅콩 모양을 만들기 위해 기본이 되는 도형의 좌표값을 구합니다.', imgUrl: '/assets/images/works/ted/modal/4.png' },
             { index: 5, title:'-', desc: '땅콩 모양을 만들기 위해 기본이 되는 도형의 좌표값을 구합니다.', imgUrl: '/assets/images/works/ted/modal/5.png' },
             { index: 6, title: '-', desc: '계산한 좌표값이 맞는지 확인도 해보구요.', imgUrl: '/assets/images/works/ted/modal/6.png' },
             { index: 7, title: '-', desc: '데이터에 따라 이런 다양한 형태를 얻을 수 있습니다.', imgUrl: '/assets/images/works/ted/modal/7.png' },
-            { index: 8, title: '-', desc: '이목구비와 팔다리를 달고 색을 부여하면 이런 다양한 캐릭터가 나올거라고 예상해보았습니다.', imgUrl: '/assets/images/works/ted/modal/8.png' },
+            { index: 8, title: '-', desc: '이목구비와 팔다리를 달고 색을 부여하면 이런 다양한 캐릭터가 나올거라고 예상해보았습니다.', imgUrl: '/assets/images/works/ted/modal/8.jpeg' },
             { index: 9, title: '-', desc: '데이터에 따른 이목구비의 위치와 크기 변화의 규칙도 정합니다.', imgUrl: '/assets/images/works/ted/modal/9.png' },
             { index: 10, title:'-', desc: '예상안을 바탕으로 나머지 작업을 합니다. 값이나 범위가 잘못될 경우에 웬 희안한 모양이 다 나옵니다.', imgUrl: '/assets/images/works/ted/modal/10.png' },
             { index: 11, title: '-', desc: '팔을 다는 위치와 팔꿈치의 각도도 계산합니다.', imgUrl: '/assets/images/works/ted/modal/11.png' },

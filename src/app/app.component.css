@@ -6179,28 +6179,10 @@ ul {
   width: 100%;
   height: 100vh;
   top: 0;
+  position: fixed;
   background-color: white;
   opacity: 0;
-  position: fixed; }
-
-.nav-on {
-  display: block;
-  animation: slideInDown 0.48s cubic-bezier(1, 0.015, 0.295, 1.225) forwards running; }
-
-.nav-off {
-  display: none;
-  animation: slideOutUp 0.48s cubic-bezier(1, 0.015, 0.295, 1.225) forwards running; }
-
-.btn-gototop {
-  z-index: 9000;
-  width: 2rem;
-  height: 2rem;
-  position: fixed;
-  right: 4%;
-  bottom: 4%;
-  background-image: url(/assets/images/ui/icons/gototop@2x.png);
-  background-repeat: no-repeat;
-  background-size: contain; }
+  z-index: -10; }
 
 .vertical {
   z-index: 8900;
