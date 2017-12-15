@@ -22,7 +22,7 @@ import { pageLoader } from './router.transition';
       state('nav-off', style({ display: 'none' })),
       transition('nav-on => nav-off',
         animate('0.4s cubic-bezier(1,.015,.295,1.225)', keyframes([
-          style({ transform: 'translate(0, 0)', opaicty: 1, offset: 0 }),
+          style({ transform: 'translate(0, 0)', opacity: 1, offset: 0 }),
           style({ transform: 'translate(0, -100%)', opacity: 0, offset: 1 })
         ]))
       ),

@@ -36,7 +36,6 @@ import { TouchSliderComponent } from './main/touch-slider/touch-slider.component
     AppComponent,
     WorksComponent,
     AboutComponent,
-    
     NavComponent,
     FooterComponent,
     SliderComponent,
