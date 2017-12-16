@@ -6464,12 +6464,12 @@ label.panel-block {
 @font-face {
   font-family: "Spoqa Han Sans";
   font-weight: 500;
-  src: local("☺"), url(/assets/fonts/spocahansans_subset/SpoqaHanSans-Regular.eot), url(/assets/fonts/spocahansans_subset/SpoqaHanSans-Regular.eot?#iefix) format("embedded-opentype"), url(/assets/fonts/spocahansans_subset/SpoqaHanSans-Regular.woff) format("woff"), url(/assets/fonts/spocahansans_subset/SpoqaHanSans-Regular.ttf) format("truetype");
+  src: local("☺"), url(/assets/fonts/spocahansans_subset/SpoqaHanSans-Regular.eot?#iefix) format("embedded-opentype"), url(/assets/fonts/spocahansans_subset/SpoqaHanSans-Regular.woff) format("woff"), url(/assets/fonts/spocahansans_subset/SpoqaHanSans-Regular.ttf) format("truetype");
   /* If not support woff */ }
 @font-face {
   font-family: "Spoqa Han Sans";
   font-weight: 700;
-  src: local("☺"), url(/assets/fonts/spocahansans_subset/SpoqaHanSans-Bold.eot), url(/assets/fonts/spocahansans_subset/SpoqaHanSans-Bold.eot?#iefix) format("embedded-opentype"), url(/assets/fonts/spocahansans_subset/SpoqaHanSans-Bold.woff) format("woff"), url(/assets/fonts/spocahansans_subset/SpoqaHanSans-Bold.ttf) format("truetype");
+  src: local("☺"), url(/assets/fonts/spocahansans_subset/SpoqaHanSans-Bold.eot?#iefix) format("embedded-opentype"), url(/assets/fonts/spocahansans_subset/SpoqaHanSans-Bold.woff) format("woff"), url(/assets/fonts/spocahansans_subset/SpoqaHanSans-Bold.ttf) format("truetype");
   /* If not support woff */ }
 * {
   font-family: "Spoqa Han Sans", "애플 SD 산돌고딕 Neo", "Apple SD Gothic Neo", 나눔고딕, "Nanum Gothic", "돋움", Dotum, Arial, sans-serif;
@@ -6509,8 +6509,7 @@ ul {
   top: 0;
   position: fixed;
   background-color: white;
-  opacity: 0;
-  z-index: -10; }
+  opacity: 0; }
 
 .vertical {
   z-index: 8900;

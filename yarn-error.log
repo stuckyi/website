@@ -1,5 +1,5 @@
 Arguments: 
-  /Users/admin/.nvm/versions/node/v8.9.1/bin/node /usr/local/bin/yarn install
+  /Users/admin/.nvm/versions/node/v8.9.1/bin/node /usr/local/bin/yarn add classlist.js
 
 PATH: 
   /Users/admin/.nvm/versions/node/v8.9.1/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/TeX/texbin:/opt/X11/bin:/Users/admin/.rvm/bin
@@ -47,7 +47,7 @@ npm manifest:
       "zone.js": "^0.8.4"
     },
     "devDependencies": {
-      "@angular/cli": "1.4.2",
+      "@angular/cli": "^1.6.1",
       "@angular/compiler-cli": "^5.0.0",
       "@types/jasmine": "2.5.38",
       "@types/node": "~6.0.60",

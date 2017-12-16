@@ -1,3 +1,5 @@
+import { WindowRef } from './utils/window.ref';
+
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
@@ -8,6 +10,7 @@ import { environment } from './../environments/environment';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppService } from './app.service';
+
 
 
 import { AppComponent } from './app.component';
@@ -34,7 +37,6 @@ import { GototopComponent } from './main/gototop/gototop.component';
     AppComponent,
     WorksComponent,
     AboutComponent,
-    
     NavComponent,
     FooterComponent,
     SliderComponent,
@@ -53,7 +55,7 @@ import { GototopComponent } from './main/gototop/gototop.component';
     HttpModule,
     AppRoutingModule
   ],
-  providers: [AppService],
+  providers: [AppService, WindowRef],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

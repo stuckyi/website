@@ -1,11 +1,14 @@
-import { Component, OnInit, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
-import {trigger, state, stagger, animate, style, group, query as q, transition, keyframes} from '@angular/animations';
+import { WindowRef } from './../utils/window.ref';
+import { Component, OnInit, ViewChild, ElementRef, AfterViewInit, Inject } from '@angular/core';
+import { trigger, state, stagger, animate, style, group, query as q, transition, keyframes} from '@angular/animations';
 import { Router, NavigationStart } from '@angular/router';
 
 import { Observable, Subscription } from 'rxjs/Rx';
 import 'rxjs/add/observable/fromEvent';
 
 import { AppService } from './../app.service';
+
+import { DOCUMENT } from '@angular/platform-browser';
 
 
 const query = (s, a, o = { optional: true }) => q(s, a, o);
@@ -38,6 +41,10 @@ export class WorksComponent implements OnInit, AfterViewInit {
   worksTransition: string = 'list-off';
   onAnimationView$: Subscription;
 
+  
+
+  
+
 
   contents;
   content_about;
@@ -57,7 +64,9 @@ export class WorksComponent implements OnInit, AfterViewInit {
 
   constructor(
     private router: Router,
-    private appService: AppService
+    private appService: AppService,
+    private windowRef: WindowRef,
+    @Inject(DOCUMENT) private document: Document
   ) { }
 
 
@@ -70,6 +79,7 @@ export class WorksComponent implements OnInit, AfterViewInit {
 
   ngAfterViewInit() {
     this.registerScrollEvent();
+    console.log("works component!");
   }
 
   setClass(name_en: string) {
@@ -146,19 +156,25 @@ export class WorksComponent implements OnInit, AfterViewInit {
   }
 
 
-
   // main image에 적용할 스크롤 이벤트
   registerScrollEvent() {
+    
+    const windowEl = this.windowRef.nativeWindow;
+
+
     const size = {
-      width: window.innerWidth || document.body.clientWidth,
-      height: window.innerHeight || document.body.clientHeight
+      width: windowEl.innerWidth || this.document.body.clientWidth,
+      height: windowEl.innerHeight || this.document.body.clientHeight
     };
     
     const startY = size.height; //기준점 브라우저 높이
     const scrollTop$ = Observable.fromEvent(window, "scroll")
-      .map((val: any) => {
-        return (val.target.scrollingElement.scrollTop >= startY) ? 'list-on' : 'list-off';
+      .map((ev: any) => {
+        let currentY = this.windowRef.nativeWindow.pageYOffset;
+        return (currentY >= startY) ? 'list-on' : 'list-off';
       }).distinctUntilChanged();
+    
+      console.log(scrollTop$);
     
     this.onAnimationView$ = scrollTop$.subscribe((val: string) => {
       this.worksTransition = val;

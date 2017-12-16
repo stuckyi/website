@@ -13,7 +13,7 @@ const gototopAnimation = trigger('gototopAnimation',[
   transition('on => off',
     animate(animationRule,
       keyframes([
-        style({ transform: 'scale(1)', opaicty: 1, offset: 0 }),
+        style({ transform: 'scale(1)', opacity: 1, offset: 0 }),
         style({ transform: 'scale(0)', opacity: 0, offset: 1 })
       ])
     )
@@ -44,12 +44,27 @@ export class GototopComponent implements OnInit {
     this.registerScrollEvent();
   }
 
+  
+  
+
 
   registerScrollEvent() {
     const scrollTop$ = Observable.fromEvent(window, "scroll");
     const scrollFn$ = scrollTop$
       .map((ev: any) => {
-        let currentY = ev.target.scrollingElement.scrollTop;
+        
+        
+        // const currentY =
+        //   ev.target.scrollingElement.scrollTop ||
+        //   ev.target.documentElement.scrollTop ||
+        //   ev.target.body.scrollTop ||
+        //   window.pageYOffset ||
+        //   -1;
+
+        const currentY = window.pageYOffset;
+        
+        
+        
         if (this.scrollY.prev > currentY) {
           this.scrollY.prev = currentY;
           return true;

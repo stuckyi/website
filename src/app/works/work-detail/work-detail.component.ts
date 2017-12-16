@@ -189,13 +189,22 @@ export class WorkDetailComponent implements OnInit, AfterViewInit {
       m: { startY: 0, endY: imgHeight.m }
     };
     const scrollTop$ = Observable.fromEvent(window, "scroll")
-      .map((val: any) => {
-        let currentY = val.target.scrollingElement.scrollTop;
+      .map((ev: any) => {
+        
+        
+        // const currentY =
+        // ev.target.scrollingElement.scrollTop ||
+        // ev.target.documentElement.scrollTop ||
+        // ev.target.body.scrollTop ||
+        // window.pageYOffset ||
+        // -1;
+
+        const currentY = window.pageYOffset;
+      
         
         if (currentY >= scrollRule.pc.startY && currentY <= scrollRule.pc.endY) {
           let result = getMap(
-            val.target.scrollingElement.scrollTop,
-            scrollRule.pc.startY, scrollRule.pc.endY,
+            currentY, scrollRule.pc.startY, scrollRule.pc.endY,
             1.0, 0.1);
           
           return result.toFixed(1);

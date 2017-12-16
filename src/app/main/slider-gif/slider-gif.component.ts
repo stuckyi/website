@@ -33,7 +33,6 @@ export class SliderGifComponent implements OnInit {
       this.curIndex++;
       this.selectedItem = this.previewSliderItems[this.curIndex];
       this.curImgUrl = this.selectedItem.imgUrl;
-      console.log('right');
     }
 
     this.isLeft = (this.curIndex === 0) ? false : true;
