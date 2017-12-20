@@ -6520,7 +6520,67 @@ ul {
     font-size: 1.25rem;
     font-weight: 700;
     letter-spacing: 0.0375rem;
+    -moz-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
     transform: rotate(-90deg);
-    transform-origin: left top 0; }
+    moz-transform-origin: left top;
+    -o-transform-origin: left top;
+    -ms-transform-origin: left top;
+    -webkit-transform-origin: left top;
+    transform-origin: left top; }
+
+.to-works {
+  -webkit-animation-delay: 0;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-name: page_fadeInOut;
+  -webkit-animation-fill-mode: forwards;
+  /* this prevents the animation from restarting! */
+  -moz-animation-delay: 0;
+  -moz-animation-duration: 1s;
+  -moz-animation-name: page_fadeInOut;
+  -moz-animation-fill-mode: forwards;
+  /* this prevents the animation from restarting! */
+  -o-animation-delay: 0;
+  -o-animation-duration: 1s;
+  -o-animation-name: page_fadeInOut;
+  -o-animation-fill-mode: forwards;
+  /* this prevents the animation from restarting! */
+  animation-delay: 0;
+  animation-duration: 1s;
+  animation-name: page_fadeInOut;
+  animation-fill-mode: forwards;
+  /* this prevents the animation from restarting! */ }
+
+.to-detail {
+  -webkit-animation-delay: 0;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-name: page_fadeInOut;
+  -webkit-animation-fill-mode: forwards;
+  /* this prevents the animation from restarting! */
+  -moz-animation-delay: 0;
+  -moz-animation-duration: 2s;
+  -moz-animation-name: page_fadeInOut;
+  -moz-animation-fill-mode: forwards;
+  /* this prevents the animation from restarting! */
+  -o-animation-delay: 0;
+  -o-animation-duration: 2s;
+  -o-animation-name: page_fadeInOut;
+  -o-animation-fill-mode: forwards;
+  /* this prevents the animation from restarting! */
+  animation-delay: 0;
+  animation-duration: 2s;
+  animation-name: page_fadeInOut;
+  animation-fill-mode: forwards;
+  /* this prevents the animation from restarting! */ }
+
+@keyframes page_fadeInOut {
+  0% {
+    opacity: 1; }
+  3% {
+    opacity: 0; }
+  100% {
+    opacity: 0; } }
 
 /*# sourceMappingURL=app.component.css.map */

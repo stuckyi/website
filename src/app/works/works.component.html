@@ -15,8 +15,12 @@
     <div *ngFor="let content of contents" 
       (click)="gotoDetail(content.id)" 
       class="work columns is-multiline"
+      [class.list-on]="worksTransition === 'list-on'"
+      [class.list-off]="worksTransition === 'list-off'">
+      <!--
       [@worksTransition]="worksTransition"
       (@worksTransition.done)="listAnimationUnsub($event)">
+      -->
 
       <!-- sprite imagse -->
       <div (mouseenter)="setHoverState(content.title_en)" 

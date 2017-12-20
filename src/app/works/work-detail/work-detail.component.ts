@@ -53,7 +53,8 @@ export class WorkDetailComponent implements OnInit, AfterViewInit {
     transparent: { opacity: 1 } ,
     // .detail-mainImg
     img: {
-      transform: 'translateX(0)'
+      transform: 'translateX(0)',
+      msTransform: 'translateX(0)'
     }           
   };
 

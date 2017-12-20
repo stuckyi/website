@@ -7,24 +7,24 @@ export const pageLoader = trigger('pageLoader', [
   transition('* => works',
     animate(toWorks,
       keyframes([
-        style({ 'z-index': 9100, opacity: 1, offset: 0 }),
-        style({ 'z-index': 9100, opacity: 1, offset: .3 }),
-        style({ 'z-index': 9100, opacity: 0, offset: 1 })
+        style({ opacity: 1, offset: 0 }),
+        style({ opacity: 1, offset: .3 }),
+        style({ opacity: 0, offset: 1 })
       ])
     ),
   ),
   transition('* => detail',
   animate(toDetail,
     keyframes([
-      style({ 'z-index': 9100, opacity: 1, offset: 0 }),
-      style({ 'z-index': 9100, opacity: 1, offset: .3 }),
-      style({ 'z-index': 9100, opacity: 0, offset: 1 })
+      style({ opacity: 1, offset: 0 }),
+      style({  opacity: 1, offset: .3 }),
+      style({ opacity: 0, offset: 1 })
     ])
   ),
 )
 ]);
 
-
+/*
 export const routerTransition = trigger('routerTransition', [
   transition('* => works', [
     query(':enter, :leave', style({ position: 'fixed', width:'100%' })
@@ -55,6 +55,7 @@ export const routerTransition = trigger('routerTransition', [
     ])
   ])
 ])
+*/
 
 
 

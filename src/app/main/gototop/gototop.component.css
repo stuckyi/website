@@ -6512,7 +6512,81 @@ ul {
   bottom: 4%;
   background-image: url(/assets/images/ui/icons/gototop@2x.png);
   background-repeat: no-repeat;
-  background-size: contain;
-  animation-fill-mode: forwards; }
+  background-size: contain; }
+
+.to-on {
+  -webkit-animation-delay: 0;
+  -webkit-animation-duration: 0.4s;
+  -webkit-animation-name: toOn;
+  -webkit-animation-fill-mode: forwards;
+  /* this prevents the animation from restarting! */
+  -moz-animation-delay: 0;
+  -moz-animation-duration: 0.4s;
+  -moz-animation-name: toOn;
+  -moz-animation-fill-mode: forwards;
+  /* this prevents the animation from restarting! */
+  -o-animation-delay: 0;
+  -o-animation-duration: 0.4s;
+  -o-animation-name: toOn;
+  -o-animation-fill-mode: forwards;
+  /* this prevents the animation from restarting! */
+  animation-delay: 0;
+  animation-duration: 0.4s;
+  animation-name: toOn;
+  animation-fill-mode: forwards;
+  /* this prevents the animation from restarting! */ }
+
+.to-off {
+  -webkit-animation-delay: 0;
+  -webkit-animation-duration: 0.4s;
+  -webkit-animation-name: toOff;
+  -webkit-animation-fill-mode: forwards;
+  /* this prevents the animation from restarting! */
+  -moz-animation-delay: 0;
+  -moz-animation-duration: 0.4s;
+  -moz-animation-name: toOff;
+  -moz-animation-fill-mode: forwards;
+  /* this prevents the animation from restarting! */
+  -o-animation-delay: 0;
+  -o-animation-duration: 0.4s;
+  -o-animation-name: toOff;
+  -o-animation-fill-mode: forwards;
+  /* this prevents the animation from restarting! */
+  animation-delay: 0;
+  animation-duration: 0.4s;
+  animation-name: toOff;
+  animation-fill-mode: forwards;
+  /* this prevents the animation from restarting! */ }
+
+@keyframes toOff {
+  from {
+    -moz-transform: scale(1);
+    -o-transform: scale(1);
+    -ms-transform: scale(1);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1; }
+  to {
+    -moz-transform: scale(0);
+    -o-transform: scale(0);
+    -ms-transform: scale(0);
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    opacity: 0; } }
+@keyframes toOn {
+  from {
+    -moz-transform: scale(0);
+    -o-transform: scale(0);
+    -ms-transform: scale(0);
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    opacity: 0; }
+  to {
+    -moz-transform: scale(1);
+    -o-transform: scale(1);
+    -ms-transform: scale(1);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1; } }
 
 /*# sourceMappingURL=gototop.component.css.map */

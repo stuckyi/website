@@ -13,6 +13,8 @@ import { pageLoader } from './router.transition';
 export class AppComponent implements OnInit {
   @ViewChild('main') main: ElementRef;
 
+
+
   constructor(
     private elementRef: ElementRef,
     private renderer2: Renderer2
@@ -20,9 +22,9 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
     window.scrollTo(0, 0);
-    this.checkBrowserProperty();
+    
   }
-  
+
   getState(outlet) {
     return outlet.activatedRouteData.state;
   }

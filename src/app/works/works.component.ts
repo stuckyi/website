@@ -31,8 +31,8 @@ export const worksTransition = trigger('worksTransition', [
 @Component({
   selector: 'app-works',
   templateUrl: './works.component.html',
-  styleUrls: ['./works.component.css'],
-  animations: [worksTransition]
+  styleUrls: ['./works.component.css']
+  // animations: [worksTransition]
 })
 export class WorksComponent implements OnInit, AfterViewInit {
   @ViewChild('worksTitle') worksTitle: ElementRef;

@@ -3,37 +3,48 @@ import { trigger,state,style,transition,animate,keyframes } from '@angular/anima
 import { Observable } from 'rxjs/Rx';
 
 
-// const animationRule: string = '.4s cubic-bezier(1,.015,.295,1.225)';
+/*
 const animationRule: string = '.4s ease-in-out';
 
 const gototopAnimation = trigger('gototopAnimation',[
-  state('init',   style({ display: 'none' })),
-  state('on',     style({ display: 'block' })),
-  state('off',    style({ display: 'none' })),
-  transition('on => off',
+  state('init',   style({ display: 'block', opacity: 0 })),
+  state('on',     style({ display: 'block', opacity: 1 })),
+  state('off',    style({ display: 'block', opacity: 0 })),
+  transition('* => off',
     animate(animationRule,
       keyframes([
-        style({ transform: 'scale(1)', opacity: 1, offset: 0 }),
-        style({ transform: 'scale(0)', opacity: 0, offset: 1 })
+        style({
+          transform: 'scale(1)',
+          opacity: 1, offset: 0
+        }),
+        style({
+          transform: 'scale(0)',
+          opacity: 0, offset: 1
+        })
       ])
     )
   ),
-  transition('off => on',
+  transition('* => on',
     animate(animationRule,
       keyframes([
-        style({ transform: 'scale(0)', opacity: 0, offset: 0 }),
-        style({ transform: 'scale(1)', opacity: 1, offset: 1 })
+        style({
+          transform: 'scale(0)',
+          opacity: 0, offset: 0
+        }),
+        style({
+          transform: 'scale(1)',
+          opacity: 1, offset: 1
+        })
       ])
     ),
   )
 ]);
-
+*/
 
 @Component({
   selector: 'app-gototop',
   templateUrl: './gototop.component.html',
-  styleUrls: ['./gototop.component.css'],
-  animations: [gototopAnimation]
+  styleUrls: ['./gototop.component.css']
 })
 export class GototopComponent implements OnInit {
   gototopAnimation: string = 'init';
@@ -43,11 +54,7 @@ export class GototopComponent implements OnInit {
   ngOnInit() {
     this.registerScrollEvent();
   }
-
   
-  
-
-
   registerScrollEvent() {
     const scrollTop$ = Observable.fromEvent(window, "scroll");
     const scrollFn$ = scrollTop$

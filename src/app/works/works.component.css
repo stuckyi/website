@@ -6636,10 +6636,102 @@ ul {
 
 @keyframes spring-up {
   0% {
-    transform: translateY(0) scale(1.05);
+    -moz-transform: translate(0, 0);
+    -o-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+    -moz-transform: scale(1.05);
+    -o-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
     opacity: 0; }
   100% {
-    transform: translateY(-100px) scale(1);
+    -moz-transform: translate(0, -100px);
+    -o-transform: translate(0, -100px);
+    -ms-transform: translate(0, -100px);
+    -webkit-transform: translate(0, -100px);
+    transform: translate(0, -100px);
+    -moz-transform: scale(1);
+    -o-transform: scale(1);
+    -ms-transform: scale(1);
+    -webkit-transform: scale(1);
+    transform: scale(1);
     opacity: 1; } }
+.list-on {
+  -webkit-animation-delay: 0;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-name: listOn;
+  -webkit-animation-fill-mode: forwards;
+  /* this prevents the animation from restarting! */
+  -moz-animation-delay: 0;
+  -moz-animation-duration: 1s;
+  -moz-animation-name: listOn;
+  -moz-animation-fill-mode: forwards;
+  /* this prevents the animation from restarting! */
+  -o-animation-delay: 0;
+  -o-animation-duration: 1s;
+  -o-animation-name: listOn;
+  -o-animation-fill-mode: forwards;
+  /* this prevents the animation from restarting! */
+  animation-delay: 0;
+  animation-duration: 1s;
+  animation-name: listOn;
+  animation-fill-mode: forwards;
+  /* this prevents the animation from restarting! */ }
+
+.list-off {
+  -webkit-animation-delay: 0;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-name: listOff;
+  -webkit-animation-fill-mode: forwards;
+  /* this prevents the animation from restarting! */
+  -moz-animation-delay: 0;
+  -moz-animation-duration: 1s;
+  -moz-animation-name: listOff;
+  -moz-animation-fill-mode: forwards;
+  /* this prevents the animation from restarting! */
+  -o-animation-delay: 0;
+  -o-animation-duration: 1s;
+  -o-animation-name: listOff;
+  -o-animation-fill-mode: forwards;
+  /* this prevents the animation from restarting! */
+  animation-delay: 0;
+  animation-duration: 1s;
+  animation-name: listOff;
+  animation-fill-mode: forwards;
+  /* this prevents the animation from restarting! */ }
+
+@keyframes listOn {
+  from {
+    -moz-transform: translate(0, 0);
+    -o-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+    opacity: 0; }
+  to {
+    -moz-transform: translate(0, -100px);
+    -o-transform: translate(0, -100px);
+    -ms-transform: translate(0, -100px);
+    -webkit-transform: translate(0, -100px);
+    transform: translate(0, -100px);
+    opacity: 1; } }
+@keyframes listOff {
+  from {
+    -moz-transform: translate(0, -100px);
+    -o-transform: translate(0, -100px);
+    -ms-transform: translate(0, -100px);
+    -webkit-transform: translate(0, -100px);
+    transform: translate(0, -100px);
+    opacity: 1; }
+  to {
+    -moz-transform: translate(0, 0);
+    -o-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+    opacity: 0; } }
 
 /*# sourceMappingURL=works.component.css.map */
