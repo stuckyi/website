@@ -32,19 +32,14 @@ export const worksTransition = trigger('worksTransition', [
   selector: 'app-works',
   templateUrl: './works.component.html',
   styleUrls: ['./works.component.css']
-  // animations: [worksTransition]
 })
 export class WorksComponent implements OnInit, AfterViewInit {
   @ViewChild('worksTitle') worksTitle: ElementRef;
   isAnimationView: boolean;
 
+  // 이 값이 변경될 때 grid animation이 on/off된다.
   worksTransition: string = 'list-off';
   onAnimationView$: Subscription;
-
-  
-
-  
-
 
   contents;
   content_about;
@@ -160,8 +155,6 @@ export class WorksComponent implements OnInit, AfterViewInit {
   registerScrollEvent() {
     
     const windowEl = this.windowRef.nativeWindow;
-
-
     const size = {
       width: windowEl.innerWidth || this.document.body.clientWidth,
       height: windowEl.innerHeight || this.document.body.clientHeight
@@ -187,9 +180,5 @@ export class WorksComponent implements OnInit, AfterViewInit {
       this.onAnimationView$.unsubscribe();
     }
   }
-
-
-  
-
 
 }

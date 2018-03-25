@@ -2,14 +2,19 @@
 
 
 .router-loader {
-    @include size(100%, 100vh); // can i use
+    @include size(100%, 100vh);
     top: 0;
     position: fixed;
     background-color: white;
     opacity: 0;
+    animation-fill-mode: forwards;
+    z-index: -1;
+    &.to-works { z-index: 9100; }
+    &.to-detail { z-index: 9100; }
 }
 
-.vertical {
+
+.vertical_text {
     z-index: $z-index-vertical-text;
     display: block;
     position: fixed;
@@ -25,13 +30,12 @@
 }
 
 
-
-.to-works { @include animation(0, 1s, page_fadeInOut, forwards); }
+// animation
+.to-works {  @include animation(0, 1s, page_fadeInOut, forwards); }
 .to-detail { @include animation(0, 2s, page_fadeInOut, forwards); }
 
-
 @keyframes page_fadeInOut {
-    0% {  opacity: 1; }
-    3% {  opacity: 0; }
-    100% { opacity: 0; }
+    0% {  z-index: 9100; opacity: 1; }
+    3% {  z-index: 9100; opacity: 0; }
+    100% { z-index: -1; opacity: 0; }
 }

@@ -1,12 +1,9 @@
 <app-nav></app-nav>
+
 <section #main>
     <div class="router-loader" [@pageLoader]="getState(o)"></div>
     <router-outlet #o="outlet"></router-outlet>
 </section>
 
-
-<div class="vertical is-hidden-mobile">
-    <p>hello@stuckyi.studio</p>
-</div>
-
+<div class="vertical_text is-hidden-mobile"> <p>hello@stuckyi.studio</p> </div>
 <app-gototop></app-gototop>

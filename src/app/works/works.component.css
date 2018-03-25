@@ -6477,8 +6477,7 @@ label.panel-block {
 
 body {
   font-family: "Spoqa Han Sans", "애플 SD 산돌고딕 Neo", "Apple SD Gothic Neo", 나눔고딕, "Nanum Gothic", "돋움", Dotum, Arial, sans-serif;
-  font-size: 8px;
-  background-color: red; }
+  font-size: 8px; }
 
 @media (min-width: 769px) {
   * {
