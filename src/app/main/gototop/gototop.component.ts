@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { trigger,state,style,transition,animate,keyframes } from '@angular/animations';
-import { Observable } from 'rxjs/Observable';
 import { fromEvent } from 'rxjs/observable/fromEvent';
 import { map, distinctUntilChanged } from 'rxjs/operators';
 const animationRule = '.4s ease-in-out';
