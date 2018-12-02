@@ -3,7 +3,9 @@ import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { trigger, state, style, transition, animate, keyframes } from '@angular/animations';
 
-import { Observable } from 'rxjs/Observable';
+// import { Observable } from 'rxjs/Observable';
+import { fromEvent } from 'rxjs/observable/fromEvent';
+import { map, distinctUntilChanged } from 'rxjs/operators';
 import { pageLoader } from './router.transition';
 
 @Component({
@@ -68,21 +70,21 @@ export class AppComponent implements AfterViewInit, OnInit {
 
   registerScrollEvent() {
 
-    const scrollTop$ = Observable.fromEvent(window, 'scroll');
+    const scrollTop$ = fromEvent(window, 'scroll');
     const scrollFn$ = scrollTop$
-      .map((ev: any) => {
-        const currentY = ev.target.scrollingElement.scrollTop;
-        if (this.scrollY.prev > currentY) {
+      .pipe(
+        map((ev: any) => {
+          const currentY = ev.target.scrollingElement.scrollTop;
+          if (this.scrollY.prev > currentY) {
+            this.scrollY.prev = currentY;
+            return true;
+          }
           this.scrollY.prev = currentY;
-          return true;
-        } 
-        this.scrollY.prev = currentY;
-        return false;
-      });
-
-    // pc nav controll
-    const distinctUntilChangedScrollTop$ = scrollFn$.distinctUntilChanged();
-    distinctUntilChangedScrollTop$.subscribe(val => {
+          return false;
+        }),
+        distinctUntilChanged()
+      );
+    scrollFn$.subscribe(val => {
         this.isNav = val;
         this.dynamicNavClass = (val === true) ? 'nav-on' : 'nav-off';
     });

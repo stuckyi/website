@@ -5,6 +5,8 @@ import { Component, OnInit, ViewChild, ElementRef, AfterViewInit } from '@angula
 import {trigger, state, stagger, animate, style, group, query as q, transition, keyframes} from '@angular/animations';
 import { Router, NavigationStart } from '@angular/router';
 
+import { fromEvent } from 'rxjs/observable/fromEvent';
+import { map, distinctUntilChanged } from 'rxjs/operators';
 
 import 'rxjs/add/observable/fromEvent';
 
@@ -146,8 +148,7 @@ export class WorksComponent implements OnInit, AfterViewInit {
 
 
   gotoDetail(id: number) {
-    let link = ['/detail', id];
-    this.router.navigate(link);
+    this.router.navigate(['/detail', id]);
   }
 
 
@@ -159,10 +160,13 @@ export class WorksComponent implements OnInit, AfterViewInit {
       height: window.innerHeight || document.body.clientHeight
     };
     const startY = size.height; // 기준점 브라우저 높이
-    const scrollTop$ = Observable.fromEvent(window, 'scroll')
-      .map((val: any) => {
-        return (val.target.scrollingElement.scrollTop >= startY) ? 'list-on' : 'list-off';
-      }).distinctUntilChanged();
+    const scrollTop$ = fromEvent(window, 'scroll')
+      .pipe(
+        map((val: any) => {
+          return (val.target.scrollingElement.scrollTop >= startY) ? 'list-on' : 'list-off';
+        }),
+        distinctUntilChanged()
+      );
 
     this.onAnimationView$ = scrollTop$.subscribe((val: string) => {
       this.dynamicClass = val;

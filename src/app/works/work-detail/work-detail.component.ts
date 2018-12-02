@@ -1,7 +1,8 @@
 import { Component, OnInit, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs/Observable';
-
+import { fromEvent } from 'rxjs/observable/fromEvent';
+import { map, distinctUntilChanged } from 'rxjs/operators';
 import { getMap } from '../../utils/util';
 import { AppService } from './../../app.service';
 
@@ -177,19 +178,23 @@ export class WorkDetailComponent implements OnInit, AfterViewInit {
       m: { startY: 0, endY: imgHeight.m }
     };
 
-    const scrollTop$ = Observable.fromEvent(window, 'scroll')
-      .map((val: any) => {
-        const currentY = val.target.scrollingElement.scrollTop;
-        if (currentY >= scrollRule.pc.startY && currentY <= scrollRule.pc.endY) {
-          const result = getMap(
-            val.target.scrollingElement.scrollTop,
-            scrollRule.pc.startY, scrollRule.pc.endY,
-            1.0, 0.1);
-          return result.toFixed(1);
-        } else {
-          return 1;
-        }
-      }).distinctUntilChanged();
+    // const scrollTop$ = Observable.fromEvent(window, 'scroll')
+    const scrollTop$ = fromEvent(window, 'scroll')
+      .pipe(
+        map((val: any) => {
+          const currentY = val.target.scrollingElement.scrollTop;
+          if (currentY >= scrollRule.pc.startY && currentY <= scrollRule.pc.endY) {
+            const result = getMap(
+              val.target.scrollingElement.scrollTop,
+              scrollRule.pc.startY, scrollRule.pc.endY,
+              1.0, 0.1);
+            return result.toFixed(1);
+          } else {
+            return 1;
+          }
+        }),
+        distinctUntilChanged()
+      );
 
     // opacity effect 
     const checkScroll$ = scrollTop$.subscribe((val: any) => {
