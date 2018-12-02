@@ -1,6 +1,5 @@
-<app-nav (click)="log('nav click')"></app-nav>
-<!-- <section [@routerTransition]="getState(o)">-->
-<!-- <section [@routerTransitionFadeIn]="getState(o)"> -->
+<app-nav></app-nav>
+
 <section>
     <div class="router-loader" [@pageLoader]="getState(o)"></div>
     <router-outlet #o="outlet"></router-outlet>
@@ -11,6 +10,5 @@
 <div class="vertical is-hidden-mobile">
     <p>hello@stuckyi.studio</p>
 </div>
-<div (click)="gotoTop()" 
-     [@dynamicNavClass]="dynamicNavClass" 
-     class="btn-gototop"> </div>
+
+<app-gototop></app-gototop>

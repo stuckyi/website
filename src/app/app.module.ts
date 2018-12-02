@@ -29,6 +29,7 @@ import { ModalComponent } from './main/modal/modal.component';
 import { SliderGifComponent } from './main/slider-gif/slider-gif.component';
 import { PreviewComponent } from './main/preview/preview.component';
 import { TouchSliderComponent } from './main/touch-slider/touch-slider.component';
+import { GototopComponent } from 'app/main/gototop/gototop.component';
 
 
 @NgModule({
@@ -44,7 +45,8 @@ import { TouchSliderComponent } from './main/touch-slider/touch-slider.component
     SliderGifComponent,
     WorkDetailComponent,
     PreviewComponent,
-    TouchSliderComponent
+    TouchSliderComponent,
+    GototopComponent
   ],
   imports: [
     BrowserModule,

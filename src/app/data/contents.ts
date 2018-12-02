@@ -1,30 +1,30 @@
-type tagInfo = {
+interface TagInfo  {
     title: string;
     items: string[];
 }
 
-type previewSliderItem = {
+interface PreviewSliderItem  {
     index: number;
     title: string;
     desc: string;
     imgUrl: string;
 }
 
-type previewContent = {
+interface PreviewContent {
     index?: number;
     title: string;
     desc: string;
     imgUrl: string;
 }
 
-type processSliderItem = {
+interface ProcessSliderItem  {
     index: number;
     title: string;
     desc: string;
     imgUrl: string;
 }
 
-type linkItem = {
+interface LinkItem  {
     index?: number;
     title: string;
     desc?: string;
@@ -32,16 +32,16 @@ type linkItem = {
 }
 
 
-type participationWork = {
-    year: number,
-    title: string,
-    host: string,
-    role: string
+interface ParticipationWork  {
+    year: number;
+    title: string;
+    host: string;
+    role: string;
 }
 
 export class About {
     interests: string[];
-    praticipactionWokrs: participationWork[];
+    praticipactionWokrs: ParticipationWork[];
 }
 
 export class Content {
@@ -52,14 +52,14 @@ export class Content {
     summary: string;
 
     year: string;
-    tagInfo: tagInfo;
+    tagInfo: TagInfo;
 
     descriptions: string[];
 
-    previewSliderItems?: previewSliderItem[];
-    previewContentItems?: previewContent[];
-    processSliderItems?: previewSliderItem[];
-    linkItems?: linkItem[];
+    previewSliderItems?: PreviewSliderItem[];
+    previewContentItems?: PreviewContent[];
+    processSliderItems?: PreviewSliderItem[];
+    linkItems?: LinkItem[];
 }
 
 
@@ -77,12 +77,12 @@ export const CONTENT_ABOUT = {
         { year: 2016, title: '<불확실한 학교 Uncertainty School>', host: 'SeMA 비엔날레', role: '협력 작가' },
         { year: 2016, title: '<반응형 웹폰트 만들기>', host: '헤럴드디자인', role: '워크숍 참여, 전시' }
     ]
-}
+};
 
 
 // export const CONTENTS: Content[] = [
 export const CONTENTS = [
-    { 
+    {
         id: 0,
         title: ['모여라 월경컵'],
         title_en: 'collection',
@@ -119,7 +119,7 @@ export const CONTENTS = [
         ],
         processSliderItems: []
     },
-    { 
+    {
         id: 1,
         title: ['보는 이와 상호작용하는 폰트', '<CODED FONT>'],
         title_en: 'codedfont',
@@ -131,7 +131,7 @@ export const CONTENTS = [
             title: '인터랙티브 웹 콘텐츠',
             items: ['#워크숍', '#전시', '#p5.js']
         },
-        
+
         descriptions: [
             '종이에 출력된 글자들은 출력되는 순간에 형태가 고정되고 모든 사람에게 동일한 형태로 전달이 됩니다. 이와 달리 웹페이지에서 보이는 글꼴들은 보는 사람의 웹브라우저나 디스플레이 환경 설정 등에 따라 조금씩 다른 형태를 띄게 됩니다.',
             '때론 제작자가 의도한 형태대로 예쁘게 보이지 않을 수 있다는 점이 한계점으로 느껴지기도 합니다만, 우리는 이번 프로젝트를 통해 이런 한계를 역으로 활용하는 실험을 해보았습니다. 글꼴이 환경에 적극적으로 반응하여 계속적으로 형태가 변하게 하는 실험입니다.',
@@ -141,7 +141,7 @@ export const CONTENTS = [
         linkItems: [
             { title: 'CODED FONT를 정의한 발표 자료', url: 'https://www.slideshare.net/secret/so1lfatzsDllqG'},
             { title: '과정에 대한 기록을 해둔 트렐로(Trello) 보드', url: 'https://trello.com/b/X7FxBG8o/%EC%BD%94%EB%93%9C%EA%B8%80%EC%9E%90%EA%BC%B4-stuckyi-studio'},
-            { title: '몇몇 실험을 캡쳐하여 모아둔 텀블러 페이지', url: 'http://stuckyi-codetype.tumblr.com/'}
+            { title: '몇몇 실험을 캡쳐하여 모아둔 텀블러 페이지', url: 'http://stuckyi-codeinterface.tumblr.com/'}
         ],
         previewSliderItems: [
             { index: 0, title: '안녕 1', desc: 'codedfont experiment', imgUrl: '/assets/images/works/codedfont/preview/0.gif' },
@@ -152,7 +152,7 @@ export const CONTENTS = [
             { index: 5, title: '모여 2', desc: '원소 캐릭터들은 글자를 구성한 후에도 각각의 객체로 존재하며, 사용자 동작에도 반응한다.', imgUrl: '/assets/images/works/codedfont/preview/5.gif' },
             { index: 6, title: '틸트체', desc: '스마트폰 기울기에 따라 다양한 형태로 변경된다. 사용자는 자신이 원하는 글자를 입력 해볼 수 있다.', imgUrl: '/assets/images/works/codedfont/preview/6.gif' },
             { index: 7, title: '-', desc: '-', imgUrl: '/assets/images/works/codedfont/preview/7.gif' }
-            
+
          ],
         previewContentItems: [
             { index: 0, title:'-', desc: '-', imgUrl: '/assets/images/works/codedfont/preview/m_0.gif' }
@@ -292,7 +292,7 @@ export const CONTENTS = [
         id: 5,
         title: ['멘넴과의 코드스터디'],
         title_en: 'codestudy',
-        summary: '새로운 매체 환경에서 글자가 어떤 가능성을 가지는지 실험해보았던 작업으로, 웹페이지 상에서 계속 변화하거나 보는 사람과 상호작용하는 레터링과 폰트를 제작하였습니다.',
+        summary: '자폐성장애판정을 받았던 다섯살 무렵부터 연필과 노트로 자신만의 독자적인 예술세계를 만들어 온 멘넴. 그동안 멘넴이 만들어온 그림들을 코드로 재구성하는 방법을 탐구했습니다.',
         baseUrl: 'assets/images/works/codestudy/',
         year: '2016',
         tagInfo: {

@@ -1,15 +1,10 @@
 
-import { Observable } from 'rxjs/Rx';
 import { Component, OnInit, AfterViewInit } from '@angular/core';
-import { trigger,state,style,transition,animate,keyframes } from '@angular/animations';
-
 import { Router } from '@angular/router';
+import { trigger, state, style, transition, animate, keyframes } from '@angular/animations';
+
+import { Observable } from 'rxjs/Observable';
 import { pageLoader } from './router.transition';
-
-
-
-
-
 
 @Component({
   selector: 'app-root',
@@ -41,13 +36,13 @@ import { pageLoader } from './router.transition';
 export class AppComponent implements AfterViewInit, OnInit {
   title = 'app works!';
 
-  isAbout: boolean = false;
-  isHero: boolean = true;
+  isAbout = false;
+  isHero = true;
 
 
-  isNav: boolean = true;
+  isNav = true;
   scrollY = { prev: 0 };
-  dynamicNavClass: string = 'init';
+  dynamicNavClass = 'init';
 
   constructor(private router: Router) { }
 
@@ -59,8 +54,7 @@ export class AppComponent implements AfterViewInit, OnInit {
     this.router.events.subscribe(event => {
       if (event.constructor.name === 'NavigationEnd') {
         const url = this.router.url;
-        this.isAbout = (url === '/about') ? true : false;        
-        
+        this.isAbout = (url === '/about') ? true : false;
       }
     });
 
@@ -74,10 +68,10 @@ export class AppComponent implements AfterViewInit, OnInit {
 
   registerScrollEvent() {
 
-    const scrollTop$ = Observable.fromEvent(window, "scroll");
+    const scrollTop$ = Observable.fromEvent(window, 'scroll');
     const scrollFn$ = scrollTop$
       .map((ev: any) => {
-        let currentY = ev.target.scrollingElement.scrollTop;
+        const currentY = ev.target.scrollingElement.scrollTop;
         if (this.scrollY.prev > currentY) {
           this.scrollY.prev = currentY;
           return true;
@@ -85,7 +79,6 @@ export class AppComponent implements AfterViewInit, OnInit {
         this.scrollY.prev = currentY;
         return false;
       });
-    
 
     // pc nav controll
     const distinctUntilChangedScrollTop$ = scrollFn$.distinctUntilChanged();

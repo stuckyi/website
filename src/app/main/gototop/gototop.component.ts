@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { trigger,state,style,transition,animate,keyframes } from '@angular/animations';
-import { Observable } from 'rxjs/Rx';
+import { Observable } from 'rxjs/Observable';
 
 
 // const animationRule: string = '.4s cubic-bezier(1,.015,.295,1.225)';
@@ -13,7 +13,7 @@ const gototopAnimation = trigger('gototopAnimation',[
   transition('on => off',
     animate(animationRule,
       keyframes([
-        style({ transform: 'scale(1)', opaicty: 1, offset: 0 }),
+        style({ transform: 'scale(1)', opacity: 1, offset: 0 }),
         style({ transform: 'scale(0)', opacity: 0, offset: 1 })
       ])
     )

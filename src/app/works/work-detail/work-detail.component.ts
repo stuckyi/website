@@ -1,6 +1,5 @@
-import { NavComponent } from './../../main/nav/nav.component';
 import { Component, OnInit, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
-import { ActivatedRoute, Params, Router } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs/Observable';
 
 import { getMap } from '../../utils/util';
@@ -28,7 +27,7 @@ export class WorkDetailComponent implements OnInit, AfterViewInit {
   previewSliderItems;
   previewContentItems;
   processSliderItems;
-  processSpriteImg: string = '';
+  processSpriteImg = '';
   linkItems;
 
   isPreviewSlider: boolean;
@@ -39,14 +38,11 @@ export class WorkDetailComponent implements OnInit, AfterViewInit {
 
 
   // 기존 Value
-  mainImgUrl: string = '';
+  mainImgUrl = '';
 
   // 모바일용 gif list 표시 여부
   isPreviewGifs: boolean;
-  isBgImg: boolean = false;
-
-
-  
+  isBgImg = false;
   customStyle = {
     // .mainImg's bacgkround
     mainImg: { opacity: 1 }, 
@@ -54,7 +50,7 @@ export class WorkDetailComponent implements OnInit, AfterViewInit {
     // .detail-mainImg
     img: {
       transform: 'translateX(0)'
-    }           
+    }
   };
 
 
@@ -82,13 +78,13 @@ export class WorkDetailComponent implements OnInit, AfterViewInit {
   }
 
   getOffsetX() {
-    let sizes = {
+    const sizes = {
       main: this.main.nativeElement.offsetWidth,
       imgEl: this.imgEl.nativeElement.offsetWidth,
       imgElMobile: this.imgElMobile.nativeElement.offsetWidth
     };
     let offsetX = 0;
-    let device = (sizes.imgEl === 0) ? 'm' : 'pc';
+    const device = (sizes.imgEl === 0) ? 'm' : 'pc';
 
     if (device === 'pc') {
       offsetX = (sizes.imgEl / 2) - (sizes.main / 2);
@@ -104,23 +100,19 @@ export class WorkDetailComponent implements OnInit, AfterViewInit {
       contentId = parseInt(urlParameters['id']);
     });
     this.content = this.appService.getContent(contentId);
-    
 
     // 메인 상단 설정
     this.customStyle.mainImg = this.setBgCol(this.content.title_en);  // 메인 상단 배경색
-    
+
     this.mainImgUrl = this.content.baseUrl;                           // 메인 상단 이미지
-    
+
     this.previewSliderItems = this.content.previewSliderItems;        // 화면미리보기 (슬O)
     this.previewContentItems = this.content.previewContentItems;      // 화면미리보기 (슬X)
 
-    
     this.processSpriteImg = this.content.baseUrl + 'slider.png';
     this.processSliderItems = this.content.processSliderItems;
     this.linkItems = this.content.linkItems;
 
-
-  
     // 데이터 셋 안에, 해당하는 값이 있을 경우만 렌더링 시작.
     this.isPreviewSlider = (this.previewSliderItems.length > 0) ? true : false;
     this.isPreviewContent = (this.previewContentItems.length > 0) ? true : false;
@@ -140,41 +132,34 @@ export class WorkDetailComponent implements OnInit, AfterViewInit {
       obj.backgroundColor = '#FAB8D5';
 
       this.isBgImg = false;
-      
-    } else if (name_en === "codestudy") {
+    } else if (name_en === 'codestudy') {
       obj.backgroundImage = 'none';
       obj.backgroundColor = '#F7F7F7';
 
       this.isBgImg = false;
-      
-    } else if (name_en === "jumpgame") {
-      obj.backgroundImage = "url('assets/images/works/jumpgame/main_bg.png')";
+    } else if (name_en === 'jumpgame') {
+      obj.backgroundImage = 'url(assets/images/works/jumpgame/main_bg.png)';
       obj.backgroundColor = '#E7FF67';
-
       this.isBgImg = true;
-      
-    } else if (name_en === "collection") {
+    } else if (name_en === 'collection') {
       obj.backgroundImage = 'none';
       obj.backgroundColor = '#1DC4A2';
       this.isBgImg = false;
 
-    } else if (name_en === "codedfont") {
-      obj.backgroundImage = "url('assets/images/works/codedfont/main_bg@2x.png')";
+    } else if (name_en === 'codedfont') {
+      obj.backgroundImage = 'url(assets/images/works/codedfont/main_bg@2x.png)';
       obj.backgroundColor = '#B000FF';
-      
       this.isBgImg = true;
-    } else if (name_en === "ted") {
+    } else if (name_en ==='ted') {
       obj.backgroundColor = '#FF672E';
-      
       this.isBgImg = false;
     }
-    else if (name_en === "kohi") {
+    else if (name_en === 'kohi') {
       obj.backgroundColor = '#00BB6D';
-      
       this.isBgImg = false;
     } else {
       obj.backgroundImage = 'none';
-      obj.backgroundColor = '#e9e9e9'; 
+      obj.backgroundColor = '#e9e9e9';
 
       this.isBgImg = false;
     }
@@ -184,7 +169,6 @@ export class WorkDetailComponent implements OnInit, AfterViewInit {
 
   // main image에 적용할 스크롤 이벤트
   registerScrollEvent() {
-    
     const imgHeight = { pc: 480, m: 375 };
     const marginWithContent = 100;          // pc only.
 
@@ -192,28 +176,25 @@ export class WorkDetailComponent implements OnInit, AfterViewInit {
       pc: { startY: 0, endY: (imgHeight.pc + marginWithContent) },
       m: { startY: 0, endY: imgHeight.m }
     };
-    const scrollTop$ = Observable.fromEvent(window, "scroll")
+
+    const scrollTop$ = Observable.fromEvent(window, 'scroll')
       .map((val: any) => {
-        let currentY = val.target.scrollingElement.scrollTop;
-        
+        const currentY = val.target.scrollingElement.scrollTop;
         if (currentY >= scrollRule.pc.startY && currentY <= scrollRule.pc.endY) {
-          let result = getMap(
+          const result = getMap(
             val.target.scrollingElement.scrollTop,
             scrollRule.pc.startY, scrollRule.pc.endY,
             1.0, 0.1);
-          
           return result.toFixed(1);
         } else {
           return 1;
         }
       }).distinctUntilChanged();
-    
+
     // opacity effect 
-    const checkScroll$ = scrollTop$.subscribe((val:any) => {
+    const checkScroll$ = scrollTop$.subscribe((val: any) => {
       this.customStyle.mainImg.opacity = val;
     });
-    
-    
   }
 
 
