@@ -1,10 +1,8 @@
-@import 'assets/scss/global';
+@import '../../assets/scss/global';
 
 $size-hello: $size-2;       // 인사말 폰트 사이즈
-
 $size-info-title: $size-3;  // 작업 문의
 $size-info-email: $size-2;  // 이메일 
-
 $size-work-tag: $size-8;    // 그리드 아이템 태그
 $size-work-name: $size-3;   // 그리드 아이템 제목
 
@@ -17,9 +15,7 @@ $about-wrap-width: 843px;
     font-size: $size-4; // 18px
     @media(min-width: $tablet){ 
         margin-top: 16rem;
-        font-size: $size-2; // 26px
-
-        
+        font-size: $size-2;
     } 
     font-weight: $weight-bold;
     text-align: center;
@@ -35,23 +31,19 @@ $about-wrap-width: 843px;
  
     .work {
         @include size(30%, auto);
-        @include min-size(270px, 323px);  // 270, 323
+        @include min-size(270px, 323px); 
         margin: 8rem 1rem 1rem 1rem;
         padding: 0;
         overflow: hidden;
-        // cursor: url("../../assets/images/ui/cursors/test.png"), auto;
 
         
         
         .image { 
             @include size(300px, 270px);
-            @include min-size(18.75rem, 16.875rem);  // 300, 270
+            @include min-size(18.75rem, 16.875rem);
             padding: 0;
             background-repeat: no-repeat;
             background-position: 0 0%;
-            
-            // border: 1px solid black;
-            
             filter: grayscale(100%);
             &:hover { filter: grayscale(0%); }
             
@@ -93,7 +85,7 @@ $about-wrap-width: 843px;
 
 
     .section-title {
-        margin-top: -1rem; // only use in worksComponent of about area
+        margin-top: -1rem;
         padding-top: 5rem;
         text-decoration: underline;
     }
@@ -156,7 +148,7 @@ $about-wrap-width: 843px;
 }
 
 
-.sp-collection      { animation: sprite .7s steps(11) infinite; }
+.sp-collection      {  animation: sprite .7s steps(11) infinite; }
 .sp-codedfont       { animation: sprite .5s steps(7) infinite; }
 .sp-kohi            { animation: sprite 1.3s steps(7) infinite; }
 .sp-jumpgame        { animation: sprite .6s steps(11) infinite; }
@@ -182,6 +174,52 @@ $about-wrap-width: 843px;
 }
 
 @keyframes spring-up{
-    0% {transform: translateY(0) scale(1.05); opacity: 0; }
-   100%{transform: translateY(-100px) scale(1); opacity: 1;}
+    0% {
+        @include translate(0, 0);
+        @include scale(1.05); 
+        opacity: 0;
+    }
+   100%{
+        @include translate(0, -100px);
+        @include scale(1); 
+        opacity: 1;
+    }
 }
+
+
+/// works transition
+
+.list-on {
+    @include animation(0, 1s, listOn, forwards);
+}
+.list-off {
+    @include animation(0, 1s, listOff, forwards);
+}
+
+
+
+@keyframes listOn {
+    from { 
+        @include translate(0, 0);
+        opacity: 0;
+     }
+    to { 
+        @include translate(0, -100px);
+        opacity: 1;
+    }
+}
+
+
+
+@keyframes listOff {
+    from { 
+        @include translate(0, -100px);
+        opacity: 1;
+        
+     }
+    to { 
+        @include translate(0, 0);
+        opacity: 0;
+    }
+}
+

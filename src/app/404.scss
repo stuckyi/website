@@ -1,0 +1,18 @@
+@import '../assets/scss/global';
+
+body {
+  background-color: $main-color;
+}
+
+.oops {
+  @include size(40%, 100%);
+  margin: 0 auto;
+
+  .btn_back {
+    @include size(100px, 100px);
+    @include border-radius(50%);
+    background-color: black;
+    color: $main-color;
+    text-align: center;
+  }
+}

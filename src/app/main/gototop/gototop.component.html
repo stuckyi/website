@@ -1,0 +1,7 @@
+<!-- <div (click)="gotoTop()" class="btn-gototop" [@gototopAnimation]="gototopAnimation"> </div> -->
+
+<div (click)="gotoTop()" 
+     class="btn-gototop"
+     [class.to-on]="gototopAnimation === 'on'"
+     [class.to-off]="gototopAnimation === 'off'"
+> </div>

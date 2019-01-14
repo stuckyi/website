@@ -1,7 +1,9 @@
 import { NavComponent } from './../../main/nav/nav.component';
 import { Component, OnInit, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
-import { ActivatedRoute, Params, Router } from '@angular/router';
-import { Observable } from 'rxjs/Observable';
+import { ActivatedRoute } from '@angular/router';
+import { fromEvent } from 'rxjs';
+import { map, distinctUntilChanged } from 'rxjs/operators';
+
 
 import { getMap } from '../../utils/util';
 import { AppService } from './../../app.service';
@@ -9,7 +11,7 @@ import { AppService } from './../../app.service';
 @Component({
   selector: 'app-work-detail',
   templateUrl: './work-detail.component.html',
-  styleUrls: ['./work-detail.component.css']
+  styleUrls: ['./work-detail.component.scss']
 })
 export class WorkDetailComponent implements OnInit, AfterViewInit {
   @ViewChild('main') main: ElementRef;
@@ -28,7 +30,7 @@ export class WorkDetailComponent implements OnInit, AfterViewInit {
   previewSliderItems;
   previewContentItems;
   processSliderItems;
-  processSpriteImg: string = '';
+  processSpriteImg = '';
   linkItems;
 
   isPreviewSlider: boolean;
@@ -39,27 +41,22 @@ export class WorkDetailComponent implements OnInit, AfterViewInit {
 
 
   // 기존 Value
-  mainImgUrl: string = '';
+  mainImgUrl = '';
 
   // 모바일용 gif list 표시 여부
   isPreviewGifs: boolean;
-  isBgImg: boolean = false;
+  isBgImg = false;
 
-
-  
   customStyle = {
     // .mainImg's bacgkround
-    mainImg: { opacity: 1 }, 
+    mainImg: { opacity: 1 },
     transparent: { opacity: 1 } ,
     // .detail-mainImg
     img: {
-      transform: 'translateX(0)'
-    }           
+      transform: 'translateX(0)',
+      msTransform: 'translateX(0)'
+    }
   };
-
-
-
-
 
   constructor(
     private elementRef: ElementRef,
@@ -69,11 +66,11 @@ export class WorkDetailComponent implements OnInit, AfterViewInit {
 
   ngOnInit() {
     this.setContent();
-    window.scrollTo(0, 0);
+    // window.scrollTo(0, 0);
   }
 
   ngAfterViewInit() {
-    setTimeout(() => { this.customStyle.img.transform = this.getOffsetX(); }, 100); 
+    setTimeout(() => { this.customStyle.img.transform = this.getOffsetX(); }, 100);
     this.registerScrollEvent();
   }
 
@@ -82,13 +79,13 @@ export class WorkDetailComponent implements OnInit, AfterViewInit {
   }
 
   getOffsetX() {
-    let sizes = {
+    const sizes = {
       main: this.main.nativeElement.offsetWidth,
       imgEl: this.imgEl.nativeElement.offsetWidth,
       imgElMobile: this.imgElMobile.nativeElement.offsetWidth
     };
     let offsetX = 0;
-    let device = (sizes.imgEl === 0) ? 'm' : 'pc';
+    const device = (sizes.imgEl === 0) ? 'm' : 'pc';
 
     if (device === 'pc') {
       offsetX = (sizes.imgEl / 2) - (sizes.main / 2);
@@ -140,42 +137,34 @@ export class WorkDetailComponent implements OnInit, AfterViewInit {
       obj.backgroundColor = '#FAB8D5';
 
       this.isBgImg = false;
-      
-    } else if (name_en === "codestudy") {
+    } else if (name_en === 'codestudy') {
       obj.backgroundImage = 'none';
       obj.backgroundColor = '#F7F7F7';
 
       this.isBgImg = false;
-      
-    } else if (name_en === "jumpgame") {
-      obj.backgroundImage = "url('assets/images/works/jumpgame/main_bg.png')";
+    } else if (name_en === 'jumpgame') {
+      obj.backgroundImage = 'url("assets/images/works/jumpgame/main_bg.png")';
       obj.backgroundColor = '#E7FF67';
 
       this.isBgImg = true;
-      
-    } else if (name_en === "collection") {
+    } else if (name_en === 'collection') {
       obj.backgroundImage = 'none';
       obj.backgroundColor = '#1DC4A2';
       this.isBgImg = false;
 
-    } else if (name_en === "codedfont") {
-      obj.backgroundImage = "url('assets/images/works/codedfont/main_bg@2x.png')";
+    } else if (name_en === 'codedfont') {
+      obj.backgroundImage = 'url("assets/images/works/codedfont/main_bg@2x.png")';
       obj.backgroundColor = '#B000FF';
-      
       this.isBgImg = true;
-    } else if (name_en === "ted") {
+    } else if (name_en === 'ted') {
       obj.backgroundColor = '#FF672E';
-      
       this.isBgImg = false;
-    }
-    else if (name_en === "kohi") {
+    } else if (name_en === 'kohi') {
       obj.backgroundColor = '#00BB6D';
-      
       this.isBgImg = false;
     } else {
       obj.backgroundImage = 'none';
-      obj.backgroundColor = '#e9e9e9'; 
-
+      obj.backgroundColor = '#e9e9e9';
       this.isBgImg = false;
     }
 
@@ -184,7 +173,7 @@ export class WorkDetailComponent implements OnInit, AfterViewInit {
 
   // main image에 적용할 스크롤 이벤트
   registerScrollEvent() {
-    
+
     const imgHeight = { pc: 480, m: 375 };
     const marginWithContent = 100;          // pc only.
 
@@ -192,28 +181,26 @@ export class WorkDetailComponent implements OnInit, AfterViewInit {
       pc: { startY: 0, endY: (imgHeight.pc + marginWithContent) },
       m: { startY: 0, endY: imgHeight.m }
     };
-    const scrollTop$ = Observable.fromEvent(window, "scroll")
-      .map((val: any) => {
-        let currentY = val.target.scrollingElement.scrollTop;
-        
-        if (currentY >= scrollRule.pc.startY && currentY <= scrollRule.pc.endY) {
-          let result = getMap(
-            val.target.scrollingElement.scrollTop,
-            scrollRule.pc.startY, scrollRule.pc.endY,
-            1.0, 0.1);
-          
-          return result.toFixed(1);
-        } else {
-          return 1;
-        }
-      }).distinctUntilChanged();
-    
+    const scrollTop$ = fromEvent(window, 'scroll')
+      .pipe(
+        map((ev: any) => {
+
+          const currentY = window.pageYOffset;
+          if (currentY >= scrollRule.pc.startY && currentY <= scrollRule.pc.endY) {
+            const result = getMap(
+              currentY, scrollRule.pc.startY, scrollRule.pc.endY,
+              1.0, 0.1);
+            return result.toFixed(1);
+          } else {
+            return 1;
+          }
+        }),
+        distinctUntilChanged()
+      );
     // opacity effect 
     const checkScroll$ = scrollTop$.subscribe((val:any) => {
       this.customStyle.mainImg.opacity = val;
     });
-    
-    
   }
 
 

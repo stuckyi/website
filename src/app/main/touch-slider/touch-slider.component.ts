@@ -5,7 +5,7 @@ import { AppService } from './../../app.service';
 @Component({
   selector: 'app-touch-slider',
   templateUrl: './touch-slider.component.html',
-  styleUrls: ['./touch-slider.component.css']
+  styleUrls: ['./touch-slider.component.scss']
 })
 export class TouchSliderComponent implements OnInit {
   contents;

@@ -1,6 +1,9 @@
 @charset "utf-8";
 @import './base/reset';
-@import '../node_modules/bulma/bulma';
+// $variable-columns: false;
+
+@import "~bulma/bulma";
+// @import '../node_modules/bulma/bulma';
 
 @import './utils/variables',
         './utils/mixins',
@@ -11,3 +14,4 @@
 
 
 
+        

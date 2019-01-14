@@ -1,47 +1,41 @@
-@import 'assets/scss/global';
-
-// Nav Animation Class
-.nav-on {
-    display: block; 
-    animation: slideInDown 0.48s cubic-bezier(1,.015,.295,1.225) forwards running;
-}
-.nav-off { 
-    display: none;
-    animation: slideOutUp 0.48s cubic-bezier(1,.015,.295,1.225) forwards running;
-}
+@import '../assets/scss/global';
 
 
-.btn-gototop {
-    z-index: $z-index-btn-gotoTop;
-
-    @include size(2rem, 2rem);
-
+.router-loader {
+    @include size(100%, 100vh);
+    top: 0;
     position: fixed;
-    right: 4%;
-    bottom: 4%;
-
-    background-image: url(/assets/images/ui/icons/gototop@2x.png);
-    background-repeat: no-repeat;
-    background-size: contain;
+    background-color: white;
+    opacity: 0;
+    animation-fill-mode: forwards;
+    z-index: -1;
+    &.to-works { z-index: 9100; }
+    &.to-detail { z-index: 9100; }
 }
 
 
-
-.vertical {
+.vertical_text {
     z-index: $z-index-vertical-text;
     display: block;
     position: fixed;
-    // @include size(100px, 100px);
     bottom: 0;
     
     p {
-        font-size: $size-3;             // 20px
+        font-size: $size-3; 
         font-weight: $weight-bold;
         letter-spacing: $letter-spacing-1;
-        transform: rotate(-90deg);
-        transform-origin: left top 0;
-
+        @include rotate(-90);
+        @include transform-origin(left top);
     }
-    
-	
+}
+
+
+// animation
+.to-works {  @include animation(0, 1s, page_fadeInOut, forwards); }
+.to-detail { @include animation(0, 2s, page_fadeInOut, forwards); }
+
+@keyframes page_fadeInOut {
+    0% {  z-index: 9100; opacity: 1; }
+    3% {  z-index: 9100; opacity: 0; }
+    100% { z-index: -1; opacity: 0; }
 }

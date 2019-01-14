@@ -3,7 +3,7 @@ import { Component, OnInit, Input } from '@angular/core';
 @Component({
   selector: 'app-slider-gif',
   templateUrl: './slider-gif.component.html',
-  styleUrls: ['./slider-gif.component.css']
+  styleUrls: ['./slider-gif.component.scss']
 })
 export class SliderGifComponent implements OnInit {
   @Input('previewSliderItems') previewSliderItems;
@@ -33,7 +33,6 @@ export class SliderGifComponent implements OnInit {
       this.curIndex++;
       this.selectedItem = this.previewSliderItems[this.curIndex];
       this.curImgUrl = this.selectedItem.imgUrl;
-      console.log('right');
     }
 
     this.isLeft = (this.curIndex === 0) ? false : true;

@@ -1,17 +1,15 @@
-@import 'assets/scss/global';
+@import '../../../assets/scss/global';
 
 
 /// PC only
 #hero{
     @include size(100%, auto);
     padding-top: 10rem;
-    // background-image: url('../../../assets/images/works/hello-bg@3x.png');
-    // background-size: 100% auto;
-    // background-repeat: no-repeat;
 
     // overflow: hidden;
-    // background-color: $main-color;
+    background-color: $main-color;
     .main-bg {
+        @include size(100%, auto);
         top: 0;
         position: absolute;
         z-index: -1;
@@ -19,7 +17,7 @@
 
     .stuckyi-container {
         
-        @include size(600, 200);
+        @include size(800px, auto);
         display: block;
         margin: 0 auto;
         overflow: hidden;
@@ -28,7 +26,6 @@
             @include size(532px, 152px);
             display: block;
             margin: 0 auto;
-
         }
     }
 
@@ -39,9 +36,6 @@
         max-width: 860px; 
         overflow: hidden;
         .hello {
-            // transform: translateY(-300px);
-            
-
             p {
                 font-size: $size-3;
                 font-weight: $weight-medium;
@@ -91,19 +85,9 @@
     &.stuckyi {
         animation: spring-down 0.8s cubic-bezier(1,.015,.295,1.225) forwards running;
     }
-
-    // &.hello {
-    //     animation: spring-down-hello 1.2s cubic-bezier(1,.015,.295,1.225) forwards running;
-    //     animation-delay: .8s;
-    // }
 }
 
 @keyframes spring-down{
     0% {transform: translateY(-200px) scale(1.05);}
    100%{transform: translateY(0) scale(1);}
 }
-
-// @keyframes spring-down-hello{
-//     0% {transform: translateY(-300px) scale(1.05);}
-//    100%{transform: translateY(0) scale(1);}
-// }

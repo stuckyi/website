@@ -4,7 +4,7 @@ import { Component, OnInit, Input, AfterViewInit, ViewChild, ElementRef } from '
 @Component({
   selector: 'app-slider',
   templateUrl: './slider.component.html',
-  styleUrls: ['./slider.component.css']
+  styleUrls: ['./slider.component.scss']
 })
 export class SliderComponent implements OnInit, AfterViewInit{
   @Input('processSpriteImg') processSpriteImg;
@@ -51,17 +51,11 @@ export class SliderComponent implements OnInit, AfterViewInit{
     this.getElementSize();
     this.dynamicOffset = 'translateX(' + this.currentPos + 'px)';
     this.maxLev = Math.floor(((this.processSliderItems.length / 2) - 1) / this.offsetLev);
-    // this.baseUrl = 'url(/assets/images/works/' + this.projectInfo + '/slider.png)';
     this.baseUrl = 'url(' + this.processSpriteImg + ')';
-    console.log(this.processSpriteImg);
-    console.log(this.processSliderItems);
-    console.log(this.baseUrl);
   }
 
 
   ngAfterViewInit() {
-    console.log('slidercomp ngAfterViewInit');
-
     this.sliderSize.w = this.slider.nativeElement.offsetWidth;
   }
 

@@ -11,7 +11,7 @@ type SliderItem = {
 @Component({
   selector: 'app-modal',
   templateUrl: './modal.component.html',
-  styleUrls: ['./modal.component.css']
+  styleUrls: ['./modal.component.scss']
 })
 export class ModalComponent implements OnInit {
   isModal: boolean = false;
@@ -36,7 +36,6 @@ export class ModalComponent implements OnInit {
   }
 
   closeModal() {
-    console.log("closeModal!");
     this.isModal = false;
   }
 

@@ -1,3 +1,5 @@
+import { WindowRef } from './utils/window.ref';
+
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
@@ -6,11 +8,9 @@ import { HttpModule } from '@angular/http';
 
 import { environment } from './../environments/environment';
 
-
-
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppService } from './app.service';
+
 
 
 import { AppComponent } from './app.component';
@@ -29,8 +29,7 @@ import { ModalComponent } from './main/modal/modal.component';
 import { SliderGifComponent } from './main/slider-gif/slider-gif.component';
 import { PreviewComponent } from './main/preview/preview.component';
 import { TouchSliderComponent } from './main/touch-slider/touch-slider.component';
-
-
+import { GototopComponent } from './main/gototop/gototop.component';
 
 
 @NgModule({
@@ -38,7 +37,6 @@ import { TouchSliderComponent } from './main/touch-slider/touch-slider.component
     AppComponent,
     WorksComponent,
     AboutComponent,
-    
     NavComponent,
     FooterComponent,
     SliderComponent,
@@ -47,7 +45,8 @@ import { TouchSliderComponent } from './main/touch-slider/touch-slider.component
     SliderGifComponent,
     WorkDetailComponent,
     PreviewComponent,
-    TouchSliderComponent
+    TouchSliderComponent,
+    GototopComponent
   ],
   imports: [
     BrowserModule,
@@ -56,7 +55,7 @@ import { TouchSliderComponent } from './main/touch-slider/touch-slider.component
     HttpModule,
     AppRoutingModule
   ],
-  providers: [AppService],
+  providers: [AppService, WindowRef],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

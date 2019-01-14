@@ -1,0 +1,47 @@
+@import '../../../assets/scss/global';
+
+
+
+.btn-gototop {
+    z-index: $z-index-btn-gotoTop;
+
+    @include size(2rem, 2rem);
+
+    position: fixed;
+    right: 4%;
+    bottom: 4%;
+
+    background-image: url(/assets/images/ui/icons/gototop@2x.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+
+.to-on { @include animation(0, .4s, toOn, forwards);   }
+.to-off { @include animation(0, .4s, toOff, forwards); }
+
+
+@keyframes toOff {
+    from { 
+        @include scale(1);
+        opacity: 1;
+     }
+    to { 
+        @include scale(0);
+        opacity: 0;
+    }
+}
+
+
+
+@keyframes toOn {
+    from { 
+        @include scale(0);
+        opacity: 0;
+     }
+    to { 
+        @include scale(1);
+        opacity: 1;
+    }
+}
+

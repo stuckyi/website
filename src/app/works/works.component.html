@@ -15,10 +15,14 @@
     <div *ngFor="let content of contents" 
       (click)="gotoDetail(content.id)" 
       class="work columns is-multiline"
-      [@dynamicClass]="dynamicClass"
-      (@dynamicClass.done)="listAnimationUnsub($event)">
+      [class.list-on]="worksTransition === 'list-on'"
+      [class.list-off]="worksTransition === 'list-off'">
+      <!--
+      [@worksTransition]="worksTransition"
+      (@worksTransition.done)="listAnimationUnsub($event)">
+      -->
 
-      <!-- sprite image -->
+      <!-- sprite imagse -->
       <div (mouseenter)="setHoverState(content.title_en)" 
           (mouseleave)="setHoverState(content.title_en)"
           class="image column is-hidden-mobile"
@@ -35,7 +39,7 @@
     </div> <!-- work end -->
     
 </div> <!-- works end -->
-<img class="work-bottom-img" src="assets/images/works/hello-bg-bottom.png" />
+<img class="work-bottom-img is-hidden-mobile" src="assets/images/works/hello-bg-bottom.png" />
 
 
 
@@ -79,3 +83,4 @@
 
 <!-- mobile -->
 <app-touch-slider class="is-hidden-tablet"></app-touch-slider>
+<app-footer></app-footer>
