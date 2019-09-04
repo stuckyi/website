@@ -1,44 +1,41 @@
-@import 'assets/scss/global';
-
+// @import '../../../assets/scss/global';
+@import '~assets/scss/global';
 
 $main-height-pc: 480px;
 $main-height-m: 375px;
 
-
-
-
 .mainImg {
-    z-index: $z-index-work-mainImg;
-    
-    top:0;
-    padding: 0;
+  z-index: $z-index-work-mainImg;
+
+  top: 0;
+  padding: 0;
+  margin: 0 auto;
+  position: fixed; // for test
+
+  background-color: #e9e9e9;
+
+  @include size(100%, $main-height-m); // m
+
+  @media(min-width: $tablet) {
+    @include size(100%, $main-height-pc);
+    min-height: 480px;
+  }
+
+  .img-m {
+    @include size(auto, $main-height-m);
     margin: 0 auto;
-    position: fixed;                                                // for test
-    
-    background-color: #e9e9e9;
+    max-width: none;
+  }
 
-    @include size(100%, $main-height-m); // m
-    @media(min-width: $tablet){  
-        @include size(100%, $main-height-pc);
-        min-height: 480px;
-    }
-
-    .img-m { 
-        @include size(auto, $main-height-m);
-        margin: 0 auto;
-        max-width: none;
-    }
-    .img-pc {
-        @include size(auto, $main-height-pc);
-        margin: 0 auto;
-        max-width: none;
-    }
+  .img-pc {
+    @include size(auto, $main-height-pc);
+    margin: 0 auto;
+    max-width: none;
+  }
 }
 
 .isBgImg {
-    // background-size: auto 100% !important;
-    // background-repeat: repeat-x !important;
-    background-attachment: fixed;                                    // fot test
+  background-attachment: fixed; // fot test
 }
 
 
@@ -54,56 +51,59 @@ $main-height-m: 375px;
   z-index: $z-index-work-content;
   background-color: white;
   margin-top: $main-height-pc;
-  
+
 
   .detail-container {
     @include size($wrapWidth, auto);
-    margin:  0 auto; // $main-height-pc + 100px
+    margin: 0 auto; // $main-height-pc + 100px
     padding-top: 100px;
     padding-bottom: 100px;
-    
-    
+
+
 
 
     // 상세페이지 타이틀
-    .work-title { 
-        
-        font-size: $size-1;
-        font-weight: $weight-bold;
-        line-height: 1.2;
-        margin-bottom: 0;
+    .work-title {
+
+      font-size: $size-1;
+      font-weight: $weight-bold;
+      line-height: 1.2;
+      margin-bottom: 0;
     }
+
     .work-summary {
-        font-size: $size-4;
-        margin: 2rem 0;
+      font-size: $size-4;
+      margin: 2rem 0;
     }
 
     // 상세페이지 태그 제목
     .tag-title {
-        font-size: $size-7;
-        margin-bottom: 1.5rem;
+      font-size: $size-7;
+      margin-bottom: 1.5rem;
     }
 
     // 상세페이지 태그 아이템
     .tag-item {
-        font-size: $size-7;
-        color: $tag-col;
+      font-size: $size-7;
+      color: $tag-col;
     }
 
     // 프로젝트 설명
     .desc-content {
-        p { 
-            font-size: $size-5;
-            margin: 1.8rem 0;
-            text-align: justify;
-        }
+      p {
+        font-size: $size-5;
+        margin: 1.8rem 0;
+        text-align: justify;
+      }
     }
+
     // 관련 링크
-    .link { 
-        text-decoration: underline;
-        &:hover {
-            font-weight: $weight-bold;
-        }
+    .link {
+      text-decoration: underline;
+      cursor: pointer;
+      &:hover {
+        font-weight: $weight-bold;
+      }
     }
   }
 }
@@ -123,82 +123,115 @@ $main-height-m: 375px;
 // mobile detail
 
 .m-detail {
-    @include size(100%, auto);
-    z-index: $z-index-work-content;
-    margin-top: $main-height-m;
-    background-color: white;
-  
-    .m-detail-container {
-      @include size(100%, auto);
-      padding: 1.68rem;
-      background-color: white;
-  
-  
-      // 상세페이지 타이틀
-      .work-title { 
-          font-size: $size-2;
-          font-weight: $weight-bold;
-          line-height: 1.1;
-          
-      }
-      .work-summary { 
-          max-width: 100%;
-          font-size: $size-4;
-      }
-  
-      // 상세페이지 태그 제목
-      .tag-title { font-size: $size-7; }
-  
-      // 상세페이지 태그 아이템
-      .tag-item {
-          font-size: $size-9;
-          color: $tag-col;
+  @include size(100%, auto);
+  z-index: $z-index-work-content;
+  margin-top: $main-height-m;
+  background-color: white;
 
-          &:after {
-              content: ',  ';
-          }
-          &:last-of-type {
-              &:after {
-                  content: '';
-              }
-          }
+  .m-detail-container {
+    @include size(100%, auto);
+    padding: 1.68rem;
+    background-color: white;
+
+
+    // 상세페이지 타이틀
+    .work-title {
+      font-size: $size-2;
+      font-weight: $weight-bold;
+      line-height: 1.1;
+
+    }
+
+    .work-summary {
+      max-width: 100%;
+      font-size: $size-4;
+    }
+
+    // 상세페이지 태그 제목
+    .tag-title {
+      font-size: $size-7;
+    }
+
+    // 상세페이지 태그 아이템
+    .tag-item {
+      font-size: $size-9;
+      color: $tag-col;
+
+      &:after {
+        content: ',  ';
       }
-  
-      // 프로젝트 설명
-      .desc-content {
-          p { 
-              font-size: $size-5;
-              margin: rem(30px) 0;
-          }
-      }
-      // 관련 링크
-      .link {
-          text-decoration: underline;
-          
+
+      &:last-of-type {
+        &:after {
+          content: '';
+        }
       }
     }
-  
+
+    // 프로젝트 설명
+    .desc-content {
+      p {
+        font-size: $size-5;
+        margin: rem(30px) 0;
+      }
+    }
+
+    // 관련 링크
+    .link {
+      text-decoration: underline;
+
+    }
   }
 
-
-.sub-title {
-    margin-top: 6.25rem; // sub section 간의 간격
-    margin-bottom: 2.4rem;
-
-    font-size: $size-4;
-    font-weight: $weight-bold;
-
-    &:before {
-        margin-top: 3rem;
-        padding:4px;
-        border-top: 3px solid black;
-    }
-    &.process-desc {  &:before { content: '프로젝트 설명'; } }
-    &.process-img {  &:before { content: '프로세스 이미지'; } }
-    &.process-preview {  &:before { content: '화면 미리보기'; } }
-    &.process-video {  &:before { content: '프로젝트 구현 영상'; } }
-    &.process-gif {  &:before { content: '화면 미리보기'; } }
-    &.process-link {  &:before { content: '관련 링크'; } }
 }
 
 
+.sub-title {
+  margin-top: 6.25rem; // sub section 간의 간격
+  margin-bottom: 2.4rem;
+
+  font-size: $size-4;
+  font-weight: $weight-bold;
+
+  &:before {
+    margin-top: 3rem;
+    padding: 4px;
+    border-top: 3px solid black;
+  }
+
+  &.process-desc {
+    &:before {
+      content: '프로젝트 설명';
+    }
+  }
+
+  &.process-img {
+    &:before {
+      content: '프로세스 이미지';
+    }
+  }
+
+  &.process-preview {
+    &:before {
+      content: '화면 미리보기';
+    }
+  }
+
+  &.process-video {
+    &:before {
+      content: '프로젝트 구현 영상';
+    }
+  }
+
+  &.process-gif {
+    &:before {
+      content: '화면 미리보기';
+    }
+  }
+
+  &.process-link {
+    &:before {
+      content: '관련 링크';
+    }
+  }
+}

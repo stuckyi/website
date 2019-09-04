@@ -40,14 +40,14 @@ export class WorksComponent implements OnInit, AfterViewInit {
   @ViewChild('worksTitle') worksTitle: ElementRef;
   isAnimationView: boolean;
 
-  dynamicClass: string = 'list-off';
+  dynamicClass = 'list-off';
   onAnimationView$: Subscription;
 
 
   contents;
   content_about;
 
-  isLoad: boolean = false;
+  isLoad = false;
   hoverState = {
     collection: false,
     codedfont: false,
@@ -67,7 +67,7 @@ export class WorksComponent implements OnInit, AfterViewInit {
 
 
   ngOnInit() {
-    console.log('ngOnInit');
+    // console.log('ngOnInit');
     this.contents = this.appService.getContents();
     this.content_about = this.appService.getContentAbout();
     window.scrollTo(0, 0);
@@ -75,7 +75,7 @@ export class WorksComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit() {
-    console.log('ngOnAfterViewInit');
+    // console.log('ngOnAfterViewInit');
     this.registerScrollEvent();
   }
 
@@ -100,7 +100,6 @@ export class WorksComponent implements OnInit, AfterViewInit {
 
     return result;
   }
-  
 
 
   getHoverState(name) {

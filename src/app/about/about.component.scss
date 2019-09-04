@@ -1,4 +1,4 @@
-@import 'assets/scss/global';
+@import '~assets/scss/global';
 
 .hello {
     @include size(100%, 100vh);
